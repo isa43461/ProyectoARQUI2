@@ -1,0 +1,1248 @@
+TimeQuest Timing Analyzer report for MuxSrcA
+Mon Apr 08 11:41:03 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Propagation Delay
+ 12. Minimum Propagation Delay
+ 13. Fast Model Setup Summary
+ 14. Fast Model Hold Summary
+ 15. Fast Model Recovery Summary
+ 16. Fast Model Removal Summary
+ 17. Fast Model Minimum Pulse Width Summary
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Multicorner Timing Analysis Summary
+ 21. Progagation Delay
+ 22. Minimum Progagation Delay
+ 23. Clock Transfers
+ 24. Report TCCS
+ 25. Report RSKM
+ 26. Unconstrained Paths
+ 27. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; MuxSrcA                                                           ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
+----------
+; Clocks ;
+----------
+No clocks to report.
+
+
+---------------------------
+; Slow Model Fmax Summary ;
+---------------------------
+No paths to report.
+
+
+----------------------------
+; Slow Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Slow Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Slow Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++-------------------------------------------------------------------------+
+; Propagation Delay                                                       ;
++--------------+----------------------+--------+--------+--------+--------+
+; Input Port   ; Output Port          ; RR     ; RF     ; FR     ; FF     ;
++--------------+----------------------+--------+--------+--------+--------+
+; entrada0[0]  ; salidaMuxAluSrcB[0]  ; 11.844 ;        ;        ; 11.844 ;
+; entrada0[1]  ; salidaMuxAluSrcB[1]  ; 11.454 ;        ;        ; 11.454 ;
+; entrada0[2]  ; salidaMuxAluSrcB[2]  ; 11.782 ;        ;        ; 11.782 ;
+; entrada0[3]  ; salidaMuxAluSrcB[3]  ; 12.107 ;        ;        ; 12.107 ;
+; entrada0[4]  ; salidaMuxAluSrcB[4]  ; 11.385 ;        ;        ; 11.385 ;
+; entrada0[5]  ; salidaMuxAluSrcB[5]  ; 11.983 ;        ;        ; 11.983 ;
+; entrada0[6]  ; salidaMuxAluSrcB[6]  ; 11.383 ;        ;        ; 11.383 ;
+; entrada0[7]  ; salidaMuxAluSrcB[7]  ; 11.388 ;        ;        ; 11.388 ;
+; entrada0[8]  ; salidaMuxAluSrcB[8]  ; 11.818 ;        ;        ; 11.818 ;
+; entrada0[9]  ; salidaMuxAluSrcB[9]  ; 11.488 ;        ;        ; 11.488 ;
+; entrada0[10] ; salidaMuxAluSrcB[10] ; 11.706 ;        ;        ; 11.706 ;
+; entrada0[11] ; salidaMuxAluSrcB[11] ; 12.323 ;        ;        ; 12.323 ;
+; entrada0[12] ; salidaMuxAluSrcB[12] ; 11.976 ;        ;        ; 11.976 ;
+; entrada0[13] ; salidaMuxAluSrcB[13] ; 12.006 ;        ;        ; 12.006 ;
+; entrada0[14] ; salidaMuxAluSrcB[14] ; 11.415 ;        ;        ; 11.415 ;
+; entrada0[15] ; salidaMuxAluSrcB[15] ; 7.714  ;        ;        ; 7.714  ;
+; entrada0[16] ; salidaMuxAluSrcB[16] ; 7.787  ;        ;        ; 7.787  ;
+; entrada0[17] ; salidaMuxAluSrcB[17] ; 10.502 ;        ;        ; 10.502 ;
+; entrada0[18] ; salidaMuxAluSrcB[18] ; 11.481 ;        ;        ; 11.481 ;
+; entrada0[19] ; salidaMuxAluSrcB[19] ; 11.610 ;        ;        ; 11.610 ;
+; entrada0[20] ; salidaMuxAluSrcB[20] ; 11.008 ;        ;        ; 11.008 ;
+; entrada0[21] ; salidaMuxAluSrcB[21] ; 11.429 ;        ;        ; 11.429 ;
+; entrada0[22] ; salidaMuxAluSrcB[22] ; 11.100 ;        ;        ; 11.100 ;
+; entrada0[23] ; salidaMuxAluSrcB[23] ; 11.629 ;        ;        ; 11.629 ;
+; entrada0[24] ; salidaMuxAluSrcB[24] ; 10.459 ;        ;        ; 10.459 ;
+; entrada0[25] ; salidaMuxAluSrcB[25] ; 10.672 ;        ;        ; 10.672 ;
+; entrada0[26] ; salidaMuxAluSrcB[26] ; 11.263 ;        ;        ; 11.263 ;
+; entrada0[27] ; salidaMuxAluSrcB[27] ; 11.133 ;        ;        ; 11.133 ;
+; entrada0[28] ; salidaMuxAluSrcB[28] ; 10.798 ;        ;        ; 10.798 ;
+; entrada0[29] ; salidaMuxAluSrcB[29] ; 11.860 ;        ;        ; 11.860 ;
+; entrada0[30] ; salidaMuxAluSrcB[30] ; 11.290 ;        ;        ; 11.290 ;
+; entrada0[31] ; salidaMuxAluSrcB[31] ; 10.946 ;        ;        ; 10.946 ;
+; entrada2[0]  ; salidaMuxAluSrcB[0]  ; 11.377 ;        ;        ; 11.377 ;
+; entrada2[1]  ; salidaMuxAluSrcB[1]  ; 11.248 ;        ;        ; 11.248 ;
+; entrada2[2]  ; salidaMuxAluSrcB[2]  ; 10.825 ;        ;        ; 10.825 ;
+; entrada2[3]  ; salidaMuxAluSrcB[3]  ; 11.779 ;        ;        ; 11.779 ;
+; entrada2[4]  ; salidaMuxAluSrcB[4]  ; 11.198 ;        ;        ; 11.198 ;
+; entrada2[5]  ; salidaMuxAluSrcB[5]  ; 11.732 ;        ;        ; 11.732 ;
+; entrada2[6]  ; salidaMuxAluSrcB[6]  ; 11.425 ;        ;        ; 11.425 ;
+; entrada2[7]  ; salidaMuxAluSrcB[7]  ; 11.499 ;        ;        ; 11.499 ;
+; entrada2[8]  ; salidaMuxAluSrcB[8]  ; 11.957 ;        ;        ; 11.957 ;
+; entrada2[9]  ; salidaMuxAluSrcB[9]  ; 11.747 ;        ;        ; 11.747 ;
+; entrada2[10] ; salidaMuxAluSrcB[10] ; 12.519 ;        ;        ; 12.519 ;
+; entrada2[11] ; salidaMuxAluSrcB[11] ; 11.817 ;        ;        ; 11.817 ;
+; entrada2[12] ; salidaMuxAluSrcB[12] ; 11.988 ;        ;        ; 11.988 ;
+; entrada2[13] ; salidaMuxAluSrcB[13] ; 11.369 ;        ;        ; 11.369 ;
+; entrada2[14] ; salidaMuxAluSrcB[14] ; 11.119 ;        ;        ; 11.119 ;
+; entrada2[15] ; salidaMuxAluSrcB[15] ; 7.673  ;        ;        ; 7.673  ;
+; entrada2[16] ; salidaMuxAluSrcB[16] ; 10.340 ;        ;        ; 10.340 ;
+; entrada2[17] ; salidaMuxAluSrcB[17] ; 11.120 ;        ;        ; 11.120 ;
+; entrada2[18] ; salidaMuxAluSrcB[18] ; 11.585 ;        ;        ; 11.585 ;
+; entrada2[19] ; salidaMuxAluSrcB[19] ; 10.694 ;        ;        ; 10.694 ;
+; entrada2[20] ; salidaMuxAluSrcB[20] ; 11.091 ;        ;        ; 11.091 ;
+; entrada2[21] ; salidaMuxAluSrcB[21] ; 11.616 ;        ;        ; 11.616 ;
+; entrada2[22] ; salidaMuxAluSrcB[22] ; 10.908 ;        ;        ; 10.908 ;
+; entrada2[23] ; salidaMuxAluSrcB[23] ; 11.198 ;        ;        ; 11.198 ;
+; entrada2[24] ; salidaMuxAluSrcB[24] ; 10.995 ;        ;        ; 10.995 ;
+; entrada2[25] ; salidaMuxAluSrcB[25] ; 11.271 ;        ;        ; 11.271 ;
+; entrada2[26] ; salidaMuxAluSrcB[26] ; 11.832 ;        ;        ; 11.832 ;
+; entrada2[27] ; salidaMuxAluSrcB[27] ; 11.499 ;        ;        ; 11.499 ;
+; entrada2[28] ; salidaMuxAluSrcB[28] ; 11.432 ;        ;        ; 11.432 ;
+; entrada2[29] ; salidaMuxAluSrcB[29] ; 11.847 ;        ;        ; 11.847 ;
+; entrada2[30] ; salidaMuxAluSrcB[30] ; 11.350 ;        ;        ; 11.350 ;
+; entrada2[31] ; salidaMuxAluSrcB[31] ; 11.327 ;        ;        ; 11.327 ;
+; entrada3[0]  ; salidaMuxAluSrcB[0]  ; 10.948 ;        ;        ; 10.948 ;
+; entrada3[1]  ; salidaMuxAluSrcB[1]  ; 10.613 ;        ;        ; 10.613 ;
+; entrada3[2]  ; salidaMuxAluSrcB[2]  ; 11.962 ;        ;        ; 11.962 ;
+; entrada3[3]  ; salidaMuxAluSrcB[3]  ; 10.881 ;        ;        ; 10.881 ;
+; entrada3[4]  ; salidaMuxAluSrcB[4]  ; 10.722 ;        ;        ; 10.722 ;
+; entrada3[5]  ; salidaMuxAluSrcB[5]  ; 11.215 ;        ;        ; 11.215 ;
+; entrada3[6]  ; salidaMuxAluSrcB[6]  ; 10.526 ;        ;        ; 10.526 ;
+; entrada3[7]  ; salidaMuxAluSrcB[7]  ; 10.342 ;        ;        ; 10.342 ;
+; entrada3[8]  ; salidaMuxAluSrcB[8]  ; 10.475 ;        ;        ; 10.475 ;
+; entrada3[9]  ; salidaMuxAluSrcB[9]  ; 10.987 ;        ;        ; 10.987 ;
+; entrada3[10] ; salidaMuxAluSrcB[10] ; 11.512 ;        ;        ; 11.512 ;
+; entrada3[11] ; salidaMuxAluSrcB[11] ; 11.474 ;        ;        ; 11.474 ;
+; entrada3[12] ; salidaMuxAluSrcB[12] ; 11.074 ;        ;        ; 11.074 ;
+; entrada3[13] ; salidaMuxAluSrcB[13] ; 10.508 ;        ;        ; 10.508 ;
+; entrada3[14] ; salidaMuxAluSrcB[14] ; 10.523 ;        ;        ; 10.523 ;
+; entrada3[15] ; salidaMuxAluSrcB[15] ; 11.479 ;        ;        ; 11.479 ;
+; entrada3[16] ; salidaMuxAluSrcB[16] ; 7.320  ;        ;        ; 7.320  ;
+; entrada3[17] ; salidaMuxAluSrcB[17] ; 9.571  ;        ;        ; 9.571  ;
+; entrada3[18] ; salidaMuxAluSrcB[18] ; 11.146 ;        ;        ; 11.146 ;
+; entrada3[19] ; salidaMuxAluSrcB[19] ; 10.671 ;        ;        ; 10.671 ;
+; entrada3[20] ; salidaMuxAluSrcB[20] ; 9.913  ;        ;        ; 9.913  ;
+; entrada3[21] ; salidaMuxAluSrcB[21] ; 10.246 ;        ;        ; 10.246 ;
+; entrada3[22] ; salidaMuxAluSrcB[22] ; 10.575 ;        ;        ; 10.575 ;
+; entrada3[23] ; salidaMuxAluSrcB[23] ; 10.549 ;        ;        ; 10.549 ;
+; entrada3[24] ; salidaMuxAluSrcB[24] ; 10.031 ;        ;        ; 10.031 ;
+; entrada3[25] ; salidaMuxAluSrcB[25] ; 10.470 ;        ;        ; 10.470 ;
+; entrada3[26] ; salidaMuxAluSrcB[26] ; 11.222 ;        ;        ; 11.222 ;
+; entrada3[27] ; salidaMuxAluSrcB[27] ; 11.337 ;        ;        ; 11.337 ;
+; entrada3[28] ; salidaMuxAluSrcB[28] ; 10.552 ;        ;        ; 10.552 ;
+; entrada3[29] ; salidaMuxAluSrcB[29] ; 10.407 ;        ;        ; 10.407 ;
+; entrada3[30] ; salidaMuxAluSrcB[30] ; 10.248 ;        ;        ; 10.248 ;
+; entrada3[31] ; salidaMuxAluSrcB[31] ; 10.559 ;        ;        ; 10.559 ;
+; selector[0]  ; salidaMuxAluSrcB[0]  ; 12.428 ; 12.794 ; 12.794 ; 12.428 ;
+; selector[0]  ; salidaMuxAluSrcB[1]  ; 11.757 ; 12.921 ; 12.921 ; 11.757 ;
+; selector[0]  ; salidaMuxAluSrcB[2]  ; 13.019 ; 12.417 ; 12.417 ; 13.019 ;
+; selector[0]  ; salidaMuxAluSrcB[3]  ; 12.057 ; 12.621 ; 12.621 ; 12.057 ;
+; selector[0]  ; salidaMuxAluSrcB[4]  ; 11.490 ; 12.373 ; 12.373 ; 11.490 ;
+; selector[0]  ; salidaMuxAluSrcB[5]  ; 12.432 ; 12.854 ; 12.854 ; 12.432 ;
+; selector[0]  ; salidaMuxAluSrcB[6]  ; 12.149 ; 12.876 ; 12.876 ; 12.149 ;
+; selector[0]  ; salidaMuxAluSrcB[7]  ; 11.479 ; 12.643 ; 12.643 ; 11.479 ;
+; selector[0]  ; salidaMuxAluSrcB[8]  ; 11.644 ; 12.067 ; 12.067 ; 11.644 ;
+; selector[0]  ; salidaMuxAluSrcB[9]  ; 10.997 ; 11.815 ; 11.815 ; 10.997 ;
+; selector[0]  ; salidaMuxAluSrcB[10] ; 11.557 ; 12.370 ; 12.370 ; 11.557 ;
+; selector[0]  ; salidaMuxAluSrcB[11] ; 11.557 ; 12.143 ; 12.143 ; 11.557 ;
+; selector[0]  ; salidaMuxAluSrcB[12] ; 11.521 ; 12.382 ; 12.382 ; 11.521 ;
+; selector[0]  ; salidaMuxAluSrcB[13] ; 11.216 ; 12.063 ; 12.063 ; 11.216 ;
+; selector[0]  ; salidaMuxAluSrcB[14] ; 10.952 ; 11.814 ; 11.814 ; 10.952 ;
+; selector[0]  ; salidaMuxAluSrcB[15] ; 11.262 ; 12.074 ; 12.074 ; 11.262 ;
+; selector[0]  ; salidaMuxAluSrcB[16] ; 11.173 ; 11.653 ; 11.653 ; 11.173 ;
+; selector[0]  ; salidaMuxAluSrcB[17] ; 10.900 ; 11.856 ; 11.856 ; 10.900 ;
+; selector[0]  ; salidaMuxAluSrcB[18] ; 11.174 ; 12.180 ; 12.180 ; 11.174 ;
+; selector[0]  ; salidaMuxAluSrcB[19] ; 11.188 ; 11.656 ; 11.656 ; 11.188 ;
+; selector[0]  ; salidaMuxAluSrcB[20] ; 10.897 ; 11.711 ; 11.711 ; 10.897 ;
+; selector[0]  ; salidaMuxAluSrcB[21] ; 11.196 ; 12.048 ; 12.048 ; 11.196 ;
+; selector[0]  ; salidaMuxAluSrcB[22] ; 10.870 ; 11.874 ; 11.874 ; 10.870 ;
+; selector[0]  ; salidaMuxAluSrcB[23] ; 10.176 ; 11.041 ; 11.041 ; 10.176 ;
+; selector[0]  ; salidaMuxAluSrcB[24] ; 10.121 ; 10.934 ; 10.934 ; 10.121 ;
+; selector[0]  ; salidaMuxAluSrcB[25] ; 10.101 ; 10.914 ; 10.914 ; 10.101 ;
+; selector[0]  ; salidaMuxAluSrcB[26] ; 10.487 ; 11.343 ; 11.343 ; 10.487 ;
+; selector[0]  ; salidaMuxAluSrcB[27] ; 10.522 ; 11.635 ; 11.635 ; 10.522 ;
+; selector[0]  ; salidaMuxAluSrcB[28] ; 9.777  ; 10.621 ; 10.621 ; 9.777  ;
+; selector[0]  ; salidaMuxAluSrcB[29] ; 10.527 ; 11.374 ; 11.374 ; 10.527 ;
+; selector[0]  ; salidaMuxAluSrcB[30] ; 10.103 ; 10.920 ; 10.920 ; 10.103 ;
+; selector[0]  ; salidaMuxAluSrcB[31] ; 11.170 ; 11.997 ; 11.997 ; 11.170 ;
+; selector[1]  ; salidaMuxAluSrcB[0]  ; 12.389 ; 12.389 ; 12.389 ; 12.389 ;
+; selector[1]  ; salidaMuxAluSrcB[1]  ; 12.498 ; 12.498 ; 12.498 ; 12.498 ;
+; selector[1]  ; salidaMuxAluSrcB[2]  ; 11.924 ; 12.500 ; 12.500 ; 11.924 ;
+; selector[1]  ; salidaMuxAluSrcB[3]  ; 12.861 ; 12.861 ; 12.861 ; 12.861 ;
+; selector[1]  ; salidaMuxAluSrcB[4]  ; 11.942 ; 11.942 ; 11.942 ; 11.942 ;
+; selector[1]  ; salidaMuxAluSrcB[5]  ; 13.074 ; 13.074 ; 13.074 ; 13.074 ;
+; selector[1]  ; salidaMuxAluSrcB[6]  ; 12.459 ; 12.459 ; 12.459 ; 12.459 ;
+; selector[1]  ; salidaMuxAluSrcB[7]  ; 12.212 ; 12.212 ; 12.212 ; 12.212 ;
+; selector[1]  ; salidaMuxAluSrcB[8]  ; 13.188 ; 13.188 ; 13.188 ; 13.188 ;
+; selector[1]  ; salidaMuxAluSrcB[9]  ; 12.942 ; 12.942 ; 12.942 ; 12.942 ;
+; selector[1]  ; salidaMuxAluSrcB[10] ; 13.297 ; 13.297 ; 13.297 ; 13.297 ;
+; selector[1]  ; salidaMuxAluSrcB[11] ; 13.075 ; 13.075 ; 13.075 ; 13.075 ;
+; selector[1]  ; salidaMuxAluSrcB[12] ; 13.314 ; 13.314 ; 13.314 ; 13.314 ;
+; selector[1]  ; salidaMuxAluSrcB[13] ; 12.996 ; 12.996 ; 12.996 ; 12.996 ;
+; selector[1]  ; salidaMuxAluSrcB[14] ; 12.746 ; 12.746 ; 12.746 ; 12.746 ;
+; selector[1]  ; salidaMuxAluSrcB[15] ; 13.000 ; 13.000 ; 13.000 ; 13.000 ;
+; selector[1]  ; salidaMuxAluSrcB[16] ; 13.011 ; 13.011 ; 13.011 ; 13.011 ;
+; selector[1]  ; salidaMuxAluSrcB[17] ; 12.719 ; 12.719 ; 12.719 ; 12.719 ;
+; selector[1]  ; salidaMuxAluSrcB[18] ; 13.061 ; 13.061 ; 13.061 ; 13.061 ;
+; selector[1]  ; salidaMuxAluSrcB[19] ; 13.020 ; 13.020 ; 13.020 ; 13.020 ;
+; selector[1]  ; salidaMuxAluSrcB[20] ; 13.104 ; 13.104 ; 13.104 ; 13.104 ;
+; selector[1]  ; salidaMuxAluSrcB[21] ; 13.426 ; 13.426 ; 13.426 ; 13.426 ;
+; selector[1]  ; salidaMuxAluSrcB[22] ; 12.743 ; 12.743 ; 12.743 ; 12.743 ;
+; selector[1]  ; salidaMuxAluSrcB[23] ; 12.547 ; 12.547 ; 12.547 ; 12.547 ;
+; selector[1]  ; salidaMuxAluSrcB[24] ; 12.672 ; 12.672 ; 12.672 ; 12.672 ;
+; selector[1]  ; salidaMuxAluSrcB[25] ; 12.409 ; 12.409 ; 12.409 ; 12.409 ;
+; selector[1]  ; salidaMuxAluSrcB[26] ; 13.075 ; 13.075 ; 13.075 ; 13.075 ;
+; selector[1]  ; salidaMuxAluSrcB[27] ; 12.840 ; 12.840 ; 12.840 ; 12.840 ;
+; selector[1]  ; salidaMuxAluSrcB[28] ; 12.134 ; 12.134 ; 12.134 ; 12.134 ;
+; selector[1]  ; salidaMuxAluSrcB[29] ; 12.886 ; 12.886 ; 12.886 ; 12.886 ;
+; selector[1]  ; salidaMuxAluSrcB[30] ; 12.415 ; 12.415 ; 12.415 ; 12.415 ;
+; selector[1]  ; salidaMuxAluSrcB[31] ; 13.354 ; 13.354 ; 13.354 ; 13.354 ;
++--------------+----------------------+--------+--------+--------+--------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Propagation Delay                                               ;
++--------------+----------------------+--------+--------+--------+--------+
+; Input Port   ; Output Port          ; RR     ; RF     ; FR     ; FF     ;
++--------------+----------------------+--------+--------+--------+--------+
+; entrada0[0]  ; salidaMuxAluSrcB[0]  ; 11.844 ;        ;        ; 11.844 ;
+; entrada0[1]  ; salidaMuxAluSrcB[1]  ; 11.454 ;        ;        ; 11.454 ;
+; entrada0[2]  ; salidaMuxAluSrcB[2]  ; 11.782 ;        ;        ; 11.782 ;
+; entrada0[3]  ; salidaMuxAluSrcB[3]  ; 12.107 ;        ;        ; 12.107 ;
+; entrada0[4]  ; salidaMuxAluSrcB[4]  ; 11.385 ;        ;        ; 11.385 ;
+; entrada0[5]  ; salidaMuxAluSrcB[5]  ; 11.983 ;        ;        ; 11.983 ;
+; entrada0[6]  ; salidaMuxAluSrcB[6]  ; 11.383 ;        ;        ; 11.383 ;
+; entrada0[7]  ; salidaMuxAluSrcB[7]  ; 11.388 ;        ;        ; 11.388 ;
+; entrada0[8]  ; salidaMuxAluSrcB[8]  ; 11.818 ;        ;        ; 11.818 ;
+; entrada0[9]  ; salidaMuxAluSrcB[9]  ; 11.488 ;        ;        ; 11.488 ;
+; entrada0[10] ; salidaMuxAluSrcB[10] ; 11.706 ;        ;        ; 11.706 ;
+; entrada0[11] ; salidaMuxAluSrcB[11] ; 12.323 ;        ;        ; 12.323 ;
+; entrada0[12] ; salidaMuxAluSrcB[12] ; 11.976 ;        ;        ; 11.976 ;
+; entrada0[13] ; salidaMuxAluSrcB[13] ; 12.006 ;        ;        ; 12.006 ;
+; entrada0[14] ; salidaMuxAluSrcB[14] ; 11.415 ;        ;        ; 11.415 ;
+; entrada0[15] ; salidaMuxAluSrcB[15] ; 7.714  ;        ;        ; 7.714  ;
+; entrada0[16] ; salidaMuxAluSrcB[16] ; 7.787  ;        ;        ; 7.787  ;
+; entrada0[17] ; salidaMuxAluSrcB[17] ; 10.502 ;        ;        ; 10.502 ;
+; entrada0[18] ; salidaMuxAluSrcB[18] ; 11.481 ;        ;        ; 11.481 ;
+; entrada0[19] ; salidaMuxAluSrcB[19] ; 11.610 ;        ;        ; 11.610 ;
+; entrada0[20] ; salidaMuxAluSrcB[20] ; 11.008 ;        ;        ; 11.008 ;
+; entrada0[21] ; salidaMuxAluSrcB[21] ; 11.429 ;        ;        ; 11.429 ;
+; entrada0[22] ; salidaMuxAluSrcB[22] ; 11.100 ;        ;        ; 11.100 ;
+; entrada0[23] ; salidaMuxAluSrcB[23] ; 11.629 ;        ;        ; 11.629 ;
+; entrada0[24] ; salidaMuxAluSrcB[24] ; 10.459 ;        ;        ; 10.459 ;
+; entrada0[25] ; salidaMuxAluSrcB[25] ; 10.672 ;        ;        ; 10.672 ;
+; entrada0[26] ; salidaMuxAluSrcB[26] ; 11.263 ;        ;        ; 11.263 ;
+; entrada0[27] ; salidaMuxAluSrcB[27] ; 11.133 ;        ;        ; 11.133 ;
+; entrada0[28] ; salidaMuxAluSrcB[28] ; 10.798 ;        ;        ; 10.798 ;
+; entrada0[29] ; salidaMuxAluSrcB[29] ; 11.860 ;        ;        ; 11.860 ;
+; entrada0[30] ; salidaMuxAluSrcB[30] ; 11.290 ;        ;        ; 11.290 ;
+; entrada0[31] ; salidaMuxAluSrcB[31] ; 10.946 ;        ;        ; 10.946 ;
+; entrada2[0]  ; salidaMuxAluSrcB[0]  ; 11.377 ;        ;        ; 11.377 ;
+; entrada2[1]  ; salidaMuxAluSrcB[1]  ; 11.248 ;        ;        ; 11.248 ;
+; entrada2[2]  ; salidaMuxAluSrcB[2]  ; 10.825 ;        ;        ; 10.825 ;
+; entrada2[3]  ; salidaMuxAluSrcB[3]  ; 11.779 ;        ;        ; 11.779 ;
+; entrada2[4]  ; salidaMuxAluSrcB[4]  ; 11.198 ;        ;        ; 11.198 ;
+; entrada2[5]  ; salidaMuxAluSrcB[5]  ; 11.732 ;        ;        ; 11.732 ;
+; entrada2[6]  ; salidaMuxAluSrcB[6]  ; 11.425 ;        ;        ; 11.425 ;
+; entrada2[7]  ; salidaMuxAluSrcB[7]  ; 11.499 ;        ;        ; 11.499 ;
+; entrada2[8]  ; salidaMuxAluSrcB[8]  ; 11.957 ;        ;        ; 11.957 ;
+; entrada2[9]  ; salidaMuxAluSrcB[9]  ; 11.747 ;        ;        ; 11.747 ;
+; entrada2[10] ; salidaMuxAluSrcB[10] ; 12.519 ;        ;        ; 12.519 ;
+; entrada2[11] ; salidaMuxAluSrcB[11] ; 11.817 ;        ;        ; 11.817 ;
+; entrada2[12] ; salidaMuxAluSrcB[12] ; 11.988 ;        ;        ; 11.988 ;
+; entrada2[13] ; salidaMuxAluSrcB[13] ; 11.369 ;        ;        ; 11.369 ;
+; entrada2[14] ; salidaMuxAluSrcB[14] ; 11.119 ;        ;        ; 11.119 ;
+; entrada2[15] ; salidaMuxAluSrcB[15] ; 7.673  ;        ;        ; 7.673  ;
+; entrada2[16] ; salidaMuxAluSrcB[16] ; 10.340 ;        ;        ; 10.340 ;
+; entrada2[17] ; salidaMuxAluSrcB[17] ; 11.120 ;        ;        ; 11.120 ;
+; entrada2[18] ; salidaMuxAluSrcB[18] ; 11.585 ;        ;        ; 11.585 ;
+; entrada2[19] ; salidaMuxAluSrcB[19] ; 10.694 ;        ;        ; 10.694 ;
+; entrada2[20] ; salidaMuxAluSrcB[20] ; 11.091 ;        ;        ; 11.091 ;
+; entrada2[21] ; salidaMuxAluSrcB[21] ; 11.616 ;        ;        ; 11.616 ;
+; entrada2[22] ; salidaMuxAluSrcB[22] ; 10.908 ;        ;        ; 10.908 ;
+; entrada2[23] ; salidaMuxAluSrcB[23] ; 11.198 ;        ;        ; 11.198 ;
+; entrada2[24] ; salidaMuxAluSrcB[24] ; 10.995 ;        ;        ; 10.995 ;
+; entrada2[25] ; salidaMuxAluSrcB[25] ; 11.271 ;        ;        ; 11.271 ;
+; entrada2[26] ; salidaMuxAluSrcB[26] ; 11.832 ;        ;        ; 11.832 ;
+; entrada2[27] ; salidaMuxAluSrcB[27] ; 11.499 ;        ;        ; 11.499 ;
+; entrada2[28] ; salidaMuxAluSrcB[28] ; 11.432 ;        ;        ; 11.432 ;
+; entrada2[29] ; salidaMuxAluSrcB[29] ; 11.847 ;        ;        ; 11.847 ;
+; entrada2[30] ; salidaMuxAluSrcB[30] ; 11.350 ;        ;        ; 11.350 ;
+; entrada2[31] ; salidaMuxAluSrcB[31] ; 11.327 ;        ;        ; 11.327 ;
+; entrada3[0]  ; salidaMuxAluSrcB[0]  ; 10.948 ;        ;        ; 10.948 ;
+; entrada3[1]  ; salidaMuxAluSrcB[1]  ; 10.613 ;        ;        ; 10.613 ;
+; entrada3[2]  ; salidaMuxAluSrcB[2]  ; 11.962 ;        ;        ; 11.962 ;
+; entrada3[3]  ; salidaMuxAluSrcB[3]  ; 10.881 ;        ;        ; 10.881 ;
+; entrada3[4]  ; salidaMuxAluSrcB[4]  ; 10.722 ;        ;        ; 10.722 ;
+; entrada3[5]  ; salidaMuxAluSrcB[5]  ; 11.215 ;        ;        ; 11.215 ;
+; entrada3[6]  ; salidaMuxAluSrcB[6]  ; 10.526 ;        ;        ; 10.526 ;
+; entrada3[7]  ; salidaMuxAluSrcB[7]  ; 10.342 ;        ;        ; 10.342 ;
+; entrada3[8]  ; salidaMuxAluSrcB[8]  ; 10.475 ;        ;        ; 10.475 ;
+; entrada3[9]  ; salidaMuxAluSrcB[9]  ; 10.987 ;        ;        ; 10.987 ;
+; entrada3[10] ; salidaMuxAluSrcB[10] ; 11.512 ;        ;        ; 11.512 ;
+; entrada3[11] ; salidaMuxAluSrcB[11] ; 11.474 ;        ;        ; 11.474 ;
+; entrada3[12] ; salidaMuxAluSrcB[12] ; 11.074 ;        ;        ; 11.074 ;
+; entrada3[13] ; salidaMuxAluSrcB[13] ; 10.508 ;        ;        ; 10.508 ;
+; entrada3[14] ; salidaMuxAluSrcB[14] ; 10.523 ;        ;        ; 10.523 ;
+; entrada3[15] ; salidaMuxAluSrcB[15] ; 11.479 ;        ;        ; 11.479 ;
+; entrada3[16] ; salidaMuxAluSrcB[16] ; 7.320  ;        ;        ; 7.320  ;
+; entrada3[17] ; salidaMuxAluSrcB[17] ; 9.571  ;        ;        ; 9.571  ;
+; entrada3[18] ; salidaMuxAluSrcB[18] ; 11.146 ;        ;        ; 11.146 ;
+; entrada3[19] ; salidaMuxAluSrcB[19] ; 10.671 ;        ;        ; 10.671 ;
+; entrada3[20] ; salidaMuxAluSrcB[20] ; 9.913  ;        ;        ; 9.913  ;
+; entrada3[21] ; salidaMuxAluSrcB[21] ; 10.246 ;        ;        ; 10.246 ;
+; entrada3[22] ; salidaMuxAluSrcB[22] ; 10.575 ;        ;        ; 10.575 ;
+; entrada3[23] ; salidaMuxAluSrcB[23] ; 10.549 ;        ;        ; 10.549 ;
+; entrada3[24] ; salidaMuxAluSrcB[24] ; 10.031 ;        ;        ; 10.031 ;
+; entrada3[25] ; salidaMuxAluSrcB[25] ; 10.470 ;        ;        ; 10.470 ;
+; entrada3[26] ; salidaMuxAluSrcB[26] ; 11.222 ;        ;        ; 11.222 ;
+; entrada3[27] ; salidaMuxAluSrcB[27] ; 11.337 ;        ;        ; 11.337 ;
+; entrada3[28] ; salidaMuxAluSrcB[28] ; 10.552 ;        ;        ; 10.552 ;
+; entrada3[29] ; salidaMuxAluSrcB[29] ; 10.407 ;        ;        ; 10.407 ;
+; entrada3[30] ; salidaMuxAluSrcB[30] ; 10.248 ;        ;        ; 10.248 ;
+; entrada3[31] ; salidaMuxAluSrcB[31] ; 10.559 ;        ;        ; 10.559 ;
+; selector[0]  ; salidaMuxAluSrcB[0]  ; 12.428 ; 12.794 ; 12.794 ; 12.428 ;
+; selector[0]  ; salidaMuxAluSrcB[1]  ; 11.757 ; 12.921 ; 12.921 ; 11.757 ;
+; selector[0]  ; salidaMuxAluSrcB[2]  ; 13.019 ; 12.417 ; 12.417 ; 13.019 ;
+; selector[0]  ; salidaMuxAluSrcB[3]  ; 12.057 ; 12.621 ; 12.621 ; 12.057 ;
+; selector[0]  ; salidaMuxAluSrcB[4]  ; 11.490 ; 12.373 ; 12.373 ; 11.490 ;
+; selector[0]  ; salidaMuxAluSrcB[5]  ; 12.432 ; 12.854 ; 12.854 ; 12.432 ;
+; selector[0]  ; salidaMuxAluSrcB[6]  ; 12.149 ; 12.876 ; 12.876 ; 12.149 ;
+; selector[0]  ; salidaMuxAluSrcB[7]  ; 11.479 ; 12.643 ; 12.643 ; 11.479 ;
+; selector[0]  ; salidaMuxAluSrcB[8]  ; 11.644 ; 12.067 ; 12.067 ; 11.644 ;
+; selector[0]  ; salidaMuxAluSrcB[9]  ; 10.997 ; 11.815 ; 11.815 ; 10.997 ;
+; selector[0]  ; salidaMuxAluSrcB[10] ; 11.557 ; 12.370 ; 12.370 ; 11.557 ;
+; selector[0]  ; salidaMuxAluSrcB[11] ; 11.557 ; 12.143 ; 12.143 ; 11.557 ;
+; selector[0]  ; salidaMuxAluSrcB[12] ; 11.521 ; 12.382 ; 12.382 ; 11.521 ;
+; selector[0]  ; salidaMuxAluSrcB[13] ; 11.216 ; 12.063 ; 12.063 ; 11.216 ;
+; selector[0]  ; salidaMuxAluSrcB[14] ; 10.952 ; 11.814 ; 11.814 ; 10.952 ;
+; selector[0]  ; salidaMuxAluSrcB[15] ; 11.262 ; 12.074 ; 12.074 ; 11.262 ;
+; selector[0]  ; salidaMuxAluSrcB[16] ; 11.173 ; 11.653 ; 11.653 ; 11.173 ;
+; selector[0]  ; salidaMuxAluSrcB[17] ; 10.900 ; 11.856 ; 11.856 ; 10.900 ;
+; selector[0]  ; salidaMuxAluSrcB[18] ; 11.174 ; 12.180 ; 12.180 ; 11.174 ;
+; selector[0]  ; salidaMuxAluSrcB[19] ; 11.188 ; 11.656 ; 11.656 ; 11.188 ;
+; selector[0]  ; salidaMuxAluSrcB[20] ; 10.897 ; 11.711 ; 11.711 ; 10.897 ;
+; selector[0]  ; salidaMuxAluSrcB[21] ; 11.196 ; 12.048 ; 12.048 ; 11.196 ;
+; selector[0]  ; salidaMuxAluSrcB[22] ; 10.870 ; 11.874 ; 11.874 ; 10.870 ;
+; selector[0]  ; salidaMuxAluSrcB[23] ; 10.176 ; 11.041 ; 11.041 ; 10.176 ;
+; selector[0]  ; salidaMuxAluSrcB[24] ; 10.121 ; 10.934 ; 10.934 ; 10.121 ;
+; selector[0]  ; salidaMuxAluSrcB[25] ; 10.101 ; 10.914 ; 10.914 ; 10.101 ;
+; selector[0]  ; salidaMuxAluSrcB[26] ; 10.487 ; 11.343 ; 11.343 ; 10.487 ;
+; selector[0]  ; salidaMuxAluSrcB[27] ; 10.522 ; 11.635 ; 11.635 ; 10.522 ;
+; selector[0]  ; salidaMuxAluSrcB[28] ; 9.777  ; 10.621 ; 10.621 ; 9.777  ;
+; selector[0]  ; salidaMuxAluSrcB[29] ; 10.527 ; 11.374 ; 11.374 ; 10.527 ;
+; selector[0]  ; salidaMuxAluSrcB[30] ; 10.103 ; 10.920 ; 10.920 ; 10.103 ;
+; selector[0]  ; salidaMuxAluSrcB[31] ; 11.170 ; 11.997 ; 11.997 ; 11.170 ;
+; selector[1]  ; salidaMuxAluSrcB[0]  ; 12.258 ; 12.389 ; 12.389 ; 12.258 ;
+; selector[1]  ; salidaMuxAluSrcB[1]  ; 11.996 ; 12.498 ; 12.498 ; 11.996 ;
+; selector[1]  ; salidaMuxAluSrcB[2]  ; 11.924 ; 12.500 ; 12.500 ; 11.924 ;
+; selector[1]  ; salidaMuxAluSrcB[3]  ; 12.279 ; 12.861 ; 12.861 ; 12.279 ;
+; selector[1]  ; salidaMuxAluSrcB[4]  ; 11.709 ; 11.942 ; 11.942 ; 11.709 ;
+; selector[1]  ; salidaMuxAluSrcB[5]  ; 11.922 ; 13.074 ; 13.074 ; 11.922 ;
+; selector[1]  ; salidaMuxAluSrcB[6]  ; 11.645 ; 12.459 ; 12.459 ; 11.645 ;
+; selector[1]  ; salidaMuxAluSrcB[7]  ; 11.698 ; 12.212 ; 12.212 ; 11.698 ;
+; selector[1]  ; salidaMuxAluSrcB[8]  ; 12.180 ; 13.188 ; 13.188 ; 12.180 ;
+; selector[1]  ; salidaMuxAluSrcB[9]  ; 11.929 ; 12.942 ; 12.942 ; 11.929 ;
+; selector[1]  ; salidaMuxAluSrcB[10] ; 12.483 ; 13.297 ; 13.297 ; 12.483 ;
+; selector[1]  ; salidaMuxAluSrcB[11] ; 12.684 ; 13.075 ; 13.075 ; 12.684 ;
+; selector[1]  ; salidaMuxAluSrcB[12] ; 12.452 ; 13.314 ; 13.314 ; 12.452 ;
+; selector[1]  ; salidaMuxAluSrcB[13] ; 12.141 ; 12.996 ; 12.996 ; 12.141 ;
+; selector[1]  ; salidaMuxAluSrcB[14] ; 11.882 ; 12.746 ; 12.746 ; 11.882 ;
+; selector[1]  ; salidaMuxAluSrcB[15] ; 12.193 ; 13.000 ; 13.000 ; 12.193 ;
+; selector[1]  ; salidaMuxAluSrcB[16] ; 12.582 ; 13.011 ; 13.011 ; 12.582 ;
+; selector[1]  ; salidaMuxAluSrcB[17] ; 12.294 ; 12.719 ; 12.719 ; 12.294 ;
+; selector[1]  ; salidaMuxAluSrcB[18] ; 12.199 ; 13.061 ; 13.061 ; 12.199 ;
+; selector[1]  ; salidaMuxAluSrcB[19] ; 12.595 ; 13.020 ; 13.020 ; 12.595 ;
+; selector[1]  ; salidaMuxAluSrcB[20] ; 12.295 ; 13.104 ; 13.104 ; 12.295 ;
+; selector[1]  ; salidaMuxAluSrcB[21] ; 12.206 ; 13.426 ; 13.426 ; 12.206 ;
+; selector[1]  ; salidaMuxAluSrcB[22] ; 11.874 ; 12.743 ; 12.743 ; 11.874 ;
+; selector[1]  ; salidaMuxAluSrcB[23] ; 11.688 ; 12.547 ; 12.547 ; 11.688 ;
+; selector[1]  ; salidaMuxAluSrcB[24] ; 11.865 ; 12.672 ; 12.672 ; 11.865 ;
+; selector[1]  ; salidaMuxAluSrcB[25] ; 11.595 ; 12.409 ; 12.409 ; 11.595 ;
+; selector[1]  ; salidaMuxAluSrcB[26] ; 11.980 ; 13.075 ; 13.075 ; 11.980 ;
+; selector[1]  ; salidaMuxAluSrcB[27] ; 12.021 ; 12.840 ; 12.840 ; 12.021 ;
+; selector[1]  ; salidaMuxAluSrcB[28] ; 11.271 ; 12.134 ; 12.134 ; 11.271 ;
+; selector[1]  ; salidaMuxAluSrcB[29] ; 12.020 ; 12.886 ; 12.886 ; 12.020 ;
+; selector[1]  ; salidaMuxAluSrcB[30] ; 11.596 ; 12.415 ; 12.415 ; 11.596 ;
+; selector[1]  ; salidaMuxAluSrcB[31] ; 12.580 ; 13.354 ; 13.354 ; 12.580 ;
++--------------+----------------------+--------+--------+--------+--------+
+
+
+----------------------------
+; Fast Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Fast Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Fast Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++---------------------------------------------------------------------+
+; Propagation Delay                                                   ;
++--------------+----------------------+-------+-------+-------+-------+
+; Input Port   ; Output Port          ; RR    ; RF    ; FR    ; FF    ;
++--------------+----------------------+-------+-------+-------+-------+
+; entrada0[0]  ; salidaMuxAluSrcB[0]  ; 5.780 ;       ;       ; 5.780 ;
+; entrada0[1]  ; salidaMuxAluSrcB[1]  ; 5.684 ;       ;       ; 5.684 ;
+; entrada0[2]  ; salidaMuxAluSrcB[2]  ; 5.831 ;       ;       ; 5.831 ;
+; entrada0[3]  ; salidaMuxAluSrcB[3]  ; 5.950 ;       ;       ; 5.950 ;
+; entrada0[4]  ; salidaMuxAluSrcB[4]  ; 5.640 ;       ;       ; 5.640 ;
+; entrada0[5]  ; salidaMuxAluSrcB[5]  ; 5.867 ;       ;       ; 5.867 ;
+; entrada0[6]  ; salidaMuxAluSrcB[6]  ; 5.643 ;       ;       ; 5.643 ;
+; entrada0[7]  ; salidaMuxAluSrcB[7]  ; 5.613 ;       ;       ; 5.613 ;
+; entrada0[8]  ; salidaMuxAluSrcB[8]  ; 5.837 ;       ;       ; 5.837 ;
+; entrada0[9]  ; salidaMuxAluSrcB[9]  ; 5.702 ;       ;       ; 5.702 ;
+; entrada0[10] ; salidaMuxAluSrcB[10] ; 5.744 ;       ;       ; 5.744 ;
+; entrada0[11] ; salidaMuxAluSrcB[11] ; 6.017 ;       ;       ; 6.017 ;
+; entrada0[12] ; salidaMuxAluSrcB[12] ; 5.850 ;       ;       ; 5.850 ;
+; entrada0[13] ; salidaMuxAluSrcB[13] ; 5.846 ;       ;       ; 5.846 ;
+; entrada0[14] ; salidaMuxAluSrcB[14] ; 5.615 ;       ;       ; 5.615 ;
+; entrada0[15] ; salidaMuxAluSrcB[15] ; 3.439 ;       ;       ; 3.439 ;
+; entrada0[16] ; salidaMuxAluSrcB[16] ; 3.512 ;       ;       ; 3.512 ;
+; entrada0[17] ; salidaMuxAluSrcB[17] ; 5.353 ;       ;       ; 5.353 ;
+; entrada0[18] ; salidaMuxAluSrcB[18] ; 5.699 ;       ;       ; 5.699 ;
+; entrada0[19] ; salidaMuxAluSrcB[19] ; 5.744 ;       ;       ; 5.744 ;
+; entrada0[20] ; salidaMuxAluSrcB[20] ; 5.528 ;       ;       ; 5.528 ;
+; entrada0[21] ; salidaMuxAluSrcB[21] ; 5.699 ;       ;       ; 5.699 ;
+; entrada0[22] ; salidaMuxAluSrcB[22] ; 5.510 ;       ;       ; 5.510 ;
+; entrada0[23] ; salidaMuxAluSrcB[23] ; 5.763 ;       ;       ; 5.763 ;
+; entrada0[24] ; salidaMuxAluSrcB[24] ; 5.291 ;       ;       ; 5.291 ;
+; entrada0[25] ; salidaMuxAluSrcB[25] ; 5.324 ;       ;       ; 5.324 ;
+; entrada0[26] ; salidaMuxAluSrcB[26] ; 5.587 ;       ;       ; 5.587 ;
+; entrada0[27] ; salidaMuxAluSrcB[27] ; 5.582 ;       ;       ; 5.582 ;
+; entrada0[28] ; salidaMuxAluSrcB[28] ; 5.412 ;       ;       ; 5.412 ;
+; entrada0[29] ; salidaMuxAluSrcB[29] ; 5.828 ;       ;       ; 5.828 ;
+; entrada0[30] ; salidaMuxAluSrcB[30] ; 5.560 ;       ;       ; 5.560 ;
+; entrada0[31] ; salidaMuxAluSrcB[31] ; 5.510 ;       ;       ; 5.510 ;
+; entrada2[0]  ; salidaMuxAluSrcB[0]  ; 5.603 ;       ;       ; 5.603 ;
+; entrada2[1]  ; salidaMuxAluSrcB[1]  ; 5.590 ;       ;       ; 5.590 ;
+; entrada2[2]  ; salidaMuxAluSrcB[2]  ; 5.446 ;       ;       ; 5.446 ;
+; entrada2[3]  ; salidaMuxAluSrcB[3]  ; 5.824 ;       ;       ; 5.824 ;
+; entrada2[4]  ; salidaMuxAluSrcB[4]  ; 5.579 ;       ;       ; 5.579 ;
+; entrada2[5]  ; salidaMuxAluSrcB[5]  ; 5.782 ;       ;       ; 5.782 ;
+; entrada2[6]  ; salidaMuxAluSrcB[6]  ; 5.645 ;       ;       ; 5.645 ;
+; entrada2[7]  ; salidaMuxAluSrcB[7]  ; 5.684 ;       ;       ; 5.684 ;
+; entrada2[8]  ; salidaMuxAluSrcB[8]  ; 5.849 ;       ;       ; 5.849 ;
+; entrada2[9]  ; salidaMuxAluSrcB[9]  ; 5.801 ;       ;       ; 5.801 ;
+; entrada2[10] ; salidaMuxAluSrcB[10] ; 6.064 ;       ;       ; 6.064 ;
+; entrada2[11] ; salidaMuxAluSrcB[11] ; 5.855 ;       ;       ; 5.855 ;
+; entrada2[12] ; salidaMuxAluSrcB[12] ; 5.830 ;       ;       ; 5.830 ;
+; entrada2[13] ; salidaMuxAluSrcB[13] ; 5.603 ;       ;       ; 5.603 ;
+; entrada2[14] ; salidaMuxAluSrcB[14] ; 5.520 ;       ;       ; 5.520 ;
+; entrada2[15] ; salidaMuxAluSrcB[15] ; 3.427 ;       ;       ; 3.427 ;
+; entrada2[16] ; salidaMuxAluSrcB[16] ; 5.296 ;       ;       ; 5.296 ;
+; entrada2[17] ; salidaMuxAluSrcB[17] ; 5.599 ;       ;       ; 5.599 ;
+; entrada2[18] ; salidaMuxAluSrcB[18] ; 5.784 ;       ;       ; 5.784 ;
+; entrada2[19] ; salidaMuxAluSrcB[19] ; 5.441 ;       ;       ; 5.441 ;
+; entrada2[20] ; salidaMuxAluSrcB[20] ; 5.566 ;       ;       ; 5.566 ;
+; entrada2[21] ; salidaMuxAluSrcB[21] ; 5.766 ;       ;       ; 5.766 ;
+; entrada2[22] ; salidaMuxAluSrcB[22] ; 5.446 ;       ;       ; 5.446 ;
+; entrada2[23] ; salidaMuxAluSrcB[23] ; 5.555 ;       ;       ; 5.555 ;
+; entrada2[24] ; salidaMuxAluSrcB[24] ; 5.484 ;       ;       ; 5.484 ;
+; entrada2[25] ; salidaMuxAluSrcB[25] ; 5.556 ;       ;       ; 5.556 ;
+; entrada2[26] ; salidaMuxAluSrcB[26] ; 5.819 ;       ;       ; 5.819 ;
+; entrada2[27] ; salidaMuxAluSrcB[27] ; 5.689 ;       ;       ; 5.689 ;
+; entrada2[28] ; salidaMuxAluSrcB[28] ; 5.640 ;       ;       ; 5.640 ;
+; entrada2[29] ; salidaMuxAluSrcB[29] ; 5.823 ;       ;       ; 5.823 ;
+; entrada2[30] ; salidaMuxAluSrcB[30] ; 5.593 ;       ;       ; 5.593 ;
+; entrada2[31] ; salidaMuxAluSrcB[31] ; 5.679 ;       ;       ; 5.679 ;
+; entrada3[0]  ; salidaMuxAluSrcB[0]  ; 5.482 ;       ;       ; 5.482 ;
+; entrada3[1]  ; salidaMuxAluSrcB[1]  ; 5.360 ;       ;       ; 5.360 ;
+; entrada3[2]  ; salidaMuxAluSrcB[2]  ; 5.886 ;       ;       ; 5.886 ;
+; entrada3[3]  ; salidaMuxAluSrcB[3]  ; 5.464 ;       ;       ; 5.464 ;
+; entrada3[4]  ; salidaMuxAluSrcB[4]  ; 5.430 ;       ;       ; 5.430 ;
+; entrada3[5]  ; salidaMuxAluSrcB[5]  ; 5.601 ;       ;       ; 5.601 ;
+; entrada3[6]  ; salidaMuxAluSrcB[6]  ; 5.367 ;       ;       ; 5.367 ;
+; entrada3[7]  ; salidaMuxAluSrcB[7]  ; 5.265 ;       ;       ; 5.265 ;
+; entrada3[8]  ; salidaMuxAluSrcB[8]  ; 5.317 ;       ;       ; 5.317 ;
+; entrada3[9]  ; salidaMuxAluSrcB[9]  ; 5.522 ;       ;       ; 5.522 ;
+; entrada3[10] ; salidaMuxAluSrcB[10] ; 5.708 ;       ;       ; 5.708 ;
+; entrada3[11] ; salidaMuxAluSrcB[11] ; 5.694 ;       ;       ; 5.694 ;
+; entrada3[12] ; salidaMuxAluSrcB[12] ; 5.521 ;       ;       ; 5.521 ;
+; entrada3[13] ; salidaMuxAluSrcB[13] ; 5.305 ;       ;       ; 5.305 ;
+; entrada3[14] ; salidaMuxAluSrcB[14] ; 5.318 ;       ;       ; 5.318 ;
+; entrada3[15] ; salidaMuxAluSrcB[15] ; 5.703 ;       ;       ; 5.703 ;
+; entrada3[16] ; salidaMuxAluSrcB[16] ; 3.347 ;       ;       ; 3.347 ;
+; entrada3[17] ; salidaMuxAluSrcB[17] ; 5.005 ;       ;       ; 5.005 ;
+; entrada3[18] ; salidaMuxAluSrcB[18] ; 5.584 ;       ;       ; 5.584 ;
+; entrada3[19] ; salidaMuxAluSrcB[19] ; 5.435 ;       ;       ; 5.435 ;
+; entrada3[20] ; salidaMuxAluSrcB[20] ; 5.150 ;       ;       ; 5.150 ;
+; entrada3[21] ; salidaMuxAluSrcB[21] ; 5.279 ;       ;       ; 5.279 ;
+; entrada3[22] ; salidaMuxAluSrcB[22] ; 5.321 ;       ;       ; 5.321 ;
+; entrada3[23] ; salidaMuxAluSrcB[23] ; 5.332 ;       ;       ; 5.332 ;
+; entrada3[24] ; salidaMuxAluSrcB[24] ; 5.132 ;       ;       ; 5.132 ;
+; entrada3[25] ; salidaMuxAluSrcB[25] ; 5.245 ;       ;       ; 5.245 ;
+; entrada3[26] ; salidaMuxAluSrcB[26] ; 5.608 ;       ;       ; 5.608 ;
+; entrada3[27] ; salidaMuxAluSrcB[27] ; 5.679 ;       ;       ; 5.679 ;
+; entrada3[28] ; salidaMuxAluSrcB[28] ; 5.344 ;       ;       ; 5.344 ;
+; entrada3[29] ; salidaMuxAluSrcB[29] ; 5.317 ;       ;       ; 5.317 ;
+; entrada3[30] ; salidaMuxAluSrcB[30] ; 5.190 ;       ;       ; 5.190 ;
+; entrada3[31] ; salidaMuxAluSrcB[31] ; 5.388 ;       ;       ; 5.388 ;
+; selector[0]  ; salidaMuxAluSrcB[0]  ; 6.188 ; 6.335 ; 6.335 ; 6.188 ;
+; selector[0]  ; salidaMuxAluSrcB[1]  ; 5.992 ; 6.416 ; 6.416 ; 5.992 ;
+; selector[0]  ; salidaMuxAluSrcB[2]  ; 6.468 ; 6.220 ; 6.220 ; 6.468 ;
+; selector[0]  ; salidaMuxAluSrcB[3]  ; 6.113 ; 6.319 ; 6.319 ; 6.113 ;
+; selector[0]  ; salidaMuxAluSrcB[4]  ; 5.895 ; 6.240 ; 6.240 ; 5.895 ;
+; selector[0]  ; salidaMuxAluSrcB[5]  ; 6.225 ; 6.386 ; 6.386 ; 6.225 ;
+; selector[0]  ; salidaMuxAluSrcB[6]  ; 6.124 ; 6.407 ; 6.407 ; 6.124 ;
+; selector[0]  ; salidaMuxAluSrcB[7]  ; 5.888 ; 6.311 ; 6.311 ; 5.888 ;
+; selector[0]  ; salidaMuxAluSrcB[8]  ; 5.908 ; 6.061 ; 6.061 ; 5.908 ;
+; selector[0]  ; salidaMuxAluSrcB[9]  ; 5.686 ; 5.974 ; 5.974 ; 5.686 ;
+; selector[0]  ; salidaMuxAluSrcB[10] ; 5.886 ; 6.169 ; 6.169 ; 5.886 ;
+; selector[0]  ; salidaMuxAluSrcB[11] ; 5.897 ; 6.119 ; 6.119 ; 5.897 ;
+; selector[0]  ; salidaMuxAluSrcB[12] ; 5.866 ; 6.159 ; 6.159 ; 5.866 ;
+; selector[0]  ; salidaMuxAluSrcB[13] ; 5.744 ; 6.031 ; 6.031 ; 5.744 ;
+; selector[0]  ; salidaMuxAluSrcB[14] ; 5.651 ; 5.946 ; 5.946 ; 5.651 ;
+; selector[0]  ; salidaMuxAluSrcB[15] ; 5.786 ; 6.069 ; 6.069 ; 5.786 ;
+; selector[0]  ; salidaMuxAluSrcB[16] ; 5.680 ; 5.855 ; 5.855 ; 5.680 ;
+; selector[0]  ; salidaMuxAluSrcB[17] ; 5.579 ; 5.933 ; 5.933 ; 5.579 ;
+; selector[0]  ; salidaMuxAluSrcB[18] ; 5.683 ; 6.050 ; 6.050 ; 5.683 ;
+; selector[0]  ; salidaMuxAluSrcB[19] ; 5.699 ; 5.862 ; 5.862 ; 5.699 ;
+; selector[0]  ; salidaMuxAluSrcB[20] ; 5.577 ; 5.860 ; 5.860 ; 5.577 ;
+; selector[0]  ; salidaMuxAluSrcB[21] ; 5.702 ; 5.985 ; 5.985 ; 5.702 ;
+; selector[0]  ; salidaMuxAluSrcB[22] ; 5.522 ; 5.888 ; 5.888 ; 5.522 ;
+; selector[0]  ; salidaMuxAluSrcB[23] ; 5.272 ; 5.570 ; 5.570 ; 5.272 ;
+; selector[0]  ; salidaMuxAluSrcB[24] ; 5.234 ; 5.520 ; 5.520 ; 5.234 ;
+; selector[0]  ; salidaMuxAluSrcB[25] ; 5.210 ; 5.493 ; 5.493 ; 5.210 ;
+; selector[0]  ; salidaMuxAluSrcB[26] ; 5.386 ; 5.679 ; 5.679 ; 5.386 ;
+; selector[0]  ; salidaMuxAluSrcB[27] ; 5.420 ; 5.830 ; 5.830 ; 5.420 ;
+; selector[0]  ; salidaMuxAluSrcB[28] ; 5.101 ; 5.380 ; 5.380 ; 5.101 ;
+; selector[0]  ; salidaMuxAluSrcB[29] ; 5.413 ; 5.694 ; 5.694 ; 5.413 ;
+; selector[0]  ; salidaMuxAluSrcB[30] ; 5.213 ; 5.501 ; 5.501 ; 5.213 ;
+; selector[0]  ; salidaMuxAluSrcB[31] ; 5.677 ; 5.975 ; 5.975 ; 5.677 ;
+; selector[1]  ; salidaMuxAluSrcB[0]  ; 6.092 ; 6.092 ; 6.092 ; 6.092 ;
+; selector[1]  ; salidaMuxAluSrcB[1]  ; 6.157 ; 6.157 ; 6.157 ; 6.157 ;
+; selector[1]  ; salidaMuxAluSrcB[2]  ; 5.977 ; 6.189 ; 6.189 ; 5.977 ;
+; selector[1]  ; salidaMuxAluSrcB[3]  ; 6.320 ; 6.320 ; 6.320 ; 6.320 ;
+; selector[1]  ; salidaMuxAluSrcB[4]  ; 5.968 ; 5.968 ; 5.968 ; 5.968 ;
+; selector[1]  ; salidaMuxAluSrcB[5]  ; 6.366 ; 6.366 ; 6.366 ; 6.366 ;
+; selector[1]  ; salidaMuxAluSrcB[6]  ; 6.152 ; 6.152 ; 6.152 ; 6.152 ;
+; selector[1]  ; salidaMuxAluSrcB[7]  ; 6.040 ; 6.040 ; 6.040 ; 6.040 ;
+; selector[1]  ; salidaMuxAluSrcB[8]  ; 6.450 ; 6.450 ; 6.450 ; 6.450 ;
+; selector[1]  ; salidaMuxAluSrcB[9]  ; 6.370 ; 6.370 ; 6.370 ; 6.370 ;
+; selector[1]  ; salidaMuxAluSrcB[10] ; 6.488 ; 6.488 ; 6.488 ; 6.488 ;
+; selector[1]  ; salidaMuxAluSrcB[11] ; 6.445 ; 6.445 ; 6.445 ; 6.445 ;
+; selector[1]  ; salidaMuxAluSrcB[12] ; 6.485 ; 6.485 ; 6.485 ; 6.485 ;
+; selector[1]  ; salidaMuxAluSrcB[13] ; 6.354 ; 6.354 ; 6.354 ; 6.354 ;
+; selector[1]  ; salidaMuxAluSrcB[14] ; 6.272 ; 6.272 ; 6.272 ; 6.272 ;
+; selector[1]  ; salidaMuxAluSrcB[15] ; 6.387 ; 6.387 ; 6.387 ; 6.387 ;
+; selector[1]  ; salidaMuxAluSrcB[16] ; 6.420 ; 6.420 ; 6.420 ; 6.420 ;
+; selector[1]  ; salidaMuxAluSrcB[17] ; 6.299 ; 6.299 ; 6.299 ; 6.299 ;
+; selector[1]  ; salidaMuxAluSrcB[18] ; 6.431 ; 6.431 ; 6.431 ; 6.431 ;
+; selector[1]  ; salidaMuxAluSrcB[19] ; 6.425 ; 6.425 ; 6.425 ; 6.425 ;
+; selector[1]  ; salidaMuxAluSrcB[20] ; 6.424 ; 6.424 ; 6.424 ; 6.424 ;
+; selector[1]  ; salidaMuxAluSrcB[21] ; 6.568 ; 6.568 ; 6.568 ; 6.568 ;
+; selector[1]  ; salidaMuxAluSrcB[22] ; 6.258 ; 6.258 ; 6.258 ; 6.258 ;
+; selector[1]  ; salidaMuxAluSrcB[23] ; 6.209 ; 6.209 ; 6.209 ; 6.209 ;
+; selector[1]  ; salidaMuxAluSrcB[24] ; 6.238 ; 6.238 ; 6.238 ; 6.238 ;
+; selector[1]  ; salidaMuxAluSrcB[25] ; 6.124 ; 6.124 ; 6.124 ; 6.124 ;
+; selector[1]  ; salidaMuxAluSrcB[26] ; 6.392 ; 6.392 ; 6.392 ; 6.392 ;
+; selector[1]  ; salidaMuxAluSrcB[27] ; 6.337 ; 6.337 ; 6.337 ; 6.337 ;
+; selector[1]  ; salidaMuxAluSrcB[28] ; 6.025 ; 6.025 ; 6.025 ; 6.025 ;
+; selector[1]  ; salidaMuxAluSrcB[29] ; 6.342 ; 6.342 ; 6.342 ; 6.342 ;
+; selector[1]  ; salidaMuxAluSrcB[30] ; 6.132 ; 6.132 ; 6.132 ; 6.132 ;
+; selector[1]  ; salidaMuxAluSrcB[31] ; 6.539 ; 6.539 ; 6.539 ; 6.539 ;
++--------------+----------------------+-------+-------+-------+-------+
+
+
++---------------------------------------------------------------------+
+; Minimum Propagation Delay                                           ;
++--------------+----------------------+-------+-------+-------+-------+
+; Input Port   ; Output Port          ; RR    ; RF    ; FR    ; FF    ;
++--------------+----------------------+-------+-------+-------+-------+
+; entrada0[0]  ; salidaMuxAluSrcB[0]  ; 5.780 ;       ;       ; 5.780 ;
+; entrada0[1]  ; salidaMuxAluSrcB[1]  ; 5.684 ;       ;       ; 5.684 ;
+; entrada0[2]  ; salidaMuxAluSrcB[2]  ; 5.831 ;       ;       ; 5.831 ;
+; entrada0[3]  ; salidaMuxAluSrcB[3]  ; 5.950 ;       ;       ; 5.950 ;
+; entrada0[4]  ; salidaMuxAluSrcB[4]  ; 5.640 ;       ;       ; 5.640 ;
+; entrada0[5]  ; salidaMuxAluSrcB[5]  ; 5.867 ;       ;       ; 5.867 ;
+; entrada0[6]  ; salidaMuxAluSrcB[6]  ; 5.643 ;       ;       ; 5.643 ;
+; entrada0[7]  ; salidaMuxAluSrcB[7]  ; 5.613 ;       ;       ; 5.613 ;
+; entrada0[8]  ; salidaMuxAluSrcB[8]  ; 5.837 ;       ;       ; 5.837 ;
+; entrada0[9]  ; salidaMuxAluSrcB[9]  ; 5.702 ;       ;       ; 5.702 ;
+; entrada0[10] ; salidaMuxAluSrcB[10] ; 5.744 ;       ;       ; 5.744 ;
+; entrada0[11] ; salidaMuxAluSrcB[11] ; 6.017 ;       ;       ; 6.017 ;
+; entrada0[12] ; salidaMuxAluSrcB[12] ; 5.850 ;       ;       ; 5.850 ;
+; entrada0[13] ; salidaMuxAluSrcB[13] ; 5.846 ;       ;       ; 5.846 ;
+; entrada0[14] ; salidaMuxAluSrcB[14] ; 5.615 ;       ;       ; 5.615 ;
+; entrada0[15] ; salidaMuxAluSrcB[15] ; 3.439 ;       ;       ; 3.439 ;
+; entrada0[16] ; salidaMuxAluSrcB[16] ; 3.512 ;       ;       ; 3.512 ;
+; entrada0[17] ; salidaMuxAluSrcB[17] ; 5.353 ;       ;       ; 5.353 ;
+; entrada0[18] ; salidaMuxAluSrcB[18] ; 5.699 ;       ;       ; 5.699 ;
+; entrada0[19] ; salidaMuxAluSrcB[19] ; 5.744 ;       ;       ; 5.744 ;
+; entrada0[20] ; salidaMuxAluSrcB[20] ; 5.528 ;       ;       ; 5.528 ;
+; entrada0[21] ; salidaMuxAluSrcB[21] ; 5.699 ;       ;       ; 5.699 ;
+; entrada0[22] ; salidaMuxAluSrcB[22] ; 5.510 ;       ;       ; 5.510 ;
+; entrada0[23] ; salidaMuxAluSrcB[23] ; 5.763 ;       ;       ; 5.763 ;
+; entrada0[24] ; salidaMuxAluSrcB[24] ; 5.291 ;       ;       ; 5.291 ;
+; entrada0[25] ; salidaMuxAluSrcB[25] ; 5.324 ;       ;       ; 5.324 ;
+; entrada0[26] ; salidaMuxAluSrcB[26] ; 5.587 ;       ;       ; 5.587 ;
+; entrada0[27] ; salidaMuxAluSrcB[27] ; 5.582 ;       ;       ; 5.582 ;
+; entrada0[28] ; salidaMuxAluSrcB[28] ; 5.412 ;       ;       ; 5.412 ;
+; entrada0[29] ; salidaMuxAluSrcB[29] ; 5.828 ;       ;       ; 5.828 ;
+; entrada0[30] ; salidaMuxAluSrcB[30] ; 5.560 ;       ;       ; 5.560 ;
+; entrada0[31] ; salidaMuxAluSrcB[31] ; 5.510 ;       ;       ; 5.510 ;
+; entrada2[0]  ; salidaMuxAluSrcB[0]  ; 5.603 ;       ;       ; 5.603 ;
+; entrada2[1]  ; salidaMuxAluSrcB[1]  ; 5.590 ;       ;       ; 5.590 ;
+; entrada2[2]  ; salidaMuxAluSrcB[2]  ; 5.446 ;       ;       ; 5.446 ;
+; entrada2[3]  ; salidaMuxAluSrcB[3]  ; 5.824 ;       ;       ; 5.824 ;
+; entrada2[4]  ; salidaMuxAluSrcB[4]  ; 5.579 ;       ;       ; 5.579 ;
+; entrada2[5]  ; salidaMuxAluSrcB[5]  ; 5.782 ;       ;       ; 5.782 ;
+; entrada2[6]  ; salidaMuxAluSrcB[6]  ; 5.645 ;       ;       ; 5.645 ;
+; entrada2[7]  ; salidaMuxAluSrcB[7]  ; 5.684 ;       ;       ; 5.684 ;
+; entrada2[8]  ; salidaMuxAluSrcB[8]  ; 5.849 ;       ;       ; 5.849 ;
+; entrada2[9]  ; salidaMuxAluSrcB[9]  ; 5.801 ;       ;       ; 5.801 ;
+; entrada2[10] ; salidaMuxAluSrcB[10] ; 6.064 ;       ;       ; 6.064 ;
+; entrada2[11] ; salidaMuxAluSrcB[11] ; 5.855 ;       ;       ; 5.855 ;
+; entrada2[12] ; salidaMuxAluSrcB[12] ; 5.830 ;       ;       ; 5.830 ;
+; entrada2[13] ; salidaMuxAluSrcB[13] ; 5.603 ;       ;       ; 5.603 ;
+; entrada2[14] ; salidaMuxAluSrcB[14] ; 5.520 ;       ;       ; 5.520 ;
+; entrada2[15] ; salidaMuxAluSrcB[15] ; 3.427 ;       ;       ; 3.427 ;
+; entrada2[16] ; salidaMuxAluSrcB[16] ; 5.296 ;       ;       ; 5.296 ;
+; entrada2[17] ; salidaMuxAluSrcB[17] ; 5.599 ;       ;       ; 5.599 ;
+; entrada2[18] ; salidaMuxAluSrcB[18] ; 5.784 ;       ;       ; 5.784 ;
+; entrada2[19] ; salidaMuxAluSrcB[19] ; 5.441 ;       ;       ; 5.441 ;
+; entrada2[20] ; salidaMuxAluSrcB[20] ; 5.566 ;       ;       ; 5.566 ;
+; entrada2[21] ; salidaMuxAluSrcB[21] ; 5.766 ;       ;       ; 5.766 ;
+; entrada2[22] ; salidaMuxAluSrcB[22] ; 5.446 ;       ;       ; 5.446 ;
+; entrada2[23] ; salidaMuxAluSrcB[23] ; 5.555 ;       ;       ; 5.555 ;
+; entrada2[24] ; salidaMuxAluSrcB[24] ; 5.484 ;       ;       ; 5.484 ;
+; entrada2[25] ; salidaMuxAluSrcB[25] ; 5.556 ;       ;       ; 5.556 ;
+; entrada2[26] ; salidaMuxAluSrcB[26] ; 5.819 ;       ;       ; 5.819 ;
+; entrada2[27] ; salidaMuxAluSrcB[27] ; 5.689 ;       ;       ; 5.689 ;
+; entrada2[28] ; salidaMuxAluSrcB[28] ; 5.640 ;       ;       ; 5.640 ;
+; entrada2[29] ; salidaMuxAluSrcB[29] ; 5.823 ;       ;       ; 5.823 ;
+; entrada2[30] ; salidaMuxAluSrcB[30] ; 5.593 ;       ;       ; 5.593 ;
+; entrada2[31] ; salidaMuxAluSrcB[31] ; 5.679 ;       ;       ; 5.679 ;
+; entrada3[0]  ; salidaMuxAluSrcB[0]  ; 5.482 ;       ;       ; 5.482 ;
+; entrada3[1]  ; salidaMuxAluSrcB[1]  ; 5.360 ;       ;       ; 5.360 ;
+; entrada3[2]  ; salidaMuxAluSrcB[2]  ; 5.886 ;       ;       ; 5.886 ;
+; entrada3[3]  ; salidaMuxAluSrcB[3]  ; 5.464 ;       ;       ; 5.464 ;
+; entrada3[4]  ; salidaMuxAluSrcB[4]  ; 5.430 ;       ;       ; 5.430 ;
+; entrada3[5]  ; salidaMuxAluSrcB[5]  ; 5.601 ;       ;       ; 5.601 ;
+; entrada3[6]  ; salidaMuxAluSrcB[6]  ; 5.367 ;       ;       ; 5.367 ;
+; entrada3[7]  ; salidaMuxAluSrcB[7]  ; 5.265 ;       ;       ; 5.265 ;
+; entrada3[8]  ; salidaMuxAluSrcB[8]  ; 5.317 ;       ;       ; 5.317 ;
+; entrada3[9]  ; salidaMuxAluSrcB[9]  ; 5.522 ;       ;       ; 5.522 ;
+; entrada3[10] ; salidaMuxAluSrcB[10] ; 5.708 ;       ;       ; 5.708 ;
+; entrada3[11] ; salidaMuxAluSrcB[11] ; 5.694 ;       ;       ; 5.694 ;
+; entrada3[12] ; salidaMuxAluSrcB[12] ; 5.521 ;       ;       ; 5.521 ;
+; entrada3[13] ; salidaMuxAluSrcB[13] ; 5.305 ;       ;       ; 5.305 ;
+; entrada3[14] ; salidaMuxAluSrcB[14] ; 5.318 ;       ;       ; 5.318 ;
+; entrada3[15] ; salidaMuxAluSrcB[15] ; 5.703 ;       ;       ; 5.703 ;
+; entrada3[16] ; salidaMuxAluSrcB[16] ; 3.347 ;       ;       ; 3.347 ;
+; entrada3[17] ; salidaMuxAluSrcB[17] ; 5.005 ;       ;       ; 5.005 ;
+; entrada3[18] ; salidaMuxAluSrcB[18] ; 5.584 ;       ;       ; 5.584 ;
+; entrada3[19] ; salidaMuxAluSrcB[19] ; 5.435 ;       ;       ; 5.435 ;
+; entrada3[20] ; salidaMuxAluSrcB[20] ; 5.150 ;       ;       ; 5.150 ;
+; entrada3[21] ; salidaMuxAluSrcB[21] ; 5.279 ;       ;       ; 5.279 ;
+; entrada3[22] ; salidaMuxAluSrcB[22] ; 5.321 ;       ;       ; 5.321 ;
+; entrada3[23] ; salidaMuxAluSrcB[23] ; 5.332 ;       ;       ; 5.332 ;
+; entrada3[24] ; salidaMuxAluSrcB[24] ; 5.132 ;       ;       ; 5.132 ;
+; entrada3[25] ; salidaMuxAluSrcB[25] ; 5.245 ;       ;       ; 5.245 ;
+; entrada3[26] ; salidaMuxAluSrcB[26] ; 5.608 ;       ;       ; 5.608 ;
+; entrada3[27] ; salidaMuxAluSrcB[27] ; 5.679 ;       ;       ; 5.679 ;
+; entrada3[28] ; salidaMuxAluSrcB[28] ; 5.344 ;       ;       ; 5.344 ;
+; entrada3[29] ; salidaMuxAluSrcB[29] ; 5.317 ;       ;       ; 5.317 ;
+; entrada3[30] ; salidaMuxAluSrcB[30] ; 5.190 ;       ;       ; 5.190 ;
+; entrada3[31] ; salidaMuxAluSrcB[31] ; 5.388 ;       ;       ; 5.388 ;
+; selector[0]  ; salidaMuxAluSrcB[0]  ; 6.188 ; 6.335 ; 6.335 ; 6.188 ;
+; selector[0]  ; salidaMuxAluSrcB[1]  ; 5.992 ; 6.416 ; 6.416 ; 5.992 ;
+; selector[0]  ; salidaMuxAluSrcB[2]  ; 6.468 ; 6.220 ; 6.220 ; 6.468 ;
+; selector[0]  ; salidaMuxAluSrcB[3]  ; 6.113 ; 6.319 ; 6.319 ; 6.113 ;
+; selector[0]  ; salidaMuxAluSrcB[4]  ; 5.895 ; 6.240 ; 6.240 ; 5.895 ;
+; selector[0]  ; salidaMuxAluSrcB[5]  ; 6.225 ; 6.386 ; 6.386 ; 6.225 ;
+; selector[0]  ; salidaMuxAluSrcB[6]  ; 6.124 ; 6.407 ; 6.407 ; 6.124 ;
+; selector[0]  ; salidaMuxAluSrcB[7]  ; 5.888 ; 6.311 ; 6.311 ; 5.888 ;
+; selector[0]  ; salidaMuxAluSrcB[8]  ; 5.908 ; 6.061 ; 6.061 ; 5.908 ;
+; selector[0]  ; salidaMuxAluSrcB[9]  ; 5.686 ; 5.974 ; 5.974 ; 5.686 ;
+; selector[0]  ; salidaMuxAluSrcB[10] ; 5.886 ; 6.169 ; 6.169 ; 5.886 ;
+; selector[0]  ; salidaMuxAluSrcB[11] ; 5.897 ; 6.119 ; 6.119 ; 5.897 ;
+; selector[0]  ; salidaMuxAluSrcB[12] ; 5.866 ; 6.159 ; 6.159 ; 5.866 ;
+; selector[0]  ; salidaMuxAluSrcB[13] ; 5.744 ; 6.031 ; 6.031 ; 5.744 ;
+; selector[0]  ; salidaMuxAluSrcB[14] ; 5.651 ; 5.946 ; 5.946 ; 5.651 ;
+; selector[0]  ; salidaMuxAluSrcB[15] ; 5.786 ; 6.069 ; 6.069 ; 5.786 ;
+; selector[0]  ; salidaMuxAluSrcB[16] ; 5.680 ; 5.855 ; 5.855 ; 5.680 ;
+; selector[0]  ; salidaMuxAluSrcB[17] ; 5.579 ; 5.933 ; 5.933 ; 5.579 ;
+; selector[0]  ; salidaMuxAluSrcB[18] ; 5.683 ; 6.050 ; 6.050 ; 5.683 ;
+; selector[0]  ; salidaMuxAluSrcB[19] ; 5.699 ; 5.862 ; 5.862 ; 5.699 ;
+; selector[0]  ; salidaMuxAluSrcB[20] ; 5.577 ; 5.860 ; 5.860 ; 5.577 ;
+; selector[0]  ; salidaMuxAluSrcB[21] ; 5.702 ; 5.985 ; 5.985 ; 5.702 ;
+; selector[0]  ; salidaMuxAluSrcB[22] ; 5.522 ; 5.888 ; 5.888 ; 5.522 ;
+; selector[0]  ; salidaMuxAluSrcB[23] ; 5.272 ; 5.570 ; 5.570 ; 5.272 ;
+; selector[0]  ; salidaMuxAluSrcB[24] ; 5.234 ; 5.520 ; 5.520 ; 5.234 ;
+; selector[0]  ; salidaMuxAluSrcB[25] ; 5.210 ; 5.493 ; 5.493 ; 5.210 ;
+; selector[0]  ; salidaMuxAluSrcB[26] ; 5.386 ; 5.679 ; 5.679 ; 5.386 ;
+; selector[0]  ; salidaMuxAluSrcB[27] ; 5.420 ; 5.830 ; 5.830 ; 5.420 ;
+; selector[0]  ; salidaMuxAluSrcB[28] ; 5.101 ; 5.380 ; 5.380 ; 5.101 ;
+; selector[0]  ; salidaMuxAluSrcB[29] ; 5.413 ; 5.694 ; 5.694 ; 5.413 ;
+; selector[0]  ; salidaMuxAluSrcB[30] ; 5.213 ; 5.501 ; 5.501 ; 5.213 ;
+; selector[0]  ; salidaMuxAluSrcB[31] ; 5.677 ; 5.975 ; 5.975 ; 5.677 ;
+; selector[1]  ; salidaMuxAluSrcB[0]  ; 6.035 ; 6.092 ; 6.092 ; 6.035 ;
+; selector[1]  ; salidaMuxAluSrcB[1]  ; 5.991 ; 6.157 ; 6.157 ; 5.991 ;
+; selector[1]  ; salidaMuxAluSrcB[2]  ; 5.977 ; 6.189 ; 6.189 ; 5.977 ;
+; selector[1]  ; salidaMuxAluSrcB[3]  ; 6.095 ; 6.320 ; 6.320 ; 6.095 ;
+; selector[1]  ; salidaMuxAluSrcB[4]  ; 5.870 ; 5.968 ; 5.968 ; 5.870 ;
+; selector[1]  ; salidaMuxAluSrcB[5]  ; 5.966 ; 6.366 ; 6.366 ; 5.966 ;
+; selector[1]  ; salidaMuxAluSrcB[6]  ; 5.869 ; 6.152 ; 6.152 ; 5.869 ;
+; selector[1]  ; salidaMuxAluSrcB[7]  ; 5.866 ; 6.040 ; 6.040 ; 5.866 ;
+; selector[1]  ; salidaMuxAluSrcB[8]  ; 6.095 ; 6.450 ; 6.450 ; 6.095 ;
+; selector[1]  ; salidaMuxAluSrcB[9]  ; 6.006 ; 6.370 ; 6.370 ; 6.006 ;
+; selector[1]  ; salidaMuxAluSrcB[10] ; 6.202 ; 6.488 ; 6.488 ; 6.202 ;
+; selector[1]  ; salidaMuxAluSrcB[11] ; 6.286 ; 6.445 ; 6.445 ; 6.286 ;
+; selector[1]  ; salidaMuxAluSrcB[12] ; 6.189 ; 6.485 ; 6.485 ; 6.189 ;
+; selector[1]  ; salidaMuxAluSrcB[13] ; 6.059 ; 6.354 ; 6.354 ; 6.059 ;
+; selector[1]  ; salidaMuxAluSrcB[14] ; 5.973 ; 6.272 ; 6.272 ; 5.973 ;
+; selector[1]  ; salidaMuxAluSrcB[15] ; 6.109 ; 6.387 ; 6.387 ; 6.109 ;
+; selector[1]  ; salidaMuxAluSrcB[16] ; 6.256 ; 6.420 ; 6.420 ; 6.256 ;
+; selector[1]  ; salidaMuxAluSrcB[17] ; 6.143 ; 6.299 ; 6.299 ; 6.143 ;
+; selector[1]  ; salidaMuxAluSrcB[18] ; 6.137 ; 6.431 ; 6.431 ; 6.137 ;
+; selector[1]  ; salidaMuxAluSrcB[19] ; 6.267 ; 6.425 ; 6.425 ; 6.267 ;
+; selector[1]  ; salidaMuxAluSrcB[20] ; 6.141 ; 6.424 ; 6.424 ; 6.141 ;
+; selector[1]  ; salidaMuxAluSrcB[21] ; 6.136 ; 6.568 ; 6.568 ; 6.136 ;
+; selector[1]  ; salidaMuxAluSrcB[22] ; 5.958 ; 6.258 ; 6.258 ; 5.958 ;
+; selector[1]  ; salidaMuxAluSrcB[23] ; 5.914 ; 6.209 ; 6.209 ; 5.914 ;
+; selector[1]  ; salidaMuxAluSrcB[24] ; 5.950 ; 6.238 ; 6.238 ; 5.950 ;
+; selector[1]  ; salidaMuxAluSrcB[25] ; 5.838 ; 6.124 ; 6.124 ; 5.838 ;
+; selector[1]  ; salidaMuxAluSrcB[26] ; 6.013 ; 6.392 ; 6.392 ; 6.013 ;
+; selector[1]  ; salidaMuxAluSrcB[27] ; 6.051 ; 6.337 ; 6.337 ; 6.051 ;
+; selector[1]  ; salidaMuxAluSrcB[28] ; 5.729 ; 6.025 ; 6.025 ; 5.729 ;
+; selector[1]  ; salidaMuxAluSrcB[29] ; 6.037 ; 6.342 ; 6.342 ; 6.037 ;
+; selector[1]  ; salidaMuxAluSrcB[30] ; 5.839 ; 6.132 ; 6.132 ; 5.839 ;
+; selector[1]  ; salidaMuxAluSrcB[31] ; 6.256 ; 6.539 ; 6.539 ; 6.256 ;
++--------------+----------------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
++------------------+-------+------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Progagation Delay                                                       ;
++--------------+----------------------+--------+--------+--------+--------+
+; Input Port   ; Output Port          ; RR     ; RF     ; FR     ; FF     ;
++--------------+----------------------+--------+--------+--------+--------+
+; entrada0[0]  ; salidaMuxAluSrcB[0]  ; 11.844 ;        ;        ; 11.844 ;
+; entrada0[1]  ; salidaMuxAluSrcB[1]  ; 11.454 ;        ;        ; 11.454 ;
+; entrada0[2]  ; salidaMuxAluSrcB[2]  ; 11.782 ;        ;        ; 11.782 ;
+; entrada0[3]  ; salidaMuxAluSrcB[3]  ; 12.107 ;        ;        ; 12.107 ;
+; entrada0[4]  ; salidaMuxAluSrcB[4]  ; 11.385 ;        ;        ; 11.385 ;
+; entrada0[5]  ; salidaMuxAluSrcB[5]  ; 11.983 ;        ;        ; 11.983 ;
+; entrada0[6]  ; salidaMuxAluSrcB[6]  ; 11.383 ;        ;        ; 11.383 ;
+; entrada0[7]  ; salidaMuxAluSrcB[7]  ; 11.388 ;        ;        ; 11.388 ;
+; entrada0[8]  ; salidaMuxAluSrcB[8]  ; 11.818 ;        ;        ; 11.818 ;
+; entrada0[9]  ; salidaMuxAluSrcB[9]  ; 11.488 ;        ;        ; 11.488 ;
+; entrada0[10] ; salidaMuxAluSrcB[10] ; 11.706 ;        ;        ; 11.706 ;
+; entrada0[11] ; salidaMuxAluSrcB[11] ; 12.323 ;        ;        ; 12.323 ;
+; entrada0[12] ; salidaMuxAluSrcB[12] ; 11.976 ;        ;        ; 11.976 ;
+; entrada0[13] ; salidaMuxAluSrcB[13] ; 12.006 ;        ;        ; 12.006 ;
+; entrada0[14] ; salidaMuxAluSrcB[14] ; 11.415 ;        ;        ; 11.415 ;
+; entrada0[15] ; salidaMuxAluSrcB[15] ; 7.714  ;        ;        ; 7.714  ;
+; entrada0[16] ; salidaMuxAluSrcB[16] ; 7.787  ;        ;        ; 7.787  ;
+; entrada0[17] ; salidaMuxAluSrcB[17] ; 10.502 ;        ;        ; 10.502 ;
+; entrada0[18] ; salidaMuxAluSrcB[18] ; 11.481 ;        ;        ; 11.481 ;
+; entrada0[19] ; salidaMuxAluSrcB[19] ; 11.610 ;        ;        ; 11.610 ;
+; entrada0[20] ; salidaMuxAluSrcB[20] ; 11.008 ;        ;        ; 11.008 ;
+; entrada0[21] ; salidaMuxAluSrcB[21] ; 11.429 ;        ;        ; 11.429 ;
+; entrada0[22] ; salidaMuxAluSrcB[22] ; 11.100 ;        ;        ; 11.100 ;
+; entrada0[23] ; salidaMuxAluSrcB[23] ; 11.629 ;        ;        ; 11.629 ;
+; entrada0[24] ; salidaMuxAluSrcB[24] ; 10.459 ;        ;        ; 10.459 ;
+; entrada0[25] ; salidaMuxAluSrcB[25] ; 10.672 ;        ;        ; 10.672 ;
+; entrada0[26] ; salidaMuxAluSrcB[26] ; 11.263 ;        ;        ; 11.263 ;
+; entrada0[27] ; salidaMuxAluSrcB[27] ; 11.133 ;        ;        ; 11.133 ;
+; entrada0[28] ; salidaMuxAluSrcB[28] ; 10.798 ;        ;        ; 10.798 ;
+; entrada0[29] ; salidaMuxAluSrcB[29] ; 11.860 ;        ;        ; 11.860 ;
+; entrada0[30] ; salidaMuxAluSrcB[30] ; 11.290 ;        ;        ; 11.290 ;
+; entrada0[31] ; salidaMuxAluSrcB[31] ; 10.946 ;        ;        ; 10.946 ;
+; entrada2[0]  ; salidaMuxAluSrcB[0]  ; 11.377 ;        ;        ; 11.377 ;
+; entrada2[1]  ; salidaMuxAluSrcB[1]  ; 11.248 ;        ;        ; 11.248 ;
+; entrada2[2]  ; salidaMuxAluSrcB[2]  ; 10.825 ;        ;        ; 10.825 ;
+; entrada2[3]  ; salidaMuxAluSrcB[3]  ; 11.779 ;        ;        ; 11.779 ;
+; entrada2[4]  ; salidaMuxAluSrcB[4]  ; 11.198 ;        ;        ; 11.198 ;
+; entrada2[5]  ; salidaMuxAluSrcB[5]  ; 11.732 ;        ;        ; 11.732 ;
+; entrada2[6]  ; salidaMuxAluSrcB[6]  ; 11.425 ;        ;        ; 11.425 ;
+; entrada2[7]  ; salidaMuxAluSrcB[7]  ; 11.499 ;        ;        ; 11.499 ;
+; entrada2[8]  ; salidaMuxAluSrcB[8]  ; 11.957 ;        ;        ; 11.957 ;
+; entrada2[9]  ; salidaMuxAluSrcB[9]  ; 11.747 ;        ;        ; 11.747 ;
+; entrada2[10] ; salidaMuxAluSrcB[10] ; 12.519 ;        ;        ; 12.519 ;
+; entrada2[11] ; salidaMuxAluSrcB[11] ; 11.817 ;        ;        ; 11.817 ;
+; entrada2[12] ; salidaMuxAluSrcB[12] ; 11.988 ;        ;        ; 11.988 ;
+; entrada2[13] ; salidaMuxAluSrcB[13] ; 11.369 ;        ;        ; 11.369 ;
+; entrada2[14] ; salidaMuxAluSrcB[14] ; 11.119 ;        ;        ; 11.119 ;
+; entrada2[15] ; salidaMuxAluSrcB[15] ; 7.673  ;        ;        ; 7.673  ;
+; entrada2[16] ; salidaMuxAluSrcB[16] ; 10.340 ;        ;        ; 10.340 ;
+; entrada2[17] ; salidaMuxAluSrcB[17] ; 11.120 ;        ;        ; 11.120 ;
+; entrada2[18] ; salidaMuxAluSrcB[18] ; 11.585 ;        ;        ; 11.585 ;
+; entrada2[19] ; salidaMuxAluSrcB[19] ; 10.694 ;        ;        ; 10.694 ;
+; entrada2[20] ; salidaMuxAluSrcB[20] ; 11.091 ;        ;        ; 11.091 ;
+; entrada2[21] ; salidaMuxAluSrcB[21] ; 11.616 ;        ;        ; 11.616 ;
+; entrada2[22] ; salidaMuxAluSrcB[22] ; 10.908 ;        ;        ; 10.908 ;
+; entrada2[23] ; salidaMuxAluSrcB[23] ; 11.198 ;        ;        ; 11.198 ;
+; entrada2[24] ; salidaMuxAluSrcB[24] ; 10.995 ;        ;        ; 10.995 ;
+; entrada2[25] ; salidaMuxAluSrcB[25] ; 11.271 ;        ;        ; 11.271 ;
+; entrada2[26] ; salidaMuxAluSrcB[26] ; 11.832 ;        ;        ; 11.832 ;
+; entrada2[27] ; salidaMuxAluSrcB[27] ; 11.499 ;        ;        ; 11.499 ;
+; entrada2[28] ; salidaMuxAluSrcB[28] ; 11.432 ;        ;        ; 11.432 ;
+; entrada2[29] ; salidaMuxAluSrcB[29] ; 11.847 ;        ;        ; 11.847 ;
+; entrada2[30] ; salidaMuxAluSrcB[30] ; 11.350 ;        ;        ; 11.350 ;
+; entrada2[31] ; salidaMuxAluSrcB[31] ; 11.327 ;        ;        ; 11.327 ;
+; entrada3[0]  ; salidaMuxAluSrcB[0]  ; 10.948 ;        ;        ; 10.948 ;
+; entrada3[1]  ; salidaMuxAluSrcB[1]  ; 10.613 ;        ;        ; 10.613 ;
+; entrada3[2]  ; salidaMuxAluSrcB[2]  ; 11.962 ;        ;        ; 11.962 ;
+; entrada3[3]  ; salidaMuxAluSrcB[3]  ; 10.881 ;        ;        ; 10.881 ;
+; entrada3[4]  ; salidaMuxAluSrcB[4]  ; 10.722 ;        ;        ; 10.722 ;
+; entrada3[5]  ; salidaMuxAluSrcB[5]  ; 11.215 ;        ;        ; 11.215 ;
+; entrada3[6]  ; salidaMuxAluSrcB[6]  ; 10.526 ;        ;        ; 10.526 ;
+; entrada3[7]  ; salidaMuxAluSrcB[7]  ; 10.342 ;        ;        ; 10.342 ;
+; entrada3[8]  ; salidaMuxAluSrcB[8]  ; 10.475 ;        ;        ; 10.475 ;
+; entrada3[9]  ; salidaMuxAluSrcB[9]  ; 10.987 ;        ;        ; 10.987 ;
+; entrada3[10] ; salidaMuxAluSrcB[10] ; 11.512 ;        ;        ; 11.512 ;
+; entrada3[11] ; salidaMuxAluSrcB[11] ; 11.474 ;        ;        ; 11.474 ;
+; entrada3[12] ; salidaMuxAluSrcB[12] ; 11.074 ;        ;        ; 11.074 ;
+; entrada3[13] ; salidaMuxAluSrcB[13] ; 10.508 ;        ;        ; 10.508 ;
+; entrada3[14] ; salidaMuxAluSrcB[14] ; 10.523 ;        ;        ; 10.523 ;
+; entrada3[15] ; salidaMuxAluSrcB[15] ; 11.479 ;        ;        ; 11.479 ;
+; entrada3[16] ; salidaMuxAluSrcB[16] ; 7.320  ;        ;        ; 7.320  ;
+; entrada3[17] ; salidaMuxAluSrcB[17] ; 9.571  ;        ;        ; 9.571  ;
+; entrada3[18] ; salidaMuxAluSrcB[18] ; 11.146 ;        ;        ; 11.146 ;
+; entrada3[19] ; salidaMuxAluSrcB[19] ; 10.671 ;        ;        ; 10.671 ;
+; entrada3[20] ; salidaMuxAluSrcB[20] ; 9.913  ;        ;        ; 9.913  ;
+; entrada3[21] ; salidaMuxAluSrcB[21] ; 10.246 ;        ;        ; 10.246 ;
+; entrada3[22] ; salidaMuxAluSrcB[22] ; 10.575 ;        ;        ; 10.575 ;
+; entrada3[23] ; salidaMuxAluSrcB[23] ; 10.549 ;        ;        ; 10.549 ;
+; entrada3[24] ; salidaMuxAluSrcB[24] ; 10.031 ;        ;        ; 10.031 ;
+; entrada3[25] ; salidaMuxAluSrcB[25] ; 10.470 ;        ;        ; 10.470 ;
+; entrada3[26] ; salidaMuxAluSrcB[26] ; 11.222 ;        ;        ; 11.222 ;
+; entrada3[27] ; salidaMuxAluSrcB[27] ; 11.337 ;        ;        ; 11.337 ;
+; entrada3[28] ; salidaMuxAluSrcB[28] ; 10.552 ;        ;        ; 10.552 ;
+; entrada3[29] ; salidaMuxAluSrcB[29] ; 10.407 ;        ;        ; 10.407 ;
+; entrada3[30] ; salidaMuxAluSrcB[30] ; 10.248 ;        ;        ; 10.248 ;
+; entrada3[31] ; salidaMuxAluSrcB[31] ; 10.559 ;        ;        ; 10.559 ;
+; selector[0]  ; salidaMuxAluSrcB[0]  ; 12.428 ; 12.794 ; 12.794 ; 12.428 ;
+; selector[0]  ; salidaMuxAluSrcB[1]  ; 11.757 ; 12.921 ; 12.921 ; 11.757 ;
+; selector[0]  ; salidaMuxAluSrcB[2]  ; 13.019 ; 12.417 ; 12.417 ; 13.019 ;
+; selector[0]  ; salidaMuxAluSrcB[3]  ; 12.057 ; 12.621 ; 12.621 ; 12.057 ;
+; selector[0]  ; salidaMuxAluSrcB[4]  ; 11.490 ; 12.373 ; 12.373 ; 11.490 ;
+; selector[0]  ; salidaMuxAluSrcB[5]  ; 12.432 ; 12.854 ; 12.854 ; 12.432 ;
+; selector[0]  ; salidaMuxAluSrcB[6]  ; 12.149 ; 12.876 ; 12.876 ; 12.149 ;
+; selector[0]  ; salidaMuxAluSrcB[7]  ; 11.479 ; 12.643 ; 12.643 ; 11.479 ;
+; selector[0]  ; salidaMuxAluSrcB[8]  ; 11.644 ; 12.067 ; 12.067 ; 11.644 ;
+; selector[0]  ; salidaMuxAluSrcB[9]  ; 10.997 ; 11.815 ; 11.815 ; 10.997 ;
+; selector[0]  ; salidaMuxAluSrcB[10] ; 11.557 ; 12.370 ; 12.370 ; 11.557 ;
+; selector[0]  ; salidaMuxAluSrcB[11] ; 11.557 ; 12.143 ; 12.143 ; 11.557 ;
+; selector[0]  ; salidaMuxAluSrcB[12] ; 11.521 ; 12.382 ; 12.382 ; 11.521 ;
+; selector[0]  ; salidaMuxAluSrcB[13] ; 11.216 ; 12.063 ; 12.063 ; 11.216 ;
+; selector[0]  ; salidaMuxAluSrcB[14] ; 10.952 ; 11.814 ; 11.814 ; 10.952 ;
+; selector[0]  ; salidaMuxAluSrcB[15] ; 11.262 ; 12.074 ; 12.074 ; 11.262 ;
+; selector[0]  ; salidaMuxAluSrcB[16] ; 11.173 ; 11.653 ; 11.653 ; 11.173 ;
+; selector[0]  ; salidaMuxAluSrcB[17] ; 10.900 ; 11.856 ; 11.856 ; 10.900 ;
+; selector[0]  ; salidaMuxAluSrcB[18] ; 11.174 ; 12.180 ; 12.180 ; 11.174 ;
+; selector[0]  ; salidaMuxAluSrcB[19] ; 11.188 ; 11.656 ; 11.656 ; 11.188 ;
+; selector[0]  ; salidaMuxAluSrcB[20] ; 10.897 ; 11.711 ; 11.711 ; 10.897 ;
+; selector[0]  ; salidaMuxAluSrcB[21] ; 11.196 ; 12.048 ; 12.048 ; 11.196 ;
+; selector[0]  ; salidaMuxAluSrcB[22] ; 10.870 ; 11.874 ; 11.874 ; 10.870 ;
+; selector[0]  ; salidaMuxAluSrcB[23] ; 10.176 ; 11.041 ; 11.041 ; 10.176 ;
+; selector[0]  ; salidaMuxAluSrcB[24] ; 10.121 ; 10.934 ; 10.934 ; 10.121 ;
+; selector[0]  ; salidaMuxAluSrcB[25] ; 10.101 ; 10.914 ; 10.914 ; 10.101 ;
+; selector[0]  ; salidaMuxAluSrcB[26] ; 10.487 ; 11.343 ; 11.343 ; 10.487 ;
+; selector[0]  ; salidaMuxAluSrcB[27] ; 10.522 ; 11.635 ; 11.635 ; 10.522 ;
+; selector[0]  ; salidaMuxAluSrcB[28] ; 9.777  ; 10.621 ; 10.621 ; 9.777  ;
+; selector[0]  ; salidaMuxAluSrcB[29] ; 10.527 ; 11.374 ; 11.374 ; 10.527 ;
+; selector[0]  ; salidaMuxAluSrcB[30] ; 10.103 ; 10.920 ; 10.920 ; 10.103 ;
+; selector[0]  ; salidaMuxAluSrcB[31] ; 11.170 ; 11.997 ; 11.997 ; 11.170 ;
+; selector[1]  ; salidaMuxAluSrcB[0]  ; 12.389 ; 12.389 ; 12.389 ; 12.389 ;
+; selector[1]  ; salidaMuxAluSrcB[1]  ; 12.498 ; 12.498 ; 12.498 ; 12.498 ;
+; selector[1]  ; salidaMuxAluSrcB[2]  ; 11.924 ; 12.500 ; 12.500 ; 11.924 ;
+; selector[1]  ; salidaMuxAluSrcB[3]  ; 12.861 ; 12.861 ; 12.861 ; 12.861 ;
+; selector[1]  ; salidaMuxAluSrcB[4]  ; 11.942 ; 11.942 ; 11.942 ; 11.942 ;
+; selector[1]  ; salidaMuxAluSrcB[5]  ; 13.074 ; 13.074 ; 13.074 ; 13.074 ;
+; selector[1]  ; salidaMuxAluSrcB[6]  ; 12.459 ; 12.459 ; 12.459 ; 12.459 ;
+; selector[1]  ; salidaMuxAluSrcB[7]  ; 12.212 ; 12.212 ; 12.212 ; 12.212 ;
+; selector[1]  ; salidaMuxAluSrcB[8]  ; 13.188 ; 13.188 ; 13.188 ; 13.188 ;
+; selector[1]  ; salidaMuxAluSrcB[9]  ; 12.942 ; 12.942 ; 12.942 ; 12.942 ;
+; selector[1]  ; salidaMuxAluSrcB[10] ; 13.297 ; 13.297 ; 13.297 ; 13.297 ;
+; selector[1]  ; salidaMuxAluSrcB[11] ; 13.075 ; 13.075 ; 13.075 ; 13.075 ;
+; selector[1]  ; salidaMuxAluSrcB[12] ; 13.314 ; 13.314 ; 13.314 ; 13.314 ;
+; selector[1]  ; salidaMuxAluSrcB[13] ; 12.996 ; 12.996 ; 12.996 ; 12.996 ;
+; selector[1]  ; salidaMuxAluSrcB[14] ; 12.746 ; 12.746 ; 12.746 ; 12.746 ;
+; selector[1]  ; salidaMuxAluSrcB[15] ; 13.000 ; 13.000 ; 13.000 ; 13.000 ;
+; selector[1]  ; salidaMuxAluSrcB[16] ; 13.011 ; 13.011 ; 13.011 ; 13.011 ;
+; selector[1]  ; salidaMuxAluSrcB[17] ; 12.719 ; 12.719 ; 12.719 ; 12.719 ;
+; selector[1]  ; salidaMuxAluSrcB[18] ; 13.061 ; 13.061 ; 13.061 ; 13.061 ;
+; selector[1]  ; salidaMuxAluSrcB[19] ; 13.020 ; 13.020 ; 13.020 ; 13.020 ;
+; selector[1]  ; salidaMuxAluSrcB[20] ; 13.104 ; 13.104 ; 13.104 ; 13.104 ;
+; selector[1]  ; salidaMuxAluSrcB[21] ; 13.426 ; 13.426 ; 13.426 ; 13.426 ;
+; selector[1]  ; salidaMuxAluSrcB[22] ; 12.743 ; 12.743 ; 12.743 ; 12.743 ;
+; selector[1]  ; salidaMuxAluSrcB[23] ; 12.547 ; 12.547 ; 12.547 ; 12.547 ;
+; selector[1]  ; salidaMuxAluSrcB[24] ; 12.672 ; 12.672 ; 12.672 ; 12.672 ;
+; selector[1]  ; salidaMuxAluSrcB[25] ; 12.409 ; 12.409 ; 12.409 ; 12.409 ;
+; selector[1]  ; salidaMuxAluSrcB[26] ; 13.075 ; 13.075 ; 13.075 ; 13.075 ;
+; selector[1]  ; salidaMuxAluSrcB[27] ; 12.840 ; 12.840 ; 12.840 ; 12.840 ;
+; selector[1]  ; salidaMuxAluSrcB[28] ; 12.134 ; 12.134 ; 12.134 ; 12.134 ;
+; selector[1]  ; salidaMuxAluSrcB[29] ; 12.886 ; 12.886 ; 12.886 ; 12.886 ;
+; selector[1]  ; salidaMuxAluSrcB[30] ; 12.415 ; 12.415 ; 12.415 ; 12.415 ;
+; selector[1]  ; salidaMuxAluSrcB[31] ; 13.354 ; 13.354 ; 13.354 ; 13.354 ;
++--------------+----------------------+--------+--------+--------+--------+
+
+
++---------------------------------------------------------------------+
+; Minimum Progagation Delay                                           ;
++--------------+----------------------+-------+-------+-------+-------+
+; Input Port   ; Output Port          ; RR    ; RF    ; FR    ; FF    ;
++--------------+----------------------+-------+-------+-------+-------+
+; entrada0[0]  ; salidaMuxAluSrcB[0]  ; 5.780 ;       ;       ; 5.780 ;
+; entrada0[1]  ; salidaMuxAluSrcB[1]  ; 5.684 ;       ;       ; 5.684 ;
+; entrada0[2]  ; salidaMuxAluSrcB[2]  ; 5.831 ;       ;       ; 5.831 ;
+; entrada0[3]  ; salidaMuxAluSrcB[3]  ; 5.950 ;       ;       ; 5.950 ;
+; entrada0[4]  ; salidaMuxAluSrcB[4]  ; 5.640 ;       ;       ; 5.640 ;
+; entrada0[5]  ; salidaMuxAluSrcB[5]  ; 5.867 ;       ;       ; 5.867 ;
+; entrada0[6]  ; salidaMuxAluSrcB[6]  ; 5.643 ;       ;       ; 5.643 ;
+; entrada0[7]  ; salidaMuxAluSrcB[7]  ; 5.613 ;       ;       ; 5.613 ;
+; entrada0[8]  ; salidaMuxAluSrcB[8]  ; 5.837 ;       ;       ; 5.837 ;
+; entrada0[9]  ; salidaMuxAluSrcB[9]  ; 5.702 ;       ;       ; 5.702 ;
+; entrada0[10] ; salidaMuxAluSrcB[10] ; 5.744 ;       ;       ; 5.744 ;
+; entrada0[11] ; salidaMuxAluSrcB[11] ; 6.017 ;       ;       ; 6.017 ;
+; entrada0[12] ; salidaMuxAluSrcB[12] ; 5.850 ;       ;       ; 5.850 ;
+; entrada0[13] ; salidaMuxAluSrcB[13] ; 5.846 ;       ;       ; 5.846 ;
+; entrada0[14] ; salidaMuxAluSrcB[14] ; 5.615 ;       ;       ; 5.615 ;
+; entrada0[15] ; salidaMuxAluSrcB[15] ; 3.439 ;       ;       ; 3.439 ;
+; entrada0[16] ; salidaMuxAluSrcB[16] ; 3.512 ;       ;       ; 3.512 ;
+; entrada0[17] ; salidaMuxAluSrcB[17] ; 5.353 ;       ;       ; 5.353 ;
+; entrada0[18] ; salidaMuxAluSrcB[18] ; 5.699 ;       ;       ; 5.699 ;
+; entrada0[19] ; salidaMuxAluSrcB[19] ; 5.744 ;       ;       ; 5.744 ;
+; entrada0[20] ; salidaMuxAluSrcB[20] ; 5.528 ;       ;       ; 5.528 ;
+; entrada0[21] ; salidaMuxAluSrcB[21] ; 5.699 ;       ;       ; 5.699 ;
+; entrada0[22] ; salidaMuxAluSrcB[22] ; 5.510 ;       ;       ; 5.510 ;
+; entrada0[23] ; salidaMuxAluSrcB[23] ; 5.763 ;       ;       ; 5.763 ;
+; entrada0[24] ; salidaMuxAluSrcB[24] ; 5.291 ;       ;       ; 5.291 ;
+; entrada0[25] ; salidaMuxAluSrcB[25] ; 5.324 ;       ;       ; 5.324 ;
+; entrada0[26] ; salidaMuxAluSrcB[26] ; 5.587 ;       ;       ; 5.587 ;
+; entrada0[27] ; salidaMuxAluSrcB[27] ; 5.582 ;       ;       ; 5.582 ;
+; entrada0[28] ; salidaMuxAluSrcB[28] ; 5.412 ;       ;       ; 5.412 ;
+; entrada0[29] ; salidaMuxAluSrcB[29] ; 5.828 ;       ;       ; 5.828 ;
+; entrada0[30] ; salidaMuxAluSrcB[30] ; 5.560 ;       ;       ; 5.560 ;
+; entrada0[31] ; salidaMuxAluSrcB[31] ; 5.510 ;       ;       ; 5.510 ;
+; entrada2[0]  ; salidaMuxAluSrcB[0]  ; 5.603 ;       ;       ; 5.603 ;
+; entrada2[1]  ; salidaMuxAluSrcB[1]  ; 5.590 ;       ;       ; 5.590 ;
+; entrada2[2]  ; salidaMuxAluSrcB[2]  ; 5.446 ;       ;       ; 5.446 ;
+; entrada2[3]  ; salidaMuxAluSrcB[3]  ; 5.824 ;       ;       ; 5.824 ;
+; entrada2[4]  ; salidaMuxAluSrcB[4]  ; 5.579 ;       ;       ; 5.579 ;
+; entrada2[5]  ; salidaMuxAluSrcB[5]  ; 5.782 ;       ;       ; 5.782 ;
+; entrada2[6]  ; salidaMuxAluSrcB[6]  ; 5.645 ;       ;       ; 5.645 ;
+; entrada2[7]  ; salidaMuxAluSrcB[7]  ; 5.684 ;       ;       ; 5.684 ;
+; entrada2[8]  ; salidaMuxAluSrcB[8]  ; 5.849 ;       ;       ; 5.849 ;
+; entrada2[9]  ; salidaMuxAluSrcB[9]  ; 5.801 ;       ;       ; 5.801 ;
+; entrada2[10] ; salidaMuxAluSrcB[10] ; 6.064 ;       ;       ; 6.064 ;
+; entrada2[11] ; salidaMuxAluSrcB[11] ; 5.855 ;       ;       ; 5.855 ;
+; entrada2[12] ; salidaMuxAluSrcB[12] ; 5.830 ;       ;       ; 5.830 ;
+; entrada2[13] ; salidaMuxAluSrcB[13] ; 5.603 ;       ;       ; 5.603 ;
+; entrada2[14] ; salidaMuxAluSrcB[14] ; 5.520 ;       ;       ; 5.520 ;
+; entrada2[15] ; salidaMuxAluSrcB[15] ; 3.427 ;       ;       ; 3.427 ;
+; entrada2[16] ; salidaMuxAluSrcB[16] ; 5.296 ;       ;       ; 5.296 ;
+; entrada2[17] ; salidaMuxAluSrcB[17] ; 5.599 ;       ;       ; 5.599 ;
+; entrada2[18] ; salidaMuxAluSrcB[18] ; 5.784 ;       ;       ; 5.784 ;
+; entrada2[19] ; salidaMuxAluSrcB[19] ; 5.441 ;       ;       ; 5.441 ;
+; entrada2[20] ; salidaMuxAluSrcB[20] ; 5.566 ;       ;       ; 5.566 ;
+; entrada2[21] ; salidaMuxAluSrcB[21] ; 5.766 ;       ;       ; 5.766 ;
+; entrada2[22] ; salidaMuxAluSrcB[22] ; 5.446 ;       ;       ; 5.446 ;
+; entrada2[23] ; salidaMuxAluSrcB[23] ; 5.555 ;       ;       ; 5.555 ;
+; entrada2[24] ; salidaMuxAluSrcB[24] ; 5.484 ;       ;       ; 5.484 ;
+; entrada2[25] ; salidaMuxAluSrcB[25] ; 5.556 ;       ;       ; 5.556 ;
+; entrada2[26] ; salidaMuxAluSrcB[26] ; 5.819 ;       ;       ; 5.819 ;
+; entrada2[27] ; salidaMuxAluSrcB[27] ; 5.689 ;       ;       ; 5.689 ;
+; entrada2[28] ; salidaMuxAluSrcB[28] ; 5.640 ;       ;       ; 5.640 ;
+; entrada2[29] ; salidaMuxAluSrcB[29] ; 5.823 ;       ;       ; 5.823 ;
+; entrada2[30] ; salidaMuxAluSrcB[30] ; 5.593 ;       ;       ; 5.593 ;
+; entrada2[31] ; salidaMuxAluSrcB[31] ; 5.679 ;       ;       ; 5.679 ;
+; entrada3[0]  ; salidaMuxAluSrcB[0]  ; 5.482 ;       ;       ; 5.482 ;
+; entrada3[1]  ; salidaMuxAluSrcB[1]  ; 5.360 ;       ;       ; 5.360 ;
+; entrada3[2]  ; salidaMuxAluSrcB[2]  ; 5.886 ;       ;       ; 5.886 ;
+; entrada3[3]  ; salidaMuxAluSrcB[3]  ; 5.464 ;       ;       ; 5.464 ;
+; entrada3[4]  ; salidaMuxAluSrcB[4]  ; 5.430 ;       ;       ; 5.430 ;
+; entrada3[5]  ; salidaMuxAluSrcB[5]  ; 5.601 ;       ;       ; 5.601 ;
+; entrada3[6]  ; salidaMuxAluSrcB[6]  ; 5.367 ;       ;       ; 5.367 ;
+; entrada3[7]  ; salidaMuxAluSrcB[7]  ; 5.265 ;       ;       ; 5.265 ;
+; entrada3[8]  ; salidaMuxAluSrcB[8]  ; 5.317 ;       ;       ; 5.317 ;
+; entrada3[9]  ; salidaMuxAluSrcB[9]  ; 5.522 ;       ;       ; 5.522 ;
+; entrada3[10] ; salidaMuxAluSrcB[10] ; 5.708 ;       ;       ; 5.708 ;
+; entrada3[11] ; salidaMuxAluSrcB[11] ; 5.694 ;       ;       ; 5.694 ;
+; entrada3[12] ; salidaMuxAluSrcB[12] ; 5.521 ;       ;       ; 5.521 ;
+; entrada3[13] ; salidaMuxAluSrcB[13] ; 5.305 ;       ;       ; 5.305 ;
+; entrada3[14] ; salidaMuxAluSrcB[14] ; 5.318 ;       ;       ; 5.318 ;
+; entrada3[15] ; salidaMuxAluSrcB[15] ; 5.703 ;       ;       ; 5.703 ;
+; entrada3[16] ; salidaMuxAluSrcB[16] ; 3.347 ;       ;       ; 3.347 ;
+; entrada3[17] ; salidaMuxAluSrcB[17] ; 5.005 ;       ;       ; 5.005 ;
+; entrada3[18] ; salidaMuxAluSrcB[18] ; 5.584 ;       ;       ; 5.584 ;
+; entrada3[19] ; salidaMuxAluSrcB[19] ; 5.435 ;       ;       ; 5.435 ;
+; entrada3[20] ; salidaMuxAluSrcB[20] ; 5.150 ;       ;       ; 5.150 ;
+; entrada3[21] ; salidaMuxAluSrcB[21] ; 5.279 ;       ;       ; 5.279 ;
+; entrada3[22] ; salidaMuxAluSrcB[22] ; 5.321 ;       ;       ; 5.321 ;
+; entrada3[23] ; salidaMuxAluSrcB[23] ; 5.332 ;       ;       ; 5.332 ;
+; entrada3[24] ; salidaMuxAluSrcB[24] ; 5.132 ;       ;       ; 5.132 ;
+; entrada3[25] ; salidaMuxAluSrcB[25] ; 5.245 ;       ;       ; 5.245 ;
+; entrada3[26] ; salidaMuxAluSrcB[26] ; 5.608 ;       ;       ; 5.608 ;
+; entrada3[27] ; salidaMuxAluSrcB[27] ; 5.679 ;       ;       ; 5.679 ;
+; entrada3[28] ; salidaMuxAluSrcB[28] ; 5.344 ;       ;       ; 5.344 ;
+; entrada3[29] ; salidaMuxAluSrcB[29] ; 5.317 ;       ;       ; 5.317 ;
+; entrada3[30] ; salidaMuxAluSrcB[30] ; 5.190 ;       ;       ; 5.190 ;
+; entrada3[31] ; salidaMuxAluSrcB[31] ; 5.388 ;       ;       ; 5.388 ;
+; selector[0]  ; salidaMuxAluSrcB[0]  ; 6.188 ; 6.335 ; 6.335 ; 6.188 ;
+; selector[0]  ; salidaMuxAluSrcB[1]  ; 5.992 ; 6.416 ; 6.416 ; 5.992 ;
+; selector[0]  ; salidaMuxAluSrcB[2]  ; 6.468 ; 6.220 ; 6.220 ; 6.468 ;
+; selector[0]  ; salidaMuxAluSrcB[3]  ; 6.113 ; 6.319 ; 6.319 ; 6.113 ;
+; selector[0]  ; salidaMuxAluSrcB[4]  ; 5.895 ; 6.240 ; 6.240 ; 5.895 ;
+; selector[0]  ; salidaMuxAluSrcB[5]  ; 6.225 ; 6.386 ; 6.386 ; 6.225 ;
+; selector[0]  ; salidaMuxAluSrcB[6]  ; 6.124 ; 6.407 ; 6.407 ; 6.124 ;
+; selector[0]  ; salidaMuxAluSrcB[7]  ; 5.888 ; 6.311 ; 6.311 ; 5.888 ;
+; selector[0]  ; salidaMuxAluSrcB[8]  ; 5.908 ; 6.061 ; 6.061 ; 5.908 ;
+; selector[0]  ; salidaMuxAluSrcB[9]  ; 5.686 ; 5.974 ; 5.974 ; 5.686 ;
+; selector[0]  ; salidaMuxAluSrcB[10] ; 5.886 ; 6.169 ; 6.169 ; 5.886 ;
+; selector[0]  ; salidaMuxAluSrcB[11] ; 5.897 ; 6.119 ; 6.119 ; 5.897 ;
+; selector[0]  ; salidaMuxAluSrcB[12] ; 5.866 ; 6.159 ; 6.159 ; 5.866 ;
+; selector[0]  ; salidaMuxAluSrcB[13] ; 5.744 ; 6.031 ; 6.031 ; 5.744 ;
+; selector[0]  ; salidaMuxAluSrcB[14] ; 5.651 ; 5.946 ; 5.946 ; 5.651 ;
+; selector[0]  ; salidaMuxAluSrcB[15] ; 5.786 ; 6.069 ; 6.069 ; 5.786 ;
+; selector[0]  ; salidaMuxAluSrcB[16] ; 5.680 ; 5.855 ; 5.855 ; 5.680 ;
+; selector[0]  ; salidaMuxAluSrcB[17] ; 5.579 ; 5.933 ; 5.933 ; 5.579 ;
+; selector[0]  ; salidaMuxAluSrcB[18] ; 5.683 ; 6.050 ; 6.050 ; 5.683 ;
+; selector[0]  ; salidaMuxAluSrcB[19] ; 5.699 ; 5.862 ; 5.862 ; 5.699 ;
+; selector[0]  ; salidaMuxAluSrcB[20] ; 5.577 ; 5.860 ; 5.860 ; 5.577 ;
+; selector[0]  ; salidaMuxAluSrcB[21] ; 5.702 ; 5.985 ; 5.985 ; 5.702 ;
+; selector[0]  ; salidaMuxAluSrcB[22] ; 5.522 ; 5.888 ; 5.888 ; 5.522 ;
+; selector[0]  ; salidaMuxAluSrcB[23] ; 5.272 ; 5.570 ; 5.570 ; 5.272 ;
+; selector[0]  ; salidaMuxAluSrcB[24] ; 5.234 ; 5.520 ; 5.520 ; 5.234 ;
+; selector[0]  ; salidaMuxAluSrcB[25] ; 5.210 ; 5.493 ; 5.493 ; 5.210 ;
+; selector[0]  ; salidaMuxAluSrcB[26] ; 5.386 ; 5.679 ; 5.679 ; 5.386 ;
+; selector[0]  ; salidaMuxAluSrcB[27] ; 5.420 ; 5.830 ; 5.830 ; 5.420 ;
+; selector[0]  ; salidaMuxAluSrcB[28] ; 5.101 ; 5.380 ; 5.380 ; 5.101 ;
+; selector[0]  ; salidaMuxAluSrcB[29] ; 5.413 ; 5.694 ; 5.694 ; 5.413 ;
+; selector[0]  ; salidaMuxAluSrcB[30] ; 5.213 ; 5.501 ; 5.501 ; 5.213 ;
+; selector[0]  ; salidaMuxAluSrcB[31] ; 5.677 ; 5.975 ; 5.975 ; 5.677 ;
+; selector[1]  ; salidaMuxAluSrcB[0]  ; 6.035 ; 6.092 ; 6.092 ; 6.035 ;
+; selector[1]  ; salidaMuxAluSrcB[1]  ; 5.991 ; 6.157 ; 6.157 ; 5.991 ;
+; selector[1]  ; salidaMuxAluSrcB[2]  ; 5.977 ; 6.189 ; 6.189 ; 5.977 ;
+; selector[1]  ; salidaMuxAluSrcB[3]  ; 6.095 ; 6.320 ; 6.320 ; 6.095 ;
+; selector[1]  ; salidaMuxAluSrcB[4]  ; 5.870 ; 5.968 ; 5.968 ; 5.870 ;
+; selector[1]  ; salidaMuxAluSrcB[5]  ; 5.966 ; 6.366 ; 6.366 ; 5.966 ;
+; selector[1]  ; salidaMuxAluSrcB[6]  ; 5.869 ; 6.152 ; 6.152 ; 5.869 ;
+; selector[1]  ; salidaMuxAluSrcB[7]  ; 5.866 ; 6.040 ; 6.040 ; 5.866 ;
+; selector[1]  ; salidaMuxAluSrcB[8]  ; 6.095 ; 6.450 ; 6.450 ; 6.095 ;
+; selector[1]  ; salidaMuxAluSrcB[9]  ; 6.006 ; 6.370 ; 6.370 ; 6.006 ;
+; selector[1]  ; salidaMuxAluSrcB[10] ; 6.202 ; 6.488 ; 6.488 ; 6.202 ;
+; selector[1]  ; salidaMuxAluSrcB[11] ; 6.286 ; 6.445 ; 6.445 ; 6.286 ;
+; selector[1]  ; salidaMuxAluSrcB[12] ; 6.189 ; 6.485 ; 6.485 ; 6.189 ;
+; selector[1]  ; salidaMuxAluSrcB[13] ; 6.059 ; 6.354 ; 6.354 ; 6.059 ;
+; selector[1]  ; salidaMuxAluSrcB[14] ; 5.973 ; 6.272 ; 6.272 ; 5.973 ;
+; selector[1]  ; salidaMuxAluSrcB[15] ; 6.109 ; 6.387 ; 6.387 ; 6.109 ;
+; selector[1]  ; salidaMuxAluSrcB[16] ; 6.256 ; 6.420 ; 6.420 ; 6.256 ;
+; selector[1]  ; salidaMuxAluSrcB[17] ; 6.143 ; 6.299 ; 6.299 ; 6.143 ;
+; selector[1]  ; salidaMuxAluSrcB[18] ; 6.137 ; 6.431 ; 6.431 ; 6.137 ;
+; selector[1]  ; salidaMuxAluSrcB[19] ; 6.267 ; 6.425 ; 6.425 ; 6.267 ;
+; selector[1]  ; salidaMuxAluSrcB[20] ; 6.141 ; 6.424 ; 6.424 ; 6.141 ;
+; selector[1]  ; salidaMuxAluSrcB[21] ; 6.136 ; 6.568 ; 6.568 ; 6.136 ;
+; selector[1]  ; salidaMuxAluSrcB[22] ; 5.958 ; 6.258 ; 6.258 ; 5.958 ;
+; selector[1]  ; salidaMuxAluSrcB[23] ; 5.914 ; 6.209 ; 6.209 ; 5.914 ;
+; selector[1]  ; salidaMuxAluSrcB[24] ; 5.950 ; 6.238 ; 6.238 ; 5.950 ;
+; selector[1]  ; salidaMuxAluSrcB[25] ; 5.838 ; 6.124 ; 6.124 ; 5.838 ;
+; selector[1]  ; salidaMuxAluSrcB[26] ; 6.013 ; 6.392 ; 6.392 ; 6.013 ;
+; selector[1]  ; salidaMuxAluSrcB[27] ; 6.051 ; 6.337 ; 6.337 ; 6.051 ;
+; selector[1]  ; salidaMuxAluSrcB[28] ; 5.729 ; 6.025 ; 6.025 ; 5.729 ;
+; selector[1]  ; salidaMuxAluSrcB[29] ; 6.037 ; 6.342 ; 6.342 ; 6.037 ;
+; selector[1]  ; salidaMuxAluSrcB[30] ; 5.839 ; 6.132 ; 6.132 ; 5.839 ;
+; selector[1]  ; salidaMuxAluSrcB[31] ; 6.256 ; 6.539 ; 6.539 ; 6.256 ;
++--------------+----------------------+-------+-------+-------+-------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 98    ; 98   ;
+; Unconstrained Input Port Paths  ; 160   ; 160  ;
+; Unconstrained Output Ports      ; 32    ; 32   ;
+; Unconstrained Output Port Paths ; 160   ; 160  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Apr 08 11:41:02 2019
+Info: Command: quartus_sta MuxSrcA -c MuxSrcA
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'MuxSrcA.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
+Info: Analyzing Slow Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4555 megabytes
+    Info: Processing ended: Mon Apr 08 11:41:03 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
