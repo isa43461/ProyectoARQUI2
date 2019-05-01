@@ -1,7 +1,7 @@
 vendor_name = ModelSim
-source_file = 1, C:/altera/13.0sp1/ProyectoArqui2/ShiftLeft/ShiftLeft.vhd
-source_file = 1, C:/altera/13.0sp1/ProyectoArqui2/ShiftLeft/Waveform.vwf
-source_file = 1, C:/altera/13.0sp1/ProyectoArqui2/ShiftLeft/db/ShiftLeft.cbx.xml
+source_file = 1, D:/PUJ/8/Arq/ProyectoARQUI2/ShiftLeft/ShiftLeft.vhd
+source_file = 1, D:/PUJ/8/Arq/ProyectoARQUI2/ShiftLeft/Waveform.vwf
+source_file = 1, D:/PUJ/8/Arq/ProyectoARQUI2/ShiftLeft/db/ShiftLeft.cbx.xml
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_b.vhd

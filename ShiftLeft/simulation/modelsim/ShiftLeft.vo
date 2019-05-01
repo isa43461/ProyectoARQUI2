@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
-// DATE "04/30/2019 00:51:25"
+// DATE "04/30/2019 20:32:48"
 
 // 
 // Device: Altera EP2C20F484C7 Package FBGA484
@@ -34,6 +34,73 @@ module ShiftLeft (
 input 	[31:0] w;
 output 	[31:0] y;
 
+// Design Ports Information
+// w[30]	=>  Location: PIN_L21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[31]	=>  Location: PIN_L22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// y[0]	=>  Location: PIN_C22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[1]	=>  Location: PIN_R5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[2]	=>  Location: PIN_A7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[3]	=>  Location: PIN_Y22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[4]	=>  Location: PIN_F12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[5]	=>  Location: PIN_J19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[6]	=>  Location: PIN_AA12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[7]	=>  Location: PIN_G17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[8]	=>  Location: PIN_E1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[9]	=>  Location: PIN_E21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[10]	=>  Location: PIN_Y6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[11]	=>  Location: PIN_E22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[12]	=>  Location: PIN_C10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[13]	=>  Location: PIN_B13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[14]	=>  Location: PIN_R6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[15]	=>  Location: PIN_F10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[16]	=>  Location: PIN_AB3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[17]	=>  Location: PIN_C20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[18]	=>  Location: PIN_B19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[19]	=>  Location: PIN_A14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[20]	=>  Location: PIN_A5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[21]	=>  Location: PIN_V4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[22]	=>  Location: PIN_V22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[23]	=>  Location: PIN_B6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[24]	=>  Location: PIN_C13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[25]	=>  Location: PIN_W21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[26]	=>  Location: PIN_P8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[27]	=>  Location: PIN_R18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[28]	=>  Location: PIN_AB13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[29]	=>  Location: PIN_J22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[30]	=>  Location: PIN_R12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// y[31]	=>  Location: PIN_V2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// w[0]	=>  Location: PIN_E9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[1]	=>  Location: PIN_Y21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[2]	=>  Location: PIN_G12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[3]	=>  Location: PIN_J18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[4]	=>  Location: PIN_AA13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[5]	=>  Location: PIN_G18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[6]	=>  Location: PIN_F1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[7]	=>  Location: PIN_D22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[8]	=>  Location: PIN_AB5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[9]	=>  Location: PIN_D21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[10]	=>  Location: PIN_F11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[11]	=>  Location: PIN_A13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[12]	=>  Location: PIN_U1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[13]	=>  Location: PIN_H11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[14]	=>  Location: PIN_AB4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[15]	=>  Location: PIN_E18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[16]	=>  Location: PIN_A20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[17]	=>  Location: PIN_B14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[18]	=>  Location: PIN_A6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[19]	=>  Location: PIN_U4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[20]	=>  Location: PIN_U21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[21]	=>  Location: PIN_G7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[22]	=>  Location: PIN_A15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[23]	=>  Location: PIN_U19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[24]	=>  Location: PIN_AB6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[25]	=>  Location: PIN_P17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[26]	=>  Location: PIN_AB12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[27]	=>  Location: PIN_H19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[28]	=>  Location: PIN_AA14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// w[29]	=>  Location: PIN_T5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+
+
 wire gnd;
 wire vcc;
 wire unknown;
@@ -48,6 +115,7 @@ tri1 devoe;
 wire [31:0] \w~combout ;
 
 
+// Location: PIN_E9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[0]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -83,6 +151,7 @@ defparam \w[0]~I .output_register_mode = "none";
 defparam \w[0]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_Y21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[1]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -118,6 +187,7 @@ defparam \w[1]~I .output_register_mode = "none";
 defparam \w[1]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_G12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[2]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -153,6 +223,7 @@ defparam \w[2]~I .output_register_mode = "none";
 defparam \w[2]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_J18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[3]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -188,6 +259,7 @@ defparam \w[3]~I .output_register_mode = "none";
 defparam \w[3]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_AA13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[4]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -223,6 +295,7 @@ defparam \w[4]~I .output_register_mode = "none";
 defparam \w[4]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_G18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[5]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -258,6 +331,7 @@ defparam \w[5]~I .output_register_mode = "none";
 defparam \w[5]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_F1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[6]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -293,6 +367,7 @@ defparam \w[6]~I .output_register_mode = "none";
 defparam \w[6]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_D22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[7]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -328,6 +403,7 @@ defparam \w[7]~I .output_register_mode = "none";
 defparam \w[7]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_AB5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[8]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -363,6 +439,7 @@ defparam \w[8]~I .output_register_mode = "none";
 defparam \w[8]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_D21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[9]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -398,6 +475,7 @@ defparam \w[9]~I .output_register_mode = "none";
 defparam \w[9]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_F11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[10]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -433,6 +511,7 @@ defparam \w[10]~I .output_register_mode = "none";
 defparam \w[10]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_A13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[11]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -468,6 +547,7 @@ defparam \w[11]~I .output_register_mode = "none";
 defparam \w[11]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_U1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[12]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -503,6 +583,7 @@ defparam \w[12]~I .output_register_mode = "none";
 defparam \w[12]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_H11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[13]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -538,6 +619,7 @@ defparam \w[13]~I .output_register_mode = "none";
 defparam \w[13]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_AB4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[14]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -573,6 +655,7 @@ defparam \w[14]~I .output_register_mode = "none";
 defparam \w[14]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_E18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[15]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -608,6 +691,7 @@ defparam \w[15]~I .output_register_mode = "none";
 defparam \w[15]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_A20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[16]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -643,6 +727,7 @@ defparam \w[16]~I .output_register_mode = "none";
 defparam \w[16]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_B14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[17]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -678,6 +763,7 @@ defparam \w[17]~I .output_register_mode = "none";
 defparam \w[17]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_A6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[18]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -713,6 +799,7 @@ defparam \w[18]~I .output_register_mode = "none";
 defparam \w[18]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_U4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[19]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -748,6 +835,7 @@ defparam \w[19]~I .output_register_mode = "none";
 defparam \w[19]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_U21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[20]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -783,6 +871,7 @@ defparam \w[20]~I .output_register_mode = "none";
 defparam \w[20]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_G7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[21]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -818,6 +907,7 @@ defparam \w[21]~I .output_register_mode = "none";
 defparam \w[21]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_A15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[22]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -853,6 +943,7 @@ defparam \w[22]~I .output_register_mode = "none";
 defparam \w[22]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_U19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[23]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -888,6 +979,7 @@ defparam \w[23]~I .output_register_mode = "none";
 defparam \w[23]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_AB6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[24]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -923,6 +1015,7 @@ defparam \w[24]~I .output_register_mode = "none";
 defparam \w[24]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_P17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[25]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -958,6 +1051,7 @@ defparam \w[25]~I .output_register_mode = "none";
 defparam \w[25]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_AB12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[26]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -993,6 +1087,7 @@ defparam \w[26]~I .output_register_mode = "none";
 defparam \w[26]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_H19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[27]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -1028,6 +1123,7 @@ defparam \w[27]~I .output_register_mode = "none";
 defparam \w[27]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_AA14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[28]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -1063,6 +1159,7 @@ defparam \w[28]~I .output_register_mode = "none";
 defparam \w[28]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_T5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[29]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -1098,6 +1195,7 @@ defparam \w[29]~I .output_register_mode = "none";
 defparam \w[29]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_L21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[30]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -1133,6 +1231,7 @@ defparam \w[30]~I .output_register_mode = "none";
 defparam \w[30]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_L22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \w[31]~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -1168,6 +1267,7 @@ defparam \w[31]~I .output_register_mode = "none";
 defparam \w[31]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_C22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[0]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -1203,6 +1303,7 @@ defparam \y[0]~I .output_register_mode = "none";
 defparam \y[0]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_R5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[1]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -1238,6 +1339,7 @@ defparam \y[1]~I .output_register_mode = "none";
 defparam \y[1]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_A7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[2]~I (
 	.datain(\w~combout [0]),
 	.oe(vcc),
@@ -1273,6 +1375,7 @@ defparam \y[2]~I .output_register_mode = "none";
 defparam \y[2]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_Y22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[3]~I (
 	.datain(\w~combout [1]),
 	.oe(vcc),
@@ -1308,6 +1411,7 @@ defparam \y[3]~I .output_register_mode = "none";
 defparam \y[3]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_F12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[4]~I (
 	.datain(\w~combout [2]),
 	.oe(vcc),
@@ -1343,6 +1447,7 @@ defparam \y[4]~I .output_register_mode = "none";
 defparam \y[4]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_J19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[5]~I (
 	.datain(\w~combout [3]),
 	.oe(vcc),
@@ -1378,6 +1483,7 @@ defparam \y[5]~I .output_register_mode = "none";
 defparam \y[5]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_AA12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[6]~I (
 	.datain(\w~combout [4]),
 	.oe(vcc),
@@ -1413,6 +1519,7 @@ defparam \y[6]~I .output_register_mode = "none";
 defparam \y[6]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_G17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[7]~I (
 	.datain(\w~combout [5]),
 	.oe(vcc),
@@ -1448,6 +1555,7 @@ defparam \y[7]~I .output_register_mode = "none";
 defparam \y[7]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_E1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[8]~I (
 	.datain(\w~combout [6]),
 	.oe(vcc),
@@ -1483,6 +1591,7 @@ defparam \y[8]~I .output_register_mode = "none";
 defparam \y[8]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_E21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[9]~I (
 	.datain(\w~combout [7]),
 	.oe(vcc),
@@ -1518,6 +1627,7 @@ defparam \y[9]~I .output_register_mode = "none";
 defparam \y[9]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_Y6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[10]~I (
 	.datain(\w~combout [8]),
 	.oe(vcc),
@@ -1553,6 +1663,7 @@ defparam \y[10]~I .output_register_mode = "none";
 defparam \y[10]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_E22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[11]~I (
 	.datain(\w~combout [9]),
 	.oe(vcc),
@@ -1588,6 +1699,7 @@ defparam \y[11]~I .output_register_mode = "none";
 defparam \y[11]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_C10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[12]~I (
 	.datain(\w~combout [10]),
 	.oe(vcc),
@@ -1623,6 +1735,7 @@ defparam \y[12]~I .output_register_mode = "none";
 defparam \y[12]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_B13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[13]~I (
 	.datain(\w~combout [11]),
 	.oe(vcc),
@@ -1658,6 +1771,7 @@ defparam \y[13]~I .output_register_mode = "none";
 defparam \y[13]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_R6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[14]~I (
 	.datain(\w~combout [12]),
 	.oe(vcc),
@@ -1693,6 +1807,7 @@ defparam \y[14]~I .output_register_mode = "none";
 defparam \y[14]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_F10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[15]~I (
 	.datain(\w~combout [13]),
 	.oe(vcc),
@@ -1728,6 +1843,7 @@ defparam \y[15]~I .output_register_mode = "none";
 defparam \y[15]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_AB3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[16]~I (
 	.datain(\w~combout [14]),
 	.oe(vcc),
@@ -1763,6 +1879,7 @@ defparam \y[16]~I .output_register_mode = "none";
 defparam \y[16]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_C20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[17]~I (
 	.datain(\w~combout [15]),
 	.oe(vcc),
@@ -1798,6 +1915,7 @@ defparam \y[17]~I .output_register_mode = "none";
 defparam \y[17]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_B19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[18]~I (
 	.datain(\w~combout [16]),
 	.oe(vcc),
@@ -1833,6 +1951,7 @@ defparam \y[18]~I .output_register_mode = "none";
 defparam \y[18]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_A14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[19]~I (
 	.datain(\w~combout [17]),
 	.oe(vcc),
@@ -1868,6 +1987,7 @@ defparam \y[19]~I .output_register_mode = "none";
 defparam \y[19]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_A5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[20]~I (
 	.datain(\w~combout [18]),
 	.oe(vcc),
@@ -1903,6 +2023,7 @@ defparam \y[20]~I .output_register_mode = "none";
 defparam \y[20]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_V4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[21]~I (
 	.datain(\w~combout [19]),
 	.oe(vcc),
@@ -1938,6 +2059,7 @@ defparam \y[21]~I .output_register_mode = "none";
 defparam \y[21]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_V22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[22]~I (
 	.datain(\w~combout [20]),
 	.oe(vcc),
@@ -1973,6 +2095,7 @@ defparam \y[22]~I .output_register_mode = "none";
 defparam \y[22]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_B6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[23]~I (
 	.datain(\w~combout [21]),
 	.oe(vcc),
@@ -2008,6 +2131,7 @@ defparam \y[23]~I .output_register_mode = "none";
 defparam \y[23]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_C13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[24]~I (
 	.datain(\w~combout [22]),
 	.oe(vcc),
@@ -2043,6 +2167,7 @@ defparam \y[24]~I .output_register_mode = "none";
 defparam \y[24]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_W21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[25]~I (
 	.datain(\w~combout [23]),
 	.oe(vcc),
@@ -2078,6 +2203,7 @@ defparam \y[25]~I .output_register_mode = "none";
 defparam \y[25]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_P8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[26]~I (
 	.datain(\w~combout [24]),
 	.oe(vcc),
@@ -2113,6 +2239,7 @@ defparam \y[26]~I .output_register_mode = "none";
 defparam \y[26]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_R18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[27]~I (
 	.datain(\w~combout [25]),
 	.oe(vcc),
@@ -2148,6 +2275,7 @@ defparam \y[27]~I .output_register_mode = "none";
 defparam \y[27]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_AB13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[28]~I (
 	.datain(\w~combout [26]),
 	.oe(vcc),
@@ -2183,6 +2311,7 @@ defparam \y[28]~I .output_register_mode = "none";
 defparam \y[28]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_J22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[29]~I (
 	.datain(\w~combout [27]),
 	.oe(vcc),
@@ -2218,6 +2347,7 @@ defparam \y[29]~I .output_register_mode = "none";
 defparam \y[29]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_R12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[30]~I (
 	.datain(\w~combout [28]),
 	.oe(vcc),
@@ -2253,6 +2383,7 @@ defparam \y[30]~I .output_register_mode = "none";
 defparam \y[30]~I .output_sync_reset = "none";
 // synopsys translate_on
 
+// Location: PIN_V2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \y[31]~I (
 	.datain(\w~combout [29]),
 	.oe(vcc),

@@ -1,0 +1,554 @@
+ -- Copyright (C) 1991-2013 Altera Corporation
+ -- Your use of Altera Corporation's design tools, logic functions 
+ -- and other software and tools, and its AMPP partner logic 
+ -- functions, and any output files from any of the foregoing 
+ -- (including device programming or simulation files), and any 
+ -- associated documentation or information are expressly subject 
+ -- to the terms and conditions of the Altera Program License 
+ -- Subscription Agreement, Altera MegaCore Function License 
+ -- Agreement, or other applicable license agreement, including, 
+ -- without limitation, that your use is for the sole purpose of 
+ -- programming logic devices manufactured by Altera and sold by 
+ -- Altera or its authorized distributors.  Please refer to the 
+ -- applicable agreement for further details.
+ -- 
+ -- This is a Quartus II output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus II input file. This file cannot be used
+ -- to make Quartus II pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus II help.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- NC            : No Connect. This pin has no internal connection to the device.
+ -- DNU           : Do Not Use. This pin MUST NOT be connected.
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.2V).
+ -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
+ --                 of its bank.
+ --					Bank 1:		3.3V
+ --					Bank 2:		3.3V
+ --					Bank 3:		3.3V
+ --					Bank 4:		3.3V
+ --					Bank 5:		3.3V
+ --					Bank 6:		3.3V
+ --					Bank 7:		3.3V
+ --					Bank 8:		3.3V
+ -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
+ --					It can also be used to report unused dedicated pins. The connection
+ --					on the board for unused dedicated pins depends on whether this will
+ --					be used in a future design. One example is device migration. When
+ --					using device migration, refer to the device pin-tables. If it is a
+ --					GND pin in the pin table or if it will not be used in a future design
+ --					for another purpose the it MUST be connected to GND. If it is an unused
+ --					dedicated pin, then it can be connected to a valid signal on the board
+ --					(low, high, or toggling) if that signal is required for a different
+ --					revision of the design.
+ -- GND+          : Unused input pin. It can also be used to report unused dual-purpose pins.
+ --					This pin should be connected to GND. It may also be connected  to a
+ --					valid signal  on the board  (low, high, or toggling)  if that signal
+ --					is required for a different revision of the design.
+ -- GND*          : Unused  I/O  pin. Connect each pin marked GND* directly to GND
+ --           	    or leave it unconnected.
+ -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
+ -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
+ -- RESERVED_INPUT_WITH_WEAK_PULLUP    : Pin is tri-stated with internal weak pull-up resistor.
+ -- RESERVED_INPUT_WITH_BUS_HOLD       : Pin is tri-stated with bus-hold circuitry.
+ -- RESERVED_OUTPUT_DRIVEN_HIGH        : Pin is output driven high.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- Pin directions (input, output or bidir) are based on device operating in user mode.
+ ---------------------------------------------------------------------------------
+
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+CHIP  "prueba1"  ASSIGNED TO AN: EP2C20F484C7
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+GND                          : A1        : gnd    :                   :         :           :                
+VCCIO3                       : A2        : power  :                   : 3.3V    : 3         :                
+entrada0MuxA[0]              : A3        : input  : 3.3-V LVTTL       :         : 3         : N              
+entrada1MuxB[10]             : A4        : input  : 3.3-V LVTTL       :         : 3         : N              
+entrada0MuxA[2]              : A5        : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : A6        :        :                   :         : 3         :                
+entradaShiftL[4]             : A7        : input  : 3.3-V LVTTL       :         : 3         : N              
+entrada1MuxB[19]             : A8        : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : A9        :        :                   :         : 3         :                
+GND*                         : A10       :        :                   :         : 3         :                
+entradaRegA[0]               : A11       : input  : 3.3-V LVTTL       :         : 3         : N              
+entradaShiftL[27]            : A12       : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : A13       :        :                   :         : 4         :                
+entradaShiftL[25]            : A14       : input  : 3.3-V LVTTL       :         : 4         : N              
+entrada2MuxB[10]             : A15       : input  : 3.3-V LVTTL       :         : 4         : N              
+entradaRegB[0]               : A16       : input  : 3.3-V LVTTL       :         : 4         : N              
+entrada2MuxB[21]             : A17       : input  : 3.3-V LVTTL       :         : 4         : N              
+entradaShiftL[1]             : A18       : input  : 3.3-V LVTTL       :         : 4         : N              
+entrada0MuxA[22]             : A19       : input  : 3.3-V LVTTL       :         : 4         : N              
+entradaShiftL[10]            : A20       : input  : 3.3-V LVTTL       :         : 4         : N              
+VCCIO4                       : A21       : power  :                   : 3.3V    : 4         :                
+GND                          : A22       : gnd    :                   :         :           :                
+VCCIO1                       : AA1       : power  :                   : 3.3V    : 1         :                
+GND                          : AA2       : gnd    :                   :         :           :                
+entradaRegA[22]              : AA3       : input  : 3.3-V LVTTL       :         : 8         : N              
+entradaShiftL[23]            : AA4       : input  : 3.3-V LVTTL       :         : 8         : N              
+entradaRegA[10]              : AA5       : input  : 3.3-V LVTTL       :         : 8         : N              
+entradaRegA[14]              : AA6       : input  : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : AA7       :        :                   :         : 8         :                
+GND*                         : AA8       :        :                   :         : 8         :                
+entrada0MuxA[24]             : AA9       : input  : 3.3-V LVTTL       :         : 8         : N              
+entrada2MuxB[19]             : AA10      : input  : 3.3-V LVTTL       :         : 8         : N              
+entrada1MuxB[23]             : AA11      : input  : 3.3-V LVTTL       :         : 8         : N              
+entradaShiftL[11]            : AA12      : input  : 3.3-V LVTTL       :         : 7         : N              
+entrada0MuxA[13]             : AA13      : input  : 3.3-V LVTTL       :         : 7         : N              
+entradaRegA[28]              : AA14      : input  : 3.3-V LVTTL       :         : 7         : N              
+entrada0MuxA[4]              : AA15      : input  : 3.3-V LVTTL       :         : 7         : N              
+entradaShiftL[15]            : AA16      : input  : 3.3-V LVTTL       :         : 7         : N              
+GND*                         : AA17      :        :                   :         : 7         :                
+entradaRegA[25]              : AA18      : input  : 3.3-V LVTTL       :         : 7         : N              
+salidaPrueba[0]              : AA19      : output : 3.3-V LVTTL       :         : 7         : N              
+GND*                         : AA20      :        :                   :         : 7         :                
+GND                          : AA21      : gnd    :                   :         :           :                
+VCCIO6                       : AA22      : power  :                   : 3.3V    : 6         :                
+GND                          : AB1       : gnd    :                   :         :           :                
+VCCIO8                       : AB2       : power  :                   : 3.3V    : 8         :                
+entrada0MuxA[10]             : AB3       : input  : 3.3-V LVTTL       :         : 8         : N              
+entradaRegB[3]               : AB4       : input  : 3.3-V LVTTL       :         : 8         : N              
+entrada0MuxA[15]             : AB5       : input  : 3.3-V LVTTL       :         : 8         : N              
+salidaPrueba[29]             : AB6       : output : 3.3-V LVTTL       :         : 8         : N              
+salidaPrueba[22]             : AB7       : output : 3.3-V LVTTL       :         : 8         : N              
+entrada2MuxB[3]              : AB8       : input  : 3.3-V LVTTL       :         : 8         : N              
+entrada0MuxA[7]              : AB9       : input  : 3.3-V LVTTL       :         : 8         : N              
+entrada2MuxB[7]              : AB10      : input  : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : AB11      :        :                   :         : 8         :                
+entrada1MuxB[14]             : AB12      : input  : 3.3-V LVTTL       :         : 7         : N              
+entradaRegA[2]               : AB13      : input  : 3.3-V LVTTL       :         : 7         : N              
+salidaPrueba[20]             : AB14      : output : 3.3-V LVTTL       :         : 7         : N              
+entrada2MuxB[15]             : AB15      : input  : 3.3-V LVTTL       :         : 7         : N              
+salidaPrueba[21]             : AB16      : output : 3.3-V LVTTL       :         : 7         : N              
+entrada0MuxA[29]             : AB17      : input  : 3.3-V LVTTL       :         : 7         : N              
+entrada1MuxB[28]             : AB18      : input  : 3.3-V LVTTL       :         : 7         : N              
+entradaRegA[1]               : AB19      : input  : 3.3-V LVTTL       :         : 7         : N              
+salidaPrueba[18]             : AB20      : output : 3.3-V LVTTL       :         : 7         : N              
+VCCIO7                       : AB21      : power  :                   : 3.3V    : 7         :                
+GND                          : AB22      : gnd    :                   :         :           :                
+VCCIO2                       : B1        : power  :                   : 3.3V    : 2         :                
+GND                          : B2        : gnd    :                   :         :           :                
+entrada0MuxA[20]             : B3        : input  : 3.3-V LVTTL       :         : 3         : N              
+entradaRegA[11]              : B4        : input  : 3.3-V LVTTL       :         : 3         : N              
+entrada1MuxB[12]             : B5        : input  : 3.3-V LVTTL       :         : 3         : N              
+entrada0MuxA[8]              : B6        : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : B7        :        :                   :         : 3         :                
+entrada1MuxB[18]             : B8        : input  : 3.3-V LVTTL       :         : 3         : N              
+entradaRegB[21]              : B9        : input  : 3.3-V LVTTL       :         : 3         : N              
+entrada1MuxB[8]              : B10       : input  : 3.3-V LVTTL       :         : 3         : N              
+entradaRegA[7]               : B11       : input  : 3.3-V LVTTL       :         : 3         : N              
+entrada2MuxB[29]             : B12       : input  : 3.3-V LVTTL       :         : 4         : N              
+entrada2MuxB[28]             : B13       : input  : 3.3-V LVTTL       :         : 4         : N              
+entradaShiftL[26]            : B14       : input  : 3.3-V LVTTL       :         : 4         : N              
+entrada2MuxB[6]              : B15       : input  : 3.3-V LVTTL       :         : 4         : N              
+entradaRegB[28]              : B16       : input  : 3.3-V LVTTL       :         : 4         : N              
+entradaShiftL[18]            : B17       : input  : 3.3-V LVTTL       :         : 4         : N              
+entradaShiftL[2]             : B18       : input  : 3.3-V LVTTL       :         : 4         : N              
+entrada0MuxA[17]             : B19       : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : B20       :        :                   :         : 4         :                
+GND                          : B21       : gnd    :                   :         :           :                
+VCCIO5                       : B22       : power  :                   : 3.3V    : 5         :                
+entrada0MuxA[28]             : C1        : input  : 3.3-V LVTTL       :         : 2         : N              
+entrada1MuxB[20]             : C2        : input  : 3.3-V LVTTL       :         : 2         : N              
+~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : C3        : input  : 3.3-V LVTTL       :         : 2         : N              
+~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : C4        : input  : 3.3-V LVTTL       :         : 2         : N              
+GND                          : C5        : gnd    :                   :         :           :                
+VCCIO3                       : C6        : power  :                   : 3.3V    : 3         :                
+entradaShiftL[12]            : C7        : input  : 3.3-V LVTTL       :         : 3         : N              
+GND                          : C8        : gnd    :                   :         :           :                
+entradaShiftL[21]            : C9        : input  : 3.3-V LVTTL       :         : 3         : N              
+entradaRegB[14]              : C10       : input  : 3.3-V LVTTL       :         : 3         : N              
+VCCIO3                       : C11       : power  :                   : 3.3V    : 3         :                
+VCCIO4                       : C12       : power  :                   : 3.3V    : 4         :                
+entrada2MuxB[16]             : C13       : input  : 3.3-V LVTTL       :         : 4         : N              
+entradaShiftL[30]            : C14       : input  : 3.3-V LVTTL       :         : 4         : N              
+GND                          : C15       : gnd    :                   :         :           :                
+entradaRegA[15]              : C16       : input  : 3.3-V LVTTL       :         : 4         : N              
+entradaShiftL[9]             : C17       : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : C18       :        :                   :         : 4         :                
+entrada2MuxB[12]             : C19       : input  : 3.3-V LVTTL       :         : 5         : N              
+entrada0MuxA[19]             : C20       : input  : 3.3-V LVTTL       :         : 5         : N              
+GND*                         : C21       :        :                   :         : 5         :                
+GND*                         : C22       :        :                   :         : 5         :                
+GND*                         : D1        :        :                   :         : 2         :                
+entrada2MuxB[27]             : D2        : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : D3        :        :                   :         : 2         :                
+GND*                         : D4        :        :                   :         : 2         :                
+GND*                         : D5        :        :                   :         : 2         :                
+GND*                         : D6        :        :                   :         : 2         :                
+entradaShiftL[5]             : D7        : input  : 3.3-V LVTTL       :         : 3         : N              
+entradaRegA[12]              : D8        : input  : 3.3-V LVTTL       :         : 3         : N              
+entrada1MuxB[13]             : D9        : input  : 3.3-V LVTTL       :         : 3         : N              
+GND                          : D10       : gnd    :                   :         :           :                
+entradaRegA[4]               : D11       : input  : 3.3-V LVTTL       :         : 3         : N              
+entrada1MuxB[0]              : D12       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND                          : D13       : gnd    :                   :         :           :                
+entradaRegA[13]              : D14       : input  : 3.3-V LVTTL       :         : 4         : N              
+entradaShiftL[3]             : D15       : input  : 3.3-V LVTTL       :         : 4         : N              
+entradaShiftL[28]            : D16       : input  : 3.3-V LVTTL       :         : 4         : N              
+VCCIO4                       : D17       : power  :                   : 3.3V    : 4         :                
+GND                          : D18       : gnd    :                   :         :           :                
+entradaShiftL[6]             : D19       : input  : 3.3-V LVTTL       :         : 5         : N              
+GND*                         : D20       :        :                   :         : 5         :                
+GND*                         : D21       :        :                   :         : 5         :                
+entradaRegA[29]              : D22       : input  : 3.3-V LVTTL       :         : 5         : N              
+GND*                         : E1        :        :                   :         : 2         :                
+entradaShiftL[13]            : E2        : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : E3        :        :                   :         : 2         :                
+GND*                         : E4        :        :                   :         : 2         :                
+VCCD_PLL3                    : E5        : power  :                   : 1.2V    :           :                
+VCCA_PLL3                    : E6        : power  :                   : 1.2V    :           :                
+entrada1MuxB[30]             : E7        : input  : 3.3-V LVTTL       :         : 3         : N              
+entradaShiftL[24]            : E8        : input  : 3.3-V LVTTL       :         : 3         : N              
+entradaRegA[17]              : E9        : input  : 3.3-V LVTTL       :         : 3         : N              
+VCCIO3                       : E10       : power  :                   : 3.3V    : 3         :                
+entrada0MuxA[12]             : E11       : input  : 3.3-V LVTTL       :         : 3         : N              
+entrada1MuxB[1]              : E12       : input  : 3.3-V LVTTL       :         : 3         : N              
+VCCIO4                       : E13       : power  :                   : 3.3V    : 4         :                
+entradaShiftL[19]            : E14       : input  : 3.3-V LVTTL       :         : 4         : N              
+entrada0MuxA[1]              : E15       : input  : 3.3-V LVTTL       :         : 4         : N              
+GNDA_PLL2                    : E16       : gnd    :                   :         :           :                
+GND_PLL2                     : E17       : gnd    :                   :         :           :                
+GND*                         : E18       :        :                   :         : 5         :                
+GND*                         : E19       :        :                   :         : 5         :                
+GND*                         : E20       :        :                   :         : 5         :                
+entradaRegB[27]              : E21       : input  : 3.3-V LVTTL       :         : 5         : N              
+entrada0MuxA[6]              : E22       : input  : 3.3-V LVTTL       :         : 5         : N              
+entradaRegB[13]              : F1        : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : F2        :        :                   :         : 2         :                
+entrada0MuxA[25]             : F3        : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : F4        :        :                   :         : 2         :                
+GND_PLL3                     : F5        : gnd    :                   :         :           :                
+GND_PLL3                     : F6        : gnd    :                   :         :           :                
+GNDA_PLL3                    : F7        : gnd    :                   :         :           :                
+entrada1MuxB[27]             : F8        : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : F9        :        :                   :         : 3         :                
+entrada0MuxA[16]             : F10       : input  : 3.3-V LVTTL       :         : 3         : N              
+entrada2MuxB[26]             : F11       : input  : 3.3-V LVTTL       :         : 3         : N              
+salidaPrueba[15]             : F12       : output : 3.3-V LVTTL       :         : 4         : N              
+entrada2MuxB[23]             : F13       : input  : 3.3-V LVTTL       :         : 4         : N              
+entradaRegB[8]               : F14       : input  : 3.3-V LVTTL       :         : 4         : N              
+entradaShiftL[17]            : F15       : input  : 3.3-V LVTTL       :         : 4         : N              
+VCCA_PLL2                    : F16       : power  :                   : 1.2V    :           :                
+VCCD_PLL2                    : F17       : power  :                   : 1.2V    :           :                
+GND_PLL2                     : F18       : gnd    :                   :         :           :                
+GND                          : F19       : gnd    :                   :         :           :                
+GND*                         : F20       :        :                   :         : 5         :                
+entradaRegB[23]              : F21       : input  : 3.3-V LVTTL       :         : 5         : N              
+entradaRegB[24]              : F22       : input  : 3.3-V LVTTL       :         : 5         : N              
+NC                           : G1        :        :                   :         :           :                
+NC                           : G2        :        :                   :         :           :                
+GND*                         : G3        :        :                   :         : 2         :                
+GND                          : G4        : gnd    :                   :         :           :                
+GND*                         : G5        :        :                   :         : 2         :                
+GND*                         : G6        :        :                   :         : 2         :                
+entrada1MuxB[31]             : G7        : input  : 3.3-V LVTTL       :         : 3         : N              
+entradaRegA[21]              : G8        : input  : 3.3-V LVTTL       :         : 3         : N              
+VCCIO3                       : G9        : power  :                   : 3.3V    : 3         :                
+GND                          : G10       : gnd    :                   :         :           :                
+salidaPrueba[6]              : G11       : output : 3.3-V LVTTL       :         : 3         : N              
+entradaRegB[1]               : G12       : input  : 3.3-V LVTTL       :         : 4         : N              
+GND                          : G13       : gnd    :                   :         :           :                
+VCCIO4                       : G14       : power  :                   : 3.3V    : 4         :                
+GND*                         : G15       :        :                   :         : 4         :                
+GND*                         : G16       :        :                   :         : 4         :                
+entradaRegB[31]              : G17       : input  : 3.3-V LVTTL       :         : 5         : N              
+entradaShiftL[22]            : G18       : input  : 3.3-V LVTTL       :         : 5         : N              
+VCCIO5                       : G19       : power  :                   : 3.3V    : 5         :                
+entrada0MuxA[5]              : G20       : input  : 3.3-V LVTTL       :         : 5         : N              
+entrada1MuxB[11]             : G21       : input  : 3.3-V LVTTL       :         : 5         : N              
+GND*                         : G22       :        :                   :         : 5         :                
+GND*                         : H1        :        :                   :         : 2         :                
+GND*                         : H2        :        :                   :         : 2         :                
+GND*                         : H3        :        :                   :         : 2         :                
+GND*                         : H4        :        :                   :         : 2         :                
+entradaShiftL[31]            : H5        : input  : 3.3-V LVTTL       :         : 2         : N              
+entradaRegB[9]               : H6        : input  : 3.3-V LVTTL       :         : 2         : N              
+entradaShiftL[16]            : H7        : input  : 3.3-V LVTTL       :         : 3         : N              
+entradaRegB[4]               : H8        : input  : 3.3-V LVTTL       :         : 3         : N              
+entrada1MuxB[15]             : H9        : input  : 3.3-V LVTTL       :         : 3         : N              
+entradaRegB[15]              : H10       : input  : 3.3-V LVTTL       :         : 3         : N              
+entradaRegA[3]               : H11       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : H12       :        :                   :         : 4         :                
+entrada2MuxB[20]             : H13       : input  : 3.3-V LVTTL       :         : 4         : N              
+entradaShiftL[20]            : H14       : input  : 3.3-V LVTTL       :         : 4         : N              
+entradaShiftL[0]             : H15       : input  : 3.3-V LVTTL       :         : 4         : N              
+entradaRegB[19]              : H16       : input  : 3.3-V LVTTL       :         : 5         : N              
+GND*                         : H17       :        :                   :         : 5         :                
+entradaRegB[25]              : H18       : input  : 3.3-V LVTTL       :         : 5         : N              
+entrada2MuxB[30]             : H19       : input  : 3.3-V LVTTL       :         : 5         : N              
+GND                          : H20       : gnd    :                   :         :           :                
+NC                           : H21       :        :                   :         :           :                
+NC                           : H22       :        :                   :         :           :                
+entrada1MuxB[25]             : J1        : input  : 3.3-V LVTTL       :         : 2         : N              
+entradaRegA[16]              : J2        : input  : 3.3-V LVTTL       :         : 2         : N              
+NC                           : J3        :        :                   :         :           :                
+entrada2MuxB[8]              : J4        : input  : 3.3-V LVTTL       :         : 2         : N              
+NC                           : J5        :        :                   :         :           :                
+NC                           : J6        :        :                   :         :           :                
+VCCIO2                       : J7        : power  :                   : 3.3V    : 2         :                
+NC                           : J8        :        :                   :         :           :                
+NC                           : J9        :        :                   :         :           :                
+VCCINT                       : J10       : power  :                   : 1.2V    :           :                
+VCCINT                       : J11       : power  :                   : 1.2V    :           :                
+VCCINT                       : J12       : power  :                   : 1.2V    :           :                
+VCCINT                       : J13       : power  :                   : 1.2V    :           :                
+entrada2MuxB[22]             : J14       : input  : 3.3-V LVTTL       :         : 4         : N              
+entradaRegB[20]              : J15       : input  : 3.3-V LVTTL       :         : 5         : N              
+VCCIO5                       : J16       : power  :                   : 3.3V    : 5         :                
+entradaRegA[9]               : J17       : input  : 3.3-V LVTTL       :         : 5         : N              
+entradaRegB[17]              : J18       : input  : 3.3-V LVTTL       :         : 5         : N              
+entradaRegB[16]              : J19       : input  : 3.3-V LVTTL       :         : 5         : N              
+entradaRegA[31]              : J20       : input  : 3.3-V LVTTL       :         : 5         : N              
+entradaRegA[8]               : J21       : input  : 3.3-V LVTTL       :         : 5         : N              
+salidaPrueba[7]              : J22       : output : 3.3-V LVTTL       :         : 5         : N              
+nCE                          : K1        :        :                   :         : 2         :                
+TCK                          : K2        : input  :                   :         : 2         :                
+GND                          : K3        : gnd    :                   :         :           :                
+DATA0                        : K4        : input  :                   :         : 2         :                
+TDI                          : K5        : input  :                   :         : 2         :                
+TMS                          : K6        : input  :                   :         : 2         :                
+GND                          : K7        : gnd    :                   :         :           :                
+NC                           : K8        :        :                   :         :           :                
+VCCINT                       : K9        : power  :                   : 1.2V    :           :                
+GND                          : K10       : gnd    :                   :         :           :                
+GND                          : K11       : gnd    :                   :         :           :                
+GND                          : K12       : gnd    :                   :         :           :                
+GND                          : K13       : gnd    :                   :         :           :                
+VCCINT                       : K14       : power  :                   : 1.2V    :           :                
+NC                           : K15       :        :                   :         :           :                
+GND                          : K16       : gnd    :                   :         :           :                
+NC                           : K17       :        :                   :         :           :                
+NC                           : K18       :        :                   :         :           :                
+GND                          : K19       : gnd    :                   :         :           :                
+GND*                         : K20       :        :                   :         : 5         :                
+entradaRegB[10]              : K21       : input  : 3.3-V LVTTL       :         : 5         : N              
+entradaRegA[27]              : K22       : input  : 3.3-V LVTTL       :         : 5         : N              
+GND+                         : L1        :        :                   :         : 2         :                
+GND+                         : L2        :        :                   :         : 2         :                
+VCCIO2                       : L3        : power  :                   : 3.3V    : 2         :                
+nCONFIG                      : L4        :        :                   :         : 2         :                
+TDO                          : L5        : output :                   :         : 2         :                
+DCLK                         : L6        :        :                   :         : 2         :                
+NC                           : L7        :        :                   :         :           :                
+GND*                         : L8        :        :                   :         : 2         :                
+VCCINT                       : L9        : power  :                   : 1.2V    :           :                
+GND                          : L10       : gnd    :                   :         :           :                
+GND                          : L11       : gnd    :                   :         :           :                
+GND                          : L12       : gnd    :                   :         :           :                
+GND                          : L13       : gnd    :                   :         :           :                
+VCCINT                       : L14       : power  :                   : 1.2V    :           :                
+NC                           : L15       :        :                   :         :           :                
+NC                           : L16       :        :                   :         :           :                
+NC                           : L17       :        :                   :         :           :                
+entradaRegA[20]              : L18       : input  : 3.3-V LVTTL       :         : 5         : N              
+salidaPrueba[16]             : L19       : output : 3.3-V LVTTL       :         : 5         : N              
+VCCIO5                       : L20       : power  :                   : 3.3V    : 5         :                
+entradaRegB[6]               : L21       : input  : 3.3-V LVTTL       :         : 5         : N              
+entradaRegB[7]               : L22       : input  : 3.3-V LVTTL       :         : 5         : N              
+GND+                         : M1        :        :                   :         : 1         :                
+GND+                         : M2        :        :                   :         : 1         :                
+VCCIO1                       : M3        : power  :                   : 3.3V    : 1         :                
+GND                          : M4        : gnd    :                   :         :           :                
+GND*                         : M5        :        :                   :         : 1         :                
+GND*                         : M6        :        :                   :         : 1         :                
+NC                           : M7        :        :                   :         :           :                
+NC                           : M8        :        :                   :         :           :                
+VCCINT                       : M9        : power  :                   : 1.2V    :           :                
+GND                          : M10       : gnd    :                   :         :           :                
+GND                          : M11       : gnd    :                   :         :           :                
+GND                          : M12       : gnd    :                   :         :           :                
+GND                          : M13       : gnd    :                   :         :           :                
+VCCINT                       : M14       : power  :                   : 1.2V    :           :                
+NC                           : M15       :        :                   :         :           :                
+NC                           : M16       :        :                   :         :           :                
+MSEL0                        : M17       :        :                   :         : 6         :                
+salidaPrueba[27]             : M18       : output : 3.3-V LVTTL       :         : 6         : N              
+salidaPrueba[25]             : M19       : output : 3.3-V LVTTL       :         : 6         : N              
+VCCIO6                       : M20       : power  :                   : 3.3V    : 6         :                
+GND+                         : M21       :        :                   :         : 6         :                
+GND+                         : M22       :        :                   :         : 6         :                
+GND*                         : N1        :        :                   :         : 1         :                
+GND*                         : N2        :        :                   :         : 1         :                
+entrada2MuxB[11]             : N3        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : N4        :        :                   :         : 1         :                
+NC                           : N5        :        :                   :         :           :                
+entradaRegB[11]              : N6        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND                          : N7        : gnd    :                   :         :           :                
+NC                           : N8        :        :                   :         :           :                
+VCCINT                       : N9        : power  :                   : 1.2V    :           :                
+GND                          : N10       : gnd    :                   :         :           :                
+GND                          : N11       : gnd    :                   :         :           :                
+GND                          : N12       : gnd    :                   :         :           :                
+GND                          : N13       : gnd    :                   :         :           :                
+VCCINT                       : N14       : power  :                   : 1.2V    :           :                
+salidaPrueba[19]             : N15       : output : 3.3-V LVTTL       :         : 6         : N              
+GND                          : N16       : gnd    :                   :         :           :                
+MSEL1                        : N17       :        :                   :         : 6         :                
+CONF_DONE                    : N18       :        :                   :         : 6         :                
+GND                          : N19       : gnd    :                   :         :           :                
+nSTATUS                      : N20       :        :                   :         : 6         :                
+entrada2MuxB[14]             : N21       : input  : 3.3-V LVTTL       :         : 6         : N              
+entradaRegB[30]              : N22       : input  : 3.3-V LVTTL       :         : 6         : N              
+GND*                         : P1        :        :                   :         : 1         :                
+GND*                         : P2        :        :                   :         : 1         :                
+GND*                         : P3        :        :                   :         : 1         :                
+NC                           : P4        :        :                   :         :           :                
+GND*                         : P5        :        :                   :         : 1         :                
+entradaRegA[19]              : P6        : input  : 3.3-V LVTTL       :         : 1         : N              
+VCCIO1                       : P7        : power  :                   : 3.3V    : 1         :                
+entrada0MuxA[21]             : P8        : input  : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : P9        :        :                   :         : 8         :                
+VCCINT                       : P10       : power  :                   : 1.2V    :           :                
+VCCINT                       : P11       : power  :                   : 1.2V    :           :                
+VCCINT                       : P12       : power  :                   : 1.2V    :           :                
+VCCINT                       : P13       : power  :                   : 1.2V    :           :                
+NC                           : P14       :        :                   :         :           :                
+salidaPrueba[17]             : P15       : output : 3.3-V LVTTL       :         : 6         : N              
+VCCIO6                       : P16       : power  :                   : 3.3V    : 6         :                
+salidaPrueba[23]             : P17       : output : 3.3-V LVTTL       :         : 6         : N              
+entrada1MuxB[26]             : P18       : input  : 3.3-V LVTTL       :         : 6         : N              
+NC                           : P19       :        :                   :         :           :                
+NC                           : P20       :        :                   :         :           :                
+NC                           : P21       :        :                   :         :           :                
+NC                           : P22       :        :                   :         :           :                
+entrada1MuxB[22]             : R1        : input  : 3.3-V LVTTL       :         : 1         : N              
+salidaPrueba[1]              : R2        : output : 3.3-V LVTTL       :         : 1         : N              
+GND                          : R3        : gnd    :                   :         :           :                
+NC                           : R4        :        :                   :         :           :                
+entrada0MuxA[11]             : R5        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : R6        :        :                   :         : 1         :                
+GND*                         : R7        :        :                   :         : 1         :                
+GND*                         : R8        :        :                   :         : 1         :                
+entrada2MuxB[5]              : R9        : input  : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : R10       :        :                   :         : 8         :                
+entrada0MuxA[14]             : R11       : input  : 3.3-V LVTTL       :         : 8         : N              
+entrada2MuxB[4]              : R12       : input  : 3.3-V LVTTL       :         : 7         : N              
+entrada2MuxB[17]             : R13       : input  : 3.3-V LVTTL       :         : 7         : N              
+salidaPrueba[13]             : R14       : output : 3.3-V LVTTL       :         : 7         : N              
+GND*                         : R15       :        :                   :         : 7         :                
+entradaRegA[26]              : R16       : input  : 3.3-V LVTTL       :         : 7         : N              
+entradaRegB[22]              : R17       : input  : 3.3-V LVTTL       :         : 6         : N              
+salidaPrueba[2]              : R18       : output : 3.3-V LVTTL       :         : 6         : N              
+entrada2MuxB[24]             : R19       : input  : 3.3-V LVTTL       :         : 6         : N              
+GND*                         : R20       :        :                   :         : 6         :                
+entrada1MuxB[16]             : R21       : input  : 3.3-V LVTTL       :         : 6         : N              
+entrada2MuxB[0]              : R22       : input  : 3.3-V LVTTL       :         : 6         : N              
+GND*                         : T1        :        :                   :         : 1         :                
+GND*                         : T2        :        :                   :         : 1         :                
+entrada1MuxB[17]             : T3        : input  : 3.3-V LVTTL       :         : 1         : N              
+VCCIO1                       : T4        : power  :                   : 3.3V    : 1         :                
+GND*                         : T5        :        :                   :         : 1         :                
+entrada2MuxB[25]             : T6        : input  : 3.3-V LVTTL       :         : 1         : N              
+entrada1MuxB[7]              : T7        : input  : 3.3-V LVTTL       :         : 8         : N              
+salidaPrueba[3]              : T8        : output : 3.3-V LVTTL       :         : 8         : N              
+VCCIO8                       : T9        : power  :                   : 3.3V    : 8         :                
+GND                          : T10       : gnd    :                   :         :           :                
+entradaRegB[29]              : T11       : input  : 3.3-V LVTTL       :         : 8         : N              
+entrada1MuxB[5]              : T12       : input  : 3.3-V LVTTL       :         : 7         : N              
+GND                          : T13       : gnd    :                   :         :           :                
+VCCIO7                       : T14       : power  :                   : 3.3V    : 7         :                
+salidaPrueba[10]             : T15       : output : 3.3-V LVTTL       :         : 7         : N              
+entrada2MuxB[13]             : T16       : input  : 3.3-V LVTTL       :         : 7         : N              
+GND_PLL4                     : T17       : gnd    :                   :         :           :                
+GND*                         : T18       :        :                   :         : 6         :                
+VCCIO6                       : T19       : power  :                   : 3.3V    : 6         :                
+GND                          : T20       : gnd    :                   :         :           :                
+salidaPrueba[9]              : T21       : output : 3.3-V LVTTL       :         : 6         : N              
+entrada0MuxA[27]             : T22       : input  : 3.3-V LVTTL       :         : 6         : N              
+entrada1MuxB[9]              : U1        : input  : 3.3-V LVTTL       :         : 1         : N              
+salidaPrueba[26]             : U2        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : U3        :        :                   :         : 1         :                
+GND*                         : U4        :        :                   :         : 1         :                
+GND_PLL1                     : U5        : gnd    :                   :         :           :                
+VCCD_PLL1                    : U6        : power  :                   : 1.2V    :           :                
+VCCA_PLL1                    : U7        : power  :                   : 1.2V    :           :                
+entrada2MuxB[18]             : U8        : input  : 3.3-V LVTTL       :         : 8         : N              
+entrada0MuxA[23]             : U9        : input  : 3.3-V LVTTL       :         : 8         : N              
+clk                          : U10       : input  : 3.3-V LVTTL       :         : 8         : N              
+entrada2MuxB[9]              : U11       : input  : 3.3-V LVTTL       :         : 8         : N              
+entradaShiftL[7]             : U12       : input  : 3.3-V LVTTL       :         : 8         : N              
+entradaRegA[5]               : U13       : input  : 3.3-V LVTTL       :         : 7         : N              
+entradaRegA[18]              : U14       : input  : 3.3-V LVTTL       :         : 7         : N              
+entrada2MuxB[1]              : U15       : input  : 3.3-V LVTTL       :         : 7         : N              
+VCCA_PLL4                    : U16       : power  :                   : 1.2V    :           :                
+VCCD_PLL4                    : U17       : power  :                   : 1.2V    :           :                
+salidaPrueba[8]              : U18       : output : 3.3-V LVTTL       :         : 6         : N              
+salidaPrueba[12]             : U19       : output : 3.3-V LVTTL       :         : 6         : N              
+salidaPrueba[31]             : U20       : output : 3.3-V LVTTL       :         : 6         : N              
+entradaShiftL[14]            : U21       : input  : 3.3-V LVTTL       :         : 6         : N              
+entrada1MuxB[3]              : U22       : input  : 3.3-V LVTTL       :         : 6         : N              
+entradaRegB[26]              : V1        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : V2        :        :                   :         : 1         :                
+GND                          : V3        : gnd    :                   :         :           :                
+GND*                         : V4        :        :                   :         : 1         :                
+GND_PLL1                     : V5        : gnd    :                   :         :           :                
+GND                          : V6        : gnd    :                   :         :           :                
+GNDA_PLL1                    : V7        : gnd    :                   :         :           :                
+entrada2MuxB[2]              : V8        : input  : 3.3-V LVTTL       :         : 8         : N              
+salidaPrueba[11]             : V9        : output : 3.3-V LVTTL       :         : 8         : N              
+VCCIO8                       : V10       : power  :                   : 3.3V    : 8         :                
+entrada1MuxB[6]              : V11       : input  : 3.3-V LVTTL       :         : 8         : N              
+entradaShiftL[29]            : V12       : input  : 3.3-V LVTTL       :         : 7         : N              
+VCCIO7                       : V13       : power  :                   : 3.3V    : 7         :                
+salidaPrueba[5]              : V14       : output : 3.3-V LVTTL       :         : 7         : N              
+entrada1MuxB[4]              : V15       : input  : 3.3-V LVTTL       :         : 7         : N              
+GNDA_PLL4                    : V16       : gnd    :                   :         :           :                
+GND                          : V17       : gnd    :                   :         :           :                
+GND_PLL4                     : V18       : gnd    :                   :         :           :                
+GND*                         : V19       :        :                   :         : 6         :                
+salidaPrueba[14]             : V20       : output : 3.3-V LVTTL       :         : 6         : N              
+GND*                         : V21       :        :                   :         : 6         :                
+salidaPrueba[28]             : V22       : output : 3.3-V LVTTL       :         : 6         : N              
+GND*                         : W1        :        :                   :         : 1         :                
+GND*                         : W2        :        :                   :         : 1         :                
+GND*                         : W3        :        :                   :         : 1         :                
+GND*                         : W4        :        :                   :         : 1         :                
+GND*                         : W5        :        :                   :         : 1         :                
+VCCIO8                       : W6        : power  :                   : 3.3V    : 8         :                
+entrada1MuxB[29]             : W7        : input  : 3.3-V LVTTL       :         : 8         : N              
+entradaRegB[2]               : W8        : input  : 3.3-V LVTTL       :         : 8         : N              
+entrada1MuxB[21]             : W9        : input  : 3.3-V LVTTL       :         : 8         : N              
+GND                          : W10       : gnd    :                   :         :           :                
+GND*                         : W11       :        :                   :         : 8         :                
+entrada2MuxB[31]             : W12       : input  : 3.3-V LVTTL       :         : 7         : N              
+GND                          : W13       : gnd    :                   :         :           :                
+entrada1MuxB[24]             : W14       : input  : 3.3-V LVTTL       :         : 7         : N              
+entradaRegA[24]              : W15       : input  : 3.3-V LVTTL       :         : 7         : N              
+salidaPrueba[30]             : W16       : output : 3.3-V LVTTL       :         : 7         : N              
+VCCIO7                       : W17       : power  :                   : 3.3V    : 7         :                
+NC                           : W18       :        :                   :         :           :                
+GND                          : W19       : gnd    :                   :         :           :                
+~LVDS91p/nCEO~               : W20       : output : 3.3-V LVTTL       :         : 6         : N              
+entrada0MuxA[31]             : W21       : input  : 3.3-V LVTTL       :         : 6         : N              
+entrada0MuxA[26]             : W22       : input  : 3.3-V LVTTL       :         : 6         : N              
+GND*                         : Y1        :        :                   :         : 1         :                
+entradaRegA[23]              : Y2        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : Y3        :        :                   :         : 1         :                
+GND*                         : Y4        :        :                   :         : 1         :                
+entrada0MuxA[30]             : Y5        : input  : 3.3-V LVTTL       :         : 8         : N              
+entrada1MuxB[2]              : Y6        : input  : 3.3-V LVTTL       :         : 8         : N              
+entradaRegB[12]              : Y7        : input  : 3.3-V LVTTL       :         : 8         : N              
+GND                          : Y8        : gnd    :                   :         :           :                
+entrada0MuxA[9]              : Y9        : input  : 3.3-V LVTTL       :         : 8         : N              
+entradaShiftL[8]             : Y10       : input  : 3.3-V LVTTL       :         : 8         : N              
+VCCIO8                       : Y11       : power  :                   : 3.3V    : 8         :                
+VCCIO7                       : Y12       : power  :                   : 3.3V    : 7         :                
+entradaRegB[18]              : Y13       : input  : 3.3-V LVTTL       :         : 7         : N              
+entrada0MuxA[3]              : Y14       : input  : 3.3-V LVTTL       :         : 7         : N              
+GND                          : Y15       : gnd    :                   :         :           :                
+entradaRegB[5]               : Y16       : input  : 3.3-V LVTTL       :         : 7         : N              
+entradaRegA[30]              : Y17       : input  : 3.3-V LVTTL       :         : 7         : N              
+GND*                         : Y18       :        :                   :         : 6         :                
+salidaPrueba[4]              : Y19       : output : 3.3-V LVTTL       :         : 6         : N              
+entradaRegA[6]               : Y20       : input  : 3.3-V LVTTL       :         : 6         : N              
+entrada0MuxA[18]             : Y21       : input  : 3.3-V LVTTL       :         : 6         : N              
+salidaPrueba[24]             : Y22       : output : 3.3-V LVTTL       :         : 6         : N              

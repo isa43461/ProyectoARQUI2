@@ -7,8 +7,8 @@ generic(
 	long : natural := 31
 );
 port(
-	w : in std_logic_vector(long downto 0);
-	y : out std_logic_vector(long downto 0)
+	w : in std_logic_vector(31 downto 0);
+	y : out std_logic_vector(31 downto 0)
 );
 end entity;
 

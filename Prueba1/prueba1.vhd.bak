@@ -1,0 +1,16 @@
+library ieee;
+
+use ieee.std_logic_arith.all;
+use ieee.std_logic_1164.all;
+
+entity prueba1 is
+	port
+		--Input
+		entrada0MuxA : in std_logic_vector(31 downto 0);
+		entradaRegA	: in std_logic_vector(31 downto 0);
+		entradaRegB	: in std_logic_vector(31 downto 0);
+		entrada1MuxB: in std_logic_vector(31 downto 0);
+		entrada2MuxB: in std_logic_vector(31 downto 0);
+		entradaShiftL: in std_logic_vector(31 downto 0);
+		--Output
+		salida	: out std_logic_vector(31 downto 0);
