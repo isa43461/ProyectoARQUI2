@@ -1,0 +1,864 @@
+TimeQuest Timing Analyzer report for MuxMemToReg
+Tue Apr 30 20:17:39 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Propagation Delay
+ 12. Minimum Propagation Delay
+ 13. Fast Model Setup Summary
+ 14. Fast Model Hold Summary
+ 15. Fast Model Recovery Summary
+ 16. Fast Model Removal Summary
+ 17. Fast Model Minimum Pulse Width Summary
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Multicorner Timing Analysis Summary
+ 21. Progagation Delay
+ 22. Minimum Progagation Delay
+ 23. Clock Transfers
+ 24. Report TCCS
+ 25. Report RSKM
+ 26. Unconstrained Paths
+ 27. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; MuxMemToReg                                                       ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
+----------
+; Clocks ;
+----------
+No clocks to report.
+
+
+---------------------------
+; Slow Model Fmax Summary ;
+---------------------------
+No paths to report.
+
+
+----------------------------
+; Slow Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Slow Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Slow Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++--------------------------------------------------------------------------+
+; Propagation Delay                                                        ;
++--------------+-----------------------+--------+--------+--------+--------+
+; Input Port   ; Output Port           ; RR     ; RF     ; FR     ; FF     ;
++--------------+-----------------------+--------+--------+--------+--------+
+; entrada1[0]  ; salidaMuxMemToReg[0]  ; 8.710  ;        ;        ; 8.710  ;
+; entrada1[1]  ; salidaMuxMemToReg[1]  ; 10.378 ;        ;        ; 10.378 ;
+; entrada1[2]  ; salidaMuxMemToReg[2]  ; 9.239  ;        ;        ; 9.239  ;
+; entrada1[3]  ; salidaMuxMemToReg[3]  ; 10.899 ;        ;        ; 10.899 ;
+; entrada1[4]  ; salidaMuxMemToReg[4]  ; 11.183 ;        ;        ; 11.183 ;
+; entrada1[5]  ; salidaMuxMemToReg[5]  ; 11.739 ;        ;        ; 11.739 ;
+; entrada1[6]  ; salidaMuxMemToReg[6]  ; 11.667 ;        ;        ; 11.667 ;
+; entrada1[7]  ; salidaMuxMemToReg[7]  ; 10.610 ;        ;        ; 10.610 ;
+; entrada1[8]  ; salidaMuxMemToReg[8]  ; 11.383 ;        ;        ; 11.383 ;
+; entrada1[9]  ; salidaMuxMemToReg[9]  ; 9.570  ;        ;        ; 9.570  ;
+; entrada1[10] ; salidaMuxMemToReg[10] ; 10.973 ;        ;        ; 10.973 ;
+; entrada1[11] ; salidaMuxMemToReg[11] ; 11.259 ;        ;        ; 11.259 ;
+; entrada1[12] ; salidaMuxMemToReg[12] ; 10.948 ;        ;        ; 10.948 ;
+; entrada1[13] ; salidaMuxMemToReg[13] ; 11.458 ;        ;        ; 11.458 ;
+; entrada1[14] ; salidaMuxMemToReg[14] ; 10.533 ;        ;        ; 10.533 ;
+; entrada1[15] ; salidaMuxMemToReg[15] ; 11.356 ;        ;        ; 11.356 ;
+; entrada1[16] ; salidaMuxMemToReg[16] ; 9.530  ;        ;        ; 9.530  ;
+; entrada1[17] ; salidaMuxMemToReg[17] ; 11.122 ;        ;        ; 11.122 ;
+; entrada1[18] ; salidaMuxMemToReg[18] ; 11.451 ;        ;        ; 11.451 ;
+; entrada1[19] ; salidaMuxMemToReg[19] ; 10.973 ;        ;        ; 10.973 ;
+; entrada1[20] ; salidaMuxMemToReg[20] ; 11.118 ;        ;        ; 11.118 ;
+; entrada1[21] ; salidaMuxMemToReg[21] ; 10.562 ;        ;        ; 10.562 ;
+; entrada1[22] ; salidaMuxMemToReg[22] ; 11.100 ;        ;        ; 11.100 ;
+; entrada1[23] ; salidaMuxMemToReg[23] ; 10.098 ;        ;        ; 10.098 ;
+; entrada1[24] ; salidaMuxMemToReg[24] ; 10.232 ;        ;        ; 10.232 ;
+; entrada1[25] ; salidaMuxMemToReg[25] ; 11.494 ;        ;        ; 11.494 ;
+; entrada1[26] ; salidaMuxMemToReg[26] ; 10.166 ;        ;        ; 10.166 ;
+; entrada1[27] ; salidaMuxMemToReg[27] ; 11.199 ;        ;        ; 11.199 ;
+; entrada1[28] ; salidaMuxMemToReg[28] ; 11.219 ;        ;        ; 11.219 ;
+; entrada1[29] ; salidaMuxMemToReg[29] ; 11.128 ;        ;        ; 11.128 ;
+; entrada1[30] ; salidaMuxMemToReg[30] ; 11.355 ;        ;        ; 11.355 ;
+; entrada1[31] ; salidaMuxMemToReg[31] ; 11.590 ;        ;        ; 11.590 ;
+; entrada2[0]  ; salidaMuxMemToReg[0]  ; 8.169  ;        ;        ; 8.169  ;
+; entrada2[1]  ; salidaMuxMemToReg[1]  ; 10.892 ;        ;        ; 10.892 ;
+; entrada2[2]  ; salidaMuxMemToReg[2]  ; 9.875  ;        ;        ; 9.875  ;
+; entrada2[3]  ; salidaMuxMemToReg[3]  ; 11.196 ;        ;        ; 11.196 ;
+; entrada2[4]  ; salidaMuxMemToReg[4]  ; 11.111 ;        ;        ; 11.111 ;
+; entrada2[5]  ; salidaMuxMemToReg[5]  ; 11.742 ;        ;        ; 11.742 ;
+; entrada2[6]  ; salidaMuxMemToReg[6]  ; 11.166 ;        ;        ; 11.166 ;
+; entrada2[7]  ; salidaMuxMemToReg[7]  ; 10.587 ;        ;        ; 10.587 ;
+; entrada2[8]  ; salidaMuxMemToReg[8]  ; 11.193 ;        ;        ; 11.193 ;
+; entrada2[9]  ; salidaMuxMemToReg[9]  ; 10.240 ;        ;        ; 10.240 ;
+; entrada2[10] ; salidaMuxMemToReg[10] ; 10.276 ;        ;        ; 10.276 ;
+; entrada2[11] ; salidaMuxMemToReg[11] ; 11.245 ;        ;        ; 11.245 ;
+; entrada2[12] ; salidaMuxMemToReg[12] ; 10.895 ;        ;        ; 10.895 ;
+; entrada2[13] ; salidaMuxMemToReg[13] ; 11.696 ;        ;        ; 11.696 ;
+; entrada2[14] ; salidaMuxMemToReg[14] ; 10.913 ;        ;        ; 10.913 ;
+; entrada2[15] ; salidaMuxMemToReg[15] ; 10.873 ;        ;        ; 10.873 ;
+; entrada2[16] ; salidaMuxMemToReg[16] ; 10.017 ;        ;        ; 10.017 ;
+; entrada2[17] ; salidaMuxMemToReg[17] ; 11.494 ;        ;        ; 11.494 ;
+; entrada2[18] ; salidaMuxMemToReg[18] ; 10.842 ;        ;        ; 10.842 ;
+; entrada2[19] ; salidaMuxMemToReg[19] ; 11.826 ;        ;        ; 11.826 ;
+; entrada2[20] ; salidaMuxMemToReg[20] ; 11.452 ;        ;        ; 11.452 ;
+; entrada2[21] ; salidaMuxMemToReg[21] ; 10.470 ;        ;        ; 10.470 ;
+; entrada2[22] ; salidaMuxMemToReg[22] ; 11.631 ;        ;        ; 11.631 ;
+; entrada2[23] ; salidaMuxMemToReg[23] ; 10.529 ;        ;        ; 10.529 ;
+; entrada2[24] ; salidaMuxMemToReg[24] ; 10.553 ;        ;        ; 10.553 ;
+; entrada2[25] ; salidaMuxMemToReg[25] ; 10.894 ;        ;        ; 10.894 ;
+; entrada2[26] ; salidaMuxMemToReg[26] ; 9.854  ;        ;        ; 9.854  ;
+; entrada2[27] ; salidaMuxMemToReg[27] ; 11.535 ;        ;        ; 11.535 ;
+; entrada2[28] ; salidaMuxMemToReg[28] ; 10.979 ;        ;        ; 10.979 ;
+; entrada2[29] ; salidaMuxMemToReg[29] ; 10.563 ;        ;        ; 10.563 ;
+; entrada2[30] ; salidaMuxMemToReg[30] ; 11.853 ;        ;        ; 11.853 ;
+; entrada2[31] ; salidaMuxMemToReg[31] ; 10.876 ;        ;        ; 10.876 ;
+; selector     ; salidaMuxMemToReg[0]  ; 12.875 ; 12.875 ; 12.875 ; 12.875 ;
+; selector     ; salidaMuxMemToReg[1]  ; 12.150 ; 12.150 ; 12.150 ; 12.150 ;
+; selector     ; salidaMuxMemToReg[2]  ; 10.544 ; 10.544 ; 10.544 ; 10.544 ;
+; selector     ; salidaMuxMemToReg[3]  ; 11.744 ; 11.744 ; 11.744 ; 11.744 ;
+; selector     ; salidaMuxMemToReg[4]  ; 12.689 ; 12.689 ; 12.689 ; 12.689 ;
+; selector     ; salidaMuxMemToReg[5]  ; 12.950 ; 12.950 ; 12.950 ; 12.950 ;
+; selector     ; salidaMuxMemToReg[6]  ; 12.665 ; 12.665 ; 12.665 ; 12.665 ;
+; selector     ; salidaMuxMemToReg[7]  ; 12.124 ; 12.124 ; 12.124 ; 12.124 ;
+; selector     ; salidaMuxMemToReg[8]  ; 12.951 ; 12.951 ; 12.951 ; 12.951 ;
+; selector     ; salidaMuxMemToReg[9]  ; 10.860 ; 10.860 ; 10.860 ; 10.860 ;
+; selector     ; salidaMuxMemToReg[10] ; 11.356 ; 11.356 ; 11.356 ; 11.356 ;
+; selector     ; salidaMuxMemToReg[11] ; 12.106 ; 12.106 ; 12.106 ; 12.106 ;
+; selector     ; salidaMuxMemToReg[12] ; 12.152 ; 12.152 ; 12.152 ; 12.152 ;
+; selector     ; salidaMuxMemToReg[13] ; 12.040 ; 12.040 ; 12.040 ; 12.040 ;
+; selector     ; salidaMuxMemToReg[14] ; 12.412 ; 12.412 ; 12.412 ; 12.412 ;
+; selector     ; salidaMuxMemToReg[15] ; 11.493 ; 11.493 ; 11.493 ; 11.493 ;
+; selector     ; salidaMuxMemToReg[16] ; 11.036 ; 11.036 ; 11.036 ; 11.036 ;
+; selector     ; salidaMuxMemToReg[17] ; 12.709 ; 12.709 ; 12.709 ; 12.709 ;
+; selector     ; salidaMuxMemToReg[18] ; 12.674 ; 12.674 ; 12.674 ; 12.674 ;
+; selector     ; salidaMuxMemToReg[19] ; 12.044 ; 12.044 ; 12.044 ; 12.044 ;
+; selector     ; salidaMuxMemToReg[20] ; 12.391 ; 12.391 ; 12.391 ; 12.391 ;
+; selector     ; salidaMuxMemToReg[21] ; 11.541 ; 11.541 ; 11.541 ; 11.541 ;
+; selector     ; salidaMuxMemToReg[22] ; 12.126 ; 12.126 ; 12.126 ; 12.126 ;
+; selector     ; salidaMuxMemToReg[23] ; 12.110 ; 12.110 ; 12.110 ; 12.110 ;
+; selector     ; salidaMuxMemToReg[24] ; 11.310 ; 11.310 ; 11.310 ; 11.310 ;
+; selector     ; salidaMuxMemToReg[25] ; 12.702 ; 12.702 ; 12.702 ; 12.702 ;
+; selector     ; salidaMuxMemToReg[26] ; 10.819 ; 10.819 ; 10.819 ; 10.819 ;
+; selector     ; salidaMuxMemToReg[27] ; 12.027 ; 12.027 ; 12.027 ; 12.027 ;
+; selector     ; salidaMuxMemToReg[28] ; 11.601 ; 11.601 ; 11.601 ; 11.601 ;
+; selector     ; salidaMuxMemToReg[29] ; 11.576 ; 11.576 ; 11.576 ; 11.576 ;
+; selector     ; salidaMuxMemToReg[30] ; 11.541 ; 11.541 ; 11.541 ; 11.541 ;
+; selector     ; salidaMuxMemToReg[31] ; 12.384 ; 12.384 ; 12.384 ; 12.384 ;
++--------------+-----------------------+--------+--------+--------+--------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Propagation Delay                                                ;
++--------------+-----------------------+--------+--------+--------+--------+
+; Input Port   ; Output Port           ; RR     ; RF     ; FR     ; FF     ;
++--------------+-----------------------+--------+--------+--------+--------+
+; entrada1[0]  ; salidaMuxMemToReg[0]  ; 8.710  ;        ;        ; 8.710  ;
+; entrada1[1]  ; salidaMuxMemToReg[1]  ; 10.378 ;        ;        ; 10.378 ;
+; entrada1[2]  ; salidaMuxMemToReg[2]  ; 9.239  ;        ;        ; 9.239  ;
+; entrada1[3]  ; salidaMuxMemToReg[3]  ; 10.899 ;        ;        ; 10.899 ;
+; entrada1[4]  ; salidaMuxMemToReg[4]  ; 11.183 ;        ;        ; 11.183 ;
+; entrada1[5]  ; salidaMuxMemToReg[5]  ; 11.739 ;        ;        ; 11.739 ;
+; entrada1[6]  ; salidaMuxMemToReg[6]  ; 11.667 ;        ;        ; 11.667 ;
+; entrada1[7]  ; salidaMuxMemToReg[7]  ; 10.610 ;        ;        ; 10.610 ;
+; entrada1[8]  ; salidaMuxMemToReg[8]  ; 11.383 ;        ;        ; 11.383 ;
+; entrada1[9]  ; salidaMuxMemToReg[9]  ; 9.570  ;        ;        ; 9.570  ;
+; entrada1[10] ; salidaMuxMemToReg[10] ; 10.973 ;        ;        ; 10.973 ;
+; entrada1[11] ; salidaMuxMemToReg[11] ; 11.259 ;        ;        ; 11.259 ;
+; entrada1[12] ; salidaMuxMemToReg[12] ; 10.948 ;        ;        ; 10.948 ;
+; entrada1[13] ; salidaMuxMemToReg[13] ; 11.458 ;        ;        ; 11.458 ;
+; entrada1[14] ; salidaMuxMemToReg[14] ; 10.533 ;        ;        ; 10.533 ;
+; entrada1[15] ; salidaMuxMemToReg[15] ; 11.356 ;        ;        ; 11.356 ;
+; entrada1[16] ; salidaMuxMemToReg[16] ; 9.530  ;        ;        ; 9.530  ;
+; entrada1[17] ; salidaMuxMemToReg[17] ; 11.122 ;        ;        ; 11.122 ;
+; entrada1[18] ; salidaMuxMemToReg[18] ; 11.451 ;        ;        ; 11.451 ;
+; entrada1[19] ; salidaMuxMemToReg[19] ; 10.973 ;        ;        ; 10.973 ;
+; entrada1[20] ; salidaMuxMemToReg[20] ; 11.118 ;        ;        ; 11.118 ;
+; entrada1[21] ; salidaMuxMemToReg[21] ; 10.562 ;        ;        ; 10.562 ;
+; entrada1[22] ; salidaMuxMemToReg[22] ; 11.100 ;        ;        ; 11.100 ;
+; entrada1[23] ; salidaMuxMemToReg[23] ; 10.098 ;        ;        ; 10.098 ;
+; entrada1[24] ; salidaMuxMemToReg[24] ; 10.232 ;        ;        ; 10.232 ;
+; entrada1[25] ; salidaMuxMemToReg[25] ; 11.494 ;        ;        ; 11.494 ;
+; entrada1[26] ; salidaMuxMemToReg[26] ; 10.166 ;        ;        ; 10.166 ;
+; entrada1[27] ; salidaMuxMemToReg[27] ; 11.199 ;        ;        ; 11.199 ;
+; entrada1[28] ; salidaMuxMemToReg[28] ; 11.219 ;        ;        ; 11.219 ;
+; entrada1[29] ; salidaMuxMemToReg[29] ; 11.128 ;        ;        ; 11.128 ;
+; entrada1[30] ; salidaMuxMemToReg[30] ; 11.355 ;        ;        ; 11.355 ;
+; entrada1[31] ; salidaMuxMemToReg[31] ; 11.590 ;        ;        ; 11.590 ;
+; entrada2[0]  ; salidaMuxMemToReg[0]  ; 8.169  ;        ;        ; 8.169  ;
+; entrada2[1]  ; salidaMuxMemToReg[1]  ; 10.892 ;        ;        ; 10.892 ;
+; entrada2[2]  ; salidaMuxMemToReg[2]  ; 9.875  ;        ;        ; 9.875  ;
+; entrada2[3]  ; salidaMuxMemToReg[3]  ; 11.196 ;        ;        ; 11.196 ;
+; entrada2[4]  ; salidaMuxMemToReg[4]  ; 11.111 ;        ;        ; 11.111 ;
+; entrada2[5]  ; salidaMuxMemToReg[5]  ; 11.742 ;        ;        ; 11.742 ;
+; entrada2[6]  ; salidaMuxMemToReg[6]  ; 11.166 ;        ;        ; 11.166 ;
+; entrada2[7]  ; salidaMuxMemToReg[7]  ; 10.587 ;        ;        ; 10.587 ;
+; entrada2[8]  ; salidaMuxMemToReg[8]  ; 11.193 ;        ;        ; 11.193 ;
+; entrada2[9]  ; salidaMuxMemToReg[9]  ; 10.240 ;        ;        ; 10.240 ;
+; entrada2[10] ; salidaMuxMemToReg[10] ; 10.276 ;        ;        ; 10.276 ;
+; entrada2[11] ; salidaMuxMemToReg[11] ; 11.245 ;        ;        ; 11.245 ;
+; entrada2[12] ; salidaMuxMemToReg[12] ; 10.895 ;        ;        ; 10.895 ;
+; entrada2[13] ; salidaMuxMemToReg[13] ; 11.696 ;        ;        ; 11.696 ;
+; entrada2[14] ; salidaMuxMemToReg[14] ; 10.913 ;        ;        ; 10.913 ;
+; entrada2[15] ; salidaMuxMemToReg[15] ; 10.873 ;        ;        ; 10.873 ;
+; entrada2[16] ; salidaMuxMemToReg[16] ; 10.017 ;        ;        ; 10.017 ;
+; entrada2[17] ; salidaMuxMemToReg[17] ; 11.494 ;        ;        ; 11.494 ;
+; entrada2[18] ; salidaMuxMemToReg[18] ; 10.842 ;        ;        ; 10.842 ;
+; entrada2[19] ; salidaMuxMemToReg[19] ; 11.826 ;        ;        ; 11.826 ;
+; entrada2[20] ; salidaMuxMemToReg[20] ; 11.452 ;        ;        ; 11.452 ;
+; entrada2[21] ; salidaMuxMemToReg[21] ; 10.470 ;        ;        ; 10.470 ;
+; entrada2[22] ; salidaMuxMemToReg[22] ; 11.631 ;        ;        ; 11.631 ;
+; entrada2[23] ; salidaMuxMemToReg[23] ; 10.529 ;        ;        ; 10.529 ;
+; entrada2[24] ; salidaMuxMemToReg[24] ; 10.553 ;        ;        ; 10.553 ;
+; entrada2[25] ; salidaMuxMemToReg[25] ; 10.894 ;        ;        ; 10.894 ;
+; entrada2[26] ; salidaMuxMemToReg[26] ; 9.854  ;        ;        ; 9.854  ;
+; entrada2[27] ; salidaMuxMemToReg[27] ; 11.535 ;        ;        ; 11.535 ;
+; entrada2[28] ; salidaMuxMemToReg[28] ; 10.979 ;        ;        ; 10.979 ;
+; entrada2[29] ; salidaMuxMemToReg[29] ; 10.563 ;        ;        ; 10.563 ;
+; entrada2[30] ; salidaMuxMemToReg[30] ; 11.853 ;        ;        ; 11.853 ;
+; entrada2[31] ; salidaMuxMemToReg[31] ; 10.876 ;        ;        ; 10.876 ;
+; selector     ; salidaMuxMemToReg[0]  ; 12.875 ; 12.875 ; 12.875 ; 12.875 ;
+; selector     ; salidaMuxMemToReg[1]  ; 12.150 ; 12.150 ; 12.150 ; 12.150 ;
+; selector     ; salidaMuxMemToReg[2]  ; 10.544 ; 10.544 ; 10.544 ; 10.544 ;
+; selector     ; salidaMuxMemToReg[3]  ; 11.744 ; 11.744 ; 11.744 ; 11.744 ;
+; selector     ; salidaMuxMemToReg[4]  ; 12.689 ; 12.689 ; 12.689 ; 12.689 ;
+; selector     ; salidaMuxMemToReg[5]  ; 12.950 ; 12.950 ; 12.950 ; 12.950 ;
+; selector     ; salidaMuxMemToReg[6]  ; 12.665 ; 12.665 ; 12.665 ; 12.665 ;
+; selector     ; salidaMuxMemToReg[7]  ; 12.124 ; 12.124 ; 12.124 ; 12.124 ;
+; selector     ; salidaMuxMemToReg[8]  ; 12.951 ; 12.951 ; 12.951 ; 12.951 ;
+; selector     ; salidaMuxMemToReg[9]  ; 10.860 ; 10.860 ; 10.860 ; 10.860 ;
+; selector     ; salidaMuxMemToReg[10] ; 11.356 ; 11.356 ; 11.356 ; 11.356 ;
+; selector     ; salidaMuxMemToReg[11] ; 12.106 ; 12.106 ; 12.106 ; 12.106 ;
+; selector     ; salidaMuxMemToReg[12] ; 12.152 ; 12.152 ; 12.152 ; 12.152 ;
+; selector     ; salidaMuxMemToReg[13] ; 12.040 ; 12.040 ; 12.040 ; 12.040 ;
+; selector     ; salidaMuxMemToReg[14] ; 12.412 ; 12.412 ; 12.412 ; 12.412 ;
+; selector     ; salidaMuxMemToReg[15] ; 11.493 ; 11.493 ; 11.493 ; 11.493 ;
+; selector     ; salidaMuxMemToReg[16] ; 11.036 ; 11.036 ; 11.036 ; 11.036 ;
+; selector     ; salidaMuxMemToReg[17] ; 12.709 ; 12.709 ; 12.709 ; 12.709 ;
+; selector     ; salidaMuxMemToReg[18] ; 12.674 ; 12.674 ; 12.674 ; 12.674 ;
+; selector     ; salidaMuxMemToReg[19] ; 12.044 ; 12.044 ; 12.044 ; 12.044 ;
+; selector     ; salidaMuxMemToReg[20] ; 12.391 ; 12.391 ; 12.391 ; 12.391 ;
+; selector     ; salidaMuxMemToReg[21] ; 11.541 ; 11.541 ; 11.541 ; 11.541 ;
+; selector     ; salidaMuxMemToReg[22] ; 12.126 ; 12.126 ; 12.126 ; 12.126 ;
+; selector     ; salidaMuxMemToReg[23] ; 12.110 ; 12.110 ; 12.110 ; 12.110 ;
+; selector     ; salidaMuxMemToReg[24] ; 11.310 ; 11.310 ; 11.310 ; 11.310 ;
+; selector     ; salidaMuxMemToReg[25] ; 12.702 ; 12.702 ; 12.702 ; 12.702 ;
+; selector     ; salidaMuxMemToReg[26] ; 10.819 ; 10.819 ; 10.819 ; 10.819 ;
+; selector     ; salidaMuxMemToReg[27] ; 12.027 ; 12.027 ; 12.027 ; 12.027 ;
+; selector     ; salidaMuxMemToReg[28] ; 11.601 ; 11.601 ; 11.601 ; 11.601 ;
+; selector     ; salidaMuxMemToReg[29] ; 11.576 ; 11.576 ; 11.576 ; 11.576 ;
+; selector     ; salidaMuxMemToReg[30] ; 11.541 ; 11.541 ; 11.541 ; 11.541 ;
+; selector     ; salidaMuxMemToReg[31] ; 12.384 ; 12.384 ; 12.384 ; 12.384 ;
++--------------+-----------------------+--------+--------+--------+--------+
+
+
+----------------------------
+; Fast Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Fast Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Fast Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++----------------------------------------------------------------------+
+; Propagation Delay                                                    ;
++--------------+-----------------------+-------+-------+-------+-------+
+; Input Port   ; Output Port           ; RR    ; RF    ; FR    ; FF    ;
++--------------+-----------------------+-------+-------+-------+-------+
+; entrada1[0]  ; salidaMuxMemToReg[0]  ; 3.895 ;       ;       ; 3.895 ;
+; entrada1[1]  ; salidaMuxMemToReg[1]  ; 5.290 ;       ;       ; 5.290 ;
+; entrada1[2]  ; salidaMuxMemToReg[2]  ; 4.844 ;       ;       ; 4.844 ;
+; entrada1[3]  ; salidaMuxMemToReg[3]  ; 5.460 ;       ;       ; 5.460 ;
+; entrada1[4]  ; salidaMuxMemToReg[4]  ; 5.581 ;       ;       ; 5.581 ;
+; entrada1[5]  ; salidaMuxMemToReg[5]  ; 5.803 ;       ;       ; 5.803 ;
+; entrada1[6]  ; salidaMuxMemToReg[6]  ; 5.747 ;       ;       ; 5.747 ;
+; entrada1[7]  ; salidaMuxMemToReg[7]  ; 5.360 ;       ;       ; 5.360 ;
+; entrada1[8]  ; salidaMuxMemToReg[8]  ; 5.658 ;       ;       ; 5.658 ;
+; entrada1[9]  ; salidaMuxMemToReg[9]  ; 4.963 ;       ;       ; 4.963 ;
+; entrada1[10] ; salidaMuxMemToReg[10] ; 5.527 ;       ;       ; 5.527 ;
+; entrada1[11] ; salidaMuxMemToReg[11] ; 5.613 ;       ;       ; 5.613 ;
+; entrada1[12] ; salidaMuxMemToReg[12] ; 5.505 ;       ;       ; 5.505 ;
+; entrada1[13] ; salidaMuxMemToReg[13] ; 5.680 ;       ;       ; 5.680 ;
+; entrada1[14] ; salidaMuxMemToReg[14] ; 5.328 ;       ;       ; 5.328 ;
+; entrada1[15] ; salidaMuxMemToReg[15] ; 5.688 ;       ;       ; 5.688 ;
+; entrada1[16] ; salidaMuxMemToReg[16] ; 4.937 ;       ;       ; 4.937 ;
+; entrada1[17] ; salidaMuxMemToReg[17] ; 5.587 ;       ;       ; 5.587 ;
+; entrada1[18] ; salidaMuxMemToReg[18] ; 5.692 ;       ;       ; 5.692 ;
+; entrada1[19] ; salidaMuxMemToReg[19] ; 5.529 ;       ;       ; 5.529 ;
+; entrada1[20] ; salidaMuxMemToReg[20] ; 5.551 ;       ;       ; 5.551 ;
+; entrada1[21] ; salidaMuxMemToReg[21] ; 5.370 ;       ;       ; 5.370 ;
+; entrada1[22] ; salidaMuxMemToReg[22] ; 5.542 ;       ;       ; 5.542 ;
+; entrada1[23] ; salidaMuxMemToReg[23] ; 5.168 ;       ;       ; 5.168 ;
+; entrada1[24] ; salidaMuxMemToReg[24] ; 5.243 ;       ;       ; 5.243 ;
+; entrada1[25] ; salidaMuxMemToReg[25] ; 5.700 ;       ;       ; 5.700 ;
+; entrada1[26] ; salidaMuxMemToReg[26] ; 5.168 ;       ;       ; 5.168 ;
+; entrada1[27] ; salidaMuxMemToReg[27] ; 5.600 ;       ;       ; 5.600 ;
+; entrada1[28] ; salidaMuxMemToReg[28] ; 5.619 ;       ;       ; 5.619 ;
+; entrada1[29] ; salidaMuxMemToReg[29] ; 5.562 ;       ;       ; 5.562 ;
+; entrada1[30] ; salidaMuxMemToReg[30] ; 5.639 ;       ;       ; 5.639 ;
+; entrada1[31] ; salidaMuxMemToReg[31] ; 5.813 ;       ;       ; 5.813 ;
+; entrada2[0]  ; salidaMuxMemToReg[0]  ; 3.696 ;       ;       ; 3.696 ;
+; entrada2[1]  ; salidaMuxMemToReg[1]  ; 5.471 ;       ;       ; 5.471 ;
+; entrada2[2]  ; salidaMuxMemToReg[2]  ; 5.052 ;       ;       ; 5.052 ;
+; entrada2[3]  ; salidaMuxMemToReg[3]  ; 5.591 ;       ;       ; 5.591 ;
+; entrada2[4]  ; salidaMuxMemToReg[4]  ; 5.564 ;       ;       ; 5.564 ;
+; entrada2[5]  ; salidaMuxMemToReg[5]  ; 5.811 ;       ;       ; 5.811 ;
+; entrada2[6]  ; salidaMuxMemToReg[6]  ; 5.575 ;       ;       ; 5.575 ;
+; entrada2[7]  ; salidaMuxMemToReg[7]  ; 5.338 ;       ;       ; 5.338 ;
+; entrada2[8]  ; salidaMuxMemToReg[8]  ; 5.605 ;       ;       ; 5.605 ;
+; entrada2[9]  ; salidaMuxMemToReg[9]  ; 5.201 ;       ;       ; 5.201 ;
+; entrada2[10] ; salidaMuxMemToReg[10] ; 5.261 ;       ;       ; 5.261 ;
+; entrada2[11] ; salidaMuxMemToReg[11] ; 5.605 ;       ;       ; 5.605 ;
+; entrada2[12] ; salidaMuxMemToReg[12] ; 5.513 ;       ;       ; 5.513 ;
+; entrada2[13] ; salidaMuxMemToReg[13] ; 5.877 ;       ;       ; 5.877 ;
+; entrada2[14] ; salidaMuxMemToReg[14] ; 5.492 ;       ;       ; 5.492 ;
+; entrada2[15] ; salidaMuxMemToReg[15] ; 5.462 ;       ;       ; 5.462 ;
+; entrada2[16] ; salidaMuxMemToReg[16] ; 5.119 ;       ;       ; 5.119 ;
+; entrada2[17] ; salidaMuxMemToReg[17] ; 5.717 ;       ;       ; 5.717 ;
+; entrada2[18] ; salidaMuxMemToReg[18] ; 5.462 ;       ;       ; 5.462 ;
+; entrada2[19] ; salidaMuxMemToReg[19] ; 5.854 ;       ;       ; 5.854 ;
+; entrada2[20] ; salidaMuxMemToReg[20] ; 5.686 ;       ;       ; 5.686 ;
+; entrada2[21] ; salidaMuxMemToReg[21] ; 5.314 ;       ;       ; 5.314 ;
+; entrada2[22] ; salidaMuxMemToReg[22] ; 5.778 ;       ;       ; 5.778 ;
+; entrada2[23] ; salidaMuxMemToReg[23] ; 5.319 ;       ;       ; 5.319 ;
+; entrada2[24] ; salidaMuxMemToReg[24] ; 5.361 ;       ;       ; 5.361 ;
+; entrada2[25] ; salidaMuxMemToReg[25] ; 5.474 ;       ;       ; 5.474 ;
+; entrada2[26] ; salidaMuxMemToReg[26] ; 5.052 ;       ;       ; 5.052 ;
+; entrada2[27] ; salidaMuxMemToReg[27] ; 5.812 ;       ;       ; 5.812 ;
+; entrada2[28] ; salidaMuxMemToReg[28] ; 5.573 ;       ;       ; 5.573 ;
+; entrada2[29] ; salidaMuxMemToReg[29] ; 5.348 ;       ;       ; 5.348 ;
+; entrada2[30] ; salidaMuxMemToReg[30] ; 5.864 ;       ;       ; 5.864 ;
+; entrada2[31] ; salidaMuxMemToReg[31] ; 5.461 ;       ;       ; 5.461 ;
+; selector     ; salidaMuxMemToReg[0]  ; 6.386 ; 6.386 ; 6.386 ; 6.386 ;
+; selector     ; salidaMuxMemToReg[1]  ; 6.237 ; 6.237 ; 6.237 ; 6.237 ;
+; selector     ; salidaMuxMemToReg[2]  ; 5.396 ; 5.396 ; 5.396 ; 5.396 ;
+; selector     ; salidaMuxMemToReg[3]  ; 5.961 ; 5.961 ; 5.961 ; 5.961 ;
+; selector     ; salidaMuxMemToReg[4]  ; 6.436 ; 6.436 ; 6.436 ; 6.436 ;
+; selector     ; salidaMuxMemToReg[5]  ; 6.530 ; 6.530 ; 6.530 ; 6.530 ;
+; selector     ; salidaMuxMemToReg[6]  ; 6.405 ; 6.405 ; 6.405 ; 6.405 ;
+; selector     ; salidaMuxMemToReg[7]  ; 6.209 ; 6.209 ; 6.209 ; 6.209 ;
+; selector     ; salidaMuxMemToReg[8]  ; 6.531 ; 6.531 ; 6.531 ; 6.531 ;
+; selector     ; salidaMuxMemToReg[9]  ; 5.501 ; 5.501 ; 5.501 ; 5.501 ;
+; selector     ; salidaMuxMemToReg[10] ; 5.845 ; 5.845 ; 5.845 ; 5.845 ;
+; selector     ; salidaMuxMemToReg[11] ; 6.109 ; 6.109 ; 6.109 ; 6.109 ;
+; selector     ; salidaMuxMemToReg[12] ; 6.237 ; 6.237 ; 6.237 ; 6.237 ;
+; selector     ; salidaMuxMemToReg[13] ; 6.085 ; 6.085 ; 6.085 ; 6.085 ;
+; selector     ; salidaMuxMemToReg[14] ; 6.328 ; 6.328 ; 6.328 ; 6.328 ;
+; selector     ; salidaMuxMemToReg[15] ; 5.880 ; 5.880 ; 5.880 ; 5.880 ;
+; selector     ; salidaMuxMemToReg[16] ; 5.561 ; 5.561 ; 5.561 ; 5.561 ;
+; selector     ; salidaMuxMemToReg[17] ; 6.445 ; 6.445 ; 6.445 ; 6.445 ;
+; selector     ; salidaMuxMemToReg[18] ; 6.422 ; 6.422 ; 6.422 ; 6.422 ;
+; selector     ; salidaMuxMemToReg[19] ; 6.091 ; 6.091 ; 6.091 ; 6.091 ;
+; selector     ; salidaMuxMemToReg[20] ; 6.309 ; 6.309 ; 6.309 ; 6.309 ;
+; selector     ; salidaMuxMemToReg[21] ; 5.888 ; 5.888 ; 5.888 ; 5.888 ;
+; selector     ; salidaMuxMemToReg[22] ; 6.128 ; 6.128 ; 6.128 ; 6.128 ;
+; selector     ; salidaMuxMemToReg[23] ; 6.198 ; 6.198 ; 6.198 ; 6.198 ;
+; selector     ; salidaMuxMemToReg[24] ; 5.821 ; 5.821 ; 5.821 ; 5.821 ;
+; selector     ; salidaMuxMemToReg[25] ; 6.437 ; 6.437 ; 6.437 ; 6.437 ;
+; selector     ; salidaMuxMemToReg[26] ; 5.477 ; 5.477 ; 5.477 ; 5.477 ;
+; selector     ; salidaMuxMemToReg[27] ; 6.078 ; 6.078 ; 6.078 ; 6.078 ;
+; selector     ; salidaMuxMemToReg[28] ; 5.936 ; 5.936 ; 5.936 ; 5.936 ;
+; selector     ; salidaMuxMemToReg[29] ; 5.907 ; 5.907 ; 5.907 ; 5.907 ;
+; selector     ; salidaMuxMemToReg[30] ; 5.886 ; 5.886 ; 5.886 ; 5.886 ;
+; selector     ; salidaMuxMemToReg[31] ; 6.304 ; 6.304 ; 6.304 ; 6.304 ;
++--------------+-----------------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------------------+
+; Minimum Propagation Delay                                            ;
++--------------+-----------------------+-------+-------+-------+-------+
+; Input Port   ; Output Port           ; RR    ; RF    ; FR    ; FF    ;
++--------------+-----------------------+-------+-------+-------+-------+
+; entrada1[0]  ; salidaMuxMemToReg[0]  ; 3.895 ;       ;       ; 3.895 ;
+; entrada1[1]  ; salidaMuxMemToReg[1]  ; 5.290 ;       ;       ; 5.290 ;
+; entrada1[2]  ; salidaMuxMemToReg[2]  ; 4.844 ;       ;       ; 4.844 ;
+; entrada1[3]  ; salidaMuxMemToReg[3]  ; 5.460 ;       ;       ; 5.460 ;
+; entrada1[4]  ; salidaMuxMemToReg[4]  ; 5.581 ;       ;       ; 5.581 ;
+; entrada1[5]  ; salidaMuxMemToReg[5]  ; 5.803 ;       ;       ; 5.803 ;
+; entrada1[6]  ; salidaMuxMemToReg[6]  ; 5.747 ;       ;       ; 5.747 ;
+; entrada1[7]  ; salidaMuxMemToReg[7]  ; 5.360 ;       ;       ; 5.360 ;
+; entrada1[8]  ; salidaMuxMemToReg[8]  ; 5.658 ;       ;       ; 5.658 ;
+; entrada1[9]  ; salidaMuxMemToReg[9]  ; 4.963 ;       ;       ; 4.963 ;
+; entrada1[10] ; salidaMuxMemToReg[10] ; 5.527 ;       ;       ; 5.527 ;
+; entrada1[11] ; salidaMuxMemToReg[11] ; 5.613 ;       ;       ; 5.613 ;
+; entrada1[12] ; salidaMuxMemToReg[12] ; 5.505 ;       ;       ; 5.505 ;
+; entrada1[13] ; salidaMuxMemToReg[13] ; 5.680 ;       ;       ; 5.680 ;
+; entrada1[14] ; salidaMuxMemToReg[14] ; 5.328 ;       ;       ; 5.328 ;
+; entrada1[15] ; salidaMuxMemToReg[15] ; 5.688 ;       ;       ; 5.688 ;
+; entrada1[16] ; salidaMuxMemToReg[16] ; 4.937 ;       ;       ; 4.937 ;
+; entrada1[17] ; salidaMuxMemToReg[17] ; 5.587 ;       ;       ; 5.587 ;
+; entrada1[18] ; salidaMuxMemToReg[18] ; 5.692 ;       ;       ; 5.692 ;
+; entrada1[19] ; salidaMuxMemToReg[19] ; 5.529 ;       ;       ; 5.529 ;
+; entrada1[20] ; salidaMuxMemToReg[20] ; 5.551 ;       ;       ; 5.551 ;
+; entrada1[21] ; salidaMuxMemToReg[21] ; 5.370 ;       ;       ; 5.370 ;
+; entrada1[22] ; salidaMuxMemToReg[22] ; 5.542 ;       ;       ; 5.542 ;
+; entrada1[23] ; salidaMuxMemToReg[23] ; 5.168 ;       ;       ; 5.168 ;
+; entrada1[24] ; salidaMuxMemToReg[24] ; 5.243 ;       ;       ; 5.243 ;
+; entrada1[25] ; salidaMuxMemToReg[25] ; 5.700 ;       ;       ; 5.700 ;
+; entrada1[26] ; salidaMuxMemToReg[26] ; 5.168 ;       ;       ; 5.168 ;
+; entrada1[27] ; salidaMuxMemToReg[27] ; 5.600 ;       ;       ; 5.600 ;
+; entrada1[28] ; salidaMuxMemToReg[28] ; 5.619 ;       ;       ; 5.619 ;
+; entrada1[29] ; salidaMuxMemToReg[29] ; 5.562 ;       ;       ; 5.562 ;
+; entrada1[30] ; salidaMuxMemToReg[30] ; 5.639 ;       ;       ; 5.639 ;
+; entrada1[31] ; salidaMuxMemToReg[31] ; 5.813 ;       ;       ; 5.813 ;
+; entrada2[0]  ; salidaMuxMemToReg[0]  ; 3.696 ;       ;       ; 3.696 ;
+; entrada2[1]  ; salidaMuxMemToReg[1]  ; 5.471 ;       ;       ; 5.471 ;
+; entrada2[2]  ; salidaMuxMemToReg[2]  ; 5.052 ;       ;       ; 5.052 ;
+; entrada2[3]  ; salidaMuxMemToReg[3]  ; 5.591 ;       ;       ; 5.591 ;
+; entrada2[4]  ; salidaMuxMemToReg[4]  ; 5.564 ;       ;       ; 5.564 ;
+; entrada2[5]  ; salidaMuxMemToReg[5]  ; 5.811 ;       ;       ; 5.811 ;
+; entrada2[6]  ; salidaMuxMemToReg[6]  ; 5.575 ;       ;       ; 5.575 ;
+; entrada2[7]  ; salidaMuxMemToReg[7]  ; 5.338 ;       ;       ; 5.338 ;
+; entrada2[8]  ; salidaMuxMemToReg[8]  ; 5.605 ;       ;       ; 5.605 ;
+; entrada2[9]  ; salidaMuxMemToReg[9]  ; 5.201 ;       ;       ; 5.201 ;
+; entrada2[10] ; salidaMuxMemToReg[10] ; 5.261 ;       ;       ; 5.261 ;
+; entrada2[11] ; salidaMuxMemToReg[11] ; 5.605 ;       ;       ; 5.605 ;
+; entrada2[12] ; salidaMuxMemToReg[12] ; 5.513 ;       ;       ; 5.513 ;
+; entrada2[13] ; salidaMuxMemToReg[13] ; 5.877 ;       ;       ; 5.877 ;
+; entrada2[14] ; salidaMuxMemToReg[14] ; 5.492 ;       ;       ; 5.492 ;
+; entrada2[15] ; salidaMuxMemToReg[15] ; 5.462 ;       ;       ; 5.462 ;
+; entrada2[16] ; salidaMuxMemToReg[16] ; 5.119 ;       ;       ; 5.119 ;
+; entrada2[17] ; salidaMuxMemToReg[17] ; 5.717 ;       ;       ; 5.717 ;
+; entrada2[18] ; salidaMuxMemToReg[18] ; 5.462 ;       ;       ; 5.462 ;
+; entrada2[19] ; salidaMuxMemToReg[19] ; 5.854 ;       ;       ; 5.854 ;
+; entrada2[20] ; salidaMuxMemToReg[20] ; 5.686 ;       ;       ; 5.686 ;
+; entrada2[21] ; salidaMuxMemToReg[21] ; 5.314 ;       ;       ; 5.314 ;
+; entrada2[22] ; salidaMuxMemToReg[22] ; 5.778 ;       ;       ; 5.778 ;
+; entrada2[23] ; salidaMuxMemToReg[23] ; 5.319 ;       ;       ; 5.319 ;
+; entrada2[24] ; salidaMuxMemToReg[24] ; 5.361 ;       ;       ; 5.361 ;
+; entrada2[25] ; salidaMuxMemToReg[25] ; 5.474 ;       ;       ; 5.474 ;
+; entrada2[26] ; salidaMuxMemToReg[26] ; 5.052 ;       ;       ; 5.052 ;
+; entrada2[27] ; salidaMuxMemToReg[27] ; 5.812 ;       ;       ; 5.812 ;
+; entrada2[28] ; salidaMuxMemToReg[28] ; 5.573 ;       ;       ; 5.573 ;
+; entrada2[29] ; salidaMuxMemToReg[29] ; 5.348 ;       ;       ; 5.348 ;
+; entrada2[30] ; salidaMuxMemToReg[30] ; 5.864 ;       ;       ; 5.864 ;
+; entrada2[31] ; salidaMuxMemToReg[31] ; 5.461 ;       ;       ; 5.461 ;
+; selector     ; salidaMuxMemToReg[0]  ; 6.386 ; 6.386 ; 6.386 ; 6.386 ;
+; selector     ; salidaMuxMemToReg[1]  ; 6.237 ; 6.237 ; 6.237 ; 6.237 ;
+; selector     ; salidaMuxMemToReg[2]  ; 5.396 ; 5.396 ; 5.396 ; 5.396 ;
+; selector     ; salidaMuxMemToReg[3]  ; 5.961 ; 5.961 ; 5.961 ; 5.961 ;
+; selector     ; salidaMuxMemToReg[4]  ; 6.436 ; 6.436 ; 6.436 ; 6.436 ;
+; selector     ; salidaMuxMemToReg[5]  ; 6.530 ; 6.530 ; 6.530 ; 6.530 ;
+; selector     ; salidaMuxMemToReg[6]  ; 6.405 ; 6.405 ; 6.405 ; 6.405 ;
+; selector     ; salidaMuxMemToReg[7]  ; 6.209 ; 6.209 ; 6.209 ; 6.209 ;
+; selector     ; salidaMuxMemToReg[8]  ; 6.531 ; 6.531 ; 6.531 ; 6.531 ;
+; selector     ; salidaMuxMemToReg[9]  ; 5.501 ; 5.501 ; 5.501 ; 5.501 ;
+; selector     ; salidaMuxMemToReg[10] ; 5.845 ; 5.845 ; 5.845 ; 5.845 ;
+; selector     ; salidaMuxMemToReg[11] ; 6.109 ; 6.109 ; 6.109 ; 6.109 ;
+; selector     ; salidaMuxMemToReg[12] ; 6.237 ; 6.237 ; 6.237 ; 6.237 ;
+; selector     ; salidaMuxMemToReg[13] ; 6.085 ; 6.085 ; 6.085 ; 6.085 ;
+; selector     ; salidaMuxMemToReg[14] ; 6.328 ; 6.328 ; 6.328 ; 6.328 ;
+; selector     ; salidaMuxMemToReg[15] ; 5.880 ; 5.880 ; 5.880 ; 5.880 ;
+; selector     ; salidaMuxMemToReg[16] ; 5.561 ; 5.561 ; 5.561 ; 5.561 ;
+; selector     ; salidaMuxMemToReg[17] ; 6.445 ; 6.445 ; 6.445 ; 6.445 ;
+; selector     ; salidaMuxMemToReg[18] ; 6.422 ; 6.422 ; 6.422 ; 6.422 ;
+; selector     ; salidaMuxMemToReg[19] ; 6.091 ; 6.091 ; 6.091 ; 6.091 ;
+; selector     ; salidaMuxMemToReg[20] ; 6.309 ; 6.309 ; 6.309 ; 6.309 ;
+; selector     ; salidaMuxMemToReg[21] ; 5.888 ; 5.888 ; 5.888 ; 5.888 ;
+; selector     ; salidaMuxMemToReg[22] ; 6.128 ; 6.128 ; 6.128 ; 6.128 ;
+; selector     ; salidaMuxMemToReg[23] ; 6.198 ; 6.198 ; 6.198 ; 6.198 ;
+; selector     ; salidaMuxMemToReg[24] ; 5.821 ; 5.821 ; 5.821 ; 5.821 ;
+; selector     ; salidaMuxMemToReg[25] ; 6.437 ; 6.437 ; 6.437 ; 6.437 ;
+; selector     ; salidaMuxMemToReg[26] ; 5.477 ; 5.477 ; 5.477 ; 5.477 ;
+; selector     ; salidaMuxMemToReg[27] ; 6.078 ; 6.078 ; 6.078 ; 6.078 ;
+; selector     ; salidaMuxMemToReg[28] ; 5.936 ; 5.936 ; 5.936 ; 5.936 ;
+; selector     ; salidaMuxMemToReg[29] ; 5.907 ; 5.907 ; 5.907 ; 5.907 ;
+; selector     ; salidaMuxMemToReg[30] ; 5.886 ; 5.886 ; 5.886 ; 5.886 ;
+; selector     ; salidaMuxMemToReg[31] ; 6.304 ; 6.304 ; 6.304 ; 6.304 ;
++--------------+-----------------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
++------------------+-------+------+----------+---------+---------------------+
+
+
++--------------------------------------------------------------------------+
+; Progagation Delay                                                        ;
++--------------+-----------------------+--------+--------+--------+--------+
+; Input Port   ; Output Port           ; RR     ; RF     ; FR     ; FF     ;
++--------------+-----------------------+--------+--------+--------+--------+
+; entrada1[0]  ; salidaMuxMemToReg[0]  ; 8.710  ;        ;        ; 8.710  ;
+; entrada1[1]  ; salidaMuxMemToReg[1]  ; 10.378 ;        ;        ; 10.378 ;
+; entrada1[2]  ; salidaMuxMemToReg[2]  ; 9.239  ;        ;        ; 9.239  ;
+; entrada1[3]  ; salidaMuxMemToReg[3]  ; 10.899 ;        ;        ; 10.899 ;
+; entrada1[4]  ; salidaMuxMemToReg[4]  ; 11.183 ;        ;        ; 11.183 ;
+; entrada1[5]  ; salidaMuxMemToReg[5]  ; 11.739 ;        ;        ; 11.739 ;
+; entrada1[6]  ; salidaMuxMemToReg[6]  ; 11.667 ;        ;        ; 11.667 ;
+; entrada1[7]  ; salidaMuxMemToReg[7]  ; 10.610 ;        ;        ; 10.610 ;
+; entrada1[8]  ; salidaMuxMemToReg[8]  ; 11.383 ;        ;        ; 11.383 ;
+; entrada1[9]  ; salidaMuxMemToReg[9]  ; 9.570  ;        ;        ; 9.570  ;
+; entrada1[10] ; salidaMuxMemToReg[10] ; 10.973 ;        ;        ; 10.973 ;
+; entrada1[11] ; salidaMuxMemToReg[11] ; 11.259 ;        ;        ; 11.259 ;
+; entrada1[12] ; salidaMuxMemToReg[12] ; 10.948 ;        ;        ; 10.948 ;
+; entrada1[13] ; salidaMuxMemToReg[13] ; 11.458 ;        ;        ; 11.458 ;
+; entrada1[14] ; salidaMuxMemToReg[14] ; 10.533 ;        ;        ; 10.533 ;
+; entrada1[15] ; salidaMuxMemToReg[15] ; 11.356 ;        ;        ; 11.356 ;
+; entrada1[16] ; salidaMuxMemToReg[16] ; 9.530  ;        ;        ; 9.530  ;
+; entrada1[17] ; salidaMuxMemToReg[17] ; 11.122 ;        ;        ; 11.122 ;
+; entrada1[18] ; salidaMuxMemToReg[18] ; 11.451 ;        ;        ; 11.451 ;
+; entrada1[19] ; salidaMuxMemToReg[19] ; 10.973 ;        ;        ; 10.973 ;
+; entrada1[20] ; salidaMuxMemToReg[20] ; 11.118 ;        ;        ; 11.118 ;
+; entrada1[21] ; salidaMuxMemToReg[21] ; 10.562 ;        ;        ; 10.562 ;
+; entrada1[22] ; salidaMuxMemToReg[22] ; 11.100 ;        ;        ; 11.100 ;
+; entrada1[23] ; salidaMuxMemToReg[23] ; 10.098 ;        ;        ; 10.098 ;
+; entrada1[24] ; salidaMuxMemToReg[24] ; 10.232 ;        ;        ; 10.232 ;
+; entrada1[25] ; salidaMuxMemToReg[25] ; 11.494 ;        ;        ; 11.494 ;
+; entrada1[26] ; salidaMuxMemToReg[26] ; 10.166 ;        ;        ; 10.166 ;
+; entrada1[27] ; salidaMuxMemToReg[27] ; 11.199 ;        ;        ; 11.199 ;
+; entrada1[28] ; salidaMuxMemToReg[28] ; 11.219 ;        ;        ; 11.219 ;
+; entrada1[29] ; salidaMuxMemToReg[29] ; 11.128 ;        ;        ; 11.128 ;
+; entrada1[30] ; salidaMuxMemToReg[30] ; 11.355 ;        ;        ; 11.355 ;
+; entrada1[31] ; salidaMuxMemToReg[31] ; 11.590 ;        ;        ; 11.590 ;
+; entrada2[0]  ; salidaMuxMemToReg[0]  ; 8.169  ;        ;        ; 8.169  ;
+; entrada2[1]  ; salidaMuxMemToReg[1]  ; 10.892 ;        ;        ; 10.892 ;
+; entrada2[2]  ; salidaMuxMemToReg[2]  ; 9.875  ;        ;        ; 9.875  ;
+; entrada2[3]  ; salidaMuxMemToReg[3]  ; 11.196 ;        ;        ; 11.196 ;
+; entrada2[4]  ; salidaMuxMemToReg[4]  ; 11.111 ;        ;        ; 11.111 ;
+; entrada2[5]  ; salidaMuxMemToReg[5]  ; 11.742 ;        ;        ; 11.742 ;
+; entrada2[6]  ; salidaMuxMemToReg[6]  ; 11.166 ;        ;        ; 11.166 ;
+; entrada2[7]  ; salidaMuxMemToReg[7]  ; 10.587 ;        ;        ; 10.587 ;
+; entrada2[8]  ; salidaMuxMemToReg[8]  ; 11.193 ;        ;        ; 11.193 ;
+; entrada2[9]  ; salidaMuxMemToReg[9]  ; 10.240 ;        ;        ; 10.240 ;
+; entrada2[10] ; salidaMuxMemToReg[10] ; 10.276 ;        ;        ; 10.276 ;
+; entrada2[11] ; salidaMuxMemToReg[11] ; 11.245 ;        ;        ; 11.245 ;
+; entrada2[12] ; salidaMuxMemToReg[12] ; 10.895 ;        ;        ; 10.895 ;
+; entrada2[13] ; salidaMuxMemToReg[13] ; 11.696 ;        ;        ; 11.696 ;
+; entrada2[14] ; salidaMuxMemToReg[14] ; 10.913 ;        ;        ; 10.913 ;
+; entrada2[15] ; salidaMuxMemToReg[15] ; 10.873 ;        ;        ; 10.873 ;
+; entrada2[16] ; salidaMuxMemToReg[16] ; 10.017 ;        ;        ; 10.017 ;
+; entrada2[17] ; salidaMuxMemToReg[17] ; 11.494 ;        ;        ; 11.494 ;
+; entrada2[18] ; salidaMuxMemToReg[18] ; 10.842 ;        ;        ; 10.842 ;
+; entrada2[19] ; salidaMuxMemToReg[19] ; 11.826 ;        ;        ; 11.826 ;
+; entrada2[20] ; salidaMuxMemToReg[20] ; 11.452 ;        ;        ; 11.452 ;
+; entrada2[21] ; salidaMuxMemToReg[21] ; 10.470 ;        ;        ; 10.470 ;
+; entrada2[22] ; salidaMuxMemToReg[22] ; 11.631 ;        ;        ; 11.631 ;
+; entrada2[23] ; salidaMuxMemToReg[23] ; 10.529 ;        ;        ; 10.529 ;
+; entrada2[24] ; salidaMuxMemToReg[24] ; 10.553 ;        ;        ; 10.553 ;
+; entrada2[25] ; salidaMuxMemToReg[25] ; 10.894 ;        ;        ; 10.894 ;
+; entrada2[26] ; salidaMuxMemToReg[26] ; 9.854  ;        ;        ; 9.854  ;
+; entrada2[27] ; salidaMuxMemToReg[27] ; 11.535 ;        ;        ; 11.535 ;
+; entrada2[28] ; salidaMuxMemToReg[28] ; 10.979 ;        ;        ; 10.979 ;
+; entrada2[29] ; salidaMuxMemToReg[29] ; 10.563 ;        ;        ; 10.563 ;
+; entrada2[30] ; salidaMuxMemToReg[30] ; 11.853 ;        ;        ; 11.853 ;
+; entrada2[31] ; salidaMuxMemToReg[31] ; 10.876 ;        ;        ; 10.876 ;
+; selector     ; salidaMuxMemToReg[0]  ; 12.875 ; 12.875 ; 12.875 ; 12.875 ;
+; selector     ; salidaMuxMemToReg[1]  ; 12.150 ; 12.150 ; 12.150 ; 12.150 ;
+; selector     ; salidaMuxMemToReg[2]  ; 10.544 ; 10.544 ; 10.544 ; 10.544 ;
+; selector     ; salidaMuxMemToReg[3]  ; 11.744 ; 11.744 ; 11.744 ; 11.744 ;
+; selector     ; salidaMuxMemToReg[4]  ; 12.689 ; 12.689 ; 12.689 ; 12.689 ;
+; selector     ; salidaMuxMemToReg[5]  ; 12.950 ; 12.950 ; 12.950 ; 12.950 ;
+; selector     ; salidaMuxMemToReg[6]  ; 12.665 ; 12.665 ; 12.665 ; 12.665 ;
+; selector     ; salidaMuxMemToReg[7]  ; 12.124 ; 12.124 ; 12.124 ; 12.124 ;
+; selector     ; salidaMuxMemToReg[8]  ; 12.951 ; 12.951 ; 12.951 ; 12.951 ;
+; selector     ; salidaMuxMemToReg[9]  ; 10.860 ; 10.860 ; 10.860 ; 10.860 ;
+; selector     ; salidaMuxMemToReg[10] ; 11.356 ; 11.356 ; 11.356 ; 11.356 ;
+; selector     ; salidaMuxMemToReg[11] ; 12.106 ; 12.106 ; 12.106 ; 12.106 ;
+; selector     ; salidaMuxMemToReg[12] ; 12.152 ; 12.152 ; 12.152 ; 12.152 ;
+; selector     ; salidaMuxMemToReg[13] ; 12.040 ; 12.040 ; 12.040 ; 12.040 ;
+; selector     ; salidaMuxMemToReg[14] ; 12.412 ; 12.412 ; 12.412 ; 12.412 ;
+; selector     ; salidaMuxMemToReg[15] ; 11.493 ; 11.493 ; 11.493 ; 11.493 ;
+; selector     ; salidaMuxMemToReg[16] ; 11.036 ; 11.036 ; 11.036 ; 11.036 ;
+; selector     ; salidaMuxMemToReg[17] ; 12.709 ; 12.709 ; 12.709 ; 12.709 ;
+; selector     ; salidaMuxMemToReg[18] ; 12.674 ; 12.674 ; 12.674 ; 12.674 ;
+; selector     ; salidaMuxMemToReg[19] ; 12.044 ; 12.044 ; 12.044 ; 12.044 ;
+; selector     ; salidaMuxMemToReg[20] ; 12.391 ; 12.391 ; 12.391 ; 12.391 ;
+; selector     ; salidaMuxMemToReg[21] ; 11.541 ; 11.541 ; 11.541 ; 11.541 ;
+; selector     ; salidaMuxMemToReg[22] ; 12.126 ; 12.126 ; 12.126 ; 12.126 ;
+; selector     ; salidaMuxMemToReg[23] ; 12.110 ; 12.110 ; 12.110 ; 12.110 ;
+; selector     ; salidaMuxMemToReg[24] ; 11.310 ; 11.310 ; 11.310 ; 11.310 ;
+; selector     ; salidaMuxMemToReg[25] ; 12.702 ; 12.702 ; 12.702 ; 12.702 ;
+; selector     ; salidaMuxMemToReg[26] ; 10.819 ; 10.819 ; 10.819 ; 10.819 ;
+; selector     ; salidaMuxMemToReg[27] ; 12.027 ; 12.027 ; 12.027 ; 12.027 ;
+; selector     ; salidaMuxMemToReg[28] ; 11.601 ; 11.601 ; 11.601 ; 11.601 ;
+; selector     ; salidaMuxMemToReg[29] ; 11.576 ; 11.576 ; 11.576 ; 11.576 ;
+; selector     ; salidaMuxMemToReg[30] ; 11.541 ; 11.541 ; 11.541 ; 11.541 ;
+; selector     ; salidaMuxMemToReg[31] ; 12.384 ; 12.384 ; 12.384 ; 12.384 ;
++--------------+-----------------------+--------+--------+--------+--------+
+
+
++----------------------------------------------------------------------+
+; Minimum Progagation Delay                                            ;
++--------------+-----------------------+-------+-------+-------+-------+
+; Input Port   ; Output Port           ; RR    ; RF    ; FR    ; FF    ;
++--------------+-----------------------+-------+-------+-------+-------+
+; entrada1[0]  ; salidaMuxMemToReg[0]  ; 3.895 ;       ;       ; 3.895 ;
+; entrada1[1]  ; salidaMuxMemToReg[1]  ; 5.290 ;       ;       ; 5.290 ;
+; entrada1[2]  ; salidaMuxMemToReg[2]  ; 4.844 ;       ;       ; 4.844 ;
+; entrada1[3]  ; salidaMuxMemToReg[3]  ; 5.460 ;       ;       ; 5.460 ;
+; entrada1[4]  ; salidaMuxMemToReg[4]  ; 5.581 ;       ;       ; 5.581 ;
+; entrada1[5]  ; salidaMuxMemToReg[5]  ; 5.803 ;       ;       ; 5.803 ;
+; entrada1[6]  ; salidaMuxMemToReg[6]  ; 5.747 ;       ;       ; 5.747 ;
+; entrada1[7]  ; salidaMuxMemToReg[7]  ; 5.360 ;       ;       ; 5.360 ;
+; entrada1[8]  ; salidaMuxMemToReg[8]  ; 5.658 ;       ;       ; 5.658 ;
+; entrada1[9]  ; salidaMuxMemToReg[9]  ; 4.963 ;       ;       ; 4.963 ;
+; entrada1[10] ; salidaMuxMemToReg[10] ; 5.527 ;       ;       ; 5.527 ;
+; entrada1[11] ; salidaMuxMemToReg[11] ; 5.613 ;       ;       ; 5.613 ;
+; entrada1[12] ; salidaMuxMemToReg[12] ; 5.505 ;       ;       ; 5.505 ;
+; entrada1[13] ; salidaMuxMemToReg[13] ; 5.680 ;       ;       ; 5.680 ;
+; entrada1[14] ; salidaMuxMemToReg[14] ; 5.328 ;       ;       ; 5.328 ;
+; entrada1[15] ; salidaMuxMemToReg[15] ; 5.688 ;       ;       ; 5.688 ;
+; entrada1[16] ; salidaMuxMemToReg[16] ; 4.937 ;       ;       ; 4.937 ;
+; entrada1[17] ; salidaMuxMemToReg[17] ; 5.587 ;       ;       ; 5.587 ;
+; entrada1[18] ; salidaMuxMemToReg[18] ; 5.692 ;       ;       ; 5.692 ;
+; entrada1[19] ; salidaMuxMemToReg[19] ; 5.529 ;       ;       ; 5.529 ;
+; entrada1[20] ; salidaMuxMemToReg[20] ; 5.551 ;       ;       ; 5.551 ;
+; entrada1[21] ; salidaMuxMemToReg[21] ; 5.370 ;       ;       ; 5.370 ;
+; entrada1[22] ; salidaMuxMemToReg[22] ; 5.542 ;       ;       ; 5.542 ;
+; entrada1[23] ; salidaMuxMemToReg[23] ; 5.168 ;       ;       ; 5.168 ;
+; entrada1[24] ; salidaMuxMemToReg[24] ; 5.243 ;       ;       ; 5.243 ;
+; entrada1[25] ; salidaMuxMemToReg[25] ; 5.700 ;       ;       ; 5.700 ;
+; entrada1[26] ; salidaMuxMemToReg[26] ; 5.168 ;       ;       ; 5.168 ;
+; entrada1[27] ; salidaMuxMemToReg[27] ; 5.600 ;       ;       ; 5.600 ;
+; entrada1[28] ; salidaMuxMemToReg[28] ; 5.619 ;       ;       ; 5.619 ;
+; entrada1[29] ; salidaMuxMemToReg[29] ; 5.562 ;       ;       ; 5.562 ;
+; entrada1[30] ; salidaMuxMemToReg[30] ; 5.639 ;       ;       ; 5.639 ;
+; entrada1[31] ; salidaMuxMemToReg[31] ; 5.813 ;       ;       ; 5.813 ;
+; entrada2[0]  ; salidaMuxMemToReg[0]  ; 3.696 ;       ;       ; 3.696 ;
+; entrada2[1]  ; salidaMuxMemToReg[1]  ; 5.471 ;       ;       ; 5.471 ;
+; entrada2[2]  ; salidaMuxMemToReg[2]  ; 5.052 ;       ;       ; 5.052 ;
+; entrada2[3]  ; salidaMuxMemToReg[3]  ; 5.591 ;       ;       ; 5.591 ;
+; entrada2[4]  ; salidaMuxMemToReg[4]  ; 5.564 ;       ;       ; 5.564 ;
+; entrada2[5]  ; salidaMuxMemToReg[5]  ; 5.811 ;       ;       ; 5.811 ;
+; entrada2[6]  ; salidaMuxMemToReg[6]  ; 5.575 ;       ;       ; 5.575 ;
+; entrada2[7]  ; salidaMuxMemToReg[7]  ; 5.338 ;       ;       ; 5.338 ;
+; entrada2[8]  ; salidaMuxMemToReg[8]  ; 5.605 ;       ;       ; 5.605 ;
+; entrada2[9]  ; salidaMuxMemToReg[9]  ; 5.201 ;       ;       ; 5.201 ;
+; entrada2[10] ; salidaMuxMemToReg[10] ; 5.261 ;       ;       ; 5.261 ;
+; entrada2[11] ; salidaMuxMemToReg[11] ; 5.605 ;       ;       ; 5.605 ;
+; entrada2[12] ; salidaMuxMemToReg[12] ; 5.513 ;       ;       ; 5.513 ;
+; entrada2[13] ; salidaMuxMemToReg[13] ; 5.877 ;       ;       ; 5.877 ;
+; entrada2[14] ; salidaMuxMemToReg[14] ; 5.492 ;       ;       ; 5.492 ;
+; entrada2[15] ; salidaMuxMemToReg[15] ; 5.462 ;       ;       ; 5.462 ;
+; entrada2[16] ; salidaMuxMemToReg[16] ; 5.119 ;       ;       ; 5.119 ;
+; entrada2[17] ; salidaMuxMemToReg[17] ; 5.717 ;       ;       ; 5.717 ;
+; entrada2[18] ; salidaMuxMemToReg[18] ; 5.462 ;       ;       ; 5.462 ;
+; entrada2[19] ; salidaMuxMemToReg[19] ; 5.854 ;       ;       ; 5.854 ;
+; entrada2[20] ; salidaMuxMemToReg[20] ; 5.686 ;       ;       ; 5.686 ;
+; entrada2[21] ; salidaMuxMemToReg[21] ; 5.314 ;       ;       ; 5.314 ;
+; entrada2[22] ; salidaMuxMemToReg[22] ; 5.778 ;       ;       ; 5.778 ;
+; entrada2[23] ; salidaMuxMemToReg[23] ; 5.319 ;       ;       ; 5.319 ;
+; entrada2[24] ; salidaMuxMemToReg[24] ; 5.361 ;       ;       ; 5.361 ;
+; entrada2[25] ; salidaMuxMemToReg[25] ; 5.474 ;       ;       ; 5.474 ;
+; entrada2[26] ; salidaMuxMemToReg[26] ; 5.052 ;       ;       ; 5.052 ;
+; entrada2[27] ; salidaMuxMemToReg[27] ; 5.812 ;       ;       ; 5.812 ;
+; entrada2[28] ; salidaMuxMemToReg[28] ; 5.573 ;       ;       ; 5.573 ;
+; entrada2[29] ; salidaMuxMemToReg[29] ; 5.348 ;       ;       ; 5.348 ;
+; entrada2[30] ; salidaMuxMemToReg[30] ; 5.864 ;       ;       ; 5.864 ;
+; entrada2[31] ; salidaMuxMemToReg[31] ; 5.461 ;       ;       ; 5.461 ;
+; selector     ; salidaMuxMemToReg[0]  ; 6.386 ; 6.386 ; 6.386 ; 6.386 ;
+; selector     ; salidaMuxMemToReg[1]  ; 6.237 ; 6.237 ; 6.237 ; 6.237 ;
+; selector     ; salidaMuxMemToReg[2]  ; 5.396 ; 5.396 ; 5.396 ; 5.396 ;
+; selector     ; salidaMuxMemToReg[3]  ; 5.961 ; 5.961 ; 5.961 ; 5.961 ;
+; selector     ; salidaMuxMemToReg[4]  ; 6.436 ; 6.436 ; 6.436 ; 6.436 ;
+; selector     ; salidaMuxMemToReg[5]  ; 6.530 ; 6.530 ; 6.530 ; 6.530 ;
+; selector     ; salidaMuxMemToReg[6]  ; 6.405 ; 6.405 ; 6.405 ; 6.405 ;
+; selector     ; salidaMuxMemToReg[7]  ; 6.209 ; 6.209 ; 6.209 ; 6.209 ;
+; selector     ; salidaMuxMemToReg[8]  ; 6.531 ; 6.531 ; 6.531 ; 6.531 ;
+; selector     ; salidaMuxMemToReg[9]  ; 5.501 ; 5.501 ; 5.501 ; 5.501 ;
+; selector     ; salidaMuxMemToReg[10] ; 5.845 ; 5.845 ; 5.845 ; 5.845 ;
+; selector     ; salidaMuxMemToReg[11] ; 6.109 ; 6.109 ; 6.109 ; 6.109 ;
+; selector     ; salidaMuxMemToReg[12] ; 6.237 ; 6.237 ; 6.237 ; 6.237 ;
+; selector     ; salidaMuxMemToReg[13] ; 6.085 ; 6.085 ; 6.085 ; 6.085 ;
+; selector     ; salidaMuxMemToReg[14] ; 6.328 ; 6.328 ; 6.328 ; 6.328 ;
+; selector     ; salidaMuxMemToReg[15] ; 5.880 ; 5.880 ; 5.880 ; 5.880 ;
+; selector     ; salidaMuxMemToReg[16] ; 5.561 ; 5.561 ; 5.561 ; 5.561 ;
+; selector     ; salidaMuxMemToReg[17] ; 6.445 ; 6.445 ; 6.445 ; 6.445 ;
+; selector     ; salidaMuxMemToReg[18] ; 6.422 ; 6.422 ; 6.422 ; 6.422 ;
+; selector     ; salidaMuxMemToReg[19] ; 6.091 ; 6.091 ; 6.091 ; 6.091 ;
+; selector     ; salidaMuxMemToReg[20] ; 6.309 ; 6.309 ; 6.309 ; 6.309 ;
+; selector     ; salidaMuxMemToReg[21] ; 5.888 ; 5.888 ; 5.888 ; 5.888 ;
+; selector     ; salidaMuxMemToReg[22] ; 6.128 ; 6.128 ; 6.128 ; 6.128 ;
+; selector     ; salidaMuxMemToReg[23] ; 6.198 ; 6.198 ; 6.198 ; 6.198 ;
+; selector     ; salidaMuxMemToReg[24] ; 5.821 ; 5.821 ; 5.821 ; 5.821 ;
+; selector     ; salidaMuxMemToReg[25] ; 6.437 ; 6.437 ; 6.437 ; 6.437 ;
+; selector     ; salidaMuxMemToReg[26] ; 5.477 ; 5.477 ; 5.477 ; 5.477 ;
+; selector     ; salidaMuxMemToReg[27] ; 6.078 ; 6.078 ; 6.078 ; 6.078 ;
+; selector     ; salidaMuxMemToReg[28] ; 5.936 ; 5.936 ; 5.936 ; 5.936 ;
+; selector     ; salidaMuxMemToReg[29] ; 5.907 ; 5.907 ; 5.907 ; 5.907 ;
+; selector     ; salidaMuxMemToReg[30] ; 5.886 ; 5.886 ; 5.886 ; 5.886 ;
+; selector     ; salidaMuxMemToReg[31] ; 6.304 ; 6.304 ; 6.304 ; 6.304 ;
++--------------+-----------------------+-------+-------+-------+-------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 65    ; 65   ;
+; Unconstrained Input Port Paths  ; 96    ; 96   ;
+; Unconstrained Output Ports      ; 32    ; 32   ;
+; Unconstrained Output Port Paths ; 96    ; 96   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Apr 30 20:17:38 2019
+Info: Command: quartus_sta MuxMemToReg -c MuxMemToReg
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'MuxMemToReg.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
+Info: Analyzing Slow Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4555 megabytes
+    Info: Processing ended: Tue Apr 30 20:17:39 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

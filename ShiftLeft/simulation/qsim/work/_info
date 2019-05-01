@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1\ProyectoArqui2\ShiftLeft\simulation\qsim
+vShiftLeft
+Z1 I_5G?6_DYFRPG0j?F4J_Qa1
+Z2 VL4;6nAHlFUGNRR^DB:o4K0
+Z3 dC:\altera\13.0sp1\ProyectoArqui2\ShiftLeft\simulation\qsim
+Z4 w1556603485
+Z5 8ShiftLeft.vo
+Z6 FShiftLeft.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@shift@left
+!i10b 1
+Z10 !s100 MR^Jgm@c8NdMN5SnMN_Q31
+!s85 0
+Z11 !s108 1556603492.310000
+Z12 !s107 ShiftLeft.vo|
+Z13 !s90 -work|work|ShiftLeft.vo|
+!s101 -O0
+vShiftLeft_vlg_check_tst
+!i10b 1
+!s100 M<7dQ<CiKzKWWS[hmTlH80
+INzLh>:I49c?Vk^?eF10a81
+Va;fefLI^hBMKB?HIoi8[f2
+R3
+Z14 w1556603484
+Z15 8ShiftLeft.vt
+Z16 FShiftLeft.vt
+L0 57
+R7
+r1
+!s85 0
+31
+Z17 !s108 1556603492.812000
+Z18 !s107 ShiftLeft.vt|
+Z19 !s90 -work|work|ShiftLeft.vt|
+!s101 -O0
+R8
+n@shift@left_vlg_check_tst
+vShiftLeft_vlg_sample_tst
+!i10b 1
+!s100 ojR:L4c5Efj3R8YJZOHNz3
+IzP3L9bhLKlgR9dWYejn_Q1
+VEcd2j^hl8?WOz5`BcWHb33
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@shift@left_vlg_sample_tst
+vShiftLeft_vlg_vec_tst
+!i10b 1
+!s100 LoTohVR`zGfo2kILj6[0b2
+I<VW=WEl`@G]g6D9QE6HeI1
+V=73eS2oga=G1ZK7Gkb6@z1
+R3
+R14
+R15
+R16
+L0 709
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@shift@left_vlg_vec_tst
