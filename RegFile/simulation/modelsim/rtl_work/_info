@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\PUJ\8\Arq\ProyectoARQUI2\RegFile\simulation\modelsim
+Eregfile
+w1557879824
+Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dD:\PUJ\8\Arq\ProyectoARQUI2\RegFile\simulation\modelsim
+8D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd
+FD:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd
+l0
+L15
+Vb@6M[YPWYSlYk;[Gb?D^21
+!s100 4^:FJ9MT3zJ_@N=H[Y<Jo0
+Z5 OV;C;10.1d;51
+31
+!i10b 1
+!s108 1557880296.547000
+!s90 -reportprogress|300|-93|-work|work|D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd|
+!s107 D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd|
+o-93 -work work -O0
+Z6 tExplicit 1

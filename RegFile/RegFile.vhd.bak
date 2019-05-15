@@ -1,0 +1,53 @@
+-- A library clause declares a name as a library.  It 
+-- does not create the library; it simply forward declares 
+-- it. 
+library IEEE;
+-- Use clauses import declarations into the current scope.	
+-- If more than one use clause imports the same name into the
+-- the same scope, none of the names are imported.
+
+	-- STD_LOGIC and STD_LOGIC_VECTOR types, and relevant functions
+	use ieee.std_logic_1164.all;
+
+	-- SIGNED and UNSIGNED types, and relevant functions
+	use ieee.numeric_std.all;
+
+entity RegFile is
+
+	port
+	(
+		-- Input ports
+		RS,RT,RD	: in  std_logic_vector(31 downto 0);
+		Data		: in  std_logic_vector(31 downto 0);
+		regWriteSignal	in std_logic;
+		clk		: in 	std_logic;
+
+		-- Output ports
+		regA, regB	: out std_logic_vector(31 downto 0)
+	);
+end RegFile;
+
+-- Library Clause(s) (optional)
+-- Use Clause(s) (optional)
+
+architecture arch_RegFile of RegFile is
+
+	-- Declarations (optional)
+
+begin
+
+	-- Process Statement (optional)
+
+	-- Concurrent Procedure Call (optional)
+
+	-- Concurrent Signal Assignment (optional)
+
+	-- Conditional Signal Assignment (optional)
+
+	-- Selected Signal Assignment (optional)
+
+	-- Component Instantiation Statement (optional)
+
+	-- Generate Statement (optional)
+
+end arch_RegFile;

@@ -1,0 +1,258 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do RegFile_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RegFile
+# -- Compiling architecture arch_RegFile of RegFile
+# ** Error: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(86): (vcom-1014) Array type case expression must be of a locally static subtype.
+# 
+# ** Error: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(124): (vcom-1014) Array type case expression must be of a locally static subtype.
+# 
+# ** Error: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(159): (vcom-1014) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(87): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(88): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(89): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(90): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(91): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(92): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(93): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(94): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(95): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(96): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(97): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(98): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(99): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(100): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(101): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(102): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(103): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(104): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(105): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(106): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(107): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(108): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(109): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(110): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(111): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(112): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(113): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(114): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(115): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(116): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(117): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(118): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Error: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(86): (vcom-1339) Case statement choices cover only 32 out of 59049 cases.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(125): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(126): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(127): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(128): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(129): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(130): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(131): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(132): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(133): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(134): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(135): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(136): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(137): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(138): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(139): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(140): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(141): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(142): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(143): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(144): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(145): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(146): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(147): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(148): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(149): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(150): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(151): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(152): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(153): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(154): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(155): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(156): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Error: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(124): (vcom-1339) Case statement choices cover only 32 out of 59049 cases.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(160): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(161): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(162): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(163): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(164): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(165): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(166): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(167): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(168): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(169): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(170): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(171): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(172): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(173): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(174): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(175): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(176): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(177): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(178): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(179): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(180): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(181): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(182): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(183): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(184): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(185): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(186): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(187): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(188): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(189): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(190): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(191): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Error: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(159): (vcom-1339) Case statement choices cover only 32 out of 59049 cases.
+# 
+# ** Error: D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd(195): VHDL Compiler exiting
+# ** Error: C:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./RegFile_run_msim_rtl_vhdl.do line 8
+# C:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/RegFile.vhd}"
+vsim work.regfile
+# vsim work.regfile 
+# Loading std.standard
+# ** Error: (vsim-3173) Entity 'D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/simulation/modelsim/rtl_work.regfile' has no architecture.
+# 
+# Error loading design
+vsim work.regfile
+wave create -pattern none -portmode in -language vhdl -range addr 0 /regfile/RS
+# regfile
+wave create -pattern none -portmode in -language vhdl -range addr 0 /regfile/RT
+# regfile
+wave create -pattern none -portmode in -language vhdl -range addr 0 /regfile/RD
+# regfile
+wave create -pattern none -portmode in -language vhdl -range data 0 /regfile/Dato
+# regfile
+wave create -pattern none -portmode in -language vhdl /regfile/regWriteSignal
+# regfile
+wave create -pattern none -portmode in -language vhdl /regfile/clk
+# regfile
+wave create -pattern none -portmode out -language vhdl -range data 0 /regfile/regA
+# regfile
+wave create -pattern none -portmode out -language vhdl -range data 0 /regfile/regB
+# regfile
+# vsim work.regfile 
+# Loading std.standard
+# ** Error: (vsim-3173) Entity 'D:/PUJ/8/Arq/ProyectoARQUI2/RegFile/simulation/modelsim/rtl_work.regfile' has no architecture.
+# 
+# Error loading design

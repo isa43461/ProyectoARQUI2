@@ -1,5 +1,9 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="prueba1">
+		<CBX_INST_ENTRY INSTANCE_NAME="|prueba1|Alu:aAlu|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_vfm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|prueba1|Alu:aAlu|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_28m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|prueba1|Alu:aAlu|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_17h.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|prueba1|Alu:aAlu|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_27h.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
