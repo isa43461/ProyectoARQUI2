@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1\ProyectoArqui2\SignExtend26\simulation\qsim
+vSignExtend26
+Z1 ITzWWFAQASQJhmf=mQg8f@0
+Z2 VC0dGXYVl[CaA3ig<SVG0U0
+Z3 dC:\altera\13.0sp1\ProyectoArqui2\SignExtend26\simulation\qsim
+Z4 w1557279460
+Z5 8SignExtend26.vo
+Z6 FSignExtend26.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@sign@extend26
+!i10b 1
+Z10 !s100 LWcQGgDMLaz::06NhmgBi0
+!s85 0
+Z11 !s108 1557279461.240000
+Z12 !s107 SignExtend26.vo|
+Z13 !s90 -work|work|SignExtend26.vo|
+!s101 -O0
+vSignExtend26_vlg_check_tst
+!i10b 1
+!s100 J>00^JgHHNhDijCPT@U1@0
+I@]kGlPhlQFUO2ZFFCkR8<0
+VNc2a:`5WC60kQ^IgW];oO1
+R3
+Z14 w1557279459
+Z15 8SignExtend26.vt
+Z16 FSignExtend26.vt
+L0 57
+R7
+r1
+!s85 0
+31
+Z17 !s108 1557279461.472000
+Z18 !s107 SignExtend26.vt|
+Z19 !s90 -work|work|SignExtend26.vt|
+!s101 -O0
+R8
+n@sign@extend26_vlg_check_tst
+vSignExtend26_vlg_sample_tst
+!i10b 1
+!s100 KJoQ>8jPd>Y>GUDTkkb`A3
+IR>EZQGoii:63F]egKanPB3
+Vn@]C5Hn3FhZT:fM9c^8oi0
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@sign@extend26_vlg_sample_tst
+vSignExtend26_vlg_vec_tst
+!i10b 1
+!s100 W@ak>XJ:zV36Io0g5g9<=0
+IY3h[1UOcF5kkKgFJ=>6Z:1
+VN=VCSJdB???:mKJaBbhJ70
+R3
+R14
+R15
+R16
+L0 735
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@sign@extend26_vlg_vec_tst

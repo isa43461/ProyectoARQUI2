@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\PUJ\8\Arq\ProyectoARQUI2\Alu\simulation\qsim
+vAlu
+Z1 I8aUN>293H2CoZR:Hzhi;A1
+Z2 VTiYk^kCm`KcL:;X;J0z[a1
+Z3 dD:\PUJ\8\Arq\ProyectoARQUI2\Alu\simulation\qsim
+Z4 w1558130236
+Z5 8Alu.vo
+Z6 FAlu.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|Alu.vo|
+Z9 o-work work -O0
+n@alu
+!i10b 1
+Z10 !s100 S5bk?IIQ4HhZSF@ZoPOJa3
+!s85 0
+Z11 !s108 1558130238.086000
+Z12 !s107 Alu.vo|
+!s101 -O0
+vAlu_vlg_check_tst
+!i10b 1
+Z13 !s100 ;FePJ:^PT_0h4IdBZ>KP12
+Z14 IQj]iAP^gO@BioFghe8^093
+Z15 VZObdF`hWPMZ]4`<j`aedI3
+R3
+Z16 w1558130234
+Z17 8Alu.vt
+Z18 FAlu.vt
+L0 61
+R7
+r1
+!s85 0
+31
+Z19 !s108 1558130238.936000
+Z20 !s107 Alu.vt|
+Z21 !s90 -work|work|Alu.vt|
+!s101 -O0
+R9
+Z22 n@alu_vlg_check_tst
+vAlu_vlg_sample_tst
+!i10b 1
+Z23 !s100 ?YOnG^=:l_kkkY]2jE4[_2
+Z24 IgYZ]64U5Zi]z]:1mWXMLA1
+Z25 VcGZKYiYN598ah^LgX>k<j0
+R3
+R16
+R17
+R18
+L0 29
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9
+Z26 n@alu_vlg_sample_tst
+vAlu_vlg_vec_tst
+!i10b 1
+!s100 RLXjThKWXL_9XzAbgY61P0
+IELNQUa^:mI9Bl@lI?Tg2>3
+Z27 V]Q88]?aW2VWb<g4HIKzJe2
+R3
+R16
+R17
+R18
+Z28 L0 740
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9
+Z29 n@alu_vlg_vec_tst

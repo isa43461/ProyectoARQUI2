@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\PUJ\8\Arq\ProyectoARQUI2\ALUControl\simulation\qsim
+vAluControl
+Z1 !s100 H0mDH_WCEUe<TDoE`8DJk1
+Z2 Iac<;M8T5TkIWJ_4P^M65J2
+Z3 V7Y[364_U^45Je2j?dloWN1
+Z4 dD:\PUJ\8\Arq\ProyectoARQUI2\ALUControl\simulation\qsim
+Z5 w1558154742
+Z6 8AluControl.vo
+Z7 FAluControl.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|AluControl.vo|
+Z10 o-work work -O0
+Z11 n@alu@control
+!i10b 1
+!s85 0
+Z12 !s108 1558154743.604000
+Z13 !s107 AluControl.vo|
+!s101 -O0
+vAluControl_vlg_check_tst
+!i10b 1
+Z14 !s100 Wj^d_0aChMGX@1;a2E;:K0
+Z15 Ic>dK[>2hGTNJ9lKLiX3;:0
+Z16 Ve=j5R66lTT;_5P=N5Bj9?0
+R4
+R5
+Z17 8AluControl.vt
+Z18 FAluControl.vt
+L0 59
+R8
+r1
+!s85 0
+31
+Z19 !s108 1558154743.730000
+Z20 !s107 AluControl.vt|
+Z21 !s90 -work|work|AluControl.vt|
+!s101 -O0
+R10
+Z22 n@alu@control_vlg_check_tst
+vAluControl_vlg_sample_tst
+!i10b 1
+Z23 !s100 kMm6jZ78ziR=f_<Z6bc^70
+Z24 IeASe8oDG`dCJif?2]A=oH2
+Z25 V5LEkN>7Yj3Wj@O5?[aDY?3
+R4
+R5
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+Z26 n@alu@control_vlg_sample_tst
+vAluControl_vlg_vec_tst
+!i10b 1
+!s100 i408;1ZPg?z^@kcTTC2SG0
+IOOd5<1n4BmTU0a4dZlF[60
+Z27 VaSF9dbPo12V6kUzLHLVb]1
+R4
+R5
+R17
+R18
+Z28 L0 189
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+Z29 n@alu@control_vlg_vec_tst

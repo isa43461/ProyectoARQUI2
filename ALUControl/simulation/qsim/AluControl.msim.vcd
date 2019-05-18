@@ -1,0 +1,114 @@
+$comment
+	File created using the following command:
+		vcd file AluControl.msim.vcd -direction
+$end
+$date
+	Fri May 17 23:45:44 2019
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module AluControl_vlg_vec_tst $end
+$var reg 2 ! aluOP [1:0] $end
+$var reg 6 " funct [5:0] $end
+$var wire 1 # operation [2] $end
+$var wire 1 $ operation [1] $end
+$var wire 1 % operation [0] $end
+$var wire 1 & sampler $end
+$scope module i1 $end
+$var wire 1 ' gnd $end
+$var wire 1 ( vcc $end
+$var wire 1 ) unknown $end
+$var tri1 1 * devclrn $end
+$var tri1 1 + devpor $end
+$var tri1 1 , devoe $end
+$var wire 1 - operation[0]~6_combout $end
+$var wire 1 . Equal2~0_combout $end
+$var wire 1 / Equal6~0_combout $end
+$var wire 1 0 Equal0~0_combout $end
+$var wire 1 1 Equal5~0_combout $end
+$var wire 1 2 operation[0]~3_combout $end
+$var wire 1 3 Equal3~0_combout $end
+$var wire 1 4 operation[2]~4_combout $end
+$var wire 1 5 operation[2]~7_combout $end
+$var wire 1 6 operation[0]~5_combout $end
+$var wire 1 7 Equal0~1_combout $end
+$var wire 1 8 operation[2]~2_combout $end
+$var wire 1 9 comb~37_combout $end
+$var wire 1 : comb~33_combout $end
+$var wire 1 ; comb~34_combout $end
+$var wire 1 < operation[0]$latch~combout $end
+$var wire 1 = comb~26_combout $end
+$var wire 1 > comb~23_combout $end
+$var wire 1 ? comb~39_combout $end
+$var wire 1 @ comb~15_combout $end
+$var wire 1 A comb~13_combout $end
+$var wire 1 B comb~38_combout $end
+$var wire 1 C operation[1]$latch~combout $end
+$var wire 1 D comb~36_combout $end
+$var wire 1 E comb~35_combout $end
+$var wire 1 F operation[2]$latch~combout $end
+$var wire 1 G funct~combout [5] $end
+$var wire 1 H funct~combout [4] $end
+$var wire 1 I funct~combout [3] $end
+$var wire 1 J funct~combout [2] $end
+$var wire 1 K funct~combout [1] $end
+$var wire 1 L funct~combout [0] $end
+$var wire 1 M aluOP~combout [1] $end
+$var wire 1 N aluOP~combout [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b10 !
+b0 "
+0%
+0$
+1#
+x&
+0'
+1(
+x)
+1*
+1+
+1,
+0-
+0.
+0/
+10
+11
+02
+03
+04
+05
+06
+17
+18
+19
+1:
+0;
+0<
+1=
+0>
+0?
+1@
+1A
+1B
+0C
+1D
+0E
+1F
+0L
+0K
+0J
+0I
+0H
+0G
+0N
+1M
+$end
+#1000000

@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\PUJ\8\Arq\ProyectoARQUI2\Memory\simulation\qsim
+vMemory
+Z1 !s100 ]Ee2@=IA25lj?<AD=ZiE83
+Z2 IXH[=6no2Yb0<PfVgWTM1I3
+Z3 V9o9:bL9Bm7TR@g4z8]QIB2
+Z4 dD:\PUJ\8\Arq\ProyectoARQUI2\Memory\simulation\qsim
+Z5 w1558149688
+Z6 8Memory.vo
+Z7 FMemory.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Memory.vo|
+Z10 o-work work -O0
+Z11 n@memory
+!i10b 1
+!s85 0
+Z12 !s108 1558149688.772000
+Z13 !s107 Memory.vo|
+!s101 -O0
+vMemory_vlg_check_tst
+!i10b 1
+Z14 !s100 [1>lLSA1M0TjCj[kk[:4>3
+Z15 I[3W3U[be_:_`EO]EOgE<S1
+Z16 V0d]GSDefGRFmf<Q<z@CDO0
+R4
+Z17 w1558149687
+Z18 8Memory.vt
+Z19 FMemory.vt
+L0 65
+R8
+r1
+!s85 0
+31
+Z20 !s108 1558149688.967000
+Z21 !s107 Memory.vt|
+Z22 !s90 -work|work|Memory.vt|
+!s101 -O0
+R10
+Z23 n@memory_vlg_check_tst
+vMemory_vlg_sample_tst
+!i10b 1
+Z24 !s100 @Y9LiOTEHnOP8VF]4?41l2
+Z25 IIa^MQ@3aKgHi1Q@IgBDSi1
+Z26 VOk4f9[o@3Y[a;S7FZba_l1
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@memory_vlg_sample_tst
+vMemory_vlg_vec_tst
+!i10b 1
+!s100 e_;D:YbU]3We5@Ze;fdV]3
+ICb@IXVA_MSA6A6;`N0ad@3
+Z28 VRZF2_:VlGgAJ_g_A2UHV:1
+R4
+R17
+R18
+R19
+Z29 L0 717
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 n@memory_vlg_vec_tst

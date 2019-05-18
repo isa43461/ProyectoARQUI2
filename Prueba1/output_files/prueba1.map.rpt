@@ -1,5 +1,5 @@
 Analysis & Synthesis report for prueba1
-Tue May 14 14:44:49 2019
+Fri May 17 18:42:47 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,18 +14,21 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. User-Specified and Inferred Latches
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for Inferred Entity Instance: Alu:aAlu|lpm_divide:Mod0
- 12. Parameter Settings for Inferred Entity Instance: Alu:aAlu|lpm_divide:Div0
- 13. Parameter Settings for Inferred Entity Instance: Alu:aAlu|lpm_mult:Mult0
- 14. lpm_mult Parameter Settings by Entity Instance
- 15. Port Connectivity Checks: "Alu:aAlu"
- 16. Port Connectivity Checks: "MuxAluSrcB:aMuxAluSrcB"
- 17. Port Connectivity Checks: "MuxSrcA:MuxAluSrcA"
- 18. Port Connectivity Checks: "Registro:regAluOut"
- 19. Elapsed Time Per Partition
- 20. Analysis & Synthesis Messages
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for Inferred Entity Instance: Alu:aAlu|lpm_divide:Mod0
+ 13. Parameter Settings for Inferred Entity Instance: Alu:aAlu|lpm_divide:Div0
+ 14. Parameter Settings for Inferred Entity Instance: Alu:aAlu|lpm_mult:Mult0
+ 15. lpm_mult Parameter Settings by Entity Instance
+ 16. Port Connectivity Checks: "Alu:aAlu"
+ 17. Port Connectivity Checks: "MuxAluSrcB:aMuxAluSrcB"
+ 18. Port Connectivity Checks: "MuxSrcA:MuxAluSrcA"
+ 19. Port Connectivity Checks: "Registro:regAluOut"
+ 20. Port Connectivity Checks: "Registro:regB"
+ 21. Port Connectivity Checks: "Registro:regA"
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
 
 
 
@@ -51,13 +54,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 14 14:44:49 2019           ;
+; Analysis & Synthesis Status        ; Successful - Fri May 17 18:42:47 2019           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; prueba1                                         ;
 ; Top-level Entity Name              ; prueba1                                         ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 3,013                                           ;
-;     Total combinational functions  ; 3,013                                           ;
+; Total logic elements               ; 3,007                                           ;
+;     Total combinational functions  ; 3,007                                           ;
 ;     Dedicated logic registers      ; 16                                              ;
 ; Total registers                    ; 16                                              ;
 ; Total pins                         ; 23                                              ;
@@ -214,17 +217,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+---------+
 ; Resource                                    ; Usage   ;
 +---------------------------------------------+---------+
-; Estimated Total logic elements              ; 3,013   ;
+; Estimated Total logic elements              ; 3,007   ;
 ;                                             ;         ;
-; Total combinational functions               ; 3013    ;
+; Total combinational functions               ; 3007    ;
 ; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 913     ;
-;     -- 3 input functions                    ; 1153    ;
-;     -- <=2 input functions                  ; 947     ;
+;     -- 4 input functions                    ; 920     ;
+;     -- 3 input functions                    ; 1145    ;
+;     -- <=2 input functions                  ; 942     ;
 ;                                             ;         ;
 ; Logic elements by mode                      ;         ;
 ;     -- normal mode                          ; 1951    ;
-;     -- arithmetic mode                      ; 1062    ;
+;     -- arithmetic mode                      ; 1056    ;
 ;                                             ;         ;
 ; Total registers                             ; 16      ;
 ;     -- Dedicated logic registers            ; 16      ;
@@ -233,9 +236,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; I/O pins                                    ; 23      ;
 ; Embedded Multiplier 9-bit elements          ; 0       ;
 ; Maximum fan-out node                        ; muxB[0] ;
-; Maximum fan-out                             ; 197     ;
-; Total fan-out                               ; 8927    ;
-; Average fan-out                             ; 2.92    ;
+; Maximum fan-out                             ; 198     ;
+; Total fan-out                               ; 8920    ;
+; Average fan-out                             ; 2.93    ;
 +---------------------------------------------+---------+
 
 
@@ -244,21 +247,21 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                      ; Library Name ;
 +---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |prueba1                                          ; 3013 (1)          ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |prueba1                                                                                                                                 ; work         ;
-;    |Alu:aAlu|                                     ; 3012 (80)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba1|Alu:aAlu                                                                                                                        ; work         ;
+; |prueba1                                          ; 3007 (1)          ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |prueba1                                                                                                                                 ; work         ;
+;    |Alu:aAlu|                                     ; 3006 (81)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba1|Alu:aAlu                                                                                                                        ; work         ;
 ;       |lpm_divide:Div0|                           ; 1454 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba1|Alu:aAlu|lpm_divide:Div0                                                                                                        ; work         ;
 ;          |lpm_divide_vfm:auto_generated|          ; 1454 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba1|Alu:aAlu|lpm_divide:Div0|lpm_divide_vfm:auto_generated                                                                          ; work         ;
 ;             |sign_div_unsign_9nh:divider|         ; 1454 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba1|Alu:aAlu|lpm_divide:Div0|lpm_divide_vfm:auto_generated|sign_div_unsign_9nh:divider                                              ; work         ;
 ;                |alt_u_div_k5f:divider|            ; 1454 (1454)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba1|Alu:aAlu|lpm_divide:Div0|lpm_divide_vfm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_k5f:divider                        ; work         ;
-;       |lpm_divide:Mod0|                           ; 1458 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba1|Alu:aAlu|lpm_divide:Mod0                                                                                                        ; work         ;
-;          |lpm_divide_28m:auto_generated|          ; 1458 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba1|Alu:aAlu|lpm_divide:Mod0|lpm_divide_28m:auto_generated                                                                          ; work         ;
-;             |sign_div_unsign_9nh:divider|         ; 1458 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba1|Alu:aAlu|lpm_divide:Mod0|lpm_divide_28m:auto_generated|sign_div_unsign_9nh:divider                                              ; work         ;
-;                |alt_u_div_k5f:divider|            ; 1458 (1458)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba1|Alu:aAlu|lpm_divide:Mod0|lpm_divide_28m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_k5f:divider                        ; work         ;
-;       |lpm_mult:Mult0|                            ; 20 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba1|Alu:aAlu|lpm_mult:Mult0                                                                                                         ; work         ;
-;          |multcore:mult_core|                     ; 20 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba1|Alu:aAlu|lpm_mult:Mult0|multcore:mult_core                                                                                      ; work         ;
-;             |mpar_add:padder|                     ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba1|Alu:aAlu|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                      ; work         ;
-;                |lpm_add_sub:adder[0]|             ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba1|Alu:aAlu|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; work         ;
-;                   |add_sub_17h:auto_generated|    ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba1|Alu:aAlu|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_17h:auto_generated                      ; work         ;
+;       |lpm_divide:Mod0|                           ; 1454 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba1|Alu:aAlu|lpm_divide:Mod0                                                                                                        ; work         ;
+;          |lpm_divide_28m:auto_generated|          ; 1454 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba1|Alu:aAlu|lpm_divide:Mod0|lpm_divide_28m:auto_generated                                                                          ; work         ;
+;             |sign_div_unsign_9nh:divider|         ; 1454 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba1|Alu:aAlu|lpm_divide:Mod0|lpm_divide_28m:auto_generated|sign_div_unsign_9nh:divider                                              ; work         ;
+;                |alt_u_div_k5f:divider|            ; 1454 (1454)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba1|Alu:aAlu|lpm_divide:Mod0|lpm_divide_28m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_k5f:divider                        ; work         ;
+;       |lpm_mult:Mult0|                            ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba1|Alu:aAlu|lpm_mult:Mult0                                                                                                         ; work         ;
+;          |multcore:mult_core|                     ; 17 (6)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba1|Alu:aAlu|lpm_mult:Mult0|multcore:mult_core                                                                                      ; work         ;
+;             |mpar_add:padder|                     ; 11 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba1|Alu:aAlu|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                      ; work         ;
+;                |lpm_add_sub:adder[0]|             ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba1|Alu:aAlu|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; work         ;
+;                   |add_sub_17h:auto_generated|    ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba1|Alu:aAlu|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_17h:auto_generated                      ; work         ;
 ;                |mpar_add:sub_par_add|             ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba1|Alu:aAlu|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; work         ;
 ;                   |lpm_add_sub:adder[0]|          ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba1|Alu:aAlu|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; work         ;
 ;                      |add_sub_27h:auto_generated| ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba1|Alu:aAlu|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_27h:auto_generated ; work         ;
@@ -288,16 +291,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Alu:aAlu|res[13]                                    ; Alu:aAlu|Mux66      ; yes                    ;
 ; Alu:aAlu|res[14]                                    ; Alu:aAlu|Mux66      ; yes                    ;
 ; Alu:aAlu|res[15]                                    ; Alu:aAlu|Mux66      ; yes                    ;
-; Alu:aAlu|tmp[0]                                     ; Alu:aAlu|Mux2       ; yes                    ;
 ; Alu:aAlu|tmp[1]                                     ; Alu:aAlu|Mux2       ; yes                    ;
 ; Alu:aAlu|tmp[2]                                     ; Alu:aAlu|Mux2       ; yes                    ;
 ; Alu:aAlu|tmp[3]                                     ; Alu:aAlu|Mux2       ; yes                    ;
 ; Alu:aAlu|tmp[4]                                     ; Alu:aAlu|Mux2       ; yes                    ;
 ; Alu:aAlu|tmp[5]                                     ; Alu:aAlu|Mux2       ; yes                    ;
 ; Alu:aAlu|tmp[6]                                     ; Alu:aAlu|Mux2       ; yes                    ;
-; Number of user-specified and inferred latches = 23  ;                     ;                        ;
+; Number of user-specified and inferred latches = 22  ;                     ;                        ;
 +-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; Registro:regB|temp[0]                  ; Stuck at GND due to stuck port data_in ;
+; Registro:regB|temp[1]                  ; Stuck at VCC due to stuck port data_in ;
+; Registro:regB|temp[2]                  ; Stuck at GND due to stuck port data_in ;
+; Registro:regB|temp[3]                  ; Stuck at VCC due to stuck port data_in ;
+; Registro:regB|temp[4..31]              ; Stuck at GND due to stuck port data_in ;
+; Registro:regA|temp[0]                  ; Stuck at GND due to stuck port data_in ;
+; Registro:regA|temp[1]                  ; Stuck at VCC due to stuck port data_in ;
+; Registro:regA|temp[2..31]              ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 64 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -320,8 +339,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 1:1                ; 7 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |prueba1|Alu:aAlu|Mux22    ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; No         ; |prueba1|Alu:aAlu|Mux46    ;
+; 1:1                ; 6 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |prueba1|Alu:aAlu|Mux23    ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 15 LEs               ; 0 LEs                  ; No         ; |prueba1|Alu:aAlu|Mux35    ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |prueba1|Alu:aAlu|Mux39    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -440,11 +460,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------+-------+----------+---------------+
 ; Port            ; Type  ; Severity ; Details       ;
 +-----------------+-------+----------+---------------+
-; entrada0[31..4] ; Input ; Info     ; Stuck at GND  ;
-; entrada0[3]     ; Input ; Info     ; Stuck at VCC  ;
-; entrada0[2]     ; Input ; Info     ; Stuck at GND  ;
-; entrada0[1]     ; Input ; Info     ; Stuck at VCC  ;
-; entrada0[0]     ; Input ; Info     ; Stuck at GND  ;
 ; entrada1[31..3] ; Input ; Info     ; Stuck at GND  ;
 ; entrada1[1..0]  ; Input ; Info     ; Stuck at GND  ;
 ; entrada1[2]     ; Input ; Info     ; Stuck at VCC  ;
@@ -466,10 +481,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; entrada1[2..1]  ; Input ; Info     ; Stuck at VCC ;
 ; entrada1[31..3] ; Input ; Info     ; Stuck at GND ;
 ; entrada1[0]     ; Input ; Info     ; Stuck at GND ;
-; entrada2[31..3] ; Input ; Info     ; Stuck at GND ;
-; entrada2[2]     ; Input ; Info     ; Stuck at VCC ;
-; entrada2[1]     ; Input ; Info     ; Stuck at GND ;
-; entrada2[0]     ; Input ; Info     ; Stuck at VCC ;
 +-----------------+-------+----------+--------------+
 
 
@@ -482,12 +493,36 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++--------------------------------------------------+
+; Port Connectivity Checks: "Registro:regB"        ;
++----------------+-------+----------+--------------+
+; Port           ; Type  ; Severity ; Details      ;
++----------------+-------+----------+--------------+
+; entrada[31..4] ; Input ; Info     ; Stuck at GND ;
+; entrada[3]     ; Input ; Info     ; Stuck at VCC ;
+; entrada[2]     ; Input ; Info     ; Stuck at GND ;
+; entrada[1]     ; Input ; Info     ; Stuck at VCC ;
+; entrada[0]     ; Input ; Info     ; Stuck at GND ;
++----------------+-------+----------+--------------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "Registro:regA"        ;
++----------------+-------+----------+--------------+
+; Port           ; Type  ; Severity ; Details      ;
++----------------+-------+----------+--------------+
+; entrada[31..2] ; Input ; Info     ; Stuck at GND ;
+; entrada[1]     ; Input ; Info     ; Stuck at VCC ;
+; entrada[0]     ; Input ; Info     ; Stuck at GND ;
++----------------+-------+----------+--------------+
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:07     ;
+; Top            ; 00:00:08     ;
 +----------------+--------------+
 
 
@@ -497,7 +532,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue May 14 14:44:33 2019
+    Info: Processing started: Fri May 17 18:42:36 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off prueba1 -c prueba1
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /puj/8/arq/proyectoarqui2/shiftleft/shiftleft.vhd
@@ -524,7 +559,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file decoder
 Info (12127): Elaborating entity "prueba1" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at prueba1.vhd(81): object "sBrAlu" assigned a value but never read
 Critical Warning (10920): VHDL Incomplete Partial Association warning at prueba1.vhd(111): port or argument "salida" has 16/32 unassociated elements
-Info (12128): Elaborating entity "Registro" for hierarchy "Registro:regAluOut"
+Info (12128): Elaborating entity "Registro" for hierarchy "Registro:regA"
 Info (12128): Elaborating entity "MuxSrcA" for hierarchy "MuxSrcA:MuxAluSrcA"
 Info (12128): Elaborating entity "MuxAluSrcB" for hierarchy "MuxAluSrcB:aMuxAluSrcB"
 Info (12128): Elaborating entity "Alu" for hierarchy "Alu:aAlu"
@@ -646,17 +681,17 @@ Info (12131): Elaborated megafunction instantiation "Alu:aAlu|lpm_mult:Mult0|alt
 Warning (13012): Latch Alu:aAlu|res[0] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUOp[2]
 Warning (13012): Latch Alu:aAlu|res[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUOp[1]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUOp[2]
 Warning (13012): Latch Alu:aAlu|res[2] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUOp[2]
 Warning (13012): Latch Alu:aAlu|res[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUOp[1]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUOp[2]
 Warning (13012): Latch Alu:aAlu|res[4] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUOp[2]
 Warning (13012): Latch Alu:aAlu|res[5] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUOp[1]
-Warning (13012): Latch Alu:aAlu|res[6] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUOp[2]
+Warning (13012): Latch Alu:aAlu|res[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUOp[1]
 Warning (13012): Latch Alu:aAlu|res[7] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUOp[2]
 Warning (13012): Latch Alu:aAlu|res[8] has unsafe behavior
@@ -677,14 +712,14 @@ Warning (13012): Latch Alu:aAlu|res[15] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ALUOp[2]
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3052 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3046 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 3029 logic cells
+    Info (21061): Implemented 3023 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 37 warnings
-    Info: Peak virtual memory: 4703 megabytes
-    Info: Processing ended: Tue May 14 14:44:49 2019
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 4708 megabytes
+    Info: Processing ended: Fri May 17 18:42:47 2019
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:11
 
 

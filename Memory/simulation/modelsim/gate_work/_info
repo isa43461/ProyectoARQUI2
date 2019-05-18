@@ -1,0 +1,26 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\PUJ\8\Arq\ProyectoARQUI2\Memory\simulation\modelsim
+vMemory
+!i10b 1
+!s100 m<iC=E:i]lQQk=EA8SeMP3
+IKY`hSWaP2[0O3Bcf6Ab6m3
+V9o9:bL9Bm7TR@g4z8]QIB2
+Z1 dD:\PUJ\8\Arq\ProyectoARQUI2\Memory\simulation\modelsim
+w1558149411
+8Memory.vo
+FMemory.vo
+L0 31
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1558149509.996000
+!s107 Memory.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|Memory.vo|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+. -O0
+n@memory

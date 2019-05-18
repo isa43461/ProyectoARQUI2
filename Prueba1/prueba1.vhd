@@ -92,22 +92,22 @@ signal sSalidaAlu : std_logic_vector(31 downto 0);
 
 begin
 	
---	regA : Registro
---		port map
---		(
---			entrada => entradaRegA,
---			salida => sRegA,
---			clk => clk
---		);
---	
---	regB : Registro
---		port map
---		(
---			entrada => entradaRegB,
---			salida => sRegB,
---			clk => clk
---		);
---		
+	regA : Registro
+		port map
+		(
+			entrada => "00000000000000000000000000000010",
+			salida => sRegA,
+			clk => clk
+		);
+	
+	regB : Registro
+		port map
+		(
+			entrada => "00000000000000000000000000001010",
+			salida => sRegB,
+			clk => clk
+		);
+		
 	regAluOut : Registro
 		port map
 		(
@@ -121,7 +121,7 @@ begin
 		port map
 		(
 			entrada1 => "00000000000000000000000000000110",
-			entrada2 => "00000000000000000000000000000101",
+			entrada2 => sRegA,
 			selector => muxA,
 			salidaMuxSrcA => e1Alu
 		);
@@ -136,7 +136,7 @@ begin
 	aMuxAluSrcB : MuxAluSrcB
 		port map
 		(
-			entrada0 => "00000000000000000000000000001010",
+			entrada0 => sRegB,
 			entrada1 => "00000000000000000000000000000100",
 			entrada2 => "00000000000000000000000000001011",
 			entrada3 => "00000000000000000000000000001100",
