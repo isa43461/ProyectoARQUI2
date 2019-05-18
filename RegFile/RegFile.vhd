@@ -12,7 +12,7 @@ library IEEE;
 entity RegFile is
 	generic
 	(
-		data : natural := 15;
+		data : natural := 31;
 		addr : natural := 4
 	);
 	port
@@ -29,7 +29,7 @@ entity RegFile is
 end RegFile;
 
 architecture arch_RegFile of RegFile is
-	type regFile_type is array (0 to 15) of std_logic_vector(15 downto 0);
+	type regFile_type is array (0 to 31) of std_logic_vector(31 downto 0);
 	signal array_reg : regFile_type; 
 begin	
 	process(clk)
