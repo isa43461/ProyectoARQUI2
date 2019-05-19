@@ -2,11 +2,11 @@ library verilog;
 use verilog.vl_types.all;
 entity Memory is
     port(
+        addressIn       : in     vl_logic_vector(31 downto 0);
+        dataIn          : in     vl_logic_vector(31 downto 0);
+        memRead         : in     vl_logic;
+        memWrite        : in     vl_logic;
         clk             : in     vl_logic;
-        address         : in     vl_logic_vector(4 downto 0);
-        writeData       : in     vl_logic_vector(31 downto 0);
-        signalMemRead   : in     vl_logic;
-        signalMemWrite  : in     vl_logic;
-        memData         : out    vl_logic_vector(31 downto 0)
+        memOut          : out    vl_logic_vector(31 downto 0)
     );
 end Memory;

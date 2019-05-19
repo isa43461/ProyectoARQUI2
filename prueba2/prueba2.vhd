@@ -3,21 +3,61 @@ library ieee;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_1164.all;
 
-entity prueba1 is
+entity prueba2 is
+	generic
+	(
+		data : natural := 31;
+		addr : natural := 4
+	);
 	port
 	(
 		--Input
+		regWrite : in std_logic;
+		regDst : in std_logic;
 		muxA : in std_logic;
 		muxB	: in std_logic_vector(1 downto 0);
-		ALUOp: in std_logic_vector(2 downto 0);
+		eALUOp: in std_logic_vector(1 downto 0);
+		memToReg : in std_logic;
 		clk : in std_logic;
 		--Output
 		salidaPrueba	: out std_logic_vector(15 downto 0)
---		salidaPrueba2	: out std_logic_vector(31 downto 0)
 		);
-end prueba1;
+end prueba2;
 
 architecture arch_prueba of prueba2 is
+
+component MuxMemToReg is
+	port
+	(
+		entrada1 : in std_logic_vector(31 downto 0);
+		entrada2 : in std_logic_vector(31 downto 0);
+		selector : in std_logic;
+		salidaMuxMemToReg : out std_logic_vector(31 downto 0)
+	);
+end component;
+
+component MuxRegDst is
+	port(
+		entrada1 : in std_logic_vector(4 downto 0);
+		entrada2 : in std_logic_vector(4 downto 0);
+		selector : in std_logic;
+		salidaMuxRegDst : out std_logic_vector(4 downto 0)
+		);
+end component;
+
+component RegFile is
+	port
+	(
+		RS,RT,RD	: in  std_logic_vector(addr downto 0);
+		Dato		: in  std_logic_vector(data downto 0);
+		regWriteSignal	: in std_logic;
+		clk		: in 	std_logic;
+
+		-- Output ports
+		regA, regB	: out std_logic_vector(data downto 0)
+	);
+end component;
+
 component Registro is
 	port 
 		(
@@ -76,38 +116,87 @@ component Alu is
 	);
 end component;
 
+component AluControl is
+	port
+	(
+		-- Input ports
+		funct	: in  std_logic_vector(5 downto 0);
+		aluOP	: in  std_logic_vector(1 downto 0);
+
+		-- Output ports
+		operation	: out std_logic_vector(2 downto 0)
+	);
+end component;
+
 signal AluSrcA : std_logic;
 signal AluSrcB : std_logic_vector(1 downto 0);
 signal sBrAlu : std_logic;
+signal eRegA : std_logic_vector(31 downto 0);
+signal eRegB : std_logic_vector(31 downto 0);
 signal sRegA : std_logic_vector(31 downto 0);
 signal sRegB : std_logic_vector(31 downto 0);
 signal sEntrada2MuxB : std_logic_vector(31 downto 0);
 signal sEntradaSL : std_logic_vector(31 downto 0);
 signal sSalidaSL : std_logic_vector(31 downto 0);
---signal AluOp : std_logic_vector(2 downto 0);
+signal opAluOp : std_logic_vector(2 downto 0);
 signal e1Alu : std_logic_vector(31 downto 0);
 signal e2ALu : std_logic_vector(31 downto 0);
 signal sSalidaAlu : std_logic_vector(31 downto 0);
+signal sMuxDst : std_logic_vector(4 downto 0);
+signal sMuxMemReg : std_logic_vector(31 downto 0);
 
 
 begin
 	
---	regA : Registro
---		port map
---		(
---			entrada => entradaRegA,
---			salida => sRegA,
---			clk => clk
---		);
---	
---	regB : Registro
---		port map
---		(
---			entrada => entradaRegB,
---			salida => sRegB,
---			clk => clk
---		);
---		
+	muxMemReg : MuxMemToReg
+		port map
+		(
+			entrada1 => "00000000000000000000000000011011",
+			entrada2 => "00000000000000000000000000101111",
+			selector => memToReg,
+			salidaMuxMemToReg => sMuxMemReg
+		);
+	
+	muxDST : MuxRegDst
+		port map
+		(
+			entrada1 => "00010",
+			entrada2 => "00010",
+			selector => regDst,
+			salidaMuxRegDst => sMuxDst
+		);
+
+	
+	registerFile : RegFile
+		port map
+		(
+			RS => "00001",
+			RT => "00010",
+			RD	=> sMuxDst,
+			Dato => sMuxMemReg,
+			regWriteSignal	=> regWrite,
+			clk => clk,
+			regA => eRegA,
+			regB => eRegB
+
+		);
+	
+	regA : Registro
+		port map
+		(
+			entrada => eRegA,
+			salida => sRegA,
+			clk => clk
+		);
+	
+	regB : Registro
+		port map
+		(
+			entrada => eRegB,
+			salida => sRegB,
+			clk => clk
+		);
+		
 	regAluOut : Registro
 		port map
 		(
@@ -121,7 +210,7 @@ begin
 		port map
 		(
 			entrada1 => "00000000000000000000000000000110",
-			entrada2 => "00000000000000000000000000000101",
+			entrada2 => sRegA,
 			selector => muxA,
 			salidaMuxSrcA => e1Alu
 		);
@@ -136,18 +225,26 @@ begin
 	aMuxAluSrcB : MuxAluSrcB
 		port map
 		(
-			entrada0 => "00000000000000000000000000001010",
+			entrada0 => sRegB,
 			entrada1 => "00000000000000000000000000000100",
 			entrada2 => "00000000000000000000000000001011",
 			entrada3 => "00000000000000000000000000001100",
 			selector => muxB,
 			salidaMuxAluSrcB => e2Alu
 		);
+		
+	aAluControl : AluControl
+		port map
+		(
+			funct	=> "100100",
+			aluOP	=> eALUOp,
+			operation => opAluOp
+		);
 			
 	aAlu : Alu
 		port map
 		(
-			OP => AluOP,
+			OP => opAluOp,
 			A => e1Alu,
 			B => e2ALu,
 			res => sSalidaAlu,

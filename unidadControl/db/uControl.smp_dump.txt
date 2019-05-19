@@ -1,0 +1,13 @@
+
+State Machine - |uControl|state
+Name state.jump state.branchSig state.aluWriteBack state.Execute state.memWriteSig state.memWriteBack state.memReadSig state.memAddr state.decode state.fetch 
+state.fetch 0 0 0 0 0 0 0 0 0 0 
+state.decode 0 0 0 0 0 0 0 0 1 1 
+state.memAddr 0 0 0 0 0 0 0 1 0 1 
+state.memReadSig 0 0 0 0 0 0 1 0 0 1 
+state.memWriteBack 0 0 0 0 0 1 0 0 0 1 
+state.memWriteSig 0 0 0 0 1 0 0 0 0 1 
+state.Execute 0 0 0 1 0 0 0 0 0 1 
+state.aluWriteBack 0 0 1 0 0 0 0 0 0 1 
+state.branchSig 0 1 0 0 0 0 0 0 0 1 
+state.jump 1 0 0 0 0 0 0 0 0 1 

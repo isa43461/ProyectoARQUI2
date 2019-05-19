@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\PUJ\8\Arq\ProyectoARQUI2\prueba2\simulation\qsim
+vprueba2
+Z1 !s100 jD<]L^6bV;KBf<>azCnAN2
+Z2 I0j0S_46YB8cUl7leH;M6J0
+Z3 VF6?P2kGgPMH<E0mW`7BkB0
+Z4 dD:\PUJ\8\Arq\ProyectoARQUI2\prueba2\simulation\qsim
+Z5 w1558236617
+Z6 8prueba2.vo
+Z7 Fprueba2.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|prueba2.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1558236619.014000
+Z12 !s107 prueba2.vo|
+!s101 -O0
+vprueba2_vlg_check_tst
+!i10b 1
+Z13 !s100 g08?bOg:JSl4cgg;g_k`f2
+Z14 Ij]e95?gCOkSTKo^>N=YEZ0
+Z15 VRo<MK`gmMD;_nNJOl7K=g1
+R4
+Z16 w1558236616
+Z17 8prueba2.vt
+Z18 Fprueba2.vt
+L0 69
+R8
+r1
+!s85 0
+31
+Z19 !s108 1558236619.308000
+Z20 !s107 prueba2.vt|
+Z21 !s90 -work|work|prueba2.vt|
+!s101 -O0
+R10
+vprueba2_vlg_sample_tst
+!i10b 1
+Z22 !s100 ;Xz3BGE4zcD>lBJ@CDR[o3
+Z23 I2Oo9Xz:H`JED^GkCVl:VP3
+Z24 V49NcoJJ3lj7F4Bmz15JBJ1
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vprueba2_vlg_vec_tst
+!i10b 1
+!s100 SPUQc>6D=@EhBdVFYH_XR2
+IeXfD;`GI7z[dXJ<HS1dgX1
+Z25 VS0Kme<7U28RVo81PfXHa`2
+R4
+R16
+R17
+R18
+Z26 L0 433
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10

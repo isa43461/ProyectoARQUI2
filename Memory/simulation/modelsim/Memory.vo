@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
-// DATE "05/17/2019 22:21:28"
+// DATE "05/18/2019 08:18:25"
 
 // 
 // Device: Altera EP2C20F484C7 Package FBGA484
@@ -206,8 +206,8 @@ wire \ram~72_combout ;
 wire \ram_rtl_0|auto_generated|ram_block1a31 ;
 wire \ram~73_combout ;
 wire [0:42] ram_rtl_0_bypass;
-wire [4:0] \address~combout ;
 wire [31:0] \writeData~combout ;
+wire [4:0] \address~combout ;
 
 wire [31:0] \ram_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus ;
 

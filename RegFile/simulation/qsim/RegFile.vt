@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "05/14/2019 22:47:11"
+// Generated on "05/18/2019 19:38:41"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    RegFile
 // 
@@ -1478,22 +1478,22 @@ end
 // Dato[ 3 ]
 initial
 begin
-	Dato[3] = 1'b1;
+	Dato[3] = 1'b0;
 end 
 // Dato[ 2 ]
 initial
 begin
-	Dato[2] = 1'b0;
+	Dato[2] = 1'b1;
 end 
 // Dato[ 1 ]
 initial
 begin
-	Dato[1] = 1'b1;
+	Dato[1] = 1'b0;
 end 
 // Dato[ 0 ]
 initial
 begin
-	Dato[0] = 1'b0;
+	Dato[0] = 1'b1;
 end 
 // RD[ 4 ]
 initial
@@ -1503,7 +1503,7 @@ end
 // RD[ 3 ]
 initial
 begin
-	RD[3] = 1'b0;
+	RD[3] = 1'b1;
 end 
 // RD[ 2 ]
 initial
@@ -1513,24 +1513,20 @@ end
 // RD[ 1 ]
 initial
 begin
-	RD[1] = 1'b0;
+	RD[1] = 1'b1;
 end 
 // RD[ 0 ]
 initial
 begin
-	RD[0] = 1'b1;
+	RD[0] = 1'b0;
 end 
 
 // regWriteSignal
-initial
+always
 begin
-	repeat(33)
-	begin
-		regWriteSignal = 1'b0;
-		regWriteSignal = #15000 1'b1;
-		# 15000;
-	end
 	regWriteSignal = 1'b0;
+	regWriteSignal = #10000 1'b1;
+	#10000;
 end 
 // RS[ 4 ]
 initial
@@ -1545,12 +1541,12 @@ end
 // RS[ 2 ]
 initial
 begin
-	RS[2] = 1'b0;
+	RS[2] = 1'b1;
 end 
 // RS[ 1 ]
 initial
 begin
-	RS[1] = 1'b1;
+	RS[1] = 1'b0;
 end 
 // RS[ 0 ]
 initial

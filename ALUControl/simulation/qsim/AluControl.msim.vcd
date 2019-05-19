@@ -3,7 +3,7 @@ $comment
 		vcd file AluControl.msim.vcd -direction
 $end
 $date
-	Fri May 17 23:45:44 2019
+	Sat May 18 22:09:18 2019
 $end
 $version
 	ModelSim Version 10.1d
@@ -65,10 +65,10 @@ $enddefinitions $end
 #0
 $dumpvars
 b10 !
-b0 "
-0%
-0$
-1#
+b100111 "
+1%
+1$
+0#
 x&
 0'
 1(
@@ -76,38 +76,38 @@ x)
 1*
 1+
 1,
-0-
-0.
+1-
+1.
 0/
-10
+00
 11
 02
 03
-04
+14
 05
-06
-17
-18
+16
+07
+08
 19
-1:
-0;
-0<
+0:
+1;
+1<
 1=
-0>
-0?
-1@
-1A
-1B
-0C
-1D
-0E
-1F
-0L
-0K
-0J
+1>
+1?
+0@
+0A
+0B
+1C
+0D
+1E
+0F
+1L
+1K
+1J
 0I
 0H
-0G
+1G
 0N
 1M
 $end

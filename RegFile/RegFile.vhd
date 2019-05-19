@@ -30,16 +30,41 @@ end RegFile;
 
 architecture arch_RegFile of RegFile is
 	type regFile_type is array (0 to 31) of std_logic_vector(31 downto 0);
-	signal array_reg : regFile_type; 
-begin	
-	process(clk)
+	signal array_reg : regFile_type;
+	
 	begin
-	if(rising_edge(clk)) then
-		if(regWriteSignal = '1') then
-			array_reg(to_integer(unsigned(RD))) <= Dato;
-		end if;
-	end if;
-	regA <= array_reg(to_integer(unsigned(RS)));
-	regB <= array_reg(to_integer(unsigned(RT)));
-	end process;
+		regA <= array_reg(to_integer(unsigned(RS)));
+		regB <= array_reg(to_integer(unsigned(RT)));
+		
+		process (clk) is
+		begin 
+			if rising_edge(clk) then
+				if regWriteSignal = '1' then
+					array_reg(to_integer(unsigned(RD))) <= Dato;
+				end if;
+			end if;
+		end process;
 end arch_RegFile;
+	
+--architecture arch_RegFile of RegFile is
+--	type regFile_type is array (0 to 31) of std_logic_vector(31 downto 0);
+--	signal array_reg : regFile_type; 
+--begin	
+--	process(clk)
+--	begin
+--	if(rising_edge(clk)) then
+--		regA <= array_reg(to_integer(unsigned(RS)));
+--		regB <= array_reg(to_integer(unsigned(RT)));
+--		if(regWriteSignal = '1') then
+--			array_reg(to_integer(unsigned(RD))) <= Dato;
+--			if RS = RD then
+--				regA <= Dato;
+--			end if;
+--			if RT = RD then
+--				regB <= Dato;
+--			end if;
+--		
+--		end if;
+--	end if;
+--	end process;
+--end arch_RegFile;

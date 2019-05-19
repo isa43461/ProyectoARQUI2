@@ -595,7 +595,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|funct[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -622,7 +622,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|funct[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -631,7 +631,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|funct[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -640,7 +640,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|funct[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -649,7 +649,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|operation[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -658,7 +658,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|operation[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -667,7 +667,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|operation[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -739,7 +739,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|i1|operation[0]~6_combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -748,7 +748,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|i1|Equal2~0_combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -766,7 +766,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|i1|Equal0~0_combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -802,7 +802,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|i1|operation[2]~4_combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -820,7 +820,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|i1|operation[0]~5_combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -829,7 +829,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|i1|Equal0~1_combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -838,7 +838,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|i1|operation[2]~2_combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -856,7 +856,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|i1|comb~33_combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -865,7 +865,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|i1|comb~34_combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -874,7 +874,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|i1|operation[0]$latch~combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -892,7 +892,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|i1|comb~23_combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -901,7 +901,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|i1|comb~39_combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -910,7 +910,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|i1|comb~15_combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -919,7 +919,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|i1|comb~13_combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -928,7 +928,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|i1|comb~38_combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -937,7 +937,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|i1|operation[1]$latch~combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -946,7 +946,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|i1|comb~36_combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -955,7 +955,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|i1|comb~35_combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -964,7 +964,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|i1|operation[2]$latch~combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -973,7 +973,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|i1|funct~combout[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -1000,7 +1000,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|i1|funct~combout[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -1009,7 +1009,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|i1|funct~combout[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -1018,7 +1018,7 @@ TRANSITION_LIST("AluControl_vlg_vec_tst|i1|funct~combout[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 

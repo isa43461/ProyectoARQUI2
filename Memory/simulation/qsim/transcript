@@ -25,9 +25,6 @@
 # Loading cycloneii_ver.cycloneii_clkctrl
 # Loading cycloneii_ver.cycloneii_mux41
 # Loading cycloneii_ver.cycloneii_ena_reg
-# Loading cycloneii_ver.cycloneii_ram_block
-# Loading cycloneii_ver.cycloneii_ram_register
-# Loading cycloneii_ver.cycloneii_ram_pulse_generator
 # Loading work.Memory_vlg_sample_tst
 # Loading work.Memory_vlg_check_tst
 # Loading cycloneii_ver.CYCLONEII_PRIM_DFFE

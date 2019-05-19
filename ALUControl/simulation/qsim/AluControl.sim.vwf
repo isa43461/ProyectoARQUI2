@@ -196,7 +196,7 @@ TRANSITION_LIST("funct[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 TRANSITION_LIST("funct[4]")
@@ -220,7 +220,7 @@ TRANSITION_LIST("funct[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 TRANSITION_LIST("funct[1]")
@@ -228,7 +228,7 @@ TRANSITION_LIST("funct[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 TRANSITION_LIST("funct[0]")
@@ -236,7 +236,7 @@ TRANSITION_LIST("funct[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 TRANSITION_LIST("operation[2]")
@@ -244,7 +244,7 @@ TRANSITION_LIST("operation[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 TRANSITION_LIST("operation[1]")
@@ -252,7 +252,7 @@ TRANSITION_LIST("operation[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 TRANSITION_LIST("operation[0]")
@@ -260,7 +260,7 @@ TRANSITION_LIST("operation[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 

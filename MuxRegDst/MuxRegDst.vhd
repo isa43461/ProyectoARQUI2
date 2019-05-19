@@ -7,10 +7,10 @@ use ieee.std_logic_unsigned.all;
 entity MuxRegDst is
 
 	port(
-		entrada1 : in std_logic_vector(31 downto 0);
-		entrada2 : in std_logic_vector(31 downto 0);
+		entrada1 : in std_logic_vector(4 downto 0);
+		entrada2 : in std_logic_vector(4 downto 0);
 		selector : in std_logic;
-		salidaMuxRegDst : out std_logic_vector(31 downto 0)
+		salidaMuxRegDst : out std_logic_vector(4 downto 0)
 		);
 end MuxRegDst;
 

@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "05/17/2019 23:45:42"
+// Generated on "05/18/2019 22:09:09"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    AluControl
 // 
@@ -216,7 +216,7 @@ end
 // funct[ 5 ]
 initial
 begin
-	funct[5] = 1'b0;
+	funct[5] = 1'b1;
 end 
 // funct[ 4 ]
 initial
@@ -231,17 +231,17 @@ end
 // funct[ 2 ]
 initial
 begin
-	funct[2] = 1'b0;
+	funct[2] = 1'b1;
 end 
 // funct[ 1 ]
 initial
 begin
-	funct[1] = 1'b0;
+	funct[1] = 1'b1;
 end 
 // funct[ 0 ]
 initial
 begin
-	funct[0] = 1'b0;
+	funct[0] = 1'b1;
 end 
 
 AluControl_vlg_sample_tst tb_sample (

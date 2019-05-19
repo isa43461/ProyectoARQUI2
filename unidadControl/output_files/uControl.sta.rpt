@@ -1,0 +1,759 @@
+TimeQuest Timing Analyzer report for uControl
+Sat May 18 18:39:23 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk'
+ 12. Slow Model Hold: 'clk'
+ 13. Slow Model Minimum Pulse Width: 'clk'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'clk'
+ 24. Fast Model Hold: 'clk'
+ 25. Fast Model Minimum Pulse Width: 'clk'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; uControl                                                          ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                   ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 844.59 MHz ; 380.08 MHz      ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -0.184 ; -0.184        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.445 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.631 ; -13.851               ;
++-------+--------+-----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                ;
++--------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; -0.184 ; state.branchSig    ; state.fetch        ; clk          ; clk         ; 1.000        ; 0.000      ; 1.222      ;
+; -0.173 ; state.jump         ; state.fetch        ; clk          ; clk         ; 1.000        ; 0.000      ; 1.211      ;
+; -0.033 ; state.memWriteSig  ; state.fetch        ; clk          ; clk         ; 1.000        ; 0.000      ; 1.071      ;
+; 0.098  ; state.decode       ; state.branchSig    ; clk          ; clk         ; 1.000        ; 0.000      ; 0.940      ;
+; 0.099  ; state.decode       ; state.Execute      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.939      ;
+; 0.102  ; state.decode       ; state.memAddr      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.936      ;
+; 0.105  ; state.decode       ; state.jump         ; clk          ; clk         ; 1.000        ; 0.000      ; 0.933      ;
+; 0.117  ; state.fetch        ; state.decode       ; clk          ; clk         ; 1.000        ; 0.000      ; 0.921      ;
+; 0.120  ; state.memAddr      ; state.memWriteSig  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.918      ;
+; 0.121  ; state.memAddr      ; state.memReadSig   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.917      ;
+; 0.124  ; state.memReadSig   ; state.memWriteBack ; clk          ; clk         ; 1.000        ; 0.000      ; 0.914      ;
+; 0.127  ; state.Execute      ; state.aluWriteBack ; clk          ; clk         ; 1.000        ; 0.000      ; 0.911      ;
+; 0.127  ; state.aluWriteBack ; state.fetch        ; clk          ; clk         ; 1.000        ; 0.000      ; 0.911      ;
+; 0.307  ; state.memWriteBack ; state.memWriteBack ; clk          ; clk         ; 1.000        ; 0.000      ; 0.731      ;
++--------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                ;
++-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; 0.445 ; state.memWriteBack ; state.memWriteBack ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.625 ; state.Execute      ; state.aluWriteBack ; clk          ; clk         ; 0.000        ; 0.000      ; 0.911      ;
+; 0.625 ; state.aluWriteBack ; state.fetch        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.911      ;
+; 0.628 ; state.memReadSig   ; state.memWriteBack ; clk          ; clk         ; 0.000        ; 0.000      ; 0.914      ;
+; 0.631 ; state.memAddr      ; state.memReadSig   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.917      ;
+; 0.632 ; state.memAddr      ; state.memWriteSig  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.918      ;
+; 0.635 ; state.fetch        ; state.decode       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.921      ;
+; 0.647 ; state.decode       ; state.jump         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.933      ;
+; 0.650 ; state.decode       ; state.memAddr      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.936      ;
+; 0.653 ; state.decode       ; state.Execute      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.939      ;
+; 0.654 ; state.decode       ; state.branchSig    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.940      ;
+; 0.785 ; state.memWriteSig  ; state.fetch        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.071      ;
+; 0.925 ; state.jump         ; state.fetch        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.211      ;
+; 0.936 ; state.branchSig    ; state.fetch        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.222      ;
++-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                   ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                 ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; clk   ; Rise       ; clk                    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.Execute          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.Execute          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.aluWriteBack     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.aluWriteBack     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.branchSig        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.branchSig        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.decode           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.decode           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.fetch            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.fetch            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.jump             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.jump             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.memAddr          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.memAddr          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.memReadSig       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.memReadSig       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.memWriteBack     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.memWriteBack     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.memWriteSig      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.memWriteSig      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.Execute|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.Execute|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.aluWriteBack|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.aluWriteBack|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.branchSig|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.branchSig|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.decode|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.decode|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.fetch|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.fetch|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.jump|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.jump|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.memAddr|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memAddr|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.memReadSig|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memReadSig|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.memWriteBack|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memWriteBack|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.memWriteSig|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memWriteSig|clk  ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+
+
++------------------------------------------------------------------------+
+; Setup Times                                                            ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; opcode[*]  ; clk        ; 4.593 ; 4.593 ; Rise       ; clk             ;
+;  opcode[0] ; clk        ; 4.593 ; 4.593 ; Rise       ; clk             ;
+;  opcode[1] ; clk        ; 4.548 ; 4.548 ; Rise       ; clk             ;
+;  opcode[2] ; clk        ; 4.219 ; 4.219 ; Rise       ; clk             ;
+;  opcode[3] ; clk        ; 4.505 ; 4.505 ; Rise       ; clk             ;
+;  opcode[4] ; clk        ; 4.323 ; 4.323 ; Rise       ; clk             ;
+;  opcode[5] ; clk        ; 4.191 ; 4.191 ; Rise       ; clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; opcode[*]  ; clk        ; -3.177 ; -3.177 ; Rise       ; clk             ;
+;  opcode[0] ; clk        ; -4.062 ; -4.062 ; Rise       ; clk             ;
+;  opcode[1] ; clk        ; -3.907 ; -3.907 ; Rise       ; clk             ;
+;  opcode[2] ; clk        ; -3.177 ; -3.177 ; Rise       ; clk             ;
+;  opcode[3] ; clk        ; -3.439 ; -3.439 ; Rise       ; clk             ;
+;  opcode[4] ; clk        ; -3.914 ; -3.914 ; Rise       ; clk             ;
+;  opcode[5] ; clk        ; -3.451 ; -3.451 ; Rise       ; clk             ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; IRwrite     ; clk        ; 6.945 ; 6.945 ; Rise       ; clk             ;
+; IorD        ; clk        ; 7.601 ; 7.601 ; Rise       ; clk             ;
+; PCsrc[*]    ; clk        ; 6.926 ; 6.926 ; Rise       ; clk             ;
+;  PCsrc[0]   ; clk        ; 6.926 ; 6.926 ; Rise       ; clk             ;
+;  PCsrc[1]   ; clk        ; 6.916 ; 6.916 ; Rise       ; clk             ;
+; aluOP[*]    ; clk        ; 6.916 ; 6.916 ; Rise       ; clk             ;
+;  aluOP[0]   ; clk        ; 6.916 ; 6.916 ; Rise       ; clk             ;
+;  aluOP[1]   ; clk        ; 6.903 ; 6.903 ; Rise       ; clk             ;
+; aluSrcA     ; clk        ; 7.751 ; 7.751 ; Rise       ; clk             ;
+; aluSrcB[*]  ; clk        ; 7.928 ; 7.928 ; Rise       ; clk             ;
+;  aluSrcB[0] ; clk        ; 7.928 ; 7.928 ; Rise       ; clk             ;
+;  aluSrcB[1] ; clk        ; 6.907 ; 6.907 ; Rise       ; clk             ;
+; branch      ; clk        ; 6.906 ; 6.906 ; Rise       ; clk             ;
+; memRead     ; clk        ; 7.383 ; 7.383 ; Rise       ; clk             ;
+; memToReg    ; clk        ; 6.924 ; 6.924 ; Rise       ; clk             ;
+; memWrite    ; clk        ; 6.963 ; 6.963 ; Rise       ; clk             ;
+; pcWrite     ; clk        ; 7.739 ; 7.739 ; Rise       ; clk             ;
+; regDst      ; clk        ; 6.942 ; 6.942 ; Rise       ; clk             ;
+; regWrite    ; clk        ; 7.923 ; 7.923 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; IRwrite     ; clk        ; 6.945 ; 6.945 ; Rise       ; clk             ;
+; IorD        ; clk        ; 7.029 ; 7.029 ; Rise       ; clk             ;
+; PCsrc[*]    ; clk        ; 6.916 ; 6.916 ; Rise       ; clk             ;
+;  PCsrc[0]   ; clk        ; 6.926 ; 6.926 ; Rise       ; clk             ;
+;  PCsrc[1]   ; clk        ; 6.916 ; 6.916 ; Rise       ; clk             ;
+; aluOP[*]    ; clk        ; 6.903 ; 6.903 ; Rise       ; clk             ;
+;  aluOP[0]   ; clk        ; 6.916 ; 6.916 ; Rise       ; clk             ;
+;  aluOP[1]   ; clk        ; 6.903 ; 6.903 ; Rise       ; clk             ;
+; aluSrcA     ; clk        ; 7.606 ; 7.606 ; Rise       ; clk             ;
+; aluSrcB[*]  ; clk        ; 6.907 ; 6.907 ; Rise       ; clk             ;
+;  aluSrcB[0] ; clk        ; 7.619 ; 7.619 ; Rise       ; clk             ;
+;  aluSrcB[1] ; clk        ; 6.907 ; 6.907 ; Rise       ; clk             ;
+; branch      ; clk        ; 6.906 ; 6.906 ; Rise       ; clk             ;
+; memRead     ; clk        ; 7.049 ; 7.049 ; Rise       ; clk             ;
+; memToReg    ; clk        ; 6.924 ; 6.924 ; Rise       ; clk             ;
+; memWrite    ; clk        ; 6.963 ; 6.963 ; Rise       ; clk             ;
+; pcWrite     ; clk        ; 7.637 ; 7.637 ; Rise       ; clk             ;
+; regDst      ; clk        ; 6.942 ; 6.942 ; Rise       ; clk             ;
+; regWrite    ; clk        ; 7.703 ; 7.703 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------+
+; Fast Model Setup Summary      ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.495 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -11.380               ;
++-------+--------+-----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                               ;
++-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; 0.495 ; state.branchSig    ; state.fetch        ; clk          ; clk         ; 1.000        ; 0.000      ; 0.537      ;
+; 0.503 ; state.jump         ; state.fetch        ; clk          ; clk         ; 1.000        ; 0.000      ; 0.529      ;
+; 0.579 ; state.memWriteSig  ; state.fetch        ; clk          ; clk         ; 1.000        ; 0.000      ; 0.453      ;
+; 0.614 ; state.fetch        ; state.decode       ; clk          ; clk         ; 1.000        ; 0.000      ; 0.418      ;
+; 0.622 ; state.decode       ; state.branchSig    ; clk          ; clk         ; 1.000        ; 0.000      ; 0.410      ;
+; 0.623 ; state.decode       ; state.Execute      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.409      ;
+; 0.625 ; state.decode       ; state.memAddr      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.407      ;
+; 0.628 ; state.decode       ; state.jump         ; clk          ; clk         ; 1.000        ; 0.000      ; 0.404      ;
+; 0.632 ; state.memAddr      ; state.memWriteSig  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.400      ;
+; 0.633 ; state.memAddr      ; state.memReadSig   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.399      ;
+; 0.635 ; state.memReadSig   ; state.memWriteBack ; clk          ; clk         ; 1.000        ; 0.000      ; 0.397      ;
+; 0.638 ; state.aluWriteBack ; state.fetch        ; clk          ; clk         ; 1.000        ; 0.000      ; 0.394      ;
+; 0.639 ; state.Execute      ; state.aluWriteBack ; clk          ; clk         ; 1.000        ; 0.000      ; 0.393      ;
+; 0.665 ; state.memWriteBack ; state.memWriteBack ; clk          ; clk         ; 1.000        ; 0.000      ; 0.367      ;
++-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                ;
++-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; state.memWriteBack ; state.memWriteBack ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.241 ; state.Execute      ; state.aluWriteBack ; clk          ; clk         ; 0.000        ; 0.000      ; 0.393      ;
+; 0.242 ; state.aluWriteBack ; state.fetch        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.394      ;
+; 0.245 ; state.memReadSig   ; state.memWriteBack ; clk          ; clk         ; 0.000        ; 0.000      ; 0.397      ;
+; 0.247 ; state.memAddr      ; state.memReadSig   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.399      ;
+; 0.248 ; state.memAddr      ; state.memWriteSig  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.400      ;
+; 0.252 ; state.decode       ; state.jump         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.404      ;
+; 0.255 ; state.decode       ; state.memAddr      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.407      ;
+; 0.257 ; state.decode       ; state.Execute      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.409      ;
+; 0.258 ; state.decode       ; state.branchSig    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.410      ;
+; 0.266 ; state.fetch        ; state.decode       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.418      ;
+; 0.301 ; state.memWriteSig  ; state.fetch        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.453      ;
+; 0.377 ; state.jump         ; state.fetch        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.529      ;
+; 0.385 ; state.branchSig    ; state.fetch        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.537      ;
++-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                   ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                 ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.Execute          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.Execute          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.aluWriteBack     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.aluWriteBack     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.branchSig        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.branchSig        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.decode           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.decode           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.fetch            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.fetch            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.jump             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.jump             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.memAddr          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memAddr          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.memReadSig       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memReadSig       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.memWriteBack     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memWriteBack     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.memWriteSig      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memWriteSig      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.Execute|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.Execute|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.aluWriteBack|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.aluWriteBack|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.branchSig|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.branchSig|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.decode|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.decode|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.fetch|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.fetch|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.jump|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.jump|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.memAddr|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memAddr|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.memReadSig|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memReadSig|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.memWriteBack|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memWriteBack|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.memWriteSig|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memWriteSig|clk  ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+
+
++------------------------------------------------------------------------+
+; Setup Times                                                            ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; opcode[*]  ; clk        ; 2.033 ; 2.033 ; Rise       ; clk             ;
+;  opcode[0] ; clk        ; 2.033 ; 2.033 ; Rise       ; clk             ;
+;  opcode[1] ; clk        ; 1.980 ; 1.980 ; Rise       ; clk             ;
+;  opcode[2] ; clk        ; 1.902 ; 1.902 ; Rise       ; clk             ;
+;  opcode[3] ; clk        ; 2.022 ; 2.022 ; Rise       ; clk             ;
+;  opcode[4] ; clk        ; 1.917 ; 1.917 ; Rise       ; clk             ;
+;  opcode[5] ; clk        ; 1.858 ; 1.858 ; Rise       ; clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; opcode[*]  ; clk        ; -1.491 ; -1.491 ; Rise       ; clk             ;
+;  opcode[0] ; clk        ; -1.797 ; -1.797 ; Rise       ; clk             ;
+;  opcode[1] ; clk        ; -1.704 ; -1.704 ; Rise       ; clk             ;
+;  opcode[2] ; clk        ; -1.491 ; -1.491 ; Rise       ; clk             ;
+;  opcode[3] ; clk        ; -1.591 ; -1.591 ; Rise       ; clk             ;
+;  opcode[4] ; clk        ; -1.721 ; -1.721 ; Rise       ; clk             ;
+;  opcode[5] ; clk        ; -1.562 ; -1.562 ; Rise       ; clk             ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; IRwrite     ; clk        ; 3.767 ; 3.767 ; Rise       ; clk             ;
+; IorD        ; clk        ; 3.974 ; 3.974 ; Rise       ; clk             ;
+; PCsrc[*]    ; clk        ; 3.750 ; 3.750 ; Rise       ; clk             ;
+;  PCsrc[0]   ; clk        ; 3.750 ; 3.750 ; Rise       ; clk             ;
+;  PCsrc[1]   ; clk        ; 3.736 ; 3.736 ; Rise       ; clk             ;
+; aluOP[*]    ; clk        ; 3.740 ; 3.740 ; Rise       ; clk             ;
+;  aluOP[0]   ; clk        ; 3.740 ; 3.740 ; Rise       ; clk             ;
+;  aluOP[1]   ; clk        ; 3.730 ; 3.730 ; Rise       ; clk             ;
+; aluSrcA     ; clk        ; 4.098 ; 4.098 ; Rise       ; clk             ;
+; aluSrcB[*]  ; clk        ; 4.114 ; 4.114 ; Rise       ; clk             ;
+;  aluSrcB[0] ; clk        ; 4.114 ; 4.114 ; Rise       ; clk             ;
+;  aluSrcB[1] ; clk        ; 3.728 ; 3.728 ; Rise       ; clk             ;
+; branch      ; clk        ; 3.730 ; 3.730 ; Rise       ; clk             ;
+; memRead     ; clk        ; 3.893 ; 3.893 ; Rise       ; clk             ;
+; memToReg    ; clk        ; 3.752 ; 3.752 ; Rise       ; clk             ;
+; memWrite    ; clk        ; 3.817 ; 3.817 ; Rise       ; clk             ;
+; pcWrite     ; clk        ; 4.055 ; 4.055 ; Rise       ; clk             ;
+; regDst      ; clk        ; 3.760 ; 3.760 ; Rise       ; clk             ;
+; regWrite    ; clk        ; 4.078 ; 4.078 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; IRwrite     ; clk        ; 3.767 ; 3.767 ; Rise       ; clk             ;
+; IorD        ; clk        ; 3.763 ; 3.763 ; Rise       ; clk             ;
+; PCsrc[*]    ; clk        ; 3.736 ; 3.736 ; Rise       ; clk             ;
+;  PCsrc[0]   ; clk        ; 3.750 ; 3.750 ; Rise       ; clk             ;
+;  PCsrc[1]   ; clk        ; 3.736 ; 3.736 ; Rise       ; clk             ;
+; aluOP[*]    ; clk        ; 3.730 ; 3.730 ; Rise       ; clk             ;
+;  aluOP[0]   ; clk        ; 3.740 ; 3.740 ; Rise       ; clk             ;
+;  aluOP[1]   ; clk        ; 3.730 ; 3.730 ; Rise       ; clk             ;
+; aluSrcA     ; clk        ; 4.030 ; 4.030 ; Rise       ; clk             ;
+; aluSrcB[*]  ; clk        ; 3.728 ; 3.728 ; Rise       ; clk             ;
+;  aluSrcB[0] ; clk        ; 3.991 ; 3.991 ; Rise       ; clk             ;
+;  aluSrcB[1] ; clk        ; 3.728 ; 3.728 ; Rise       ; clk             ;
+; branch      ; clk        ; 3.730 ; 3.730 ; Rise       ; clk             ;
+; memRead     ; clk        ; 3.797 ; 3.797 ; Rise       ; clk             ;
+; memToReg    ; clk        ; 3.752 ; 3.752 ; Rise       ; clk             ;
+; memWrite    ; clk        ; 3.817 ; 3.817 ; Rise       ; clk             ;
+; pcWrite     ; clk        ; 4.010 ; 4.010 ; Rise       ; clk             ;
+; regDst      ; clk        ; 3.760 ; 3.760 ; Rise       ; clk             ;
+; regWrite    ; clk        ; 4.017 ; 4.017 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -0.184 ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+;  clk             ; -0.184 ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+; Design-wide TNS  ; -0.184 ; 0.0   ; 0.0      ; 0.0     ; -13.851             ;
+;  clk             ; -0.184 ; 0.000 ; N/A      ; N/A     ; -13.851             ;
++------------------+--------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------+
+; Setup Times                                                            ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; opcode[*]  ; clk        ; 4.593 ; 4.593 ; Rise       ; clk             ;
+;  opcode[0] ; clk        ; 4.593 ; 4.593 ; Rise       ; clk             ;
+;  opcode[1] ; clk        ; 4.548 ; 4.548 ; Rise       ; clk             ;
+;  opcode[2] ; clk        ; 4.219 ; 4.219 ; Rise       ; clk             ;
+;  opcode[3] ; clk        ; 4.505 ; 4.505 ; Rise       ; clk             ;
+;  opcode[4] ; clk        ; 4.323 ; 4.323 ; Rise       ; clk             ;
+;  opcode[5] ; clk        ; 4.191 ; 4.191 ; Rise       ; clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; opcode[*]  ; clk        ; -1.491 ; -1.491 ; Rise       ; clk             ;
+;  opcode[0] ; clk        ; -1.797 ; -1.797 ; Rise       ; clk             ;
+;  opcode[1] ; clk        ; -1.704 ; -1.704 ; Rise       ; clk             ;
+;  opcode[2] ; clk        ; -1.491 ; -1.491 ; Rise       ; clk             ;
+;  opcode[3] ; clk        ; -1.591 ; -1.591 ; Rise       ; clk             ;
+;  opcode[4] ; clk        ; -1.721 ; -1.721 ; Rise       ; clk             ;
+;  opcode[5] ; clk        ; -1.562 ; -1.562 ; Rise       ; clk             ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; IRwrite     ; clk        ; 6.945 ; 6.945 ; Rise       ; clk             ;
+; IorD        ; clk        ; 7.601 ; 7.601 ; Rise       ; clk             ;
+; PCsrc[*]    ; clk        ; 6.926 ; 6.926 ; Rise       ; clk             ;
+;  PCsrc[0]   ; clk        ; 6.926 ; 6.926 ; Rise       ; clk             ;
+;  PCsrc[1]   ; clk        ; 6.916 ; 6.916 ; Rise       ; clk             ;
+; aluOP[*]    ; clk        ; 6.916 ; 6.916 ; Rise       ; clk             ;
+;  aluOP[0]   ; clk        ; 6.916 ; 6.916 ; Rise       ; clk             ;
+;  aluOP[1]   ; clk        ; 6.903 ; 6.903 ; Rise       ; clk             ;
+; aluSrcA     ; clk        ; 7.751 ; 7.751 ; Rise       ; clk             ;
+; aluSrcB[*]  ; clk        ; 7.928 ; 7.928 ; Rise       ; clk             ;
+;  aluSrcB[0] ; clk        ; 7.928 ; 7.928 ; Rise       ; clk             ;
+;  aluSrcB[1] ; clk        ; 6.907 ; 6.907 ; Rise       ; clk             ;
+; branch      ; clk        ; 6.906 ; 6.906 ; Rise       ; clk             ;
+; memRead     ; clk        ; 7.383 ; 7.383 ; Rise       ; clk             ;
+; memToReg    ; clk        ; 6.924 ; 6.924 ; Rise       ; clk             ;
+; memWrite    ; clk        ; 6.963 ; 6.963 ; Rise       ; clk             ;
+; pcWrite     ; clk        ; 7.739 ; 7.739 ; Rise       ; clk             ;
+; regDst      ; clk        ; 6.942 ; 6.942 ; Rise       ; clk             ;
+; regWrite    ; clk        ; 7.923 ; 7.923 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; IRwrite     ; clk        ; 3.767 ; 3.767 ; Rise       ; clk             ;
+; IorD        ; clk        ; 3.763 ; 3.763 ; Rise       ; clk             ;
+; PCsrc[*]    ; clk        ; 3.736 ; 3.736 ; Rise       ; clk             ;
+;  PCsrc[0]   ; clk        ; 3.750 ; 3.750 ; Rise       ; clk             ;
+;  PCsrc[1]   ; clk        ; 3.736 ; 3.736 ; Rise       ; clk             ;
+; aluOP[*]    ; clk        ; 3.730 ; 3.730 ; Rise       ; clk             ;
+;  aluOP[0]   ; clk        ; 3.740 ; 3.740 ; Rise       ; clk             ;
+;  aluOP[1]   ; clk        ; 3.730 ; 3.730 ; Rise       ; clk             ;
+; aluSrcA     ; clk        ; 4.030 ; 4.030 ; Rise       ; clk             ;
+; aluSrcB[*]  ; clk        ; 3.728 ; 3.728 ; Rise       ; clk             ;
+;  aluSrcB[0] ; clk        ; 3.991 ; 3.991 ; Rise       ; clk             ;
+;  aluSrcB[1] ; clk        ; 3.728 ; 3.728 ; Rise       ; clk             ;
+; branch      ; clk        ; 3.730 ; 3.730 ; Rise       ; clk             ;
+; memRead     ; clk        ; 3.797 ; 3.797 ; Rise       ; clk             ;
+; memToReg    ; clk        ; 3.752 ; 3.752 ; Rise       ; clk             ;
+; memWrite    ; clk        ; 3.817 ; 3.817 ; Rise       ; clk             ;
+; pcWrite     ; clk        ; 4.010 ; 4.010 ; Rise       ; clk             ;
+; regDst      ; clk        ; 3.760 ; 3.760 ; Rise       ; clk             ;
+; regWrite    ; clk        ; 4.017 ; 4.017 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 14       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 14       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 7     ; 7    ;
+; Unconstrained Input Port Paths  ; 45    ; 45   ;
+; Unconstrained Output Ports      ; 16    ; 16   ;
+; Unconstrained Output Port Paths ; 22    ; 22   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat May 18 18:39:22 2019
+Info: Command: quartus_sta uControl -c uControl
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'uControl.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.184
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.184        -0.184 clk 
+Info (332146): Worst-case hold slack is 0.445
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.445         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.631
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.631       -13.851 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332146): Worst-case setup slack is 0.495
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.495         0.000 clk 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -11.380 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4556 megabytes
+    Info: Processing ended: Sat May 18 18:39:23 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

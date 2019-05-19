@@ -2,6 +2,7 @@ vendor_name = ModelSim
 source_file = 1, D:/PUJ/8/Arq/ProyectoARQUI2/Memory/Memory.vhd
 source_file = 1, D:/PUJ/8/Arq/ProyectoARQUI2/Memory/Waveform.vwf
 source_file = 1, D:/PUJ/8/Arq/ProyectoARQUI2/Memory/Waveform1.vwf
+source_file = 1, D:/PUJ/8/Arq/ProyectoARQUI2/Memory/Waveform2.vwf
 source_file = 1, D:/PUJ/8/Arq/ProyectoARQUI2/Memory/db/Memory.cbx.xml
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
