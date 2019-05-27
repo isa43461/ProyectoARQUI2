@@ -20,7 +20,7 @@ entity prueba2 is
 		memToReg : in std_logic;
 		clk : in std_logic;
 		--Output
-		salidaPrueba	: out std_logic_vector(15 downto 0)
+		salidaPrueba	: inout std_logic_vector(15 downto 0)
 		);
 end prueba2;
 
@@ -128,6 +128,14 @@ component AluControl is
 	);
 end component;
 
+component Divisor is
+	port
+	(
+		Clkin: in std_logic;
+		Clkout: out std_logic
+	);
+end component;
+
 signal AluSrcA : std_logic;
 signal AluSrcB : std_logic_vector(1 downto 0);
 signal sBrAlu : std_logic;
@@ -144,13 +152,22 @@ signal e2ALu : std_logic_vector(31 downto 0);
 signal sSalidaAlu : std_logic_vector(31 downto 0);
 signal sMuxDst : std_logic_vector(4 downto 0);
 signal sMuxMemReg : std_logic_vector(31 downto 0);
+signal salidaCLK : std_logic;
 
-
+ 
 begin
+	
+	decoder : Divisor
+		port map
+		(
+			Clkin => clk,
+			Clkout => salidaCLK
+		);
 	
 	muxMemReg : MuxMemToReg
 		port map
 		(
+			--entrada1 => salidaPrueba,
 			entrada1 => "00000000000000000000000000011011",
 			entrada2 => "00000000000000000000000000101111",
 			selector => memToReg,
@@ -175,7 +192,7 @@ begin
 			RD	=> sMuxDst,
 			Dato => sMuxMemReg,
 			regWriteSignal	=> regWrite,
-			clk => clk,
+			clk => salidaCLK,
 			regA => eRegA,
 			regB => eRegB
 
@@ -186,7 +203,7 @@ begin
 		(
 			entrada => eRegA,
 			salida => sRegA,
-			clk => clk
+			clk => salidaCLK
 		);
 	
 	regB : Registro
@@ -194,15 +211,16 @@ begin
 		(
 			entrada => eRegB,
 			salida => sRegB,
-			clk => clk
+			clk => salidaCLK
 		);
 		
 	regAluOut : Registro
 		port map
 		(
 			entrada => sSalidaAlu,
+			--salida => salidaPrueba,
 			salida(15 downto 0) => salidaPrueba,
-			clk => clk
+			clk => salidaCLK
 		);
 
 		

@@ -1,0 +1,27 @@
+|Divisor
+Clkin => counter[0].CLK
+Clkin => counter[1].CLK
+Clkin => counter[2].CLK
+Clkin => counter[3].CLK
+Clkin => counter[4].CLK
+Clkin => counter[5].CLK
+Clkin => counter[6].CLK
+Clkin => counter[7].CLK
+Clkin => counter[8].CLK
+Clkin => counter[9].CLK
+Clkin => counter[10].CLK
+Clkin => counter[11].CLK
+Clkin => counter[12].CLK
+Clkin => counter[13].CLK
+Clkin => counter[14].CLK
+Clkin => counter[15].CLK
+Clkin => counter[16].CLK
+Clkin => counter[17].CLK
+Clkin => counter[18].CLK
+Clkin => counter[19].CLK
+Clkin => counter[20].CLK
+Clkin => counter[21].CLK
+Clkin => State.CLK
+Clkout <= State.DB_MAX_OUTPUT_PORT_TYPE
+
+

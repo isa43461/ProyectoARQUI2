@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "05/18/2019 22:30:15"
+// Generated on "05/24/2019 15:48:32"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    prueba2
 // 
@@ -479,13 +479,13 @@ end
 // memToReg
 initial
 begin
-	memToReg = 1'b1;
+	memToReg = 1'b0;
 end 
 
 // muxA
 initial
 begin
-	muxA = 1'b1;
+	muxA = 1'b0;
 end 
 // muxB[ 1 ]
 initial
@@ -495,7 +495,7 @@ end
 // muxB[ 0 ]
 initial
 begin
-	muxB[0] = 1'b0;
+	muxB[0] = 1'b1;
 end 
 
 // regDst
@@ -507,7 +507,7 @@ end
 // regWrite
 initial
 begin
-	regWrite = 1'b0;
+	regWrite = 1'b1;
 end 
 
 prueba2_vlg_sample_tst tb_sample (
