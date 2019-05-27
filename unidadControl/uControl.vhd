@@ -89,7 +89,7 @@ begin
 					state <= memWriteBack;
 					
 				when memWriteBack =>
-					state <= memWriteBack;
+					state <= fetch;
 					
 				when memWriteSig =>
 					state <= fetch;

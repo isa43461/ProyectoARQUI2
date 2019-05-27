@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\PUJ\8\Arq\ProyectoARQUI2\pruebaUControl\simulation\qsim
+vpruebaControl
+Z1 IR^AXPN=Cf[IaVah]nd4GO0
+Z2 VLB`Y6bW6aIY?_WJ]<?K]F0
+Z3 dD:\PUJ\8\Arq\ProyectoARQUI2\pruebaUControl\simulation\qsim
+Z4 w1558970833
+Z5 8pruebaControl.vo
+Z6 FpruebaControl.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 nprueba@control
+!i10b 1
+Z10 !s100 D]B<fOkMl@7G;lnh80zBN0
+!s85 0
+Z11 !s108 1558970842.984000
+Z12 !s107 pruebaControl.vo|
+Z13 !s90 -work|work|pruebaControl.vo|
+!s101 -O0
+vpruebaControl_vlg_check_tst
+!i10b 1
+!s100 ^ki@Jl1O7DT3QYWAD:B9N3
+IUWJR3_7diJU0RFU:j`KMj3
+VVM;VX5H`6mfbK=8IcKFLo0
+R3
+Z14 w1558970831
+Z15 8pruebaControl.vt
+Z16 FpruebaControl.vt
+L0 57
+R7
+r1
+!s85 0
+31
+Z17 !s108 1558970843.382000
+Z18 !s107 pruebaControl.vt|
+Z19 !s90 -work|work|pruebaControl.vt|
+!s101 -O0
+R8
+nprueba@control_vlg_check_tst
+vpruebaControl_vlg_sample_tst
+!i10b 1
+!s100 =h_nTh@PHe`nKa_VPB^cE1
+IHhMAO7d1CWUCC3HJ8nD2a0
+V=APOFJMHkXf;L^fln2[6J0
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+nprueba@control_vlg_sample_tst
+vpruebaControl_vlg_vec_tst
+!i10b 1
+!s100 dYQijLRS3e_bF5>H_512S3
+ILo^1O1?f7WKmJjH@687bO2
+VZ:Sk7Gf1J1Hd7dBS=L^]`1
+R3
+R14
+R15
+R16
+L0 545
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+nprueba@control_vlg_vec_tst

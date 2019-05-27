@@ -1,5 +1,5 @@
 Analysis & Synthesis report for uControl
-Sat May 18 18:39:15 2019
+Mon May 27 10:06:32 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -43,13 +43,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat May 18 18:39:15 2019           ;
+; Analysis & Synthesis Status        ; Successful - Mon May 27 10:06:32 2019           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; uControl                                        ;
 ; Top-level Entity Name              ; uControl                                        ;
 ; Family                             ; Cyclone II                                      ;
 ; Total logic elements               ; 18                                              ;
-;     Total combinational functions  ; 17                                              ;
+;     Total combinational functions  ; 16                                              ;
 ;     Dedicated logic registers      ; 10                                              ;
 ; Total registers                    ; 10                                              ;
 ; Total pins                         ; 25                                              ;
@@ -172,14 +172,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Estimated Total logic elements              ; 18    ;
 ;                                             ;       ;
-; Total combinational functions               ; 17    ;
+; Total combinational functions               ; 16    ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 8     ;
 ;     -- 3 input functions                    ; 1     ;
-;     -- <=2 input functions                  ; 8     ;
+;     -- <=2 input functions                  ; 7     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 17    ;
+;     -- normal mode                          ; 16    ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
 ; Total registers                             ; 10    ;
@@ -190,8 +190,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clk   ;
 ; Maximum fan-out                             ; 10    ;
-; Total fan-out                               ; 96    ;
-; Average fan-out                             ; 1.85  ;
+; Total fan-out                               ; 94    ;
+; Average fan-out                             ; 1.84  ;
 +---------------------------------------------+-------+
 
 
@@ -200,7 +200,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |uControl                  ; 17 (17)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 25   ; 0            ; |uControl           ; work         ;
+; |uControl                  ; 16 (16)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 25   ; 0            ; |uControl           ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -263,7 +263,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat May 18 18:39:14 2019
+    Info: Processing started: Mon May 27 10:06:29 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off uControl -c uControl
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file ucontrol.vhd
@@ -279,9 +279,9 @@ Info (21057): Implemented 43 device resources after synthesis - the final resour
     Info (21059): Implemented 17 output pins
     Info (21061): Implemented 18 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4669 megabytes
-    Info: Processing ended: Sat May 18 18:39:15 2019
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 4660 megabytes
+    Info: Processing ended: Mon May 27 10:06:32 2019
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 
