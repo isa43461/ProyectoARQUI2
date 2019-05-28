@@ -64,7 +64,7 @@ begin
 						state <= decode;
 					elsif opcode = "000000" then --R
 						state <= decode;
-					else -- opcode = "000010" then --j
+					elsif  opcode = "000010" then --j
 						state <= decode;
 					end if;
 				when decode=>
@@ -76,13 +76,13 @@ begin
 						state <= branchSig;
 					elsif opcode = "000000" then --R
 						state <= execute;
-					else --opcode = "000010" then --j
+					elsif opcode = "000010" then --j
 						state <= jump;
 					end if;
 				when memAddr =>
 					if opcode = "100011" then --lw
 						state <= memReadSig;
-					else --opcode = "101011" then --sw
+					else-- opcode = "101011" then --sw
 						state <= memWriteSig;
 					end if;
 				when memReadSig =>
@@ -92,15 +92,25 @@ begin
 					state <= fetch;
 					
 				when memWriteSig =>
-					state <= fetch;
-				
-				when execute =>
-					state <= aluWriteBack;
+					if opcode = "101011" then
+						state <= fetch;
+					end if;
 					
+				when execute =>
+					if opcode = "000000" then 
+						state <= aluWriteBack;
+					end if;
 				when aluWriteBack=>
-					state <= fetch;
+					if opcode = "000000" then 
+						state <= fetch;
+					end if;
+					
 				when branchSig =>
-					state <= fetch;
+					if opcode = "000100" then
+						state <= fetch;
+					else
+						state <= null;
+					end if;
 				
 				when jump =>
 					state <= fetch;
@@ -142,6 +152,20 @@ begin
 					aluOP <= "000";
 					aluSrcA <= '0';
 					aluSrcB <= "11";
+					regWrite <= '0';
+					regDst <= '0';
+				when memAddr =>
+					pcWrite <= '0';
+					branch <= '0';
+					IorD <= '0';
+					memRead <= '0';
+					memWrite <= '0';
+					memToReg <= '0';
+					IRwrite <= '0';
+					PCsrc <= "00";
+					aluOP <= "000";
+					aluSrcA <= '1';
+					aluSrcB <= "10";
 					regWrite <= '0';
 					regDst <= '0';
 				when memReadSig =>

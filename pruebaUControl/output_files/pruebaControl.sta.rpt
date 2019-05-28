@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for pruebaControl
-Mon May 27 10:07:32 2019
+Mon May 27 23:14:03 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -107,7 +107,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------+-----------------+-----------------------+-------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name            ; Note                                                  ;
 +------------+-----------------+-----------------------+-------------------------------------------------------+
-; 686.34 MHz ; 450.05 MHz      ; divisor:decoder|state ; limit due to high minimum pulse width violation (tch) ;
+; 849.62 MHz ; 450.05 MHz      ; divisor:decoder|state ; limit due to high minimum pulse width violation (tch) ;
 +------------+-----------------+-----------------------+-------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -117,7 +117,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------+--------+---------------+
 ; Clock                 ; Slack  ; End Point TNS ;
 +-----------------------+--------+---------------+
-; divisor:decoder|state ; -0.457 ; -0.473        ;
+; divisor:decoder|state ; -0.177 ; -0.177        ;
 ; clk                   ; 2.653  ; 0.000         ;
 +-----------------------+--------+---------------+
 
@@ -128,7 +128,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; Clock                 ; Slack  ; End Point TNS ;
 +-----------------------+--------+---------------+
 ; clk                   ; -2.401 ; -2.401        ;
-; divisor:decoder|state ; 0.632  ; 0.000         ;
+; divisor:decoder|state ; 0.445  ; 0.000         ;
 +-----------------------+--------+---------------+
 
 
@@ -154,16 +154,17 @@ No paths to report.
 +-----------------------+--------+---------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow Model Setup: 'divisor:decoder|state'                                                                                                                          ;
-+--------+-------------------------------+----------------------------------+-----------------------+-----------------------+--------------+------------+------------+
-; Slack  ; From Node                     ; To Node                          ; Launch Clock          ; Latch Clock           ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-------------------------------+----------------------------------+-----------------------+-----------------------+--------------+------------+------------+
-; -0.457 ; uControl:control|state.decode ; uControl:control|state.fetch     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; 0.000      ; 1.495      ;
-; -0.361 ; uControl:control|state.fetch  ; uControl:control|state.fetch     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; 0.000      ; 1.399      ;
-; -0.016 ; uControl:control|state.decode ; uControl:control|state.branchSig ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; 0.000      ; 1.054      ;
-; 0.120  ; uControl:control|state.fetch  ; uControl:control|state.decode    ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; 0.000      ; 0.918      ;
-+--------+-------------------------------+----------------------------------+-----------------------+-----------------------+--------------+------------+------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'divisor:decoder|state'                                                                                                                       ;
++--------+-------------------------------+-------------------------------+-----------------------+-----------------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock          ; Latch Clock           ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+-----------------------+-----------------------+--------------+------------+------------+
+; -0.177 ; uControl:control|state.fetch  ; uControl:control|state.decode ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; 0.000      ; 1.215      ;
+; 0.112  ; uControl:control|state.jump   ; uControl:control|state.fetch  ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; 0.000      ; 0.926      ;
+; 0.112  ; uControl:control|state.jump   ; uControl:control|state.decode ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; 0.000      ; 0.926      ;
+; 0.122  ; uControl:control|state.decode ; uControl:control|state.jump   ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; 0.000      ; 0.916      ;
+; 0.307  ; uControl:control|state.decode ; uControl:control|state.decode ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; 0.000      ; 0.731      ;
++--------+-------------------------------+-------------------------------+-----------------------+-----------------------+--------------+------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------+
@@ -186,16 +187,17 @@ No paths to report.
 +--------+-----------------------+-----------------------+-----------------------+-------------+--------------+------------+------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow Model Hold: 'divisor:decoder|state'                                                                                                                          ;
-+-------+-------------------------------+----------------------------------+-----------------------+-----------------------+--------------+------------+------------+
-; Slack ; From Node                     ; To Node                          ; Launch Clock          ; Latch Clock           ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-------------------------------+----------------------------------+-----------------------+-----------------------+--------------+------------+------------+
-; 0.632 ; uControl:control|state.fetch  ; uControl:control|state.decode    ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; 0.000      ; 0.918      ;
-; 0.768 ; uControl:control|state.decode ; uControl:control|state.branchSig ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; 0.000      ; 1.054      ;
-; 1.113 ; uControl:control|state.fetch  ; uControl:control|state.fetch     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; 0.000      ; 1.399      ;
-; 1.209 ; uControl:control|state.decode ; uControl:control|state.fetch     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; 0.000      ; 1.495      ;
-+-------+-------------------------------+----------------------------------+-----------------------+-----------------------+--------------+------------+------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'divisor:decoder|state'                                                                                                                       ;
++-------+-------------------------------+-------------------------------+-----------------------+-----------------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock          ; Latch Clock           ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+-----------------------+-----------------------+--------------+------------+------------+
+; 0.445 ; uControl:control|state.decode ; uControl:control|state.decode ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; 0.000      ; 0.731      ;
+; 0.630 ; uControl:control|state.decode ; uControl:control|state.jump   ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; 0.000      ; 0.916      ;
+; 0.640 ; uControl:control|state.jump   ; uControl:control|state.fetch  ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; 0.000      ; 0.926      ;
+; 0.640 ; uControl:control|state.jump   ; uControl:control|state.decode ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; 0.000      ; 0.926      ;
+; 0.929 ; uControl:control|state.fetch  ; uControl:control|state.decode ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; 0.000      ; 1.215      ;
++-------+-------------------------------+-------------------------------+-----------------------+-----------------------+--------------+------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------+
@@ -213,30 +215,30 @@ No paths to report.
 +--------+--------------+----------------+------------------+-------+------------+-----------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Slow Model Minimum Pulse Width: 'divisor:decoder|state'                                                                           ;
-+--------+--------------+----------------+------------------+-----------------------+------------+----------------------------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock                 ; Clock Edge ; Target                           ;
-+--------+--------------+----------------+------------------+-----------------------+------------+----------------------------------+
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; divisor:decoder|state ; Rise       ; uControl:control|state.branchSig ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; uControl:control|state.branchSig ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; divisor:decoder|state ; Rise       ; uControl:control|state.decode    ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; uControl:control|state.decode    ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; divisor:decoder|state ; Rise       ; uControl:control|state.fetch     ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; uControl:control|state.fetch     ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; control|state.branchSig|clk      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; control|state.branchSig|clk      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; control|state.decode|clk         ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; control|state.decode|clk         ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; control|state.fetch|clk          ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; control|state.fetch|clk          ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; decoder|state|regout             ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; decoder|state|regout             ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; decoder|state~clkctrl|inclk[0]   ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; decoder|state~clkctrl|inclk[0]   ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; decoder|state~clkctrl|outclk     ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; decoder|state~clkctrl|outclk     ;
-+--------+--------------+----------------+------------------+-----------------------+------------+----------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'divisor:decoder|state'                                                                         ;
++--------+--------------+----------------+------------------+-----------------------+------------+--------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                 ; Clock Edge ; Target                         ;
++--------+--------------+----------------+------------------+-----------------------+------------+--------------------------------+
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; divisor:decoder|state ; Rise       ; uControl:control|state.decode  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; uControl:control|state.decode  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; divisor:decoder|state ; Rise       ; uControl:control|state.fetch   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; uControl:control|state.fetch   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; divisor:decoder|state ; Rise       ; uControl:control|state.jump    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; uControl:control|state.jump    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; control|state.decode|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; control|state.decode|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; control|state.fetch|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; control|state.fetch|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; control|state.jump|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; control|state.jump|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; decoder|state|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; decoder|state|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; decoder|state~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; decoder|state~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; decoder|state~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; decoder|state~clkctrl|outclk   ;
++--------+--------------+----------------+------------------+-----------------------+------------+--------------------------------+
 
 
 +------------------------------------------------------------------------------------------+
@@ -244,18 +246,14 @@ No paths to report.
 +-------------+-----------------------+-------+-------+------------+-----------------------+
 ; Data Port   ; Clock Port            ; Rise  ; Fall  ; Clock Edge ; Clock Reference       ;
 +-------------+-----------------------+-------+-------+------------+-----------------------+
-; IRwrite     ; divisor:decoder|state ; 7.003 ; 7.003 ; Rise       ; divisor:decoder|state ;
-; PCsrc[*]    ; divisor:decoder|state ; 6.645 ; 6.645 ; Rise       ; divisor:decoder|state ;
-;  PCsrc[0]   ; divisor:decoder|state ; 6.645 ; 6.645 ; Rise       ; divisor:decoder|state ;
-; aluOP[*]    ; divisor:decoder|state ; 6.583 ; 6.583 ; Rise       ; divisor:decoder|state ;
-;  aluOP[0]   ; divisor:decoder|state ; 6.583 ; 6.583 ; Rise       ; divisor:decoder|state ;
-; aluSrcA     ; divisor:decoder|state ; 6.583 ; 6.583 ; Rise       ; divisor:decoder|state ;
-; aluSrcB[*]  ; divisor:decoder|state ; 7.469 ; 7.469 ; Rise       ; divisor:decoder|state ;
-;  aluSrcB[0] ; divisor:decoder|state ; 7.469 ; 7.469 ; Rise       ; divisor:decoder|state ;
-;  aluSrcB[1] ; divisor:decoder|state ; 6.702 ; 6.702 ; Rise       ; divisor:decoder|state ;
-; branch      ; divisor:decoder|state ; 6.612 ; 6.612 ; Rise       ; divisor:decoder|state ;
-; memRead     ; divisor:decoder|state ; 6.713 ; 6.713 ; Rise       ; divisor:decoder|state ;
-; pcWrite     ; divisor:decoder|state ; 6.700 ; 6.700 ; Rise       ; divisor:decoder|state ;
+; IRwrite     ; divisor:decoder|state ; 6.977 ; 6.977 ; Rise       ; divisor:decoder|state ;
+; PCsrc[*]    ; divisor:decoder|state ; 6.326 ; 6.326 ; Rise       ; divisor:decoder|state ;
+;  PCsrc[1]   ; divisor:decoder|state ; 6.326 ; 6.326 ; Rise       ; divisor:decoder|state ;
+; aluSrcB[*]  ; divisor:decoder|state ; 7.679 ; 7.679 ; Rise       ; divisor:decoder|state ;
+;  aluSrcB[0] ; divisor:decoder|state ; 7.679 ; 7.679 ; Rise       ; divisor:decoder|state ;
+;  aluSrcB[1] ; divisor:decoder|state ; 6.770 ; 6.770 ; Rise       ; divisor:decoder|state ;
+; memRead     ; divisor:decoder|state ; 6.644 ; 6.644 ; Rise       ; divisor:decoder|state ;
+; pcWrite     ; divisor:decoder|state ; 7.455 ; 7.455 ; Rise       ; divisor:decoder|state ;
 +-------------+-----------------------+-------+-------+------------+-----------------------+
 
 
@@ -264,18 +262,14 @@ No paths to report.
 +-------------+-----------------------+-------+-------+------------+-----------------------+
 ; Data Port   ; Clock Port            ; Rise  ; Fall  ; Clock Edge ; Clock Reference       ;
 +-------------+-----------------------+-------+-------+------------+-----------------------+
-; IRwrite     ; divisor:decoder|state ; 7.003 ; 7.003 ; Rise       ; divisor:decoder|state ;
-; PCsrc[*]    ; divisor:decoder|state ; 6.645 ; 6.645 ; Rise       ; divisor:decoder|state ;
-;  PCsrc[0]   ; divisor:decoder|state ; 6.645 ; 6.645 ; Rise       ; divisor:decoder|state ;
-; aluOP[*]    ; divisor:decoder|state ; 6.583 ; 6.583 ; Rise       ; divisor:decoder|state ;
-;  aluOP[0]   ; divisor:decoder|state ; 6.583 ; 6.583 ; Rise       ; divisor:decoder|state ;
-; aluSrcA     ; divisor:decoder|state ; 6.583 ; 6.583 ; Rise       ; divisor:decoder|state ;
-; aluSrcB[*]  ; divisor:decoder|state ; 6.702 ; 6.702 ; Rise       ; divisor:decoder|state ;
-;  aluSrcB[0] ; divisor:decoder|state ; 7.373 ; 7.373 ; Rise       ; divisor:decoder|state ;
-;  aluSrcB[1] ; divisor:decoder|state ; 6.702 ; 6.702 ; Rise       ; divisor:decoder|state ;
-; branch      ; divisor:decoder|state ; 6.612 ; 6.612 ; Rise       ; divisor:decoder|state ;
-; memRead     ; divisor:decoder|state ; 6.713 ; 6.713 ; Rise       ; divisor:decoder|state ;
-; pcWrite     ; divisor:decoder|state ; 6.700 ; 6.700 ; Rise       ; divisor:decoder|state ;
+; IRwrite     ; divisor:decoder|state ; 6.977 ; 6.977 ; Rise       ; divisor:decoder|state ;
+; PCsrc[*]    ; divisor:decoder|state ; 6.326 ; 6.326 ; Rise       ; divisor:decoder|state ;
+;  PCsrc[1]   ; divisor:decoder|state ; 6.326 ; 6.326 ; Rise       ; divisor:decoder|state ;
+; aluSrcB[*]  ; divisor:decoder|state ; 6.770 ; 6.770 ; Rise       ; divisor:decoder|state ;
+;  aluSrcB[0] ; divisor:decoder|state ; 7.437 ; 7.437 ; Rise       ; divisor:decoder|state ;
+;  aluSrcB[1] ; divisor:decoder|state ; 6.770 ; 6.770 ; Rise       ; divisor:decoder|state ;
+; memRead     ; divisor:decoder|state ; 6.644 ; 6.644 ; Rise       ; divisor:decoder|state ;
+; pcWrite     ; divisor:decoder|state ; 7.434 ; 7.434 ; Rise       ; divisor:decoder|state ;
 +-------------+-----------------------+-------+-------+------------+-----------------------+
 
 
@@ -284,7 +278,7 @@ No paths to report.
 +-----------------------+-------+---------------+
 ; Clock                 ; Slack ; End Point TNS ;
 +-----------------------+-------+---------------+
-; divisor:decoder|state ; 0.421 ; 0.000         ;
+; divisor:decoder|state ; 0.507 ; 0.000         ;
 ; clk                   ; 1.571 ; 0.000         ;
 +-----------------------+-------+---------------+
 
@@ -295,7 +289,7 @@ No paths to report.
 ; Clock                 ; Slack  ; End Point TNS ;
 +-----------------------+--------+---------------+
 ; clk                   ; -1.191 ; -1.191        ;
-; divisor:decoder|state ; 0.266  ; 0.000         ;
+; divisor:decoder|state ; 0.215  ; 0.000         ;
 +-----------------------+--------+---------------+
 
 
@@ -321,16 +315,17 @@ No paths to report.
 +-----------------------+--------+---------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast Model Setup: 'divisor:decoder|state'                                                                                                                         ;
-+-------+-------------------------------+----------------------------------+-----------------------+-----------------------+--------------+------------+------------+
-; Slack ; From Node                     ; To Node                          ; Launch Clock          ; Latch Clock           ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-------------------------------+----------------------------------+-----------------------+-----------------------+--------------+------------+------------+
-; 0.421 ; uControl:control|state.decode ; uControl:control|state.fetch     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; 0.000      ; 0.611      ;
-; 0.447 ; uControl:control|state.fetch  ; uControl:control|state.fetch     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; 0.000      ; 0.585      ;
-; 0.555 ; uControl:control|state.decode ; uControl:control|state.branchSig ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; 0.000      ; 0.477      ;
-; 0.614 ; uControl:control|state.fetch  ; uControl:control|state.decode    ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; 0.000      ; 0.418      ;
-+-------+-------------------------------+----------------------------------+-----------------------+-----------------------+--------------+------------+------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'divisor:decoder|state'                                                                                                                      ;
++-------+-------------------------------+-------------------------------+-----------------------+-----------------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock          ; Latch Clock           ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+-----------------------+-----------------------+--------------+------------+------------+
+; 0.507 ; uControl:control|state.fetch  ; uControl:control|state.decode ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; 0.000      ; 0.525      ;
+; 0.610 ; uControl:control|state.jump   ; uControl:control|state.fetch  ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; 0.000      ; 0.422      ;
+; 0.630 ; uControl:control|state.jump   ; uControl:control|state.decode ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; 0.000      ; 0.402      ;
+; 0.638 ; uControl:control|state.decode ; uControl:control|state.jump   ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; 0.000      ; 0.394      ;
+; 0.665 ; uControl:control|state.decode ; uControl:control|state.decode ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; 0.000      ; 0.367      ;
++-------+-------------------------------+-------------------------------+-----------------------+-----------------------+--------------+------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------+
@@ -353,16 +348,17 @@ No paths to report.
 +--------+-----------------------+-----------------------+-----------------------+-------------+--------------+------------+------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast Model Hold: 'divisor:decoder|state'                                                                                                                          ;
-+-------+-------------------------------+----------------------------------+-----------------------+-----------------------+--------------+------------+------------+
-; Slack ; From Node                     ; To Node                          ; Launch Clock          ; Latch Clock           ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-------------------------------+----------------------------------+-----------------------+-----------------------+--------------+------------+------------+
-; 0.266 ; uControl:control|state.fetch  ; uControl:control|state.decode    ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; 0.000      ; 0.418      ;
-; 0.325 ; uControl:control|state.decode ; uControl:control|state.branchSig ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; 0.000      ; 0.477      ;
-; 0.433 ; uControl:control|state.fetch  ; uControl:control|state.fetch     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; 0.000      ; 0.585      ;
-; 0.459 ; uControl:control|state.decode ; uControl:control|state.fetch     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; 0.000      ; 0.611      ;
-+-------+-------------------------------+----------------------------------+-----------------------+-----------------------+--------------+------------+------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'divisor:decoder|state'                                                                                                                       ;
++-------+-------------------------------+-------------------------------+-----------------------+-----------------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock          ; Latch Clock           ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+-----------------------+-----------------------+--------------+------------+------------+
+; 0.215 ; uControl:control|state.decode ; uControl:control|state.decode ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; 0.000      ; 0.367      ;
+; 0.242 ; uControl:control|state.decode ; uControl:control|state.jump   ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; 0.000      ; 0.394      ;
+; 0.250 ; uControl:control|state.jump   ; uControl:control|state.decode ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; 0.000      ; 0.402      ;
+; 0.270 ; uControl:control|state.jump   ; uControl:control|state.fetch  ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; 0.000      ; 0.422      ;
+; 0.373 ; uControl:control|state.fetch  ; uControl:control|state.decode ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; 0.000      ; 0.525      ;
++-------+-------------------------------+-------------------------------+-----------------------+-----------------------+--------------+------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------+
@@ -380,30 +376,30 @@ No paths to report.
 +--------+--------------+----------------+------------------+-------+------------+-----------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Fast Model Minimum Pulse Width: 'divisor:decoder|state'                                                                           ;
-+--------+--------------+----------------+------------------+-----------------------+------------+----------------------------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock                 ; Clock Edge ; Target                           ;
-+--------+--------------+----------------+------------------+-----------------------+------------+----------------------------------+
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; uControl:control|state.branchSig ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; uControl:control|state.branchSig ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; uControl:control|state.decode    ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; uControl:control|state.decode    ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; uControl:control|state.fetch     ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; uControl:control|state.fetch     ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; control|state.branchSig|clk      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; control|state.branchSig|clk      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; control|state.decode|clk         ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; control|state.decode|clk         ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; control|state.fetch|clk          ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; control|state.fetch|clk          ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; decoder|state|regout             ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; decoder|state|regout             ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; decoder|state~clkctrl|inclk[0]   ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; decoder|state~clkctrl|inclk[0]   ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; decoder|state~clkctrl|outclk     ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; decoder|state~clkctrl|outclk     ;
-+--------+--------------+----------------+------------------+-----------------------+------------+----------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'divisor:decoder|state'                                                                         ;
++--------+--------------+----------------+------------------+-----------------------+------------+--------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                 ; Clock Edge ; Target                         ;
++--------+--------------+----------------+------------------+-----------------------+------------+--------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; uControl:control|state.decode  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; uControl:control|state.decode  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; uControl:control|state.fetch   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; uControl:control|state.fetch   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; uControl:control|state.jump    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; uControl:control|state.jump    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; control|state.decode|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; control|state.decode|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; control|state.fetch|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; control|state.fetch|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; control|state.jump|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; control|state.jump|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; decoder|state|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; decoder|state|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; decoder|state~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; decoder|state~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divisor:decoder|state ; Rise       ; decoder|state~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divisor:decoder|state ; Rise       ; decoder|state~clkctrl|outclk   ;
++--------+--------------+----------------+------------------+-----------------------+------------+--------------------------------+
 
 
 +------------------------------------------------------------------------------------------+
@@ -411,18 +407,14 @@ No paths to report.
 +-------------+-----------------------+-------+-------+------------+-----------------------+
 ; Data Port   ; Clock Port            ; Rise  ; Fall  ; Clock Edge ; Clock Reference       ;
 +-------------+-----------------------+-------+-------+------------+-----------------------+
-; IRwrite     ; divisor:decoder|state ; 3.702 ; 3.702 ; Rise       ; divisor:decoder|state ;
-; PCsrc[*]    ; divisor:decoder|state ; 3.559 ; 3.559 ; Rise       ; divisor:decoder|state ;
-;  PCsrc[0]   ; divisor:decoder|state ; 3.559 ; 3.559 ; Rise       ; divisor:decoder|state ;
-; aluOP[*]    ; divisor:decoder|state ; 3.515 ; 3.515 ; Rise       ; divisor:decoder|state ;
-;  aluOP[0]   ; divisor:decoder|state ; 3.515 ; 3.515 ; Rise       ; divisor:decoder|state ;
-; aluSrcA     ; divisor:decoder|state ; 3.515 ; 3.515 ; Rise       ; divisor:decoder|state ;
-; aluSrcB[*]  ; divisor:decoder|state ; 3.854 ; 3.854 ; Rise       ; divisor:decoder|state ;
-;  aluSrcB[0] ; divisor:decoder|state ; 3.854 ; 3.854 ; Rise       ; divisor:decoder|state ;
-;  aluSrcB[1] ; divisor:decoder|state ; 3.612 ; 3.612 ; Rise       ; divisor:decoder|state ;
-; branch      ; divisor:decoder|state ; 3.527 ; 3.527 ; Rise       ; divisor:decoder|state ;
-; memRead     ; divisor:decoder|state ; 3.606 ; 3.606 ; Rise       ; divisor:decoder|state ;
-; pcWrite     ; divisor:decoder|state ; 3.593 ; 3.593 ; Rise       ; divisor:decoder|state ;
+; IRwrite     ; divisor:decoder|state ; 3.674 ; 3.674 ; Rise       ; divisor:decoder|state ;
+; PCsrc[*]    ; divisor:decoder|state ; 3.436 ; 3.436 ; Rise       ; divisor:decoder|state ;
+;  PCsrc[1]   ; divisor:decoder|state ; 3.436 ; 3.436 ; Rise       ; divisor:decoder|state ;
+; aluSrcB[*]  ; divisor:decoder|state ; 3.917 ; 3.917 ; Rise       ; divisor:decoder|state ;
+;  aluSrcB[0] ; divisor:decoder|state ; 3.917 ; 3.917 ; Rise       ; divisor:decoder|state ;
+;  aluSrcB[1] ; divisor:decoder|state ; 3.637 ; 3.637 ; Rise       ; divisor:decoder|state ;
+; memRead     ; divisor:decoder|state ; 3.551 ; 3.551 ; Rise       ; divisor:decoder|state ;
+; pcWrite     ; divisor:decoder|state ; 3.829 ; 3.829 ; Rise       ; divisor:decoder|state ;
 +-------------+-----------------------+-------+-------+------------+-----------------------+
 
 
@@ -431,18 +423,14 @@ No paths to report.
 +-------------+-----------------------+-------+-------+------------+-----------------------+
 ; Data Port   ; Clock Port            ; Rise  ; Fall  ; Clock Edge ; Clock Reference       ;
 +-------------+-----------------------+-------+-------+------------+-----------------------+
-; IRwrite     ; divisor:decoder|state ; 3.702 ; 3.702 ; Rise       ; divisor:decoder|state ;
-; PCsrc[*]    ; divisor:decoder|state ; 3.559 ; 3.559 ; Rise       ; divisor:decoder|state ;
-;  PCsrc[0]   ; divisor:decoder|state ; 3.559 ; 3.559 ; Rise       ; divisor:decoder|state ;
-; aluOP[*]    ; divisor:decoder|state ; 3.515 ; 3.515 ; Rise       ; divisor:decoder|state ;
-;  aluOP[0]   ; divisor:decoder|state ; 3.515 ; 3.515 ; Rise       ; divisor:decoder|state ;
-; aluSrcA     ; divisor:decoder|state ; 3.515 ; 3.515 ; Rise       ; divisor:decoder|state ;
-; aluSrcB[*]  ; divisor:decoder|state ; 3.612 ; 3.612 ; Rise       ; divisor:decoder|state ;
-;  aluSrcB[0] ; divisor:decoder|state ; 3.828 ; 3.828 ; Rise       ; divisor:decoder|state ;
-;  aluSrcB[1] ; divisor:decoder|state ; 3.612 ; 3.612 ; Rise       ; divisor:decoder|state ;
-; branch      ; divisor:decoder|state ; 3.527 ; 3.527 ; Rise       ; divisor:decoder|state ;
-; memRead     ; divisor:decoder|state ; 3.606 ; 3.606 ; Rise       ; divisor:decoder|state ;
-; pcWrite     ; divisor:decoder|state ; 3.593 ; 3.593 ; Rise       ; divisor:decoder|state ;
+; IRwrite     ; divisor:decoder|state ; 3.674 ; 3.674 ; Rise       ; divisor:decoder|state ;
+; PCsrc[*]    ; divisor:decoder|state ; 3.436 ; 3.436 ; Rise       ; divisor:decoder|state ;
+;  PCsrc[1]   ; divisor:decoder|state ; 3.436 ; 3.436 ; Rise       ; divisor:decoder|state ;
+; aluSrcB[*]  ; divisor:decoder|state ; 3.637 ; 3.637 ; Rise       ; divisor:decoder|state ;
+;  aluSrcB[0] ; divisor:decoder|state ; 3.841 ; 3.841 ; Rise       ; divisor:decoder|state ;
+;  aluSrcB[1] ; divisor:decoder|state ; 3.637 ; 3.637 ; Rise       ; divisor:decoder|state ;
+; memRead     ; divisor:decoder|state ; 3.551 ; 3.551 ; Rise       ; divisor:decoder|state ;
+; pcWrite     ; divisor:decoder|state ; 3.827 ; 3.827 ; Rise       ; divisor:decoder|state ;
 +-------------+-----------------------+-------+-------+------------+-----------------------+
 
 
@@ -451,12 +439,12 @@ No paths to report.
 +------------------------+--------+--------+----------+---------+---------------------+
 ; Clock                  ; Setup  ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------------+--------+--------+----------+---------+---------------------+
-; Worst-case Slack       ; -0.457 ; -2.401 ; N/A      ; N/A     ; -1.469              ;
+; Worst-case Slack       ; -0.177 ; -2.401 ; N/A      ; N/A     ; -1.469              ;
 ;  clk                   ; 1.571  ; -2.401 ; N/A      ; N/A     ; -1.469              ;
-;  divisor:decoder|state ; -0.457 ; 0.266  ; N/A      ; N/A     ; -0.611              ;
-; Design-wide TNS        ; -0.473 ; -2.401 ; 0.0      ; 0.0     ; -6.357              ;
+;  divisor:decoder|state ; -0.177 ; 0.215  ; N/A      ; N/A     ; -0.611              ;
+; Design-wide TNS        ; -0.177 ; -2.401 ; 0.0      ; 0.0     ; -6.357              ;
 ;  clk                   ; 0.000  ; -2.401 ; N/A      ; N/A     ; -2.691              ;
-;  divisor:decoder|state ; -0.473 ; 0.000  ; N/A      ; N/A     ; -3.666              ;
+;  divisor:decoder|state ; -0.177 ; 0.000  ; N/A      ; N/A     ; -3.666              ;
 +------------------------+--------+--------+----------+---------+---------------------+
 
 
@@ -465,18 +453,14 @@ No paths to report.
 +-------------+-----------------------+-------+-------+------------+-----------------------+
 ; Data Port   ; Clock Port            ; Rise  ; Fall  ; Clock Edge ; Clock Reference       ;
 +-------------+-----------------------+-------+-------+------------+-----------------------+
-; IRwrite     ; divisor:decoder|state ; 7.003 ; 7.003 ; Rise       ; divisor:decoder|state ;
-; PCsrc[*]    ; divisor:decoder|state ; 6.645 ; 6.645 ; Rise       ; divisor:decoder|state ;
-;  PCsrc[0]   ; divisor:decoder|state ; 6.645 ; 6.645 ; Rise       ; divisor:decoder|state ;
-; aluOP[*]    ; divisor:decoder|state ; 6.583 ; 6.583 ; Rise       ; divisor:decoder|state ;
-;  aluOP[0]   ; divisor:decoder|state ; 6.583 ; 6.583 ; Rise       ; divisor:decoder|state ;
-; aluSrcA     ; divisor:decoder|state ; 6.583 ; 6.583 ; Rise       ; divisor:decoder|state ;
-; aluSrcB[*]  ; divisor:decoder|state ; 7.469 ; 7.469 ; Rise       ; divisor:decoder|state ;
-;  aluSrcB[0] ; divisor:decoder|state ; 7.469 ; 7.469 ; Rise       ; divisor:decoder|state ;
-;  aluSrcB[1] ; divisor:decoder|state ; 6.702 ; 6.702 ; Rise       ; divisor:decoder|state ;
-; branch      ; divisor:decoder|state ; 6.612 ; 6.612 ; Rise       ; divisor:decoder|state ;
-; memRead     ; divisor:decoder|state ; 6.713 ; 6.713 ; Rise       ; divisor:decoder|state ;
-; pcWrite     ; divisor:decoder|state ; 6.700 ; 6.700 ; Rise       ; divisor:decoder|state ;
+; IRwrite     ; divisor:decoder|state ; 6.977 ; 6.977 ; Rise       ; divisor:decoder|state ;
+; PCsrc[*]    ; divisor:decoder|state ; 6.326 ; 6.326 ; Rise       ; divisor:decoder|state ;
+;  PCsrc[1]   ; divisor:decoder|state ; 6.326 ; 6.326 ; Rise       ; divisor:decoder|state ;
+; aluSrcB[*]  ; divisor:decoder|state ; 7.679 ; 7.679 ; Rise       ; divisor:decoder|state ;
+;  aluSrcB[0] ; divisor:decoder|state ; 7.679 ; 7.679 ; Rise       ; divisor:decoder|state ;
+;  aluSrcB[1] ; divisor:decoder|state ; 6.770 ; 6.770 ; Rise       ; divisor:decoder|state ;
+; memRead     ; divisor:decoder|state ; 6.644 ; 6.644 ; Rise       ; divisor:decoder|state ;
+; pcWrite     ; divisor:decoder|state ; 7.455 ; 7.455 ; Rise       ; divisor:decoder|state ;
 +-------------+-----------------------+-------+-------+------------+-----------------------+
 
 
@@ -485,18 +469,14 @@ No paths to report.
 +-------------+-----------------------+-------+-------+------------+-----------------------+
 ; Data Port   ; Clock Port            ; Rise  ; Fall  ; Clock Edge ; Clock Reference       ;
 +-------------+-----------------------+-------+-------+------------+-----------------------+
-; IRwrite     ; divisor:decoder|state ; 3.702 ; 3.702 ; Rise       ; divisor:decoder|state ;
-; PCsrc[*]    ; divisor:decoder|state ; 3.559 ; 3.559 ; Rise       ; divisor:decoder|state ;
-;  PCsrc[0]   ; divisor:decoder|state ; 3.559 ; 3.559 ; Rise       ; divisor:decoder|state ;
-; aluOP[*]    ; divisor:decoder|state ; 3.515 ; 3.515 ; Rise       ; divisor:decoder|state ;
-;  aluOP[0]   ; divisor:decoder|state ; 3.515 ; 3.515 ; Rise       ; divisor:decoder|state ;
-; aluSrcA     ; divisor:decoder|state ; 3.515 ; 3.515 ; Rise       ; divisor:decoder|state ;
-; aluSrcB[*]  ; divisor:decoder|state ; 3.612 ; 3.612 ; Rise       ; divisor:decoder|state ;
-;  aluSrcB[0] ; divisor:decoder|state ; 3.828 ; 3.828 ; Rise       ; divisor:decoder|state ;
-;  aluSrcB[1] ; divisor:decoder|state ; 3.612 ; 3.612 ; Rise       ; divisor:decoder|state ;
-; branch      ; divisor:decoder|state ; 3.527 ; 3.527 ; Rise       ; divisor:decoder|state ;
-; memRead     ; divisor:decoder|state ; 3.606 ; 3.606 ; Rise       ; divisor:decoder|state ;
-; pcWrite     ; divisor:decoder|state ; 3.593 ; 3.593 ; Rise       ; divisor:decoder|state ;
+; IRwrite     ; divisor:decoder|state ; 3.674 ; 3.674 ; Rise       ; divisor:decoder|state ;
+; PCsrc[*]    ; divisor:decoder|state ; 3.436 ; 3.436 ; Rise       ; divisor:decoder|state ;
+;  PCsrc[1]   ; divisor:decoder|state ; 3.436 ; 3.436 ; Rise       ; divisor:decoder|state ;
+; aluSrcB[*]  ; divisor:decoder|state ; 3.637 ; 3.637 ; Rise       ; divisor:decoder|state ;
+;  aluSrcB[0] ; divisor:decoder|state ; 3.841 ; 3.841 ; Rise       ; divisor:decoder|state ;
+;  aluSrcB[1] ; divisor:decoder|state ; 3.637 ; 3.637 ; Rise       ; divisor:decoder|state ;
+; memRead     ; divisor:decoder|state ; 3.551 ; 3.551 ; Rise       ; divisor:decoder|state ;
+; pcWrite     ; divisor:decoder|state ; 3.827 ; 3.827 ; Rise       ; divisor:decoder|state ;
 +-------------+-----------------------+-------+-------+------------+-----------------------+
 
 
@@ -506,7 +486,7 @@ No paths to report.
 ; From Clock            ; To Clock              ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------+-----------------------+----------+----------+----------+----------+
 ; divisor:decoder|state ; clk                   ; 1        ; 1        ; 0        ; 0        ;
-; divisor:decoder|state ; divisor:decoder|state ; 4        ; 0        ; 0        ; 0        ;
+; divisor:decoder|state ; divisor:decoder|state ; 5        ; 0        ; 0        ; 0        ;
 +-----------------------+-----------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -517,7 +497,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; From Clock            ; To Clock              ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------+-----------------------+----------+----------+----------+----------+
 ; divisor:decoder|state ; clk                   ; 1        ; 1        ; 0        ; 0        ;
-; divisor:decoder|state ; divisor:decoder|state ; 4        ; 0        ; 0        ; 0        ;
+; divisor:decoder|state ; divisor:decoder|state ; 5        ; 0        ; 0        ; 0        ;
 +-----------------------+-----------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -543,8 +523,8 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 0     ; 0    ;
 ; Unconstrained Input Port Paths  ; 0     ; 0    ;
-; Unconstrained Output Ports      ; 9     ; 9    ;
-; Unconstrained Output Port Paths ; 10    ; 10   ;
+; Unconstrained Output Ports      ; 6     ; 6    ;
+; Unconstrained Output Port Paths ; 8     ; 8    ;
 +---------------------------------+-------+------+
 
 
@@ -554,7 +534,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon May 27 10:07:30 2019
+    Info: Processing started: Mon May 27 23:14:02 2019
 Info: Command: quartus_sta pruebaControl -c pruebaControl
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -568,16 +548,16 @@ Info (332105): Deriving Clocks
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow Model
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -0.457
+Info (332146): Worst-case setup slack is -0.177
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -0.457        -0.473 divisor:decoder|state 
+    Info (332119):    -0.177        -0.177 divisor:decoder|state 
     Info (332119):     2.653         0.000 clk 
 Info (332146): Worst-case hold slack is -2.401
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
     Info (332119):    -2.401        -2.401 clk 
-    Info (332119):     0.632         0.000 divisor:decoder|state 
+    Info (332119):     0.445         0.000 divisor:decoder|state 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.469
@@ -587,17 +567,17 @@ Info (332146): Worst-case minimum pulse width slack is -1.469
     Info (332119):    -0.611        -3.666 divisor:decoder|state 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
-Info (332146): Worst-case setup slack is 0.421
+Info (332146): Worst-case setup slack is 0.507
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):     0.421         0.000 divisor:decoder|state 
+    Info (332119):     0.507         0.000 divisor:decoder|state 
     Info (332119):     1.571         0.000 clk 
 Critical Warning (332148): Timing requirements not met
 Info (332146): Worst-case hold slack is -1.191
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
     Info (332119):    -1.191        -1.191 clk 
-    Info (332119):     0.266         0.000 divisor:decoder|state 
+    Info (332119):     0.215         0.000 divisor:decoder|state 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.222
@@ -610,8 +590,8 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4556 megabytes
-    Info: Processing ended: Mon May 27 10:07:32 2019
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Mon May 27 23:14:03 2019
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
 
 

@@ -97,7 +97,7 @@ begin
 	port map
 	(
 		clk => salidaCLK,
-		opcode => "000100",
+		opcode => "000010",
 		reset	=> '0',
 		
 		pcWrite => pcWrite,
