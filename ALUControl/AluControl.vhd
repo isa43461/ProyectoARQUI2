@@ -39,7 +39,7 @@ architecture arch_AluControl of AluControl is
 
 begin
 
-	operation <= "000" when (aluOP = "10" and funct = "100100") else
+	operation <= "000" when (aluOP = "10" and funct = "100010") else
 					"001" when (aluOP = "10" and funct = "100101") else
 					"010" when (aluOP = "10" and funct = "100000") else
 					"011" when (aluOP = "10" and funct = "100111") else

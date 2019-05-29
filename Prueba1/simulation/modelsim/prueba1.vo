@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
-// DATE "05/17/2019 18:46:20"
+// DATE "05/28/2019 11:10:19"
 
 // 
 // Device: Altera EP2C20F484C7 Package FBGA484
@@ -4070,13 +4070,13 @@ wire \aAlu|Mod0|auto_generated|divider|divider|op_24~30_combout ;
 wire \aAlu|Mux49~1_combout ;
 wire \aAlu|Mux49~0_combout ;
 wire \aAlu|Mux49~2_combout ;
-wire [1023:0] \aAlu|Mod0|auto_generated|divider|divider|StageOut ;
-wire [31:0] \regAluOut|temp ;
-wire [1023:0] \aAlu|Div0|auto_generated|divider|divider|StageOut ;
-wire [63:0] \aAlu|tmp ;
-wire [31:0] \aAlu|res ;
 wire [1:0] \muxB~combout ;
 wire [2:0] \ALUOp~combout ;
+wire [1023:0] \aAlu|Div0|auto_generated|divider|divider|StageOut ;
+wire [31:0] \aAlu|res ;
+wire [1023:0] \aAlu|Mod0|auto_generated|divider|divider|StageOut ;
+wire [63:0] \aAlu|tmp ;
+wire [31:0] \regAluOut|temp ;
 
 
 // Location: LCCOMB_X37_Y12_N16

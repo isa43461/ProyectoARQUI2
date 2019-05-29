@@ -9,6 +9,7 @@ entity prueba2_vlg_sample_tst is
         muxB            : in     vl_logic_vector(1 downto 0);
         regDst          : in     vl_logic;
         regWrite        : in     vl_logic;
+        salidaPrueba    : in     vl_logic_vector(15 downto 0);
         sampler_tx      : out    vl_logic
     );
 end prueba2_vlg_sample_tst;

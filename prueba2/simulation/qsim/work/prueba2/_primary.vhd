@@ -9,6 +9,6 @@ entity prueba2 is
         eALUOp          : in     vl_logic_vector(1 downto 0);
         memToReg        : in     vl_logic;
         clk             : in     vl_logic;
-        salidaPrueba    : out    vl_logic_vector(15 downto 0)
+        salidaPrueba    : inout  vl_logic_vector(15 downto 0)
     );
 end prueba2;

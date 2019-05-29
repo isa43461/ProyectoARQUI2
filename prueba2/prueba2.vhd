@@ -20,7 +20,7 @@ entity prueba2 is
 		memToReg : in std_logic;
 		clk : in std_logic;
 		--Output
-		salidaPrueba	: inout std_logic_vector(15 downto 0)
+		salidaPrueba	: out std_logic_vector(15 downto 0)
 		);
 end prueba2;
 
@@ -189,6 +189,8 @@ begin
 		(
 			RS => "00001",
 			RT => "00010",
+			--RS => "10011",
+			--RT => "10101",
 			RD	=> sMuxDst,
 			Dato => sMuxMemReg,
 			regWriteSignal	=> regWrite,
@@ -255,6 +257,7 @@ begin
 		port map
 		(
 			funct	=> "100100",
+			--funct	=> "100010",
 			aluOP	=> eALUOp,
 			operation => opAluOp
 		);

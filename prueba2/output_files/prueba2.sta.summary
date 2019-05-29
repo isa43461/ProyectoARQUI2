@@ -3,8 +3,8 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'divisor:decoder|state'
-Slack : -7.839
-TNS   : -318.375
+Slack : -6.053
+TNS   : -111.830
 
 Type  : Slow Model Setup 'clk'
 Slack : 2.116
@@ -15,20 +15,20 @@ Slack : -1.864
 TNS   : -1.864
 
 Type  : Slow Model Hold 'divisor:decoder|state'
-Slack : 1.581
+Slack : 2.786
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'divisor:decoder|state'
 Slack : -2.064
-TNS   : -315.680
+TNS   : -139.264
 
 Type  : Slow Model Minimum Pulse Width 'clk'
 Slack : -1.631
 TNS   : -2.853
 
 Type  : Fast Model Setup 'divisor:decoder|state'
-Slack : -3.173
-TNS   : -127.776
+Slack : -2.383
+TNS   : -51.896
 
 Type  : Fast Model Setup 'clk'
 Slack : 1.343
@@ -39,12 +39,12 @@ Slack : -0.963
 TNS   : -0.963
 
 Type  : Fast Model Hold 'divisor:decoder|state'
-Slack : 0.531
+Slack : 2.244
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'divisor:decoder|state'
 Slack : -1.627
-TNS   : -250.018
+TNS   : -110.366
 
 Type  : Fast Model Minimum Pulse Width 'clk'
 Slack : -1.380
