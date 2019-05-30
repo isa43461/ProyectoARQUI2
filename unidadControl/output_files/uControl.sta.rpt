@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for uControl
-Wed May 29 17:57:05 2019
+Thu May 30 01:54:39 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -106,7 +106,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------+-----------------+------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
 +------------+-----------------+------------+---------------------------------------------------------------+
-; 574.71 MHz ; 380.08 MHz      ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 513.61 MHz ; 380.08 MHz      ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -116,7 +116,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+---------------+
 ; Clock ; Slack  ; End Point TNS ;
 +-------+--------+---------------+
-; clk   ; -0.740 ; -1.788        ;
+; clk   ; -0.947 ; -18.986       ;
 +-------+--------+---------------+
 
 
@@ -125,7 +125,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+---------------+
 ; Clock ; Slack ; End Point TNS ;
 +-------+-------+---------------+
-; clk   ; 0.445 ; 0.000         ;
+; clk   ; 0.636 ; 0.000         ;
 +-------+-------+---------------+
 
 
@@ -146,109 +146,332 @@ No paths to report.
 +-------+--------+-----------------------+
 ; Clock ; Slack  ; End Point TNS         ;
 +-------+--------+-----------------------+
-; clk   ; -1.631 ; -13.851               ;
+; clk   ; -1.631 ; -57.843               ;
 +-------+--------+-----------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Slow Model Setup: 'clk'                                                                                                ;
-+--------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node          ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
-; -0.740 ; state.memWriteBack ; state.fetch        ; clk          ; clk         ; 1.000        ; 0.000      ; 1.778      ;
-; -0.701 ; state.aluWriteBack ; state.fetch        ; clk          ; clk         ; 1.000        ; 0.000      ; 1.739      ;
-; -0.517 ; state.memAddr      ; state.memWriteSig  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.555      ;
-; -0.458 ; state.branchSig    ; state.fetch        ; clk          ; clk         ; 1.000        ; 0.000      ; 1.496      ;
-; -0.420 ; state.fetch        ; state.decode       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.458      ;
-; -0.356 ; state.memWriteSig  ; state.memWriteSig  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.394      ;
-; -0.349 ; state.jump         ; state.fetch        ; clk          ; clk         ; 1.000        ; 0.000      ; 1.387      ;
-; -0.263 ; state.memWriteSig  ; state.fetch        ; clk          ; clk         ; 1.000        ; 0.000      ; 1.301      ;
-; -0.044 ; state.memAddr      ; state.memReadSig   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.082      ;
-; -0.039 ; state.memReadSig   ; state.memWriteBack ; clk          ; clk         ; 1.000        ; 0.000      ; 1.077      ;
-; -0.028 ; state.Execute      ; state.aluWriteBack ; clk          ; clk         ; 1.000        ; 0.000      ; 1.066      ;
-; 0.106  ; state.decode       ; state.jump         ; clk          ; clk         ; 1.000        ; 0.000      ; 0.932      ;
-; 0.107  ; state.decode       ; state.Execute      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.931      ;
-; 0.107  ; state.decode       ; state.memAddr      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.931      ;
-; 0.108  ; state.decode       ; state.branchSig    ; clk          ; clk         ; 1.000        ; 0.000      ; 0.930      ;
-+--------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                    ;
++--------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node            ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; -0.947 ; state.aluWriteBack   ; state.fetch          ; clk          ; clk         ; 1.000        ; 0.000      ; 1.985      ;
+; -0.945 ; state.aluWriteBack   ; estado4[3]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.983      ;
+; -0.943 ; state.aluWriteBack   ; estado4[5]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.981      ;
+; -0.942 ; state.memAddr        ; estado4[6]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.980      ;
+; -0.903 ; state.jump           ; state.fetch          ; clk          ; clk         ; 1.000        ; 0.000      ; 1.941      ;
+; -0.901 ; state.jump           ; estado4[3]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.939      ;
+; -0.899 ; state.jump           ; estado4[5]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.937      ;
+; -0.860 ; state.division       ; state.aluWriteBack   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.897      ;
+; -0.858 ; state.memWriteSig    ; state.fetch          ; clk          ; clk         ; 1.000        ; 0.000      ; 1.896      ;
+; -0.856 ; state.memWriteSig    ; estado4[3]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.894      ;
+; -0.854 ; state.memWriteSig    ; estado4[5]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.892      ;
+; -0.835 ; state.multiplicacion ; state.aluWriteBack   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.872      ;
+; -0.787 ; state.memWriteBack   ; estado4[6]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.825      ;
+; -0.777 ; state.multiplicacion ; estado3[0]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.815      ;
+; -0.715 ; state.slt            ; state.aluWriteBack   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.752      ;
+; -0.697 ; state.division       ; aluSrcA~reg0         ; clk          ; clk         ; 1.000        ; 0.000      ; 1.735      ;
+; -0.697 ; state.division       ; estado4[0]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.735      ;
+; -0.696 ; state.division       ; estado3[1]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.734      ;
+; -0.672 ; state.multiplicacion ; aluSrcA~reg0         ; clk          ; clk         ; 1.000        ; 0.000      ; 1.710      ;
+; -0.672 ; state.multiplicacion ; estado4[0]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.710      ;
+; -0.671 ; state.multiplicacion ; estado3[1]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.709      ;
+; -0.670 ; state.branchSig      ; estado4[6]~reg0      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.707      ;
+; -0.648 ; state.slt            ; estado3[0]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.686      ;
+; -0.643 ; state.branchSig      ; estado4[5]~reg0      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.680      ;
+; -0.642 ; state.branchSig      ; state.fetch          ; clk          ; clk         ; 1.000        ; -0.001     ; 1.679      ;
+; -0.633 ; state.decode         ; estado4[6]~reg0      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.670      ;
+; -0.568 ; state.addi           ; state.aluWriteBack   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.605      ;
+; -0.562 ; state.decode         ; state.addi           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.600      ;
+; -0.562 ; state.decode         ; state.paso           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.600      ;
+; -0.560 ; state.decode         ; state.Execute        ; clk          ; clk         ; 1.000        ; 0.000      ; 1.598      ;
+; -0.559 ; state.decode         ; estado4[3]~reg0      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.596      ;
+; -0.558 ; state.decode         ; state.division       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.596      ;
+; -0.558 ; state.decode         ; state.branchSig      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.596      ;
+; -0.557 ; state.decode         ; state.slt            ; clk          ; clk         ; 1.000        ; 0.000      ; 1.595      ;
+; -0.557 ; state.decode         ; state.multiplicacion ; clk          ; clk         ; 1.000        ; 0.000      ; 1.595      ;
+; -0.552 ; state.slt            ; aluSrcA~reg0         ; clk          ; clk         ; 1.000        ; 0.000      ; 1.590      ;
+; -0.552 ; state.slt            ; estado4[0]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.590      ;
+; -0.551 ; state.slt            ; estado3[1]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.589      ;
+; -0.515 ; state.addi           ; aluSrcB[1]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.553      ;
+; -0.506 ; state.branchSig      ; aluSrcA~reg0         ; clk          ; clk         ; 1.000        ; 0.000      ; 1.544      ;
+; -0.503 ; state.fetch          ; estado4[0]~reg0      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.542      ;
+; -0.500 ; state.aluWriteBack   ; estado4[6]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.538      ;
+; -0.500 ; state.addi           ; estado3[0]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.538      ;
+; -0.488 ; state.memReadSig     ; IorD~reg0            ; clk          ; clk         ; 1.000        ; 0.000      ; 1.526      ;
+; -0.488 ; state.multiplicacion ; estado3[6]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.526      ;
+; -0.484 ; state.memReadSig     ; memRead~reg0         ; clk          ; clk         ; 1.000        ; 0.001      ; 1.523      ;
+; -0.476 ; state.multiplicacion ; aluSrcB[1]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.514      ;
+; -0.474 ; state.multiplicacion ; aluOP[1]~reg0        ; clk          ; clk         ; 1.000        ; 0.000      ; 1.512      ;
+; -0.471 ; state.memAddr        ; aluSrcA~reg0         ; clk          ; clk         ; 1.000        ; 0.001      ; 1.510      ;
+; -0.465 ; state.memReadSig     ; estado4[0]~reg0      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.504      ;
+; -0.464 ; state.paso           ; estado4[0]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.502      ;
+; -0.462 ; state.memWriteSig    ; IorD~reg0            ; clk          ; clk         ; 1.000        ; 0.000      ; 1.500      ;
+; -0.438 ; state.slt            ; estado3[6]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.476      ;
+; -0.433 ; state.memWriteBack   ; state.fetch          ; clk          ; clk         ; 1.000        ; 0.000      ; 1.471      ;
+; -0.431 ; state.memWriteBack   ; estado4[3]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.469      ;
+; -0.430 ; state.slt            ; estado3[2]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.468      ;
+; -0.429 ; state.memWriteBack   ; estado4[5]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.467      ;
+; -0.429 ; state.addi           ; estado3[2]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.467      ;
+; -0.428 ; state.paso           ; state.fetch          ; clk          ; clk         ; 1.000        ; -0.001     ; 1.465      ;
+; -0.415 ; state.memWriteSig    ; estado4[4]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.453      ;
+; -0.405 ; state.addi           ; aluSrcA~reg0         ; clk          ; clk         ; 1.000        ; 0.000      ; 1.443      ;
+; -0.405 ; state.addi           ; estado4[0]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.443      ;
+; -0.404 ; state.addi           ; estado3[1]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.442      ;
+; -0.394 ; state.fetch          ; aluSrcB[0]~reg0      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.433      ;
+; -0.394 ; state.fetch          ; memRead~reg0         ; clk          ; clk         ; 1.000        ; 0.001      ; 1.433      ;
+; -0.375 ; state.memAddr        ; aluSrcB[1]~reg0      ; clk          ; clk         ; 1.000        ; 0.001      ; 1.414      ;
+; -0.346 ; state.memWriteBack   ; memToReg~reg0        ; clk          ; clk         ; 1.000        ; 0.001      ; 1.385      ;
+; -0.310 ; state.memWriteBack   ; regWrite~reg0        ; clk          ; clk         ; 1.000        ; 0.000      ; 1.348      ;
+; -0.310 ; state.memWriteBack   ; estado4[1]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.348      ;
+; -0.287 ; state.decode         ; estado4[2]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.325      ;
+; -0.281 ; state.addi           ; estado3[4]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.319      ;
+; -0.276 ; state.division       ; estado3[2]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.314      ;
+; -0.274 ; state.addi           ; estado3[5]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.312      ;
+; -0.268 ; state.paso           ; estado3[1]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.306      ;
+; -0.263 ; state.memWriteSig    ; memWrite~reg0        ; clk          ; clk         ; 1.000        ; 0.000      ; 1.301      ;
+; -0.261 ; state.fetch          ; pcWrite~reg0         ; clk          ; clk         ; 1.000        ; 0.000      ; 1.299      ;
+; -0.261 ; state.Execute        ; aluSrcA~reg0         ; clk          ; clk         ; 1.000        ; 0.000      ; 1.299      ;
+; -0.245 ; state.decode         ; aluSrcB[0]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.283      ;
+; -0.244 ; state.decode         ; aluSrcB[1]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.282      ;
+; -0.235 ; state.division       ; aluOP[1]~reg0        ; clk          ; clk         ; 1.000        ; 0.000      ; 1.273      ;
+; -0.231 ; state.division       ; aluOP[0]~reg0        ; clk          ; clk         ; 1.000        ; 0.000      ; 1.269      ;
+; -0.214 ; state.memReadSig     ; estado4[6]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.252      ;
+; -0.205 ; state.Execute        ; state.aluWriteBack   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.242      ;
+; -0.194 ; state.memAddr        ; estado4[3]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.232      ;
+; -0.163 ; state.multiplicacion ; estado3[3]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.201      ;
+; -0.162 ; state.jump           ; estado4[4]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.200      ;
+; -0.158 ; state.decode         ; state.jump           ; clk          ; clk         ; 1.000        ; -0.001     ; 1.195      ;
+; -0.158 ; state.decode         ; estado4[4]~reg0      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.195      ;
+; -0.155 ; state.decode         ; state.memAddr        ; clk          ; clk         ; 1.000        ; -0.001     ; 1.192      ;
+; -0.155 ; state.slt            ; aluOP[2]~reg0        ; clk          ; clk         ; 1.000        ; 0.000      ; 1.193      ;
+; -0.155 ; state.slt            ; aluOP[1]~reg0        ; clk          ; clk         ; 1.000        ; 0.000      ; 1.193      ;
+; -0.149 ; state.branchSig      ; branch~reg0          ; clk          ; clk         ; 1.000        ; 0.000      ; 1.187      ;
+; -0.145 ; state.branchSig      ; PCsrc[0]~reg0        ; clk          ; clk         ; 1.000        ; 0.000      ; 1.183      ;
+; -0.143 ; state.branchSig      ; aluOP[0]~reg0        ; clk          ; clk         ; 1.000        ; 0.000      ; 1.181      ;
+; -0.135 ; state.paso           ; estado3[6]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.173      ;
+; -0.135 ; state.paso           ; estado3[2]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.173      ;
+; -0.131 ; state.paso           ; estado3[5]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.169      ;
+; -0.128 ; state.multiplicacion ; estado3[4]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.166      ;
+; -0.114 ; state.fetch          ; state.decode         ; clk          ; clk         ; 1.000        ; 0.001      ; 1.153      ;
+; -0.108 ; state.fetch          ; IRwrite~reg0         ; clk          ; clk         ; 1.000        ; 0.000      ; 1.146      ;
++--------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Slow Model Hold: 'clk'                                                                                                ;
-+-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node          ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
-; 0.445 ; state.memWriteSig  ; state.memWriteSig  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
-; 0.644 ; state.decode       ; state.branchSig    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.930      ;
-; 0.645 ; state.decode       ; state.Execute      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.931      ;
-; 0.645 ; state.decode       ; state.memAddr      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.931      ;
-; 0.646 ; state.decode       ; state.jump         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.932      ;
-; 0.780 ; state.Execute      ; state.aluWriteBack ; clk          ; clk         ; 0.000        ; 0.000      ; 1.066      ;
-; 0.791 ; state.memReadSig   ; state.memWriteBack ; clk          ; clk         ; 0.000        ; 0.000      ; 1.077      ;
-; 0.796 ; state.memAddr      ; state.memReadSig   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.082      ;
-; 0.989 ; state.memAddr      ; state.memWriteSig  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.275      ;
-; 1.015 ; state.memWriteSig  ; state.fetch        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.301      ;
-; 1.101 ; state.jump         ; state.fetch        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.387      ;
-; 1.172 ; state.fetch        ; state.decode       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.458      ;
-; 1.210 ; state.branchSig    ; state.fetch        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.496      ;
-; 1.453 ; state.aluWriteBack ; state.fetch        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.739      ;
-; 1.492 ; state.memWriteBack ; state.fetch        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.778      ;
-+-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                    ;
++-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; 0.636 ; state.jump           ; pcWrite~reg0         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.922      ;
+; 0.638 ; state.addi           ; estado3[3]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.924      ;
+; 0.649 ; state.memAddr        ; state.memWriteSig    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.935      ;
+; 0.653 ; state.memAddr        ; state.memReadSig     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.939      ;
+; 0.740 ; state.memWriteSig    ; estado4[1]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.026      ;
+; 0.775 ; state.aluWriteBack   ; regWrite~reg0        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.061      ;
+; 0.786 ; state.slt            ; estado3[3]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.787 ; state.memWriteSig    ; estado4[6]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.073      ;
+; 0.801 ; state.jump           ; PCsrc[1]~reg0        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.087      ;
+; 0.812 ; state.memReadSig     ; state.memWriteBack   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.098      ;
+; 0.812 ; state.aluWriteBack   ; estado4[4]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.098      ;
+; 0.813 ; state.aluWriteBack   ; regDst~reg0          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.099      ;
+; 0.818 ; state.memReadSig     ; estado4[5]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.860 ; state.fetch          ; IRwrite~reg0         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.146      ;
+; 0.866 ; state.fetch          ; state.decode         ; clk          ; clk         ; 0.000        ; 0.001      ; 1.153      ;
+; 0.880 ; state.multiplicacion ; estado3[4]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.166      ;
+; 0.883 ; state.paso           ; estado3[5]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.169      ;
+; 0.887 ; state.paso           ; estado3[2]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.173      ;
+; 0.887 ; state.paso           ; estado3[6]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.173      ;
+; 0.895 ; state.branchSig      ; aluOP[0]~reg0        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.181      ;
+; 0.897 ; state.branchSig      ; PCsrc[0]~reg0        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.183      ;
+; 0.901 ; state.branchSig      ; branch~reg0          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.187      ;
+; 0.907 ; state.decode         ; state.memAddr        ; clk          ; clk         ; 0.000        ; -0.001     ; 1.192      ;
+; 0.907 ; state.slt            ; aluOP[1]~reg0        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.193      ;
+; 0.907 ; state.slt            ; aluOP[2]~reg0        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.193      ;
+; 0.910 ; state.decode         ; state.jump           ; clk          ; clk         ; 0.000        ; -0.001     ; 1.195      ;
+; 0.910 ; state.decode         ; estado4[4]~reg0      ; clk          ; clk         ; 0.000        ; -0.001     ; 1.195      ;
+; 0.914 ; state.jump           ; estado4[4]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.200      ;
+; 0.915 ; state.multiplicacion ; estado3[3]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.201      ;
+; 0.946 ; state.memAddr        ; estado4[3]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.232      ;
+; 0.957 ; state.Execute        ; state.aluWriteBack   ; clk          ; clk         ; 0.000        ; -0.001     ; 1.242      ;
+; 0.966 ; state.memReadSig     ; estado4[6]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.252      ;
+; 0.983 ; state.division       ; aluOP[0]~reg0        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.269      ;
+; 0.987 ; state.division       ; aluOP[1]~reg0        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.273      ;
+; 0.996 ; state.decode         ; aluSrcB[1]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.282      ;
+; 0.997 ; state.decode         ; aluSrcB[0]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.283      ;
+; 1.013 ; state.Execute        ; aluSrcA~reg0         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
+; 1.013 ; state.fetch          ; pcWrite~reg0         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
+; 1.015 ; state.memWriteSig    ; memWrite~reg0        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.301      ;
+; 1.020 ; state.paso           ; estado3[1]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.306      ;
+; 1.026 ; state.addi           ; estado3[5]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.312      ;
+; 1.028 ; state.division       ; estado3[2]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.314      ;
+; 1.033 ; state.addi           ; estado3[4]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.319      ;
+; 1.039 ; state.decode         ; estado4[2]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.325      ;
+; 1.062 ; state.memWriteBack   ; estado4[1]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.348      ;
+; 1.062 ; state.memWriteBack   ; regWrite~reg0        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.348      ;
+; 1.098 ; state.memWriteBack   ; memToReg~reg0        ; clk          ; clk         ; 0.000        ; 0.001      ; 1.385      ;
+; 1.127 ; state.memAddr        ; aluSrcB[1]~reg0      ; clk          ; clk         ; 0.000        ; 0.001      ; 1.414      ;
+; 1.146 ; state.fetch          ; memRead~reg0         ; clk          ; clk         ; 0.000        ; 0.001      ; 1.433      ;
+; 1.146 ; state.fetch          ; aluSrcB[0]~reg0      ; clk          ; clk         ; 0.000        ; 0.001      ; 1.433      ;
+; 1.156 ; state.addi           ; estado3[1]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.442      ;
+; 1.157 ; state.addi           ; estado4[0]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.443      ;
+; 1.157 ; state.addi           ; aluSrcA~reg0         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.443      ;
+; 1.167 ; state.memWriteSig    ; estado4[4]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.453      ;
+; 1.180 ; state.paso           ; state.fetch          ; clk          ; clk         ; 0.000        ; -0.001     ; 1.465      ;
+; 1.181 ; state.memWriteBack   ; estado4[5]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.467      ;
+; 1.181 ; state.addi           ; estado3[2]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.467      ;
+; 1.182 ; state.slt            ; estado3[2]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.468      ;
+; 1.183 ; state.memWriteBack   ; estado4[3]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.469      ;
+; 1.185 ; state.memWriteBack   ; state.fetch          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.471      ;
+; 1.190 ; state.slt            ; estado3[6]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.476      ;
+; 1.214 ; state.memWriteSig    ; IorD~reg0            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.500      ;
+; 1.216 ; state.paso           ; estado4[0]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.502      ;
+; 1.217 ; state.memReadSig     ; estado4[0]~reg0      ; clk          ; clk         ; 0.000        ; 0.001      ; 1.504      ;
+; 1.223 ; state.memAddr        ; aluSrcA~reg0         ; clk          ; clk         ; 0.000        ; 0.001      ; 1.510      ;
+; 1.226 ; state.multiplicacion ; aluOP[1]~reg0        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.512      ;
+; 1.228 ; state.multiplicacion ; aluSrcB[1]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.514      ;
+; 1.236 ; state.memReadSig     ; memRead~reg0         ; clk          ; clk         ; 0.000        ; 0.001      ; 1.523      ;
+; 1.240 ; state.multiplicacion ; estado3[6]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.526      ;
+; 1.240 ; state.memReadSig     ; IorD~reg0            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.526      ;
+; 1.252 ; state.addi           ; estado3[0]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.538      ;
+; 1.252 ; state.aluWriteBack   ; estado4[6]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.538      ;
+; 1.255 ; state.fetch          ; estado4[0]~reg0      ; clk          ; clk         ; 0.000        ; 0.001      ; 1.542      ;
+; 1.258 ; state.branchSig      ; aluSrcA~reg0         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.544      ;
+; 1.267 ; state.addi           ; aluSrcB[1]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.553      ;
+; 1.303 ; state.slt            ; estado3[1]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.589      ;
+; 1.304 ; state.slt            ; estado4[0]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.590      ;
+; 1.304 ; state.slt            ; aluSrcA~reg0         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.590      ;
+; 1.309 ; state.decode         ; state.slt            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.595      ;
+; 1.309 ; state.decode         ; state.multiplicacion ; clk          ; clk         ; 0.000        ; 0.000      ; 1.595      ;
+; 1.310 ; state.decode         ; state.division       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.596      ;
+; 1.310 ; state.decode         ; state.branchSig      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.596      ;
+; 1.311 ; state.decode         ; estado4[3]~reg0      ; clk          ; clk         ; 0.000        ; -0.001     ; 1.596      ;
+; 1.312 ; state.decode         ; state.Execute        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.598      ;
+; 1.314 ; state.decode         ; state.addi           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.600      ;
+; 1.314 ; state.decode         ; state.paso           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.600      ;
+; 1.320 ; state.addi           ; state.aluWriteBack   ; clk          ; clk         ; 0.000        ; -0.001     ; 1.605      ;
+; 1.385 ; state.decode         ; estado4[6]~reg0      ; clk          ; clk         ; 0.000        ; -0.001     ; 1.670      ;
+; 1.394 ; state.branchSig      ; state.fetch          ; clk          ; clk         ; 0.000        ; -0.001     ; 1.679      ;
+; 1.395 ; state.branchSig      ; estado4[5]~reg0      ; clk          ; clk         ; 0.000        ; -0.001     ; 1.680      ;
+; 1.400 ; state.slt            ; estado3[0]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.686      ;
+; 1.422 ; state.branchSig      ; estado4[6]~reg0      ; clk          ; clk         ; 0.000        ; -0.001     ; 1.707      ;
+; 1.423 ; state.multiplicacion ; estado3[1]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.709      ;
+; 1.424 ; state.multiplicacion ; estado4[0]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.710      ;
+; 1.424 ; state.multiplicacion ; aluSrcA~reg0         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.710      ;
+; 1.448 ; state.division       ; estado3[1]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.734      ;
+; 1.449 ; state.division       ; estado4[0]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.735      ;
+; 1.449 ; state.division       ; aluSrcA~reg0         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.735      ;
+; 1.467 ; state.slt            ; state.aluWriteBack   ; clk          ; clk         ; 0.000        ; -0.001     ; 1.752      ;
+; 1.529 ; state.multiplicacion ; estado3[0]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.815      ;
++-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
 
 
-+---------------------------------------------------------------------------------------------------------+
-; Slow Model Minimum Pulse Width: 'clk'                                                                   ;
-+--------+--------------+----------------+------------------+-------+------------+------------------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                 ;
-+--------+--------------+----------------+------------------+-------+------------+------------------------+
-; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; clk   ; Rise       ; clk                    ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.Execute          ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.Execute          ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.aluWriteBack     ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.aluWriteBack     ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.branchSig        ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.branchSig        ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.decode           ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.decode           ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.fetch            ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.fetch            ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.jump             ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.jump             ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.memAddr          ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.memAddr          ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.memReadSig       ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.memReadSig       ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.memWriteBack     ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.memWriteBack     ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.memWriteSig      ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.memWriteSig      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]   ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]   ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk     ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk     ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.Execute|clk      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.Execute|clk      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.aluWriteBack|clk ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.aluWriteBack|clk ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.branchSig|clk    ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.branchSig|clk    ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.decode|clk       ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.decode|clk       ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.fetch|clk        ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.fetch|clk        ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.jump|clk         ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.jump|clk         ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.memAddr|clk      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memAddr|clk      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.memReadSig|clk   ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memReadSig|clk   ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.memWriteBack|clk ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memWriteBack|clk ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.memWriteSig|clk  ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memWriteSig|clk  ;
-+--------+--------------+----------------+------------------+-------+------------+------------------------+
++-------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                 ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target               ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; clk   ; Rise       ; clk                  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; IRwrite~reg0         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; IRwrite~reg0         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; IorD~reg0            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; IorD~reg0            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; PCsrc[0]~reg0        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; PCsrc[0]~reg0        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; PCsrc[1]~reg0        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; PCsrc[1]~reg0        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; aluOP[0]~reg0        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; aluOP[0]~reg0        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; aluOP[1]~reg0        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; aluOP[1]~reg0        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; aluOP[2]~reg0        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; aluOP[2]~reg0        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; aluSrcA~reg0         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; aluSrcA~reg0         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; aluSrcB[0]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; aluSrcB[0]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; aluSrcB[1]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; aluSrcB[1]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; branch~reg0          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; branch~reg0          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; estado3[0]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; estado3[0]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; estado3[1]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; estado3[1]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; estado3[2]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; estado3[2]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; estado3[3]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; estado3[3]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; estado3[4]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; estado3[4]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; estado3[5]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; estado3[5]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; estado3[6]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; estado3[6]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; estado4[0]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; estado4[0]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; estado4[1]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; estado4[1]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; estado4[2]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; estado4[2]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; estado4[3]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; estado4[3]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; estado4[4]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; estado4[4]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; estado4[5]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; estado4[5]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; estado4[6]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; estado4[6]~reg0      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; memRead~reg0         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; memRead~reg0         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; memToReg~reg0        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; memToReg~reg0        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; memWrite~reg0        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; memWrite~reg0        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; pcWrite~reg0         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; pcWrite~reg0         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; regDst~reg0          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; regDst~reg0          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; regWrite~reg0        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; regWrite~reg0        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.Execute        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.Execute        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.addi           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.addi           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.aluWriteBack   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.aluWriteBack   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.branchSig      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.branchSig      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.decode         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.decode         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.division       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.division       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.fetch          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.fetch          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.jump           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.jump           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.memAddr        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.memAddr        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.memReadSig     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.memReadSig     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.memWriteBack   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.memWriteBack   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.memWriteSig    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.memWriteSig    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.multiplicacion ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.multiplicacion ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.paso           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.paso           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; state.slt            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; state.slt            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; IRwrite~reg0|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; IRwrite~reg0|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; IorD~reg0|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; IorD~reg0|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; PCsrc[0]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; PCsrc[0]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; PCsrc[1]~reg0|clk    ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
 
 
 +------------------------------------------------------------------------+
@@ -256,13 +479,14 @@ No paths to report.
 +------------+------------+-------+-------+------------+-----------------+
 ; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +------------+------------+-------+-------+------------+-----------------+
-; opcode[*]  ; clk        ; 2.080 ; 2.080 ; Rise       ; clk             ;
-;  opcode[0] ; clk        ; 1.493 ; 1.493 ; Rise       ; clk             ;
-;  opcode[1] ; clk        ; 1.738 ; 1.738 ; Rise       ; clk             ;
-;  opcode[2] ; clk        ; 1.361 ; 1.361 ; Rise       ; clk             ;
-;  opcode[3] ; clk        ; 1.541 ; 1.541 ; Rise       ; clk             ;
-;  opcode[4] ; clk        ; 2.080 ; 2.080 ; Rise       ; clk             ;
-;  opcode[5] ; clk        ; 1.361 ; 1.361 ; Rise       ; clk             ;
+; opcode[*]  ; clk        ; 1.950 ; 1.950 ; Rise       ; clk             ;
+;  opcode[0] ; clk        ; 1.950 ; 1.950 ; Rise       ; clk             ;
+;  opcode[1] ; clk        ; 1.145 ; 1.145 ; Rise       ; clk             ;
+;  opcode[2] ; clk        ; 1.407 ; 1.407 ; Rise       ; clk             ;
+;  opcode[3] ; clk        ; 1.197 ; 1.197 ; Rise       ; clk             ;
+;  opcode[4] ; clk        ; 1.393 ; 1.393 ; Rise       ; clk             ;
+;  opcode[5] ; clk        ; 1.504 ; 1.504 ; Rise       ; clk             ;
+; reset      ; clk        ; 1.858 ; 1.858 ; Rise       ; clk             ;
 +------------+------------+-------+-------+------------+-----------------+
 
 
@@ -271,13 +495,14 @@ No paths to report.
 +------------+------------+--------+--------+------------+-----------------+
 ; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +------------+------------+--------+--------+------------+-----------------+
-; opcode[*]  ; clk        ; 0.404  ; 0.404  ; Rise       ; clk             ;
-;  opcode[0] ; clk        ; -0.583 ; -0.583 ; Rise       ; clk             ;
-;  opcode[1] ; clk        ; -0.494 ; -0.494 ; Rise       ; clk             ;
-;  opcode[2] ; clk        ; 0.404  ; 0.404  ; Rise       ; clk             ;
-;  opcode[3] ; clk        ; -0.109 ; -0.109 ; Rise       ; clk             ;
-;  opcode[4] ; clk        ; -1.170 ; -1.170 ; Rise       ; clk             ;
-;  opcode[5] ; clk        ; 0.137  ; 0.137  ; Rise       ; clk             ;
+; opcode[*]  ; clk        ; -0.043 ; -0.043 ; Rise       ; clk             ;
+;  opcode[0] ; clk        ; -0.560 ; -0.560 ; Rise       ; clk             ;
+;  opcode[1] ; clk        ; -0.043 ; -0.043 ; Rise       ; clk             ;
+;  opcode[2] ; clk        ; -0.075 ; -0.075 ; Rise       ; clk             ;
+;  opcode[3] ; clk        ; -0.127 ; -0.127 ; Rise       ; clk             ;
+;  opcode[4] ; clk        ; -0.514 ; -0.514 ; Rise       ; clk             ;
+;  opcode[5] ; clk        ; -0.295 ; -0.295 ; Rise       ; clk             ;
+; reset      ; clk        ; -1.248 ; -1.248 ; Rise       ; clk             ;
 +------------+------------+--------+--------+------------+-----------------+
 
 
@@ -286,25 +511,42 @@ No paths to report.
 +-------------+------------+-------+-------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-------------+------------+-------+-------+------------+-----------------+
-; IRwrite     ; clk        ; 6.878 ; 6.878 ; Rise       ; clk             ;
-; IorD        ; clk        ; 7.676 ; 7.676 ; Rise       ; clk             ;
-; PCsrc[*]    ; clk        ; 7.167 ; 7.167 ; Rise       ; clk             ;
-;  PCsrc[0]   ; clk        ; 7.105 ; 7.105 ; Rise       ; clk             ;
-;  PCsrc[1]   ; clk        ; 7.167 ; 7.167 ; Rise       ; clk             ;
-; aluOP[*]    ; clk        ; 7.518 ; 7.518 ; Rise       ; clk             ;
-;  aluOP[0]   ; clk        ; 7.518 ; 7.518 ; Rise       ; clk             ;
-;  aluOP[1]   ; clk        ; 7.082 ; 7.082 ; Rise       ; clk             ;
-; aluSrcA     ; clk        ; 8.317 ; 8.317 ; Rise       ; clk             ;
-; aluSrcB[*]  ; clk        ; 8.350 ; 8.350 ; Rise       ; clk             ;
-;  aluSrcB[0] ; clk        ; 8.350 ; 8.350 ; Rise       ; clk             ;
-;  aluSrcB[1] ; clk        ; 8.223 ; 8.223 ; Rise       ; clk             ;
-; branch      ; clk        ; 7.490 ; 7.490 ; Rise       ; clk             ;
-; memRead     ; clk        ; 8.050 ; 8.050 ; Rise       ; clk             ;
-; memToReg    ; clk        ; 7.119 ; 7.119 ; Rise       ; clk             ;
-; memWrite    ; clk        ; 7.130 ; 7.130 ; Rise       ; clk             ;
-; pcWrite     ; clk        ; 8.088 ; 8.088 ; Rise       ; clk             ;
-; regDst      ; clk        ; 6.787 ; 6.787 ; Rise       ; clk             ;
-; regWrite    ; clk        ; 7.044 ; 7.044 ; Rise       ; clk             ;
+; IRwrite     ; clk        ; 7.542 ; 7.542 ; Rise       ; clk             ;
+; IorD        ; clk        ; 7.150 ; 7.150 ; Rise       ; clk             ;
+; PCsrc[*]    ; clk        ; 7.163 ; 7.163 ; Rise       ; clk             ;
+;  PCsrc[0]   ; clk        ; 6.894 ; 6.894 ; Rise       ; clk             ;
+;  PCsrc[1]   ; clk        ; 7.163 ; 7.163 ; Rise       ; clk             ;
+; aluOP[*]    ; clk        ; 7.251 ; 7.251 ; Rise       ; clk             ;
+;  aluOP[0]   ; clk        ; 6.756 ; 6.756 ; Rise       ; clk             ;
+;  aluOP[1]   ; clk        ; 6.682 ; 6.682 ; Rise       ; clk             ;
+;  aluOP[2]   ; clk        ; 7.251 ; 7.251 ; Rise       ; clk             ;
+; aluSrcA     ; clk        ; 6.804 ; 6.804 ; Rise       ; clk             ;
+; aluSrcB[*]  ; clk        ; 6.851 ; 6.851 ; Rise       ; clk             ;
+;  aluSrcB[0] ; clk        ; 6.851 ; 6.851 ; Rise       ; clk             ;
+;  aluSrcB[1] ; clk        ; 6.724 ; 6.724 ; Rise       ; clk             ;
+; branch      ; clk        ; 6.788 ; 6.788 ; Rise       ; clk             ;
+; estado3[*]  ; clk        ; 6.971 ; 6.971 ; Rise       ; clk             ;
+;  estado3[0] ; clk        ; 6.951 ; 6.951 ; Rise       ; clk             ;
+;  estado3[1] ; clk        ; 6.957 ; 6.957 ; Rise       ; clk             ;
+;  estado3[2] ; clk        ; 6.927 ; 6.927 ; Rise       ; clk             ;
+;  estado3[3] ; clk        ; 6.971 ; 6.971 ; Rise       ; clk             ;
+;  estado3[4] ; clk        ; 6.891 ; 6.891 ; Rise       ; clk             ;
+;  estado3[5] ; clk        ; 6.917 ; 6.917 ; Rise       ; clk             ;
+;  estado3[6] ; clk        ; 6.542 ; 6.542 ; Rise       ; clk             ;
+; estado4[*]  ; clk        ; 7.225 ; 7.225 ; Rise       ; clk             ;
+;  estado4[0] ; clk        ; 7.225 ; 7.225 ; Rise       ; clk             ;
+;  estado4[1] ; clk        ; 7.204 ; 7.204 ; Rise       ; clk             ;
+;  estado4[2] ; clk        ; 6.956 ; 6.956 ; Rise       ; clk             ;
+;  estado4[3] ; clk        ; 6.928 ; 6.928 ; Rise       ; clk             ;
+;  estado4[4] ; clk        ; 6.928 ; 6.928 ; Rise       ; clk             ;
+;  estado4[5] ; clk        ; 7.188 ; 7.188 ; Rise       ; clk             ;
+;  estado4[6] ; clk        ; 6.941 ; 6.941 ; Rise       ; clk             ;
+; memRead     ; clk        ; 6.954 ; 6.954 ; Rise       ; clk             ;
+; memToReg    ; clk        ; 6.921 ; 6.921 ; Rise       ; clk             ;
+; memWrite    ; clk        ; 7.149 ; 7.149 ; Rise       ; clk             ;
+; pcWrite     ; clk        ; 7.196 ; 7.196 ; Rise       ; clk             ;
+; regDst      ; clk        ; 7.148 ; 7.148 ; Rise       ; clk             ;
+; regWrite    ; clk        ; 7.185 ; 7.185 ; Rise       ; clk             ;
 +-------------+------------+-------+-------+------------+-----------------+
 
 
@@ -313,25 +555,42 @@ No paths to report.
 +-------------+------------+-------+-------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-------------+------------+-------+-------+------------+-----------------+
-; IRwrite     ; clk        ; 6.878 ; 6.878 ; Rise       ; clk             ;
-; IorD        ; clk        ; 7.654 ; 7.654 ; Rise       ; clk             ;
-; PCsrc[*]    ; clk        ; 7.105 ; 7.105 ; Rise       ; clk             ;
-;  PCsrc[0]   ; clk        ; 7.105 ; 7.105 ; Rise       ; clk             ;
-;  PCsrc[1]   ; clk        ; 7.167 ; 7.167 ; Rise       ; clk             ;
-; aluOP[*]    ; clk        ; 7.082 ; 7.082 ; Rise       ; clk             ;
-;  aluOP[0]   ; clk        ; 7.518 ; 7.518 ; Rise       ; clk             ;
-;  aluOP[1]   ; clk        ; 7.082 ; 7.082 ; Rise       ; clk             ;
-; aluSrcA     ; clk        ; 8.151 ; 8.151 ; Rise       ; clk             ;
-; aluSrcB[*]  ; clk        ; 7.940 ; 7.940 ; Rise       ; clk             ;
-;  aluSrcB[0] ; clk        ; 7.940 ; 7.940 ; Rise       ; clk             ;
-;  aluSrcB[1] ; clk        ; 8.110 ; 8.110 ; Rise       ; clk             ;
-; branch      ; clk        ; 7.490 ; 7.490 ; Rise       ; clk             ;
-; memRead     ; clk        ; 7.910 ; 7.910 ; Rise       ; clk             ;
-; memToReg    ; clk        ; 7.119 ; 7.119 ; Rise       ; clk             ;
-; memWrite    ; clk        ; 7.130 ; 7.130 ; Rise       ; clk             ;
-; pcWrite     ; clk        ; 7.780 ; 7.780 ; Rise       ; clk             ;
-; regDst      ; clk        ; 6.787 ; 6.787 ; Rise       ; clk             ;
-; regWrite    ; clk        ; 6.853 ; 6.853 ; Rise       ; clk             ;
+; IRwrite     ; clk        ; 7.542 ; 7.542 ; Rise       ; clk             ;
+; IorD        ; clk        ; 7.150 ; 7.150 ; Rise       ; clk             ;
+; PCsrc[*]    ; clk        ; 6.894 ; 6.894 ; Rise       ; clk             ;
+;  PCsrc[0]   ; clk        ; 6.894 ; 6.894 ; Rise       ; clk             ;
+;  PCsrc[1]   ; clk        ; 7.163 ; 7.163 ; Rise       ; clk             ;
+; aluOP[*]    ; clk        ; 6.682 ; 6.682 ; Rise       ; clk             ;
+;  aluOP[0]   ; clk        ; 6.756 ; 6.756 ; Rise       ; clk             ;
+;  aluOP[1]   ; clk        ; 6.682 ; 6.682 ; Rise       ; clk             ;
+;  aluOP[2]   ; clk        ; 7.251 ; 7.251 ; Rise       ; clk             ;
+; aluSrcA     ; clk        ; 6.804 ; 6.804 ; Rise       ; clk             ;
+; aluSrcB[*]  ; clk        ; 6.724 ; 6.724 ; Rise       ; clk             ;
+;  aluSrcB[0] ; clk        ; 6.851 ; 6.851 ; Rise       ; clk             ;
+;  aluSrcB[1] ; clk        ; 6.724 ; 6.724 ; Rise       ; clk             ;
+; branch      ; clk        ; 6.788 ; 6.788 ; Rise       ; clk             ;
+; estado3[*]  ; clk        ; 6.542 ; 6.542 ; Rise       ; clk             ;
+;  estado3[0] ; clk        ; 6.951 ; 6.951 ; Rise       ; clk             ;
+;  estado3[1] ; clk        ; 6.957 ; 6.957 ; Rise       ; clk             ;
+;  estado3[2] ; clk        ; 6.927 ; 6.927 ; Rise       ; clk             ;
+;  estado3[3] ; clk        ; 6.971 ; 6.971 ; Rise       ; clk             ;
+;  estado3[4] ; clk        ; 6.891 ; 6.891 ; Rise       ; clk             ;
+;  estado3[5] ; clk        ; 6.917 ; 6.917 ; Rise       ; clk             ;
+;  estado3[6] ; clk        ; 6.542 ; 6.542 ; Rise       ; clk             ;
+; estado4[*]  ; clk        ; 6.928 ; 6.928 ; Rise       ; clk             ;
+;  estado4[0] ; clk        ; 7.225 ; 7.225 ; Rise       ; clk             ;
+;  estado4[1] ; clk        ; 7.204 ; 7.204 ; Rise       ; clk             ;
+;  estado4[2] ; clk        ; 6.956 ; 6.956 ; Rise       ; clk             ;
+;  estado4[3] ; clk        ; 6.928 ; 6.928 ; Rise       ; clk             ;
+;  estado4[4] ; clk        ; 6.928 ; 6.928 ; Rise       ; clk             ;
+;  estado4[5] ; clk        ; 7.188 ; 7.188 ; Rise       ; clk             ;
+;  estado4[6] ; clk        ; 6.941 ; 6.941 ; Rise       ; clk             ;
+; memRead     ; clk        ; 6.954 ; 6.954 ; Rise       ; clk             ;
+; memToReg    ; clk        ; 6.921 ; 6.921 ; Rise       ; clk             ;
+; memWrite    ; clk        ; 7.149 ; 7.149 ; Rise       ; clk             ;
+; pcWrite     ; clk        ; 7.196 ; 7.196 ; Rise       ; clk             ;
+; regDst      ; clk        ; 7.148 ; 7.148 ; Rise       ; clk             ;
+; regWrite    ; clk        ; 7.185 ; 7.185 ; Rise       ; clk             ;
 +-------------+------------+-------+-------+------------+-----------------+
 
 
@@ -340,7 +599,7 @@ No paths to report.
 +-------+-------+---------------+
 ; Clock ; Slack ; End Point TNS ;
 +-------+-------+---------------+
-; clk   ; 0.340 ; 0.000         ;
+; clk   ; 0.212 ; 0.000         ;
 +-------+-------+---------------+
 
 
@@ -349,7 +608,7 @@ No paths to report.
 +-------+-------+---------------+
 ; Clock ; Slack ; End Point TNS ;
 +-------+-------+---------------+
-; clk   ; 0.215 ; 0.000         ;
+; clk   ; 0.247 ; 0.000         ;
 +-------+-------+---------------+
 
 
@@ -370,109 +629,332 @@ No paths to report.
 +-------+--------+-----------------------+
 ; Clock ; Slack  ; End Point TNS         ;
 +-------+--------+-----------------------+
-; clk   ; -1.380 ; -11.380               ;
+; clk   ; -1.380 ; -47.380               ;
 +-------+--------+-----------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Fast Model Setup: 'clk'                                                                                               ;
-+-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node          ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
-; 0.340 ; state.memWriteBack ; state.fetch        ; clk          ; clk         ; 1.000        ; 0.000      ; 0.692      ;
-; 0.350 ; state.aluWriteBack ; state.fetch        ; clk          ; clk         ; 1.000        ; 0.000      ; 0.682      ;
-; 0.408 ; state.memAddr      ; state.memWriteSig  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.624      ;
-; 0.414 ; state.fetch        ; state.decode       ; clk          ; clk         ; 1.000        ; 0.000      ; 0.618      ;
-; 0.419 ; state.branchSig    ; state.fetch        ; clk          ; clk         ; 1.000        ; 0.000      ; 0.613      ;
-; 0.465 ; state.memWriteSig  ; state.memWriteSig  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.567      ;
-; 0.471 ; state.jump         ; state.fetch        ; clk          ; clk         ; 1.000        ; 0.000      ; 0.561      ;
-; 0.498 ; state.memWriteSig  ; state.fetch        ; clk          ; clk         ; 1.000        ; 0.000      ; 0.534      ;
-; 0.541 ; state.memReadSig   ; state.memWriteBack ; clk          ; clk         ; 1.000        ; 0.000      ; 0.491      ;
-; 0.546 ; state.Execute      ; state.aluWriteBack ; clk          ; clk         ; 1.000        ; 0.000      ; 0.486      ;
-; 0.552 ; state.memAddr      ; state.memReadSig   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.480      ;
-; 0.627 ; state.decode       ; state.jump         ; clk          ; clk         ; 1.000        ; 0.000      ; 0.405      ;
-; 0.628 ; state.decode       ; state.branchSig    ; clk          ; clk         ; 1.000        ; 0.000      ; 0.404      ;
-; 0.628 ; state.decode       ; state.Execute      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.404      ;
-; 0.628 ; state.decode       ; state.memAddr      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.404      ;
-+-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                   ;
++-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; 0.212 ; state.aluWriteBack   ; state.fetch          ; clk          ; clk         ; 1.000        ; 0.000      ; 0.820      ;
+; 0.215 ; state.aluWriteBack   ; estado4[3]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.817      ;
+; 0.216 ; state.aluWriteBack   ; estado4[5]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.816      ;
+; 0.224 ; state.division       ; state.aluWriteBack   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.808      ;
+; 0.239 ; state.jump           ; state.fetch          ; clk          ; clk         ; 1.000        ; 0.000      ; 0.793      ;
+; 0.239 ; state.multiplicacion ; state.aluWriteBack   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.793      ;
+; 0.242 ; state.jump           ; estado4[3]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.790      ;
+; 0.243 ; state.jump           ; estado4[5]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.789      ;
+; 0.262 ; state.memAddr        ; estado4[6]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.770      ;
+; 0.264 ; state.multiplicacion ; estado3[0]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.768      ;
+; 0.278 ; state.memWriteSig    ; state.fetch          ; clk          ; clk         ; 1.000        ; 0.000      ; 0.754      ;
+; 0.281 ; state.memWriteSig    ; estado4[3]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.751      ;
+; 0.282 ; state.memWriteSig    ; estado4[5]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.750      ;
+; 0.290 ; state.division       ; aluSrcA~reg0         ; clk          ; clk         ; 1.000        ; 0.000      ; 0.742      ;
+; 0.291 ; state.division       ; estado4[0]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.741      ;
+; 0.305 ; state.slt            ; state.aluWriteBack   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.727      ;
+; 0.305 ; state.multiplicacion ; aluSrcA~reg0         ; clk          ; clk         ; 1.000        ; 0.000      ; 0.727      ;
+; 0.306 ; state.multiplicacion ; estado4[0]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.726      ;
+; 0.312 ; state.division       ; estado3[1]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.720      ;
+; 0.312 ; state.memWriteBack   ; estado4[6]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.720      ;
+; 0.324 ; state.branchSig      ; estado4[6]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.708      ;
+; 0.325 ; state.branchSig      ; state.fetch          ; clk          ; clk         ; 1.000        ; 0.000      ; 0.707      ;
+; 0.327 ; state.branchSig      ; estado4[5]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.705      ;
+; 0.327 ; state.multiplicacion ; estado3[1]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.705      ;
+; 0.331 ; state.slt            ; estado3[0]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.701      ;
+; 0.355 ; state.addi           ; state.aluWriteBack   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.677      ;
+; 0.360 ; state.decode         ; state.addi           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.672      ;
+; 0.360 ; state.decode         ; state.paso           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.672      ;
+; 0.361 ; state.decode         ; state.Execute        ; clk          ; clk         ; 1.000        ; 0.000      ; 0.671      ;
+; 0.362 ; state.decode         ; estado4[6]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.670      ;
+; 0.363 ; state.decode         ; state.division       ; clk          ; clk         ; 1.000        ; 0.000      ; 0.669      ;
+; 0.363 ; state.decode         ; state.branchSig      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.669      ;
+; 0.364 ; state.decode         ; state.slt            ; clk          ; clk         ; 1.000        ; 0.000      ; 0.668      ;
+; 0.364 ; state.decode         ; state.multiplicacion ; clk          ; clk         ; 1.000        ; 0.000      ; 0.668      ;
+; 0.371 ; state.slt            ; aluSrcA~reg0         ; clk          ; clk         ; 1.000        ; 0.000      ; 0.661      ;
+; 0.372 ; state.slt            ; estado4[0]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.660      ;
+; 0.382 ; state.addi           ; estado3[0]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.650      ;
+; 0.390 ; state.aluWriteBack   ; estado4[6]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.642      ;
+; 0.392 ; state.decode         ; estado4[3]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.640      ;
+; 0.393 ; state.branchSig      ; aluSrcA~reg0         ; clk          ; clk         ; 1.000        ; 0.000      ; 0.639      ;
+; 0.393 ; state.slt            ; estado3[1]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.639      ;
+; 0.395 ; state.memWriteBack   ; state.fetch          ; clk          ; clk         ; 1.000        ; 0.000      ; 0.637      ;
+; 0.398 ; state.memWriteBack   ; estado4[3]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.634      ;
+; 0.399 ; state.memWriteBack   ; estado4[5]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.633      ;
+; 0.400 ; state.memReadSig     ; memRead~reg0         ; clk          ; clk         ; 1.000        ; 0.000      ; 0.632      ;
+; 0.401 ; state.memReadSig     ; IorD~reg0            ; clk          ; clk         ; 1.000        ; -0.001     ; 0.630      ;
+; 0.403 ; state.addi           ; estado3[2]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.629      ;
+; 0.407 ; state.slt            ; estado3[6]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.625      ;
+; 0.407 ; state.slt            ; estado3[2]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.625      ;
+; 0.413 ; state.paso           ; state.fetch          ; clk          ; clk         ; 1.000        ; 0.000      ; 0.619      ;
+; 0.414 ; state.addi           ; aluSrcB[1]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.618      ;
+; 0.415 ; state.memWriteSig    ; estado4[4]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.617      ;
+; 0.415 ; state.memReadSig     ; estado4[0]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.617      ;
+; 0.421 ; state.addi           ; aluSrcA~reg0         ; clk          ; clk         ; 1.000        ; 0.000      ; 0.611      ;
+; 0.422 ; state.fetch          ; estado4[0]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.610      ;
+; 0.422 ; state.addi           ; estado4[0]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.610      ;
+; 0.422 ; state.multiplicacion ; estado3[6]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.610      ;
+; 0.424 ; state.multiplicacion ; aluSrcB[1]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.608      ;
+; 0.425 ; state.multiplicacion ; aluOP[1]~reg0        ; clk          ; clk         ; 1.000        ; 0.000      ; 0.607      ;
+; 0.427 ; state.memAddr        ; aluSrcA~reg0         ; clk          ; clk         ; 1.000        ; 0.000      ; 0.605      ;
+; 0.427 ; state.fetch          ; memRead~reg0         ; clk          ; clk         ; 1.000        ; 0.000      ; 0.605      ;
+; 0.428 ; state.fetch          ; aluSrcB[0]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.604      ;
+; 0.430 ; state.paso           ; estado4[0]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.602      ;
+; 0.432 ; state.memWriteSig    ; IorD~reg0            ; clk          ; clk         ; 1.000        ; -0.001     ; 0.599      ;
+; 0.443 ; state.addi           ; estado3[1]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.589      ;
+; 0.448 ; state.decode         ; estado4[2]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.584      ;
+; 0.460 ; state.memAddr        ; aluSrcB[1]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.572      ;
+; 0.462 ; state.memWriteSig    ; memWrite~reg0        ; clk          ; clk         ; 1.000        ; -0.001     ; 0.569      ;
+; 0.472 ; state.memWriteBack   ; memToReg~reg0        ; clk          ; clk         ; 1.000        ; 0.000      ; 0.560      ;
+; 0.480 ; state.memWriteBack   ; regWrite~reg0        ; clk          ; clk         ; 1.000        ; 0.000      ; 0.552      ;
+; 0.480 ; state.memReadSig     ; estado4[6]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.552      ;
+; 0.481 ; state.memWriteBack   ; estado4[1]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.551      ;
+; 0.485 ; state.decode         ; aluSrcB[0]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.547      ;
+; 0.486 ; state.addi           ; estado3[4]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.546      ;
+; 0.489 ; state.division       ; estado3[2]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.543      ;
+; 0.489 ; state.division       ; aluOP[1]~reg0        ; clk          ; clk         ; 1.000        ; 0.000      ; 0.543      ;
+; 0.490 ; state.decode         ; aluSrcB[1]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.542      ;
+; 0.493 ; state.addi           ; estado3[5]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.539      ;
+; 0.494 ; state.division       ; aluOP[0]~reg0        ; clk          ; clk         ; 1.000        ; 0.000      ; 0.538      ;
+; 0.496 ; state.memAddr        ; estado4[3]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.536      ;
+; 0.498 ; state.paso           ; estado3[1]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.534      ;
+; 0.500 ; state.fetch          ; pcWrite~reg0         ; clk          ; clk         ; 1.000        ; 0.000      ; 0.532      ;
+; 0.506 ; state.Execute        ; state.aluWriteBack   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.526      ;
+; 0.509 ; state.jump           ; estado4[4]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.523      ;
+; 0.510 ; state.Execute        ; aluSrcA~reg0         ; clk          ; clk         ; 1.000        ; 0.000      ; 0.522      ;
+; 0.513 ; state.multiplicacion ; estado3[3]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.519      ;
+; 0.524 ; state.aluWriteBack   ; regDst~reg0          ; clk          ; clk         ; 1.000        ; 0.000      ; 0.508      ;
+; 0.528 ; state.slt            ; aluOP[1]~reg0        ; clk          ; clk         ; 1.000        ; 0.000      ; 0.504      ;
+; 0.529 ; state.branchSig      ; branch~reg0          ; clk          ; clk         ; 1.000        ; 0.000      ; 0.503      ;
+; 0.529 ; state.decode         ; estado4[4]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.503      ;
+; 0.530 ; state.decode         ; state.jump           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.502      ;
+; 0.531 ; state.memReadSig     ; state.memWriteBack   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.501      ;
+; 0.531 ; state.fetch          ; state.decode         ; clk          ; clk         ; 1.000        ; 0.000      ; 0.501      ;
+; 0.531 ; state.slt            ; aluOP[2]~reg0        ; clk          ; clk         ; 1.000        ; 0.000      ; 0.501      ;
+; 0.533 ; state.fetch          ; IRwrite~reg0         ; clk          ; clk         ; 1.000        ; -0.001     ; 0.498      ;
+; 0.534 ; state.decode         ; state.memAddr        ; clk          ; clk         ; 1.000        ; 0.000      ; 0.498      ;
+; 0.534 ; state.branchSig      ; PCsrc[0]~reg0        ; clk          ; clk         ; 1.000        ; 0.000      ; 0.498      ;
+; 0.536 ; state.branchSig      ; aluOP[0]~reg0        ; clk          ; clk         ; 1.000        ; 0.000      ; 0.496      ;
+; 0.539 ; state.paso           ; estado3[2]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.493      ;
+; 0.539 ; state.paso           ; estado3[6]~reg0      ; clk          ; clk         ; 1.000        ; 0.000      ; 0.493      ;
++-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Fast Model Hold: 'clk'                                                                                                ;
-+-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node          ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
-; 0.215 ; state.memWriteSig  ; state.memWriteSig  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
-; 0.252 ; state.decode       ; state.branchSig    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.404      ;
-; 0.252 ; state.decode       ; state.Execute      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.404      ;
-; 0.252 ; state.decode       ; state.memAddr      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.404      ;
-; 0.253 ; state.decode       ; state.jump         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.405      ;
-; 0.328 ; state.memAddr      ; state.memReadSig   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.480      ;
-; 0.334 ; state.Execute      ; state.aluWriteBack ; clk          ; clk         ; 0.000        ; 0.000      ; 0.486      ;
-; 0.339 ; state.memReadSig   ; state.memWriteBack ; clk          ; clk         ; 0.000        ; 0.000      ; 0.491      ;
-; 0.373 ; state.memAddr      ; state.memWriteSig  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.525      ;
-; 0.382 ; state.memWriteSig  ; state.fetch        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.534      ;
-; 0.409 ; state.jump         ; state.fetch        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.561      ;
-; 0.461 ; state.branchSig    ; state.fetch        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.613      ;
-; 0.466 ; state.fetch        ; state.decode       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.618      ;
-; 0.530 ; state.aluWriteBack ; state.fetch        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.682      ;
-; 0.540 ; state.memWriteBack ; state.fetch        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.692      ;
-+-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                    ;
++-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; 0.247 ; state.jump           ; pcWrite~reg0         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.399      ;
+; 0.249 ; state.addi           ; estado3[3]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.401      ;
+; 0.252 ; state.memAddr        ; state.memWriteSig    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.404      ;
+; 0.256 ; state.memAddr        ; state.memReadSig     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.408      ;
+; 0.295 ; state.memWriteSig    ; estado4[1]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.447      ;
+; 0.300 ; state.slt            ; estado3[3]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.452      ;
+; 0.301 ; state.memWriteSig    ; estado4[6]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.453      ;
+; 0.314 ; state.memReadSig     ; estado4[5]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.466      ;
+; 0.315 ; state.jump           ; PCsrc[1]~reg0        ; clk          ; clk         ; 0.000        ; -0.001     ; 0.466      ;
+; 0.316 ; state.aluWriteBack   ; estado4[4]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.468      ;
+; 0.321 ; state.aluWriteBack   ; regWrite~reg0        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.473      ;
+; 0.334 ; state.paso           ; estado3[5]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.486      ;
+; 0.335 ; state.multiplicacion ; estado3[4]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.487      ;
+; 0.341 ; state.paso           ; estado3[2]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.493      ;
+; 0.341 ; state.paso           ; estado3[6]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.493      ;
+; 0.344 ; state.branchSig      ; aluOP[0]~reg0        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.496      ;
+; 0.346 ; state.decode         ; state.memAddr        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.498      ;
+; 0.346 ; state.branchSig      ; PCsrc[0]~reg0        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.498      ;
+; 0.347 ; state.fetch          ; IRwrite~reg0         ; clk          ; clk         ; 0.000        ; -0.001     ; 0.498      ;
+; 0.349 ; state.memReadSig     ; state.memWriteBack   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.501      ;
+; 0.349 ; state.fetch          ; state.decode         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.501      ;
+; 0.349 ; state.slt            ; aluOP[2]~reg0        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.501      ;
+; 0.350 ; state.decode         ; state.jump           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.502      ;
+; 0.351 ; state.branchSig      ; branch~reg0          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.503      ;
+; 0.351 ; state.decode         ; estado4[4]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.503      ;
+; 0.352 ; state.slt            ; aluOP[1]~reg0        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.504      ;
+; 0.356 ; state.aluWriteBack   ; regDst~reg0          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.508      ;
+; 0.367 ; state.multiplicacion ; estado3[3]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.519      ;
+; 0.370 ; state.Execute        ; aluSrcA~reg0         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.522      ;
+; 0.371 ; state.jump           ; estado4[4]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.374 ; state.Execute        ; state.aluWriteBack   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.526      ;
+; 0.380 ; state.fetch          ; pcWrite~reg0         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.532      ;
+; 0.382 ; state.paso           ; estado3[1]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.534      ;
+; 0.384 ; state.memAddr        ; estado4[3]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.536      ;
+; 0.386 ; state.division       ; aluOP[0]~reg0        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.538      ;
+; 0.387 ; state.addi           ; estado3[5]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.539      ;
+; 0.390 ; state.decode         ; aluSrcB[1]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.542      ;
+; 0.391 ; state.division       ; estado3[2]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.543      ;
+; 0.391 ; state.division       ; aluOP[1]~reg0        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.543      ;
+; 0.394 ; state.addi           ; estado3[4]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.546      ;
+; 0.395 ; state.decode         ; aluSrcB[0]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.547      ;
+; 0.399 ; state.memWriteBack   ; estado4[1]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.551      ;
+; 0.400 ; state.memReadSig     ; estado4[6]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.552      ;
+; 0.400 ; state.memWriteBack   ; regWrite~reg0        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.552      ;
+; 0.408 ; state.memWriteBack   ; memToReg~reg0        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.560      ;
+; 0.418 ; state.memWriteSig    ; memWrite~reg0        ; clk          ; clk         ; 0.000        ; -0.001     ; 0.569      ;
+; 0.420 ; state.memAddr        ; aluSrcB[1]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.572      ;
+; 0.432 ; state.decode         ; estado4[2]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.584      ;
+; 0.437 ; state.addi           ; estado3[1]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.589      ;
+; 0.448 ; state.memWriteSig    ; IorD~reg0            ; clk          ; clk         ; 0.000        ; -0.001     ; 0.599      ;
+; 0.450 ; state.paso           ; estado4[0]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.602      ;
+; 0.452 ; state.fetch          ; aluSrcB[0]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.604      ;
+; 0.453 ; state.fetch          ; memRead~reg0         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.605      ;
+; 0.453 ; state.memAddr        ; aluSrcA~reg0         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.605      ;
+; 0.455 ; state.multiplicacion ; aluOP[1]~reg0        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.607      ;
+; 0.456 ; state.multiplicacion ; aluSrcB[1]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.608      ;
+; 0.458 ; state.multiplicacion ; estado3[6]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.610      ;
+; 0.458 ; state.fetch          ; estado4[0]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.610      ;
+; 0.458 ; state.addi           ; estado4[0]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.610      ;
+; 0.459 ; state.addi           ; aluSrcA~reg0         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.611      ;
+; 0.465 ; state.memWriteSig    ; estado4[4]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.617      ;
+; 0.465 ; state.memReadSig     ; estado4[0]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.617      ;
+; 0.466 ; state.addi           ; aluSrcB[1]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.618      ;
+; 0.467 ; state.paso           ; state.fetch          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.619      ;
+; 0.473 ; state.slt            ; estado3[2]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.625      ;
+; 0.473 ; state.slt            ; estado3[6]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.625      ;
+; 0.477 ; state.addi           ; estado3[2]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.629      ;
+; 0.479 ; state.memReadSig     ; IorD~reg0            ; clk          ; clk         ; 0.000        ; -0.001     ; 0.630      ;
+; 0.480 ; state.memReadSig     ; memRead~reg0         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.632      ;
+; 0.481 ; state.memWriteBack   ; estado4[5]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.633      ;
+; 0.482 ; state.memWriteBack   ; estado4[3]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.634      ;
+; 0.485 ; state.memWriteBack   ; state.fetch          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.637      ;
+; 0.487 ; state.branchSig      ; aluSrcA~reg0         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.639      ;
+; 0.487 ; state.slt            ; estado3[1]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.639      ;
+; 0.488 ; state.decode         ; estado4[3]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.640      ;
+; 0.490 ; state.aluWriteBack   ; estado4[6]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.642      ;
+; 0.498 ; state.addi           ; estado3[0]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.650      ;
+; 0.508 ; state.slt            ; estado4[0]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.660      ;
+; 0.509 ; state.slt            ; aluSrcA~reg0         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.661      ;
+; 0.516 ; state.decode         ; state.slt            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.668      ;
+; 0.516 ; state.decode         ; state.multiplicacion ; clk          ; clk         ; 0.000        ; 0.000      ; 0.668      ;
+; 0.517 ; state.decode         ; state.division       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.669      ;
+; 0.517 ; state.decode         ; state.branchSig      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.669      ;
+; 0.518 ; state.decode         ; estado4[6]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.670      ;
+; 0.519 ; state.decode         ; state.Execute        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.671      ;
+; 0.520 ; state.decode         ; state.addi           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.672      ;
+; 0.520 ; state.decode         ; state.paso           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.672      ;
+; 0.525 ; state.addi           ; state.aluWriteBack   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.677      ;
+; 0.549 ; state.slt            ; estado3[0]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.701      ;
+; 0.553 ; state.branchSig      ; estado4[5]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.705      ;
+; 0.553 ; state.multiplicacion ; estado3[1]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.705      ;
+; 0.555 ; state.branchSig      ; state.fetch          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.707      ;
+; 0.556 ; state.branchSig      ; estado4[6]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.708      ;
+; 0.568 ; state.division       ; estado3[1]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.720      ;
+; 0.568 ; state.memWriteBack   ; estado4[6]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.720      ;
+; 0.574 ; state.multiplicacion ; estado4[0]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.726      ;
+; 0.575 ; state.multiplicacion ; aluSrcA~reg0         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.727      ;
+; 0.575 ; state.slt            ; state.aluWriteBack   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.727      ;
+; 0.589 ; state.division       ; estado4[0]~reg0      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.741      ;
+; 0.590 ; state.division       ; aluSrcA~reg0         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.742      ;
++-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
 
 
-+---------------------------------------------------------------------------------------------------------+
-; Fast Model Minimum Pulse Width: 'clk'                                                                   ;
-+--------+--------------+----------------+------------------+-------+------------+------------------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                 ;
-+--------+--------------+----------------+------------------+-------+------------+------------------------+
-; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                    ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.Execute          ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.Execute          ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.aluWriteBack     ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.aluWriteBack     ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.branchSig        ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.branchSig        ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.decode           ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.decode           ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.fetch            ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.fetch            ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.jump             ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.jump             ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.memAddr          ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memAddr          ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.memReadSig       ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memReadSig       ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.memWriteBack     ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memWriteBack     ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.memWriteSig      ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memWriteSig      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]   ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]   ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk     ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk     ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.Execute|clk      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.Execute|clk      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.aluWriteBack|clk ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.aluWriteBack|clk ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.branchSig|clk    ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.branchSig|clk    ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.decode|clk       ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.decode|clk       ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.fetch|clk        ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.fetch|clk        ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.jump|clk         ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.jump|clk         ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.memAddr|clk      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memAddr|clk      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.memReadSig|clk   ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memReadSig|clk   ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.memWriteBack|clk ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memWriteBack|clk ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.memWriteSig|clk  ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memWriteSig|clk  ;
-+--------+--------------+----------------+------------------+-------+------------+------------------------+
++-------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                 ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target               ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; IRwrite~reg0         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; IRwrite~reg0         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; IorD~reg0            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; IorD~reg0            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; PCsrc[0]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; PCsrc[0]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; PCsrc[1]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; PCsrc[1]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; aluOP[0]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; aluOP[0]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; aluOP[1]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; aluOP[1]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; aluOP[2]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; aluOP[2]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; aluSrcA~reg0         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; aluSrcA~reg0         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; aluSrcB[0]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; aluSrcB[0]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; aluSrcB[1]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; aluSrcB[1]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; branch~reg0          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; branch~reg0          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; estado3[0]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; estado3[0]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; estado3[1]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; estado3[1]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; estado3[2]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; estado3[2]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; estado3[3]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; estado3[3]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; estado3[4]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; estado3[4]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; estado3[5]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; estado3[5]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; estado3[6]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; estado3[6]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; estado4[0]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; estado4[0]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; estado4[1]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; estado4[1]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; estado4[2]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; estado4[2]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; estado4[3]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; estado4[3]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; estado4[4]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; estado4[4]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; estado4[5]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; estado4[5]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; estado4[6]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; estado4[6]~reg0      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; memRead~reg0         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; memRead~reg0         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; memToReg~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; memToReg~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; memWrite~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; memWrite~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; pcWrite~reg0         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; pcWrite~reg0         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; regDst~reg0          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; regDst~reg0          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; regWrite~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; regWrite~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.Execute        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.Execute        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.addi           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.addi           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.aluWriteBack   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.aluWriteBack   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.branchSig      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.branchSig      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.decode         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.decode         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.division       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.division       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.fetch          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.fetch          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.jump           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.jump           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.memAddr        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memAddr        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.memReadSig     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memReadSig     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.memWriteBack   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memWriteBack   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.memWriteSig    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.memWriteSig    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.multiplicacion ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.multiplicacion ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.paso           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.paso           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.slt            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.slt            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; IRwrite~reg0|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; IRwrite~reg0|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; IorD~reg0|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; IorD~reg0|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; PCsrc[0]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; PCsrc[0]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; PCsrc[1]~reg0|clk    ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
 
 
 +--------------------------------------------------------------------------+
@@ -480,29 +962,31 @@ No paths to report.
 +------------+------------+--------+--------+------------+-----------------+
 ; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +------------+------------+--------+--------+------------+-----------------+
-; opcode[*]  ; clk        ; 0.294  ; 0.294  ; Rise       ; clk             ;
-;  opcode[0] ; clk        ; 0.041  ; 0.041  ; Rise       ; clk             ;
-;  opcode[1] ; clk        ; 0.102  ; 0.102  ; Rise       ; clk             ;
-;  opcode[2] ; clk        ; -0.024 ; -0.024 ; Rise       ; clk             ;
-;  opcode[3] ; clk        ; 0.098  ; 0.098  ; Rise       ; clk             ;
-;  opcode[4] ; clk        ; 0.294  ; 0.294  ; Rise       ; clk             ;
-;  opcode[5] ; clk        ; -0.020 ; -0.020 ; Rise       ; clk             ;
+; opcode[*]  ; clk        ; 0.206  ; 0.206  ; Rise       ; clk             ;
+;  opcode[0] ; clk        ; 0.206  ; 0.206  ; Rise       ; clk             ;
+;  opcode[1] ; clk        ; -0.083 ; -0.083 ; Rise       ; clk             ;
+;  opcode[2] ; clk        ; 0.046  ; 0.046  ; Rise       ; clk             ;
+;  opcode[3] ; clk        ; -0.074 ; -0.074 ; Rise       ; clk             ;
+;  opcode[4] ; clk        ; -0.038 ; -0.038 ; Rise       ; clk             ;
+;  opcode[5] ; clk        ; 0.022  ; 0.022  ; Rise       ; clk             ;
+; reset      ; clk        ; 0.373  ; 0.373  ; Rise       ; clk             ;
 +------------+------------+--------+--------+------------+-----------------+
 
 
-+------------------------------------------------------------------------+
-; Hold Times                                                             ;
-+------------+------------+-------+-------+------------+-----------------+
-; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+------------+------------+-------+-------+------------+-----------------+
-; opcode[*]  ; clk        ; 0.679 ; 0.679 ; Rise       ; clk             ;
-;  opcode[0] ; clk        ; 0.343 ; 0.343 ; Rise       ; clk             ;
-;  opcode[1] ; clk        ; 0.394 ; 0.394 ; Rise       ; clk             ;
-;  opcode[2] ; clk        ; 0.679 ; 0.679 ; Rise       ; clk             ;
-;  opcode[3] ; clk        ; 0.467 ; 0.467 ; Rise       ; clk             ;
-;  opcode[4] ; clk        ; 0.079 ; 0.079 ; Rise       ; clk             ;
-;  opcode[5] ; clk        ; 0.577 ; 0.577 ; Rise       ; clk             ;
-+------------+------------+-------+-------+------------+-----------------+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; opcode[*]  ; clk        ; 0.506  ; 0.506  ; Rise       ; clk             ;
+;  opcode[0] ; clk        ; 0.323  ; 0.323  ; Rise       ; clk             ;
+;  opcode[1] ; clk        ; 0.506  ; 0.506  ; Rise       ; clk             ;
+;  opcode[2] ; clk        ; 0.475  ; 0.475  ; Rise       ; clk             ;
+;  opcode[3] ; clk        ; 0.461  ; 0.461  ; Rise       ; clk             ;
+;  opcode[4] ; clk        ; 0.350  ; 0.350  ; Rise       ; clk             ;
+;  opcode[5] ; clk        ; 0.415  ; 0.415  ; Rise       ; clk             ;
+; reset      ; clk        ; -0.124 ; -0.124 ; Rise       ; clk             ;
++------------+------------+--------+--------+------------+-----------------+
 
 
 +-------------------------------------------------------------------------+
@@ -510,25 +994,42 @@ No paths to report.
 +-------------+------------+-------+-------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-------------+------------+-------+-------+------------+-----------------+
-; IRwrite     ; clk        ; 3.721 ; 3.721 ; Rise       ; clk             ;
-; IorD        ; clk        ; 3.986 ; 3.986 ; Rise       ; clk             ;
-; PCsrc[*]    ; clk        ; 3.836 ; 3.836 ; Rise       ; clk             ;
-;  PCsrc[0]   ; clk        ; 3.790 ; 3.790 ; Rise       ; clk             ;
-;  PCsrc[1]   ; clk        ; 3.836 ; 3.836 ; Rise       ; clk             ;
-; aluOP[*]    ; clk        ; 3.973 ; 3.973 ; Rise       ; clk             ;
-;  aluOP[0]   ; clk        ; 3.973 ; 3.973 ; Rise       ; clk             ;
-;  aluOP[1]   ; clk        ; 3.860 ; 3.860 ; Rise       ; clk             ;
-; aluSrcA     ; clk        ; 4.228 ; 4.228 ; Rise       ; clk             ;
-; aluSrcB[*]  ; clk        ; 4.277 ; 4.277 ; Rise       ; clk             ;
-;  aluSrcB[0] ; clk        ; 4.255 ; 4.255 ; Rise       ; clk             ;
-;  aluSrcB[1] ; clk        ; 4.277 ; 4.277 ; Rise       ; clk             ;
-; branch      ; clk        ; 3.950 ; 3.950 ; Rise       ; clk             ;
-; memRead     ; clk        ; 4.152 ; 4.152 ; Rise       ; clk             ;
-; memToReg    ; clk        ; 3.807 ; 3.807 ; Rise       ; clk             ;
-; memWrite    ; clk        ; 3.818 ; 3.818 ; Rise       ; clk             ;
-; pcWrite     ; clk        ; 4.124 ; 4.124 ; Rise       ; clk             ;
-; regDst      ; clk        ; 3.679 ; 3.679 ; Rise       ; clk             ;
-; regWrite    ; clk        ; 3.775 ; 3.775 ; Rise       ; clk             ;
+; IRwrite     ; clk        ; 3.998 ; 3.998 ; Rise       ; clk             ;
+; IorD        ; clk        ; 3.826 ; 3.826 ; Rise       ; clk             ;
+; PCsrc[*]    ; clk        ; 3.839 ; 3.839 ; Rise       ; clk             ;
+;  PCsrc[0]   ; clk        ; 3.741 ; 3.741 ; Rise       ; clk             ;
+;  PCsrc[1]   ; clk        ; 3.839 ; 3.839 ; Rise       ; clk             ;
+; aluOP[*]    ; clk        ; 3.873 ; 3.873 ; Rise       ; clk             ;
+;  aluOP[0]   ; clk        ; 3.662 ; 3.662 ; Rise       ; clk             ;
+;  aluOP[1]   ; clk        ; 3.696 ; 3.696 ; Rise       ; clk             ;
+;  aluOP[2]   ; clk        ; 3.873 ; 3.873 ; Rise       ; clk             ;
+; aluSrcA     ; clk        ; 3.692 ; 3.692 ; Rise       ; clk             ;
+; aluSrcB[*]  ; clk        ; 3.721 ; 3.721 ; Rise       ; clk             ;
+;  aluSrcB[0] ; clk        ; 3.712 ; 3.712 ; Rise       ; clk             ;
+;  aluSrcB[1] ; clk        ; 3.721 ; 3.721 ; Rise       ; clk             ;
+; branch      ; clk        ; 3.685 ; 3.685 ; Rise       ; clk             ;
+; estado3[*]  ; clk        ; 3.828 ; 3.828 ; Rise       ; clk             ;
+;  estado3[0] ; clk        ; 3.813 ; 3.813 ; Rise       ; clk             ;
+;  estado3[1] ; clk        ; 3.820 ; 3.820 ; Rise       ; clk             ;
+;  estado3[2] ; clk        ; 3.751 ; 3.751 ; Rise       ; clk             ;
+;  estado3[3] ; clk        ; 3.828 ; 3.828 ; Rise       ; clk             ;
+;  estado3[4] ; clk        ; 3.719 ; 3.719 ; Rise       ; clk             ;
+;  estado3[5] ; clk        ; 3.748 ; 3.748 ; Rise       ; clk             ;
+;  estado3[6] ; clk        ; 3.583 ; 3.583 ; Rise       ; clk             ;
+; estado4[*]  ; clk        ; 3.909 ; 3.909 ; Rise       ; clk             ;
+;  estado4[0] ; clk        ; 3.909 ; 3.909 ; Rise       ; clk             ;
+;  estado4[1] ; clk        ; 3.897 ; 3.897 ; Rise       ; clk             ;
+;  estado4[2] ; clk        ; 3.820 ; 3.820 ; Rise       ; clk             ;
+;  estado4[3] ; clk        ; 3.792 ; 3.792 ; Rise       ; clk             ;
+;  estado4[4] ; clk        ; 3.792 ; 3.792 ; Rise       ; clk             ;
+;  estado4[5] ; clk        ; 3.882 ; 3.882 ; Rise       ; clk             ;
+;  estado4[6] ; clk        ; 3.803 ; 3.803 ; Rise       ; clk             ;
+; memRead     ; clk        ; 3.785 ; 3.785 ; Rise       ; clk             ;
+; memToReg    ; clk        ; 3.764 ; 3.764 ; Rise       ; clk             ;
+; memWrite    ; clk        ; 3.826 ; 3.826 ; Rise       ; clk             ;
+; pcWrite     ; clk        ; 3.862 ; 3.862 ; Rise       ; clk             ;
+; regDst      ; clk        ; 3.833 ; 3.833 ; Rise       ; clk             ;
+; regWrite    ; clk        ; 3.855 ; 3.855 ; Rise       ; clk             ;
 +-------------+------------+-------+-------+------------+-----------------+
 
 
@@ -537,38 +1038,55 @@ No paths to report.
 +-------------+------------+-------+-------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-------------+------------+-------+-------+------------+-----------------+
-; IRwrite     ; clk        ; 3.721 ; 3.721 ; Rise       ; clk             ;
-; IorD        ; clk        ; 3.980 ; 3.980 ; Rise       ; clk             ;
-; PCsrc[*]    ; clk        ; 3.790 ; 3.790 ; Rise       ; clk             ;
-;  PCsrc[0]   ; clk        ; 3.790 ; 3.790 ; Rise       ; clk             ;
-;  PCsrc[1]   ; clk        ; 3.836 ; 3.836 ; Rise       ; clk             ;
-; aluOP[*]    ; clk        ; 3.860 ; 3.860 ; Rise       ; clk             ;
-;  aluOP[0]   ; clk        ; 3.973 ; 3.973 ; Rise       ; clk             ;
-;  aluOP[1]   ; clk        ; 3.860 ; 3.860 ; Rise       ; clk             ;
-; aluSrcA     ; clk        ; 4.171 ; 4.171 ; Rise       ; clk             ;
-; aluSrcB[*]  ; clk        ; 4.110 ; 4.110 ; Rise       ; clk             ;
-;  aluSrcB[0] ; clk        ; 4.110 ; 4.110 ; Rise       ; clk             ;
-;  aluSrcB[1] ; clk        ; 4.224 ; 4.224 ; Rise       ; clk             ;
-; branch      ; clk        ; 3.950 ; 3.950 ; Rise       ; clk             ;
-; memRead     ; clk        ; 4.102 ; 4.102 ; Rise       ; clk             ;
-; memToReg    ; clk        ; 3.807 ; 3.807 ; Rise       ; clk             ;
-; memWrite    ; clk        ; 3.818 ; 3.818 ; Rise       ; clk             ;
-; pcWrite     ; clk        ; 4.051 ; 4.051 ; Rise       ; clk             ;
-; regDst      ; clk        ; 3.679 ; 3.679 ; Rise       ; clk             ;
-; regWrite    ; clk        ; 3.741 ; 3.741 ; Rise       ; clk             ;
+; IRwrite     ; clk        ; 3.998 ; 3.998 ; Rise       ; clk             ;
+; IorD        ; clk        ; 3.826 ; 3.826 ; Rise       ; clk             ;
+; PCsrc[*]    ; clk        ; 3.741 ; 3.741 ; Rise       ; clk             ;
+;  PCsrc[0]   ; clk        ; 3.741 ; 3.741 ; Rise       ; clk             ;
+;  PCsrc[1]   ; clk        ; 3.839 ; 3.839 ; Rise       ; clk             ;
+; aluOP[*]    ; clk        ; 3.662 ; 3.662 ; Rise       ; clk             ;
+;  aluOP[0]   ; clk        ; 3.662 ; 3.662 ; Rise       ; clk             ;
+;  aluOP[1]   ; clk        ; 3.696 ; 3.696 ; Rise       ; clk             ;
+;  aluOP[2]   ; clk        ; 3.873 ; 3.873 ; Rise       ; clk             ;
+; aluSrcA     ; clk        ; 3.692 ; 3.692 ; Rise       ; clk             ;
+; aluSrcB[*]  ; clk        ; 3.712 ; 3.712 ; Rise       ; clk             ;
+;  aluSrcB[0] ; clk        ; 3.712 ; 3.712 ; Rise       ; clk             ;
+;  aluSrcB[1] ; clk        ; 3.721 ; 3.721 ; Rise       ; clk             ;
+; branch      ; clk        ; 3.685 ; 3.685 ; Rise       ; clk             ;
+; estado3[*]  ; clk        ; 3.583 ; 3.583 ; Rise       ; clk             ;
+;  estado3[0] ; clk        ; 3.813 ; 3.813 ; Rise       ; clk             ;
+;  estado3[1] ; clk        ; 3.820 ; 3.820 ; Rise       ; clk             ;
+;  estado3[2] ; clk        ; 3.751 ; 3.751 ; Rise       ; clk             ;
+;  estado3[3] ; clk        ; 3.828 ; 3.828 ; Rise       ; clk             ;
+;  estado3[4] ; clk        ; 3.719 ; 3.719 ; Rise       ; clk             ;
+;  estado3[5] ; clk        ; 3.748 ; 3.748 ; Rise       ; clk             ;
+;  estado3[6] ; clk        ; 3.583 ; 3.583 ; Rise       ; clk             ;
+; estado4[*]  ; clk        ; 3.792 ; 3.792 ; Rise       ; clk             ;
+;  estado4[0] ; clk        ; 3.909 ; 3.909 ; Rise       ; clk             ;
+;  estado4[1] ; clk        ; 3.897 ; 3.897 ; Rise       ; clk             ;
+;  estado4[2] ; clk        ; 3.820 ; 3.820 ; Rise       ; clk             ;
+;  estado4[3] ; clk        ; 3.792 ; 3.792 ; Rise       ; clk             ;
+;  estado4[4] ; clk        ; 3.792 ; 3.792 ; Rise       ; clk             ;
+;  estado4[5] ; clk        ; 3.882 ; 3.882 ; Rise       ; clk             ;
+;  estado4[6] ; clk        ; 3.803 ; 3.803 ; Rise       ; clk             ;
+; memRead     ; clk        ; 3.785 ; 3.785 ; Rise       ; clk             ;
+; memToReg    ; clk        ; 3.764 ; 3.764 ; Rise       ; clk             ;
+; memWrite    ; clk        ; 3.826 ; 3.826 ; Rise       ; clk             ;
+; pcWrite     ; clk        ; 3.862 ; 3.862 ; Rise       ; clk             ;
+; regDst      ; clk        ; 3.833 ; 3.833 ; Rise       ; clk             ;
+; regWrite    ; clk        ; 3.855 ; 3.855 ; Rise       ; clk             ;
 +-------------+------------+-------+-------+------------+-----------------+
 
 
-+------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                          ;
-+------------------+--------+-------+----------+---------+---------------------+
-; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+--------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -0.740 ; 0.215 ; N/A      ; N/A     ; -1.631              ;
-;  clk             ; -0.740 ; 0.215 ; N/A      ; N/A     ; -1.631              ;
-; Design-wide TNS  ; -1.788 ; 0.0   ; 0.0      ; 0.0     ; -13.851             ;
-;  clk             ; -1.788 ; 0.000 ; N/A      ; N/A     ; -13.851             ;
-+------------------+--------+-------+----------+---------+---------------------+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -0.947  ; 0.247 ; N/A      ; N/A     ; -1.631              ;
+;  clk             ; -0.947  ; 0.247 ; N/A      ; N/A     ; -1.631              ;
+; Design-wide TNS  ; -18.986 ; 0.0   ; 0.0      ; 0.0     ; -57.843             ;
+;  clk             ; -18.986 ; 0.000 ; N/A      ; N/A     ; -57.843             ;
++------------------+---------+-------+----------+---------+---------------------+
 
 
 +------------------------------------------------------------------------+
@@ -576,29 +1094,31 @@ No paths to report.
 +------------+------------+-------+-------+------------+-----------------+
 ; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +------------+------------+-------+-------+------------+-----------------+
-; opcode[*]  ; clk        ; 2.080 ; 2.080 ; Rise       ; clk             ;
-;  opcode[0] ; clk        ; 1.493 ; 1.493 ; Rise       ; clk             ;
-;  opcode[1] ; clk        ; 1.738 ; 1.738 ; Rise       ; clk             ;
-;  opcode[2] ; clk        ; 1.361 ; 1.361 ; Rise       ; clk             ;
-;  opcode[3] ; clk        ; 1.541 ; 1.541 ; Rise       ; clk             ;
-;  opcode[4] ; clk        ; 2.080 ; 2.080 ; Rise       ; clk             ;
-;  opcode[5] ; clk        ; 1.361 ; 1.361 ; Rise       ; clk             ;
+; opcode[*]  ; clk        ; 1.950 ; 1.950 ; Rise       ; clk             ;
+;  opcode[0] ; clk        ; 1.950 ; 1.950 ; Rise       ; clk             ;
+;  opcode[1] ; clk        ; 1.145 ; 1.145 ; Rise       ; clk             ;
+;  opcode[2] ; clk        ; 1.407 ; 1.407 ; Rise       ; clk             ;
+;  opcode[3] ; clk        ; 1.197 ; 1.197 ; Rise       ; clk             ;
+;  opcode[4] ; clk        ; 1.393 ; 1.393 ; Rise       ; clk             ;
+;  opcode[5] ; clk        ; 1.504 ; 1.504 ; Rise       ; clk             ;
+; reset      ; clk        ; 1.858 ; 1.858 ; Rise       ; clk             ;
 +------------+------------+-------+-------+------------+-----------------+
 
 
-+------------------------------------------------------------------------+
-; Hold Times                                                             ;
-+------------+------------+-------+-------+------------+-----------------+
-; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+------------+------------+-------+-------+------------+-----------------+
-; opcode[*]  ; clk        ; 0.679 ; 0.679 ; Rise       ; clk             ;
-;  opcode[0] ; clk        ; 0.343 ; 0.343 ; Rise       ; clk             ;
-;  opcode[1] ; clk        ; 0.394 ; 0.394 ; Rise       ; clk             ;
-;  opcode[2] ; clk        ; 0.679 ; 0.679 ; Rise       ; clk             ;
-;  opcode[3] ; clk        ; 0.467 ; 0.467 ; Rise       ; clk             ;
-;  opcode[4] ; clk        ; 0.079 ; 0.079 ; Rise       ; clk             ;
-;  opcode[5] ; clk        ; 0.577 ; 0.577 ; Rise       ; clk             ;
-+------------+------------+-------+-------+------------+-----------------+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; opcode[*]  ; clk        ; 0.506  ; 0.506  ; Rise       ; clk             ;
+;  opcode[0] ; clk        ; 0.323  ; 0.323  ; Rise       ; clk             ;
+;  opcode[1] ; clk        ; 0.506  ; 0.506  ; Rise       ; clk             ;
+;  opcode[2] ; clk        ; 0.475  ; 0.475  ; Rise       ; clk             ;
+;  opcode[3] ; clk        ; 0.461  ; 0.461  ; Rise       ; clk             ;
+;  opcode[4] ; clk        ; 0.350  ; 0.350  ; Rise       ; clk             ;
+;  opcode[5] ; clk        ; 0.415  ; 0.415  ; Rise       ; clk             ;
+; reset      ; clk        ; -0.124 ; -0.124 ; Rise       ; clk             ;
++------------+------------+--------+--------+------------+-----------------+
 
 
 +-------------------------------------------------------------------------+
@@ -606,25 +1126,42 @@ No paths to report.
 +-------------+------------+-------+-------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-------------+------------+-------+-------+------------+-----------------+
-; IRwrite     ; clk        ; 6.878 ; 6.878 ; Rise       ; clk             ;
-; IorD        ; clk        ; 7.676 ; 7.676 ; Rise       ; clk             ;
-; PCsrc[*]    ; clk        ; 7.167 ; 7.167 ; Rise       ; clk             ;
-;  PCsrc[0]   ; clk        ; 7.105 ; 7.105 ; Rise       ; clk             ;
-;  PCsrc[1]   ; clk        ; 7.167 ; 7.167 ; Rise       ; clk             ;
-; aluOP[*]    ; clk        ; 7.518 ; 7.518 ; Rise       ; clk             ;
-;  aluOP[0]   ; clk        ; 7.518 ; 7.518 ; Rise       ; clk             ;
-;  aluOP[1]   ; clk        ; 7.082 ; 7.082 ; Rise       ; clk             ;
-; aluSrcA     ; clk        ; 8.317 ; 8.317 ; Rise       ; clk             ;
-; aluSrcB[*]  ; clk        ; 8.350 ; 8.350 ; Rise       ; clk             ;
-;  aluSrcB[0] ; clk        ; 8.350 ; 8.350 ; Rise       ; clk             ;
-;  aluSrcB[1] ; clk        ; 8.223 ; 8.223 ; Rise       ; clk             ;
-; branch      ; clk        ; 7.490 ; 7.490 ; Rise       ; clk             ;
-; memRead     ; clk        ; 8.050 ; 8.050 ; Rise       ; clk             ;
-; memToReg    ; clk        ; 7.119 ; 7.119 ; Rise       ; clk             ;
-; memWrite    ; clk        ; 7.130 ; 7.130 ; Rise       ; clk             ;
-; pcWrite     ; clk        ; 8.088 ; 8.088 ; Rise       ; clk             ;
-; regDst      ; clk        ; 6.787 ; 6.787 ; Rise       ; clk             ;
-; regWrite    ; clk        ; 7.044 ; 7.044 ; Rise       ; clk             ;
+; IRwrite     ; clk        ; 7.542 ; 7.542 ; Rise       ; clk             ;
+; IorD        ; clk        ; 7.150 ; 7.150 ; Rise       ; clk             ;
+; PCsrc[*]    ; clk        ; 7.163 ; 7.163 ; Rise       ; clk             ;
+;  PCsrc[0]   ; clk        ; 6.894 ; 6.894 ; Rise       ; clk             ;
+;  PCsrc[1]   ; clk        ; 7.163 ; 7.163 ; Rise       ; clk             ;
+; aluOP[*]    ; clk        ; 7.251 ; 7.251 ; Rise       ; clk             ;
+;  aluOP[0]   ; clk        ; 6.756 ; 6.756 ; Rise       ; clk             ;
+;  aluOP[1]   ; clk        ; 6.682 ; 6.682 ; Rise       ; clk             ;
+;  aluOP[2]   ; clk        ; 7.251 ; 7.251 ; Rise       ; clk             ;
+; aluSrcA     ; clk        ; 6.804 ; 6.804 ; Rise       ; clk             ;
+; aluSrcB[*]  ; clk        ; 6.851 ; 6.851 ; Rise       ; clk             ;
+;  aluSrcB[0] ; clk        ; 6.851 ; 6.851 ; Rise       ; clk             ;
+;  aluSrcB[1] ; clk        ; 6.724 ; 6.724 ; Rise       ; clk             ;
+; branch      ; clk        ; 6.788 ; 6.788 ; Rise       ; clk             ;
+; estado3[*]  ; clk        ; 6.971 ; 6.971 ; Rise       ; clk             ;
+;  estado3[0] ; clk        ; 6.951 ; 6.951 ; Rise       ; clk             ;
+;  estado3[1] ; clk        ; 6.957 ; 6.957 ; Rise       ; clk             ;
+;  estado3[2] ; clk        ; 6.927 ; 6.927 ; Rise       ; clk             ;
+;  estado3[3] ; clk        ; 6.971 ; 6.971 ; Rise       ; clk             ;
+;  estado3[4] ; clk        ; 6.891 ; 6.891 ; Rise       ; clk             ;
+;  estado3[5] ; clk        ; 6.917 ; 6.917 ; Rise       ; clk             ;
+;  estado3[6] ; clk        ; 6.542 ; 6.542 ; Rise       ; clk             ;
+; estado4[*]  ; clk        ; 7.225 ; 7.225 ; Rise       ; clk             ;
+;  estado4[0] ; clk        ; 7.225 ; 7.225 ; Rise       ; clk             ;
+;  estado4[1] ; clk        ; 7.204 ; 7.204 ; Rise       ; clk             ;
+;  estado4[2] ; clk        ; 6.956 ; 6.956 ; Rise       ; clk             ;
+;  estado4[3] ; clk        ; 6.928 ; 6.928 ; Rise       ; clk             ;
+;  estado4[4] ; clk        ; 6.928 ; 6.928 ; Rise       ; clk             ;
+;  estado4[5] ; clk        ; 7.188 ; 7.188 ; Rise       ; clk             ;
+;  estado4[6] ; clk        ; 6.941 ; 6.941 ; Rise       ; clk             ;
+; memRead     ; clk        ; 6.954 ; 6.954 ; Rise       ; clk             ;
+; memToReg    ; clk        ; 6.921 ; 6.921 ; Rise       ; clk             ;
+; memWrite    ; clk        ; 7.149 ; 7.149 ; Rise       ; clk             ;
+; pcWrite     ; clk        ; 7.196 ; 7.196 ; Rise       ; clk             ;
+; regDst      ; clk        ; 7.148 ; 7.148 ; Rise       ; clk             ;
+; regWrite    ; clk        ; 7.185 ; 7.185 ; Rise       ; clk             ;
 +-------------+------------+-------+-------+------------+-----------------+
 
 
@@ -633,25 +1170,42 @@ No paths to report.
 +-------------+------------+-------+-------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-------------+------------+-------+-------+------------+-----------------+
-; IRwrite     ; clk        ; 3.721 ; 3.721 ; Rise       ; clk             ;
-; IorD        ; clk        ; 3.980 ; 3.980 ; Rise       ; clk             ;
-; PCsrc[*]    ; clk        ; 3.790 ; 3.790 ; Rise       ; clk             ;
-;  PCsrc[0]   ; clk        ; 3.790 ; 3.790 ; Rise       ; clk             ;
-;  PCsrc[1]   ; clk        ; 3.836 ; 3.836 ; Rise       ; clk             ;
-; aluOP[*]    ; clk        ; 3.860 ; 3.860 ; Rise       ; clk             ;
-;  aluOP[0]   ; clk        ; 3.973 ; 3.973 ; Rise       ; clk             ;
-;  aluOP[1]   ; clk        ; 3.860 ; 3.860 ; Rise       ; clk             ;
-; aluSrcA     ; clk        ; 4.171 ; 4.171 ; Rise       ; clk             ;
-; aluSrcB[*]  ; clk        ; 4.110 ; 4.110 ; Rise       ; clk             ;
-;  aluSrcB[0] ; clk        ; 4.110 ; 4.110 ; Rise       ; clk             ;
-;  aluSrcB[1] ; clk        ; 4.224 ; 4.224 ; Rise       ; clk             ;
-; branch      ; clk        ; 3.950 ; 3.950 ; Rise       ; clk             ;
-; memRead     ; clk        ; 4.102 ; 4.102 ; Rise       ; clk             ;
-; memToReg    ; clk        ; 3.807 ; 3.807 ; Rise       ; clk             ;
-; memWrite    ; clk        ; 3.818 ; 3.818 ; Rise       ; clk             ;
-; pcWrite     ; clk        ; 4.051 ; 4.051 ; Rise       ; clk             ;
-; regDst      ; clk        ; 3.679 ; 3.679 ; Rise       ; clk             ;
-; regWrite    ; clk        ; 3.741 ; 3.741 ; Rise       ; clk             ;
+; IRwrite     ; clk        ; 3.998 ; 3.998 ; Rise       ; clk             ;
+; IorD        ; clk        ; 3.826 ; 3.826 ; Rise       ; clk             ;
+; PCsrc[*]    ; clk        ; 3.741 ; 3.741 ; Rise       ; clk             ;
+;  PCsrc[0]   ; clk        ; 3.741 ; 3.741 ; Rise       ; clk             ;
+;  PCsrc[1]   ; clk        ; 3.839 ; 3.839 ; Rise       ; clk             ;
+; aluOP[*]    ; clk        ; 3.662 ; 3.662 ; Rise       ; clk             ;
+;  aluOP[0]   ; clk        ; 3.662 ; 3.662 ; Rise       ; clk             ;
+;  aluOP[1]   ; clk        ; 3.696 ; 3.696 ; Rise       ; clk             ;
+;  aluOP[2]   ; clk        ; 3.873 ; 3.873 ; Rise       ; clk             ;
+; aluSrcA     ; clk        ; 3.692 ; 3.692 ; Rise       ; clk             ;
+; aluSrcB[*]  ; clk        ; 3.712 ; 3.712 ; Rise       ; clk             ;
+;  aluSrcB[0] ; clk        ; 3.712 ; 3.712 ; Rise       ; clk             ;
+;  aluSrcB[1] ; clk        ; 3.721 ; 3.721 ; Rise       ; clk             ;
+; branch      ; clk        ; 3.685 ; 3.685 ; Rise       ; clk             ;
+; estado3[*]  ; clk        ; 3.583 ; 3.583 ; Rise       ; clk             ;
+;  estado3[0] ; clk        ; 3.813 ; 3.813 ; Rise       ; clk             ;
+;  estado3[1] ; clk        ; 3.820 ; 3.820 ; Rise       ; clk             ;
+;  estado3[2] ; clk        ; 3.751 ; 3.751 ; Rise       ; clk             ;
+;  estado3[3] ; clk        ; 3.828 ; 3.828 ; Rise       ; clk             ;
+;  estado3[4] ; clk        ; 3.719 ; 3.719 ; Rise       ; clk             ;
+;  estado3[5] ; clk        ; 3.748 ; 3.748 ; Rise       ; clk             ;
+;  estado3[6] ; clk        ; 3.583 ; 3.583 ; Rise       ; clk             ;
+; estado4[*]  ; clk        ; 3.792 ; 3.792 ; Rise       ; clk             ;
+;  estado4[0] ; clk        ; 3.909 ; 3.909 ; Rise       ; clk             ;
+;  estado4[1] ; clk        ; 3.897 ; 3.897 ; Rise       ; clk             ;
+;  estado4[2] ; clk        ; 3.820 ; 3.820 ; Rise       ; clk             ;
+;  estado4[3] ; clk        ; 3.792 ; 3.792 ; Rise       ; clk             ;
+;  estado4[4] ; clk        ; 3.792 ; 3.792 ; Rise       ; clk             ;
+;  estado4[5] ; clk        ; 3.882 ; 3.882 ; Rise       ; clk             ;
+;  estado4[6] ; clk        ; 3.803 ; 3.803 ; Rise       ; clk             ;
+; memRead     ; clk        ; 3.785 ; 3.785 ; Rise       ; clk             ;
+; memToReg    ; clk        ; 3.764 ; 3.764 ; Rise       ; clk             ;
+; memWrite    ; clk        ; 3.826 ; 3.826 ; Rise       ; clk             ;
+; pcWrite     ; clk        ; 3.862 ; 3.862 ; Rise       ; clk             ;
+; regDst      ; clk        ; 3.833 ; 3.833 ; Rise       ; clk             ;
+; regWrite    ; clk        ; 3.855 ; 3.855 ; Rise       ; clk             ;
 +-------------+------------+-------+-------+------------+-----------------+
 
 
@@ -660,7 +1214,7 @@ No paths to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 17       ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 113      ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -670,7 +1224,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 17       ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 113      ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -695,9 +1249,9 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 7     ; 7    ;
-; Unconstrained Input Port Paths  ; 51    ; 51   ;
-; Unconstrained Output Ports      ; 16    ; 16   ;
-; Unconstrained Output Port Paths ; 24    ; 24   ;
+; Unconstrained Input Port Paths  ; 94    ; 94   ;
+; Unconstrained Output Ports      ; 31    ; 31   ;
+; Unconstrained Output Port Paths ; 31    ; 31   ;
 +---------------------------------+-------+------+
 
 
@@ -707,7 +1261,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed May 29 17:57:03 2019
+    Info: Processing started: Thu May 30 01:54:37 2019
 Info: Command: quartus_sta uControl -c uControl
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -720,43 +1274,43 @@ Info (332105): Deriving Clocks
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow Model
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -0.740
+Info (332146): Worst-case setup slack is -0.947
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -0.740        -1.788 clk 
-Info (332146): Worst-case hold slack is 0.445
+    Info (332119):    -0.947       -18.986 clk 
+Info (332146): Worst-case hold slack is 0.636
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):     0.445         0.000 clk 
+    Info (332119):     0.636         0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.631
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.631       -13.851 clk 
+    Info (332119):    -1.631       -57.843 clk 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
-Info (332146): Worst-case setup slack is 0.340
+Info (332146): Worst-case setup slack is 0.212
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):     0.340         0.000 clk 
-Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     0.212         0.000 clk 
+Info (332146): Worst-case hold slack is 0.247
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):     0.215         0.000 clk 
+    Info (332119):     0.247         0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Critical Warning (332148): Timing requirements not met
 Info (332146): Worst-case minimum pulse width slack is -1.380
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.380       -11.380 clk 
+    Info (332119):    -1.380       -47.380 clk 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4567 megabytes
-    Info: Processing ended: Wed May 29 17:57:05 2019
+    Info: Peak virtual memory: 4556 megabytes
+    Info: Processing ended: Thu May 30 01:54:39 2019
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

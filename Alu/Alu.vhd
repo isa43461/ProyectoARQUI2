@@ -41,13 +41,14 @@ process(OP, A,B, tmp)
 				br <= '0';
 			end if;
 		when "110" =>
-			if(unsigned(A) > unsigned(B)) then
-				br <= '1';
+			if(unsigned(A) < unsigned(B)) then
+				res(0) <= '1';
+				res(31 downto 1) <= (others => '0');
 			else
 				br <= '0';
 			end if;
-		when others =>
-			res <=NULL;
+		when "111" =>
+			res <= A;
 			br <= '0';
 	end case;
 end process;

@@ -1,0 +1,29 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do Alu_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {D:/PUJ/8/Arq/ProyectoARQUI2/Alu/Alu.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Alu
+# -- Compiling architecture Alu_arc of Alu
+# ** Error: D:/PUJ/8/Arq/ProyectoARQUI2/Alu/Alu.vhd(47): near "else": expecting ';'
+# ** Error: D:/PUJ/8/Arq/ProyectoARQUI2/Alu/Alu.vhd(20): (vcom-1339) Case statement choices cover only 8 out of 729 cases.
+# 
+# ** Error: D:/PUJ/8/Arq/ProyectoARQUI2/Alu/Alu.vhd(55): VHDL Compiler exiting
+# ** Error: C:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./Alu_run_msim_rtl_vhdl.do line 8
+# C:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {D:/PUJ/8/Arq/ProyectoARQUI2/Alu/Alu.vhd}"

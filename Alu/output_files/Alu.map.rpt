@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Alu
-Fri May 17 16:51:05 2019
+Thu May 30 02:13:27 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -48,13 +48,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri May 17 16:51:05 2019           ;
+; Analysis & Synthesis Status        ; Successful - Thu May 30 02:13:27 2019           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Alu                                             ;
 ; Top-level Entity Name              ; Alu                                             ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 2,499                                           ;
-;     Total combinational functions  ; 2,499                                           ;
+; Total logic elements               ; 2,533                                           ;
+;     Total combinational functions  ; 2,533                                           ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
 ; Total pins                         ; 100                                             ;
@@ -191,16 +191,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+---------+
 ; Resource                                    ; Usage   ;
 +---------------------------------------------+---------+
-; Estimated Total logic elements              ; 2,499   ;
+; Estimated Total logic elements              ; 2,533   ;
 ;                                             ;         ;
-; Total combinational functions               ; 2499    ;
+; Total combinational functions               ; 2533    ;
 ; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 1105    ;
-;     -- 3 input functions                    ; 1277    ;
+;     -- 4 input functions                    ; 1137    ;
+;     -- 3 input functions                    ; 1279    ;
 ;     -- <=2 input functions                  ; 117     ;
 ;                                             ;         ;
 ; Logic elements by mode                      ;         ;
-;     -- normal mode                          ; 1329    ;
+;     -- normal mode                          ; 1363    ;
 ;     -- arithmetic mode                      ; 1170    ;
 ;                                             ;         ;
 ; Total registers                             ; 0       ;
@@ -209,10 +209,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;         ;
 ; I/O pins                                    ; 100     ;
 ; Embedded Multiplier 9-bit elements          ; 6       ;
-; Maximum fan-out node                        ; Mux42~0 ;
+; Maximum fan-out node                        ; Mux35~0 ;
 ; Maximum fan-out                             ; 79      ;
-; Total fan-out                               ; 8502    ;
-; Average fan-out                             ; 3.26    ;
+; Total fan-out                               ; 8636    ;
+; Average fan-out                             ; 3.27    ;
 +---------------------------------------------+---------+
 
 
@@ -221,7 +221,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                        ; Library Name ;
 +----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+--------------+
-; |Alu                                   ; 2499 (306)        ; 0 (0)        ; 0           ; 6            ; 0       ; 3         ; 100  ; 0            ; |Alu                                                                                                                       ; work         ;
+; |Alu                                   ; 2533 (340)        ; 0 (0)        ; 0           ; 6            ; 0       ; 3         ; 100  ; 0            ; |Alu                                                                                                                       ; work         ;
 ;    |lpm_divide:Div0|                   ; 1062 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Alu|lpm_divide:Div0                                                                                                       ; work         ;
 ;       |lpm_divide_vfm:auto_generated|  ; 1062 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Alu|lpm_divide:Div0|lpm_divide_vfm:auto_generated                                                                         ; work         ;
 ;          |sign_div_unsign_9nh:divider| ; 1062 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Alu|lpm_divide:Div0|lpm_divide_vfm:auto_generated|sign_div_unsign_9nh:divider                                             ; work         ;
@@ -260,38 +260,39 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +-----------------------------------------------------+---------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
 +-----------------------------------------------------+---------------------+------------------------+
-; res[0]$latch                                        ; Mux66               ; yes                    ;
-; res[1]$latch                                        ; Mux66               ; yes                    ;
-; res[2]$latch                                        ; Mux66               ; yes                    ;
-; res[3]$latch                                        ; Mux66               ; yes                    ;
-; res[4]$latch                                        ; Mux66               ; yes                    ;
-; res[5]$latch                                        ; Mux66               ; yes                    ;
-; res[6]$latch                                        ; Mux66               ; yes                    ;
-; res[7]$latch                                        ; Mux66               ; yes                    ;
-; res[8]$latch                                        ; Mux66               ; yes                    ;
-; res[9]$latch                                        ; Mux66               ; yes                    ;
-; res[10]$latch                                       ; Mux66               ; yes                    ;
-; res[11]$latch                                       ; Mux66               ; yes                    ;
-; res[12]$latch                                       ; Mux66               ; yes                    ;
-; res[13]$latch                                       ; Mux66               ; yes                    ;
-; res[14]$latch                                       ; Mux66               ; yes                    ;
-; res[15]$latch                                       ; Mux66               ; yes                    ;
-; res[16]$latch                                       ; Mux66               ; yes                    ;
-; res[17]$latch                                       ; Mux66               ; yes                    ;
-; res[18]$latch                                       ; Mux66               ; yes                    ;
-; res[19]$latch                                       ; Mux66               ; yes                    ;
-; res[20]$latch                                       ; Mux66               ; yes                    ;
-; res[21]$latch                                       ; Mux66               ; yes                    ;
-; res[22]$latch                                       ; Mux66               ; yes                    ;
-; res[23]$latch                                       ; Mux66               ; yes                    ;
-; res[24]$latch                                       ; Mux66               ; yes                    ;
-; res[25]$latch                                       ; Mux66               ; yes                    ;
-; res[26]$latch                                       ; Mux66               ; yes                    ;
-; res[27]$latch                                       ; Mux66               ; yes                    ;
-; res[28]$latch                                       ; Mux66               ; yes                    ;
-; res[29]$latch                                       ; Mux66               ; yes                    ;
-; res[30]$latch                                       ; Mux66               ; yes                    ;
-; res[31]$latch                                       ; Mux66               ; yes                    ;
+; res[0]$latch                                        ; Mux65               ; yes                    ;
+; res[1]$latch                                        ; Mux65               ; yes                    ;
+; res[2]$latch                                        ; Mux65               ; yes                    ;
+; res[3]$latch                                        ; Mux65               ; yes                    ;
+; res[4]$latch                                        ; Mux65               ; yes                    ;
+; res[5]$latch                                        ; Mux65               ; yes                    ;
+; res[6]$latch                                        ; Mux65               ; yes                    ;
+; res[7]$latch                                        ; Mux65               ; yes                    ;
+; res[8]$latch                                        ; Mux65               ; yes                    ;
+; res[9]$latch                                        ; Mux65               ; yes                    ;
+; res[10]$latch                                       ; Mux65               ; yes                    ;
+; res[11]$latch                                       ; Mux65               ; yes                    ;
+; res[12]$latch                                       ; Mux65               ; yes                    ;
+; res[13]$latch                                       ; Mux65               ; yes                    ;
+; res[14]$latch                                       ; Mux65               ; yes                    ;
+; res[15]$latch                                       ; Mux65               ; yes                    ;
+; res[16]$latch                                       ; Mux65               ; yes                    ;
+; res[17]$latch                                       ; Mux65               ; yes                    ;
+; res[18]$latch                                       ; Mux65               ; yes                    ;
+; res[19]$latch                                       ; Mux65               ; yes                    ;
+; res[20]$latch                                       ; Mux65               ; yes                    ;
+; res[21]$latch                                       ; Mux65               ; yes                    ;
+; res[22]$latch                                       ; Mux65               ; yes                    ;
+; res[23]$latch                                       ; Mux65               ; yes                    ;
+; res[24]$latch                                       ; Mux65               ; yes                    ;
+; res[25]$latch                                       ; Mux65               ; yes                    ;
+; res[26]$latch                                       ; Mux65               ; yes                    ;
+; res[27]$latch                                       ; Mux65               ; yes                    ;
+; res[28]$latch                                       ; Mux65               ; yes                    ;
+; res[29]$latch                                       ; Mux65               ; yes                    ;
+; res[30]$latch                                       ; Mux65               ; yes                    ;
+; res[31]$latch                                       ; Mux65               ; yes                    ;
+; br$latch                                            ; Mux67               ; yes                    ;
 ; tmp[0]                                              ; Mux2                ; yes                    ;
 ; tmp[1]                                              ; Mux2                ; yes                    ;
 ; tmp[2]                                              ; Mux2                ; yes                    ;
@@ -324,7 +325,7 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; tmp[29]                                             ; Mux2                ; yes                    ;
 ; tmp[30]                                             ; Mux2                ; yes                    ;
 ; tmp[31]                                             ; Mux2                ; yes                    ;
-; Number of user-specified and inferred latches = 64  ;                     ;                        ;
+; Number of user-specified and inferred latches = 65  ;                     ;                        ;
 +-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -349,8 +350,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 1:1                ; 32 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |Alu|Mux29                 ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |Alu|Mux42                 ;
+; 1:1                ; 32 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |Alu|Mux27                 ;
+; 7:1                ; 32 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |Alu|Mux35                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -460,7 +461,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:08     ;
+; Top            ; 00:00:12     ;
 +----------------+--------------+
 
 
@@ -470,13 +471,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri May 17 16:50:53 2019
+    Info: Processing started: Thu May 30 02:13:11 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Alu -c Alu
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
     Info (12022): Found design unit 1: Alu-Alu_arc
     Info (12023): Found entity 1: Alu
 Info (12127): Elaborating entity "Alu" for the top level hierarchy
+Warning (10631): VHDL Process Statement warning at Alu.vhd(18): inferring latch(es) for signal or variable "br", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at Alu.vhd(18): inferring latch(es) for signal or variable "res", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at Alu.vhd(18): inferring latch(es) for signal or variable "tmp", which holds its previous value in one or more paths through the process
 Info (10041): Inferred latch for "tmp[0]" at Alu.vhd(18)
@@ -543,6 +545,7 @@ Info (10041): Inferred latch for "res[28]" at Alu.vhd(18)
 Info (10041): Inferred latch for "res[29]" at Alu.vhd(18)
 Info (10041): Inferred latch for "res[30]" at Alu.vhd(18)
 Info (10041): Inferred latch for "res[31]" at Alu.vhd(18)
+Info (10041): Inferred latch for "br" at Alu.vhd(18)
 Info (278001): Inferred 3 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0"
@@ -591,80 +594,82 @@ Warning (14284): Synthesized away the following node(s):
 Info (13014): Ignored 84 buffer(s)
     Info (13019): Ignored 84 SOFT buffer(s)
 Warning (13012): Latch res[0]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[2]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[1]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[1]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[2]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[2]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[3]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[1]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[4]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[2]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[5]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[1]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[6]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[2]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[7]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[1]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[8]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[2]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[9]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[1]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[10]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[2]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[11]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[1]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[12]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[2]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[13]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[1]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[14]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[2]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[15]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[1]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[16]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[2]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[17]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[1]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[18]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[2]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[19]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[1]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[20]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[2]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[21]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[1]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[22]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[2]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[23]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[1]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[24]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[2]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[25]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[1]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[26]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[2]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[27]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[1]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[28]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[2]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[29]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[1]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[30]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[2]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Warning (13012): Latch res[31]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[1]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
+Warning (13012): Latch br$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal OP[0]
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2605 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2639 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 67 input pins
     Info (21059): Implemented 33 output pins
-    Info (21061): Implemented 2499 logic cells
+    Info (21061): Implemented 2533 logic cells
     Info (21062): Implemented 6 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 71 warnings
-    Info: Peak virtual memory: 4707 megabytes
-    Info: Processing ended: Fri May 17 16:51:05 2019
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:12
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 74 warnings
+    Info: Peak virtual memory: 4700 megabytes
+    Info: Processing ended: Thu May 30 02:13:27 2019
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:16
 
 

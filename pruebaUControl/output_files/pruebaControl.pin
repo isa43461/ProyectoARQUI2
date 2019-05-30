@@ -436,11 +436,11 @@ GND*                         : R13       :        :                   :         
 GND*                         : R14       :        :                   :         : 7         :                
 GND*                         : R15       :        :                   :         : 7         :                
 GND*                         : R16       :        :                   :         : 7         :                
-GND*                         : R17       :        :                   :         : 6         :                
+salida                       : R17       : output : 3.3-V LVTTL       :         : 6         : Y              
 aluOP[2]                     : R18       : output : 3.3-V LVTTL       :         : 6         : Y              
 IorD                         : R19       : output : 3.3-V LVTTL       :         : 6         : Y              
 IRwrite                      : R20       : output : 3.3-V LVTTL       :         : 6         : Y              
-salida                       : R21       : output : 3.3-V LVTTL       :         : 6         : N              
+GND*                         : R21       :        :                   :         : 6         :                
 clk                          : R22       : input  : 3.3-V LVTTL       :         : 6         : Y              
 GND*                         : T1        :        :                   :         : 1         :                
 GND*                         : T2        :        :                   :         : 1         :                

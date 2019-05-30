@@ -4,10 +4,10 @@ K3
 cModel Technology
 Z0 dD:\PUJ\8\Arq\ProyectoARQUI2\Alu\simulation\qsim
 vAlu
-Z1 I8aUN>293H2CoZR:Hzhi;A1
+Z1 IG598Tf^hPAK8;a7GCHRci0
 Z2 VTiYk^kCm`KcL:;X;J0z[a1
 Z3 dD:\PUJ\8\Arq\ProyectoARQUI2\Alu\simulation\qsim
-Z4 w1558130236
+Z4 w1559200699
 Z5 8Alu.vo
 Z6 FAlu.vo
 L0 31
@@ -18,18 +18,18 @@ Z8 !s90 -work|work|Alu.vo|
 Z9 o-work work -O0
 n@alu
 !i10b 1
-Z10 !s100 S5bk?IIQ4HhZSF@ZoPOJa3
+Z10 !s100 mZU6=YNW75o9SZ>bDmKmS0
 !s85 0
-Z11 !s108 1558130238.086000
+Z11 !s108 1559200701.771000
 Z12 !s107 Alu.vo|
 !s101 -O0
 vAlu_vlg_check_tst
 !i10b 1
-Z13 !s100 ;FePJ:^PT_0h4IdBZ>KP12
-Z14 IQj]iAP^gO@BioFghe8^093
+Z13 !s100 9EON5UGE36ShDmkKjEOZN2
+Z14 I[=oc7P1b1c9fiF4WaPeX32
 Z15 VZObdF`hWPMZ]4`<j`aedI3
 R3
-Z16 w1558130234
+Z16 w1559200697
 Z17 8Alu.vt
 Z18 FAlu.vt
 L0 61
@@ -37,7 +37,7 @@ R7
 r1
 !s85 0
 31
-Z19 !s108 1558130238.936000
+Z19 !s108 1559200702.830000
 Z20 !s107 Alu.vt|
 Z21 !s90 -work|work|Alu.vt|
 !s101 -O0
@@ -65,14 +65,14 @@ R9
 Z26 n@alu_vlg_sample_tst
 vAlu_vlg_vec_tst
 !i10b 1
-!s100 RLXjThKWXL_9XzAbgY61P0
-IELNQUa^:mI9Bl@lI?Tg2>3
+!s100 3j>XD>PNWcnBMmEAX<X1G1
+IYLmfE7zX5EoEW;QfOHlVG0
 Z27 V]Q88]?aW2VWb<g4HIKzJe2
 R3
 R16
 R17
 R18
-Z28 L0 740
+Z28 L0 766
 R7
 r1
 !s85 0

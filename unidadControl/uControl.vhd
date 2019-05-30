@@ -40,7 +40,7 @@ end entity;
 architecture rtl of uControl is
 
 	-- Build an enumerated type for the state machine
-	type state_type is (fetch, decode,memAddr,memReadSig,memWriteBack,memWriteSig,Execute,aluWriteBack,branchSig,jump);
+	type state_type is (fetch, decode,memAddr,memReadSig,memWriteBack,memWriteSig,Execute,aluWriteBack,branchSig,jump,addi,division,multiplicacion,slt,paso,despuesAddi);
 
 	-- Register to hold the current state
 	signal state : state_type := fetch;
@@ -64,17 +64,8 @@ begin
 					estado3 <= "1111111";
 					estado4 <= "1111001"; --1
 
---					if opcode = "100011" then --lw
---						state <= decode;
---					elsif opcode = "101011" then --sw
---						state <= decode;
---					elsif opcode = "000100" then --beq
---						state <= decode;
---					elsif opcode = "000000" then --R
---						state <= decode;
---					else--  opcode = "000010" then --j
 					state <= decode;
---					end if;
+
 				when decode=>
 					estado1 <= "1111111";
 					estado2 <= "1111111";
@@ -86,8 +77,18 @@ begin
 						state <= memAddr;
 					elsif opcode = "000100" then --beq
 						state <= branchSig;
-					elsif opcode = "000000" then --R
+					elsif opcode = "000000" then --add
 						state <= execute;
+					elsif opcode = "000110" then --division
+						state <= division;
+					elsif opcode = "000001" then --addi
+						state <= addi;
+					elsif opcode = "000011" then --multiplicacion
+						state <= multiplicacion;
+					elsif opcode = "000101" then --slt
+						state <= slt;
+					elsif opcode = "000111" then --paso
+						state <= paso;
 					else-- opcode = "000010" then --j
 						state <= jump;
 					end if;
@@ -128,26 +129,70 @@ begin
 						--state <= null;
 					--end if;
 					
-				when execute =>
+				when execute => --add
 					estado1 <= "1111111";
 					estado2 <= "1111111";
 					estado3 <= "1111111";
 					estado4 <= "1111000"; --7
-					--if opcode = "000000" then 
-						state <= aluWriteBack;
-					--else 
-						--state <= null;
-					--end if;
+
+					state <= aluWriteBack;
+
+					
+				when addi => --add
+					estado1 <= "1111111";
+					estado2 <= "1111111";
+					estado3 <= "1000000";
+					estado4 <= "1111001"; --10
+				
+					state <= aluWriteBack;
+				
+				when division => --div
+					estado1 <= "1111111";
+					estado2 <= "1111111";
+					estado3 <= "1111001";
+					estado4 <= "1111001"; --11		
+					
+					state <= aluWriteBack;
+			
+				when multiplicacion => --multiplicacion
+					estado1 <= "1111111";
+					estado2 <= "1111111";
+					estado3 <= "0100100";
+					estado4 <= "1111001"; --12		
+					
+					state <= aluWriteBack;
+				
+				when slt => --slt
+					estado1 <= "1111111";
+					estado2 <= "1111111";
+					estado3 <= "0110000";
+					estado4 <= "1111001"; --13		
+					
+					state <= aluWriteBack;
+		
+				when paso => --paso
+					estado1 <= "1111111";
+					estado2 <= "1111111";
+					estado3 <= "0011001";
+					estado4 <= "1111001"; --14		
+					
+					state <= fetch;	
+					
+				when despuesAddi => --despuesAddi
+					estado1 <= "1111111";
+					estado2 <= "1111111";
+					estado3 <= "0010010";
+					estado4 <= "1111001"; --15	
+
+					state <= fetch;					
 				when aluWriteBack=>
 					estado1 <= "1111111";
 					estado2 <= "1111111";
 					estado3 <= "1111111";
 					estado4 <= "0000000"; --8
-					--if opcode = "000000" then 
-						state <= fetch;
-					--else 
-						--state <= null;
-					--end if;
+
+					state <= fetch;
+
 					
 				when branchSig =>
 					estado1 <= "1111111";
@@ -263,7 +308,83 @@ begin
 					aluSrcB <= "00";
 					regWrite <= '1';
 					regDst <= '0';
+					
 				when execute =>
+					pcWrite <= '0';
+					branch <= '0';
+					IorD <= '0';
+					memRead <= '0';
+					memWrite <= '0';
+					memToReg <= '0';
+					IRwrite <= '0';
+					PCsrc <= "00";
+					aluOP <= "000";
+					aluSrcA <= '1';
+					aluSrcB <= "00";
+					regWrite <= '0';
+					regDst <= '0';
+
+				when division =>
+					pcWrite <= '0';
+					branch <= '0';
+					IorD <= '0';
+					memRead <= '0';
+					memWrite <= '0';
+					memToReg <= '0';
+					IRwrite <= '0';
+					PCsrc <= "00";
+					aluOP <= "011";
+					aluSrcA <= '1';
+					aluSrcB <= "00";
+					regWrite <= '0';
+					regDst <= '0';
+
+				when slt =>
+					pcWrite <= '0';
+					branch <= '0';
+					IorD <= '0';
+					memRead <= '0';
+					memWrite <= '0';
+					memToReg <= '0';
+					IRwrite <= '0';
+					PCsrc <= "00";
+					aluOP <= "110";
+					aluSrcA <= '1';
+					aluSrcB <= "00";
+					regWrite <= '0';
+					regDst <= '0';
+					
+				when addi =>
+					pcWrite <= '0';
+					branch <= '0';
+					IorD <= '0';
+					memRead <= '0';
+					memWrite <= '0';
+					memToReg <= '0';
+					IRwrite <= '0';
+					PCsrc <= "00";
+					aluOP <= "000";
+					aluSrcA <= '1';
+					aluSrcB <= "10";
+					regWrite <= '0';
+					regDst <= '0';
+
+				when despuesAddi =>
+					pcWrite <= '0';
+					branch <= '0';
+					IorD <= '0';
+					memRead <= '0';
+					memWrite <= '0';
+					memToReg <= '0';
+					IRwrite <= '0';
+					PCsrc <= "00";
+					aluOP <= "000";
+					aluSrcA <= '0';
+					aluSrcB <= "00";
+					regWrite <= '1';
+					regDst <= '0';	
+					
+				when multiplicacion =>
 					pcWrite <= '0';
 					branch <= '0';
 					IorD <= '0';
@@ -274,9 +395,9 @@ begin
 					PCsrc <= "00";
 					aluOP <= "010";
 					aluSrcA <= '1';
-					aluSrcB <= "00";
+					aluSrcB <= "10";
 					regWrite <= '0';
-					regDst <= '0';
+					regDst <= '0';					
 				when aluWriteBack =>
 					pcWrite <= '0';
 					branch <= '0';
