@@ -50,11 +50,10 @@ begin
 	process (clk, reset)
 	begin
 
-		if reset = '1' then
-			state <= fetch;
-
-		elsif (rising_edge(clk)) then
-
+		if (rising_edge(clk)) then
+			if reset = '1' then
+				state <= fetch;
+			else
 			-- Determine the next state synchronously, based on
 			-- the current state and the input
 			case state is
@@ -214,7 +213,7 @@ begin
 				when others => null;
 
 			end case;
-
+			end if;
 		end if;
 	end process;
 

@@ -30,7 +30,7 @@ end RegFile;
 
 architecture arch_RegFile of RegFile is
 	type regFile_type is array (0 to 31) of std_logic_vector(31 downto 0);
-	signal array_reg : regFile_type;
+	signal array_reg : regFile_type:= (others=> (others=>'0'));
 	
 	begin
 		regA <= array_reg(to_integer(unsigned(RS)));
