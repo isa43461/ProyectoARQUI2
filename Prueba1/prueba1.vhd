@@ -29,6 +29,14 @@ component Registro is
 		);
 end component;
 
+component Divisor is
+	port
+	(
+		Clkin: in std_logic;
+		Clkout: out std_logic
+	);
+end component;
+
 component MuxSrcA is
 	port
 		(
@@ -88,22 +96,29 @@ signal sSalidaSL : std_logic_vector(31 downto 0);
 signal e1Alu : std_logic_vector(31 downto 0);
 signal e2ALu : std_logic_vector(31 downto 0);
 signal sSalidaAlu : std_logic_vector(31 downto 0);
-
+signal salidaCLK : std_logic;
 
 begin
+
+	decoder : Divisor
+		port map
+		(
+			Clkin => clk,
+			Clkout => salidaCLK
+		);
 	
 	regA : Registro
 		port map
 		(
-			entrada => "00000000000000000000000000000010",
+			entrada => "00000000000000000000000000000010", --2
 			salida => sRegA,
-			clk => clk
+			clk => salidaCLK
 		);
 	
 	regB : Registro
 		port map
 		(
-			entrada => "00000000000000000000000000001010",
+			entrada => "00000000000000000000000000001010", --10
 			salida => sRegB,
 			clk => clk
 		);
@@ -113,14 +128,14 @@ begin
 		(
 			entrada => sSalidaAlu,
 			salida(15 downto 0) => salidaPrueba,
-			clk => clk
+			clk => salidaCLK
 		);
 
 		
 	MuxAluSrcA : MuxSrcA
 		port map
 		(
-			entrada1 => "00000000000000000000000000000110",
+			entrada1 => "00000000000000000000000000000110", --6
 			entrada2 => sRegA,
 			selector => muxA,
 			salidaMuxSrcA => e1Alu
@@ -137,9 +152,9 @@ begin
 		port map
 		(
 			entrada0 => sRegB,
-			entrada1 => "00000000000000000000000000000100",
-			entrada2 => "00000000000000000000000000001011",
-			entrada3 => "00000000000000000000000000001100",
+			entrada1 => "00000000000000000000000000000100", --4
+			entrada2 => "00000000000000000000000000001011", --11
+			entrada3 => "00000000000000000000000000001100", --12
 			selector => muxB,
 			salidaMuxAluSrcB => e2Alu
 		);

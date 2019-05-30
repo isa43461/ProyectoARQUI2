@@ -168,7 +168,7 @@ begin
 		port map
 		(
 			--entrada1 => salidaPrueba,
-			entrada1 => "00000000000000000000000000011011",
+			entrada1 => "00000000000000000000000000011011",	
 			entrada2 => "00000000000000000000000000101111",
 			selector => memToReg,
 			salidaMuxMemToReg => sMuxMemReg
@@ -179,7 +179,7 @@ begin
 		(
 			entrada1 => "00010",
 			entrada2 => "00010",
-			selector => regDst,
+			selector => '1',
 			salidaMuxRegDst => sMuxDst
 		);
 
@@ -229,7 +229,7 @@ begin
 	MuxAluSrcA : MuxSrcA
 		port map
 		(
-			entrada1 => "00000000000000000000000000000110",
+			entrada1 => "00000000000000000000000000000110", --6
 			entrada2 => sRegA,
 			selector => muxA,
 			salidaMuxSrcA => e1Alu
@@ -246,9 +246,9 @@ begin
 		port map
 		(
 			entrada0 => sRegB,
-			entrada1 => "00000000000000000000000000000100",
-			entrada2 => "00000000000000000000000000001011",
-			entrada3 => "00000000000000000000000000001100",
+			entrada1 => "00000000000000000000000000000100", --4
+			entrada2 => "00000000000000000000000000001011", --11
+			entrada3 => "00000000000000000000000000001100", --12
 			selector => muxB,
 			salidaMuxAluSrcB => e2Alu
 		);
@@ -256,7 +256,7 @@ begin
 	aAluControl : AluControl
 		port map
 		(
-			funct	=> "100100",
+			funct	=> "100010",
 			--funct	=> "100010",
 			aluOP	=> eALUOp,
 			operation => opAluOp

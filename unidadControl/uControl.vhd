@@ -29,9 +29,12 @@ entity uControl is
 		aluSrcA : out	std_logic;
 		aluSrcB : out	std_logic_vector (1 downto 0);
 		regWrite : out	std_logic;
-		regDst : out	std_logic
+		regDst : out	std_logic;
+		estado1 : out std_logic_vector(6 downto 0); -- primer siete seg
+		estado2 : out std_logic_vector(6 downto 0);
+		estado3 : out std_logic_vector(6 downto 0);
+		estado4 : out std_logic_vector(6 downto 0)
 	);
-
 end entity;
 
 architecture rtl of uControl is
@@ -56,18 +59,27 @@ begin
 			-- the current state and the input
 			case state is
 				when fetch=>
-					if opcode = "100011" then --lw
-						state <= decode;
-					elsif opcode = "101011" then --sw
-						state <= decode;
-					elsif opcode = "000100" then --beq
-						state <= decode;
-					elsif opcode = "000000" then --R
-						state <= decode;
-					elsif  opcode = "000010" then --j
-						state <= decode;
-					end if;
+					estado1 <= "1111111";
+					estado2 <= "1111111";
+					estado3 <= "1111111";
+					estado4 <= "1111001"; --1
+
+--					if opcode = "100011" then --lw
+--						state <= decode;
+--					elsif opcode = "101011" then --sw
+--						state <= decode;
+--					elsif opcode = "000100" then --beq
+--						state <= decode;
+--					elsif opcode = "000000" then --R
+--						state <= decode;
+--					else--  opcode = "000010" then --j
+					state <= decode;
+--					end if;
 				when decode=>
+					estado1 <= "1111111";
+					estado2 <= "1111111";
+					estado3 <= "1111111";
+					estado4 <= "0100100"; --2
 					if opcode = "100011" then --lw
 						state <= memAddr;
 					elsif opcode = "101011" then --sw
@@ -76,43 +88,83 @@ begin
 						state <= branchSig;
 					elsif opcode = "000000" then --R
 						state <= execute;
-					elsif opcode = "000010" then --j
+					else-- opcode = "000010" then --j
 						state <= jump;
 					end if;
+				
 				when memAddr =>
+					estado1 <= "1111111";
+					estado2 <= "1111111";
+					estado3 <= "1111111";
+					estado4 <= "0110000"; --3
 					if opcode = "100011" then --lw
 						state <= memReadSig;
 					else-- opcode = "101011" then --sw
 						state <= memWriteSig;
 					end if;
+				
 				when memReadSig =>
+					estado1 <= "1111111";
+					estado2 <= "1111111";
+					estado3 <= "1111111";
+					estado4 <= "0011001"; --4
 					state <= memWriteBack;
 					
 				when memWriteBack =>
+					estado1 <= "1111111";
+					estado2 <= "1111111";
+					estado3 <= "1111111";
+					estado4 <= "0010010"; --5---
 					state <= fetch;
 					
 				when memWriteSig =>
-					if opcode = "101011" then
+					estado1 <= "1111111";
+					estado2 <= "1111111";
+					estado3 <= "1111111";
+					estado4 <= "0000010"; --6
+					--if opcode = "101011" then
 						state <= fetch;
-					end if;
+					--else 
+						--state <= null;
+					--end if;
 					
 				when execute =>
-					if opcode = "000000" then 
+					estado1 <= "1111111";
+					estado2 <= "1111111";
+					estado3 <= "1111111";
+					estado4 <= "1111000"; --7
+					--if opcode = "000000" then 
 						state <= aluWriteBack;
-					end if;
+					--else 
+						--state <= null;
+					--end if;
 				when aluWriteBack=>
-					if opcode = "000000" then 
+					estado1 <= "1111111";
+					estado2 <= "1111111";
+					estado3 <= "1111111";
+					estado4 <= "0000000"; --8
+					--if opcode = "000000" then 
 						state <= fetch;
-					end if;
+					--else 
+						--state <= null;
+					--end if;
 					
 				when branchSig =>
-					if opcode = "000100" then
+					estado1 <= "1111111";
+					estado2 <= "1111111";
+					estado3 <= "1111111";
+					estado4 <= "0011000"; --9
+					--if opcode = "000100" then
 						state <= fetch;
-					else
-						state <= null;
-					end if;
+					--else
+						--state <= null;
+					--end if;
 				
 				when jump =>
+					estado1 <= "1111111";
+					estado2 <= "1111111";
+					estado3 <= "1111111";
+					estado4 <= "1000000"; --0 jump
 					state <= fetch;
 				when others => null;
 
@@ -123,8 +175,9 @@ begin
 
 	-- Determine the output based only on the current state
 	-- and the input (do not wait for a clock edge).
-	process (state, opcode)
+	process (state, opcode,clk)
 	begin
+		if (rising_edge(clk)) then
 			case state is
 				when fetch=>
 					pcWrite <= '1';
@@ -281,6 +334,7 @@ begin
 					regWrite <= '0';
 					regDst <= '0';
 			end case;
+		end if;
 	end process;
 
 end rtl;

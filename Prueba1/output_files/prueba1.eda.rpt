@@ -1,5 +1,5 @@
 EDA Netlist Writer report for prueba1
-Tue May 28 11:10:19 2019
+Tue May 28 19:45:16 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue May 28 11:10:19 2019 ;
+; EDA Netlist Writer Status ; Successful - Tue May 28 19:45:16 2019 ;
 ; Revision Name             ; prueba1                               ;
 ; Top-level Entity Name     ; prueba1                               ;
 ; Family                    ; Cyclone II                            ;
@@ -80,12 +80,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue May 28 11:10:17 2019
+    Info: Processing started: Tue May 28 19:45:14 2019
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off prueba1 -c prueba1
 Info (204019): Generated file prueba1.vo in folder "D:/PUJ/8/Arq/ProyectoARQUI2/Prueba1/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4561 megabytes
-    Info: Processing ended: Tue May 28 11:10:19 2019
+    Info: Processing ended: Tue May 28 19:45:16 2019
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

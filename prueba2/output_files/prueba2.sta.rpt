@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for prueba2
-Tue May 28 11:24:57 2019
+Tue May 28 20:50:36 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -113,7 +113,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------+-----------------+-----------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name            ; Note ;
 +------------+-----------------+-----------------------+------+
-; 141.78 MHz ; 141.78 MHz      ; divisor:decoder|state ;      ;
+; 141.64 MHz ; 141.64 MHz      ; divisor:decoder|state ;      ;
 +------------+-----------------+-----------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -123,7 +123,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------+--------+---------------+
 ; Clock                 ; Slack  ; End Point TNS ;
 +-----------------------+--------+---------------+
-; divisor:decoder|state ; -6.053 ; -111.830      ;
+; divisor:decoder|state ; -6.060 ; -111.936      ;
 ; clk                   ; 2.116  ; 0.000         ;
 +-----------------------+--------+---------------+
 
@@ -165,22 +165,22 @@ No paths to report.
 +--------+----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+-----------------------+-----------------------+--------------+------------+------------+
 ; Slack  ; From Node                                                                                                      ; To Node                                                                                                        ; Launch Clock          ; Latch Clock           ; Relationship ; Clock Skew ; Data Delay ;
 +--------+----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+-----------------------+-----------------------+--------------+------------+------------+
-; -6.053 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[15]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.112     ; 6.979      ;
-; -5.973 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[14]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.112     ; 6.899      ;
-; -5.893 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[13]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.112     ; 6.819      ;
-; -5.813 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[12]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.112     ; 6.739      ;
-; -5.733 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[11]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.112     ; 6.659      ;
-; -5.653 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[10]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.112     ; 6.579      ;
-; -5.573 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[9]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.112     ; 6.499      ;
-; -5.493 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[8]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.112     ; 6.419      ;
-; -5.319 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[7]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.112     ; 6.245      ;
-; -5.239 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[6]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.112     ; 6.165      ;
-; -5.159 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[5]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.112     ; 6.085      ;
-; -5.079 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[4]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.112     ; 6.005      ;
-; -4.999 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[3]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.112     ; 5.925      ;
-; -4.919 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[2]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.112     ; 5.845      ;
-; -4.489 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[1]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.112     ; 5.415      ;
-; -3.455 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[0]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.113     ; 4.380      ;
+; -6.060 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[15]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.113     ; 6.985      ;
+; -5.980 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[14]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.113     ; 6.905      ;
+; -5.900 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[13]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.113     ; 6.825      ;
+; -5.820 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[12]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.113     ; 6.745      ;
+; -5.740 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[11]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.113     ; 6.665      ;
+; -5.660 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[10]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.113     ; 6.585      ;
+; -5.580 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[9]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.113     ; 6.505      ;
+; -5.500 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[8]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.113     ; 6.425      ;
+; -5.326 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[7]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.113     ; 6.251      ;
+; -5.246 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[6]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.113     ; 6.171      ;
+; -5.166 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[5]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.113     ; 6.091      ;
+; -5.086 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[4]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.113     ; 6.011      ;
+; -5.006 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[3]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.113     ; 5.931      ;
+; -4.926 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[2]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.113     ; 5.851      ;
+; -4.496 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[1]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.113     ; 5.421      ;
+; -3.456 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[0]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.114     ; 4.380      ;
 ; -2.076 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~porta_datain_reg2  ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a2~porta_memory_reg0  ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.022     ; 3.014      ;
 ; -2.076 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~porta_datain_reg4  ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a4~porta_memory_reg0  ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.022     ; 3.014      ;
 ; -2.076 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~porta_datain_reg5  ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a5~porta_memory_reg0  ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.022     ; 3.014      ;
@@ -235,22 +235,22 @@ No paths to report.
 ; 2.786 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~porta_datain_reg13 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a13~porta_memory_reg0 ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.022     ; 3.014      ;
 ; 2.786 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~porta_datain_reg14 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a14~porta_memory_reg0 ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.022     ; 3.014      ;
 ; 2.786 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~porta_datain_reg15 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a15~porta_memory_reg0 ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.022     ; 3.014      ;
-; 4.207 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[0]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.113     ; 4.380      ;
-; 4.529 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[15]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.112     ; 4.703      ;
-; 4.859 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[9]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.112     ; 5.033      ;
-; 4.867 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[11]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.112     ; 5.041      ;
-; 4.867 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[14]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.112     ; 5.041      ;
-; 4.871 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[6]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.112     ; 5.045      ;
-; 4.874 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[10]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.112     ; 5.048      ;
-; 4.875 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[8]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.112     ; 5.049      ;
-; 4.881 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[4]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.112     ; 5.055      ;
-; 4.884 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[7]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.112     ; 5.058      ;
-; 4.892 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[5]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.112     ; 5.066      ;
-; 4.901 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[13]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.112     ; 5.075      ;
-; 4.904 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[12]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.112     ; 5.078      ;
-; 5.240 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[3]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.112     ; 5.414      ;
-; 5.241 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[1]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.112     ; 5.415      ;
-; 5.248 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[2]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.112     ; 5.422      ;
+; 4.208 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[0]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.114     ; 4.380      ;
+; 4.614 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[15]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.113     ; 4.787      ;
+; 4.862 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[10]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.113     ; 5.035      ;
+; 4.868 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[11]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.113     ; 5.041      ;
+; 4.871 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[6]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.113     ; 5.044      ;
+; 4.873 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[12]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.113     ; 5.046      ;
+; 4.873 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[14]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.113     ; 5.046      ;
+; 4.885 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[5]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.113     ; 5.058      ;
+; 4.887 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[4]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.113     ; 5.060      ;
+; 4.892 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[7]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.113     ; 5.065      ;
+; 4.901 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[13]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.113     ; 5.074      ;
+; 4.934 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[8]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.113     ; 5.107      ;
+; 4.939 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[9]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.113     ; 5.112      ;
+; 5.239 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[3]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.113     ; 5.412      ;
+; 5.248 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[1]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.113     ; 5.421      ;
+; 5.255 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[2]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.113     ; 5.428      ;
 +-------+----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+-----------------------+-----------------------+--------------+------------+------------+
 
 
@@ -382,12 +382,12 @@ No paths to report.
 +-----------+-----------------------+-------+-------+------------+-----------------------+
 ; Data Port ; Clock Port            ; Rise  ; Fall  ; Clock Edge ; Clock Reference       ;
 +-----------+-----------------------+-------+-------+------------+-----------------------+
-; memToReg  ; divisor:decoder|state ; 1.944 ; 1.944 ; Rise       ; divisor:decoder|state ;
-; muxA      ; divisor:decoder|state ; 2.784 ; 2.784 ; Rise       ; divisor:decoder|state ;
-; muxB[*]   ; divisor:decoder|state ; 3.594 ; 3.594 ; Rise       ; divisor:decoder|state ;
-;  muxB[0]  ; divisor:decoder|state ; 3.431 ; 3.431 ; Rise       ; divisor:decoder|state ;
-;  muxB[1]  ; divisor:decoder|state ; 3.594 ; 3.594 ; Rise       ; divisor:decoder|state ;
-; regWrite  ; divisor:decoder|state ; 1.440 ; 1.440 ; Rise       ; divisor:decoder|state ;
+; memToReg  ; divisor:decoder|state ; 1.568 ; 1.568 ; Rise       ; divisor:decoder|state ;
+; muxA      ; divisor:decoder|state ; 3.017 ; 3.017 ; Rise       ; divisor:decoder|state ;
+; muxB[*]   ; divisor:decoder|state ; 3.516 ; 3.516 ; Rise       ; divisor:decoder|state ;
+;  muxB[0]  ; divisor:decoder|state ; 3.516 ; 3.516 ; Rise       ; divisor:decoder|state ;
+;  muxB[1]  ; divisor:decoder|state ; 3.471 ; 3.471 ; Rise       ; divisor:decoder|state ;
+; regWrite  ; divisor:decoder|state ; 1.313 ; 1.313 ; Rise       ; divisor:decoder|state ;
 +-----------+-----------------------+-------+-------+------------+-----------------------+
 
 
@@ -396,12 +396,12 @@ No paths to report.
 +-----------+-----------------------+--------+--------+------------+-----------------------+
 ; Data Port ; Clock Port            ; Rise   ; Fall   ; Clock Edge ; Clock Reference       ;
 +-----------+-----------------------+--------+--------+------------+-----------------------+
-; memToReg  ; divisor:decoder|state ; -0.391 ; -0.391 ; Rise       ; divisor:decoder|state ;
-; muxA      ; divisor:decoder|state ; -0.795 ; -0.795 ; Rise       ; divisor:decoder|state ;
-; muxB[*]   ; divisor:decoder|state ; -0.586 ; -0.586 ; Rise       ; divisor:decoder|state ;
-;  muxB[0]  ; divisor:decoder|state ; -0.586 ; -0.586 ; Rise       ; divisor:decoder|state ;
-;  muxB[1]  ; divisor:decoder|state ; -0.751 ; -0.751 ; Rise       ; divisor:decoder|state ;
-; regWrite  ; divisor:decoder|state ; -1.150 ; -1.150 ; Rise       ; divisor:decoder|state ;
+; memToReg  ; divisor:decoder|state ; -0.288 ; -0.288 ; Rise       ; divisor:decoder|state ;
+; muxA      ; divisor:decoder|state ; -0.925 ; -0.925 ; Rise       ; divisor:decoder|state ;
+; muxB[*]   ; divisor:decoder|state ; -0.620 ; -0.620 ; Rise       ; divisor:decoder|state ;
+;  muxB[0]  ; divisor:decoder|state ; -0.655 ; -0.655 ; Rise       ; divisor:decoder|state ;
+;  muxB[1]  ; divisor:decoder|state ; -0.620 ; -0.620 ; Rise       ; divisor:decoder|state ;
+; regWrite  ; divisor:decoder|state ; -1.023 ; -1.023 ; Rise       ; divisor:decoder|state ;
 +-----------+-----------------------+--------+--------+------------+-----------------------+
 
 
@@ -410,23 +410,23 @@ No paths to report.
 +-------------------+-----------------------+-------+-------+------------+-----------------------+
 ; Data Port         ; Clock Port            ; Rise  ; Fall  ; Clock Edge ; Clock Reference       ;
 +-------------------+-----------------------+-------+-------+------------+-----------------------+
-; salidaPrueba[*]   ; divisor:decoder|state ; 7.228 ; 7.228 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[0]  ; divisor:decoder|state ; 6.903 ; 6.903 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[1]  ; divisor:decoder|state ; 6.875 ; 6.875 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[2]  ; divisor:decoder|state ; 6.900 ; 6.900 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[3]  ; divisor:decoder|state ; 6.841 ; 6.841 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[4]  ; divisor:decoder|state ; 6.891 ; 6.891 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[5]  ; divisor:decoder|state ; 6.711 ; 6.711 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[6]  ; divisor:decoder|state ; 6.904 ; 6.904 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[7]  ; divisor:decoder|state ; 6.874 ; 6.874 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[8]  ; divisor:decoder|state ; 7.228 ; 7.228 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[9]  ; divisor:decoder|state ; 6.871 ; 6.871 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[10] ; divisor:decoder|state ; 6.492 ; 6.492 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[11] ; divisor:decoder|state ; 6.843 ; 6.843 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[12] ; divisor:decoder|state ; 7.009 ; 7.009 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[13] ; divisor:decoder|state ; 6.836 ; 6.836 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[14] ; divisor:decoder|state ; 6.880 ; 6.880 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[15] ; divisor:decoder|state ; 6.981 ; 6.981 ; Rise       ; divisor:decoder|state ;
+; salidaPrueba[*]   ; divisor:decoder|state ; 7.031 ; 7.031 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[0]  ; divisor:decoder|state ; 6.864 ; 6.864 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[1]  ; divisor:decoder|state ; 6.830 ; 6.830 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[2]  ; divisor:decoder|state ; 6.823 ; 6.823 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[3]  ; divisor:decoder|state ; 6.495 ; 6.495 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[4]  ; divisor:decoder|state ; 6.832 ; 6.832 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[5]  ; divisor:decoder|state ; 6.832 ; 6.832 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[6]  ; divisor:decoder|state ; 6.515 ; 6.515 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[7]  ; divisor:decoder|state ; 6.534 ; 6.534 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[8]  ; divisor:decoder|state ; 6.839 ; 6.839 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[9]  ; divisor:decoder|state ; 6.815 ; 6.815 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[10] ; divisor:decoder|state ; 6.870 ; 6.870 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[11] ; divisor:decoder|state ; 6.850 ; 6.850 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[12] ; divisor:decoder|state ; 6.992 ; 6.992 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[13] ; divisor:decoder|state ; 6.849 ; 6.849 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[14] ; divisor:decoder|state ; 6.859 ; 6.859 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[15] ; divisor:decoder|state ; 7.031 ; 7.031 ; Rise       ; divisor:decoder|state ;
 +-------------------+-----------------------+-------+-------+------------+-----------------------+
 
 
@@ -435,23 +435,23 @@ No paths to report.
 +-------------------+-----------------------+-------+-------+------------+-----------------------+
 ; Data Port         ; Clock Port            ; Rise  ; Fall  ; Clock Edge ; Clock Reference       ;
 +-------------------+-----------------------+-------+-------+------------+-----------------------+
-; salidaPrueba[*]   ; divisor:decoder|state ; 6.492 ; 6.492 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[0]  ; divisor:decoder|state ; 6.903 ; 6.903 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[1]  ; divisor:decoder|state ; 6.875 ; 6.875 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[2]  ; divisor:decoder|state ; 6.900 ; 6.900 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[3]  ; divisor:decoder|state ; 6.841 ; 6.841 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[4]  ; divisor:decoder|state ; 6.891 ; 6.891 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[5]  ; divisor:decoder|state ; 6.711 ; 6.711 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[6]  ; divisor:decoder|state ; 6.904 ; 6.904 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[7]  ; divisor:decoder|state ; 6.874 ; 6.874 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[8]  ; divisor:decoder|state ; 7.228 ; 7.228 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[9]  ; divisor:decoder|state ; 6.871 ; 6.871 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[10] ; divisor:decoder|state ; 6.492 ; 6.492 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[11] ; divisor:decoder|state ; 6.843 ; 6.843 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[12] ; divisor:decoder|state ; 7.009 ; 7.009 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[13] ; divisor:decoder|state ; 6.836 ; 6.836 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[14] ; divisor:decoder|state ; 6.880 ; 6.880 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[15] ; divisor:decoder|state ; 6.981 ; 6.981 ; Rise       ; divisor:decoder|state ;
+; salidaPrueba[*]   ; divisor:decoder|state ; 6.495 ; 6.495 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[0]  ; divisor:decoder|state ; 6.864 ; 6.864 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[1]  ; divisor:decoder|state ; 6.830 ; 6.830 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[2]  ; divisor:decoder|state ; 6.823 ; 6.823 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[3]  ; divisor:decoder|state ; 6.495 ; 6.495 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[4]  ; divisor:decoder|state ; 6.832 ; 6.832 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[5]  ; divisor:decoder|state ; 6.832 ; 6.832 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[6]  ; divisor:decoder|state ; 6.515 ; 6.515 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[7]  ; divisor:decoder|state ; 6.534 ; 6.534 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[8]  ; divisor:decoder|state ; 6.839 ; 6.839 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[9]  ; divisor:decoder|state ; 6.815 ; 6.815 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[10] ; divisor:decoder|state ; 6.870 ; 6.870 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[11] ; divisor:decoder|state ; 6.850 ; 6.850 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[12] ; divisor:decoder|state ; 6.992 ; 6.992 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[13] ; divisor:decoder|state ; 6.849 ; 6.849 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[14] ; divisor:decoder|state ; 6.859 ; 6.859 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[15] ; divisor:decoder|state ; 7.031 ; 7.031 ; Rise       ; divisor:decoder|state ;
 +-------------------+-----------------------+-------+-------+------------+-----------------------+
 
 
@@ -460,7 +460,7 @@ No paths to report.
 +-----------------------+--------+---------------+
 ; Clock                 ; Slack  ; End Point TNS ;
 +-----------------------+--------+---------------+
-; divisor:decoder|state ; -2.383 ; -51.896       ;
+; divisor:decoder|state ; -2.386 ; -51.941       ;
 ; clk                   ; 1.343  ; 0.000         ;
 +-----------------------+--------+---------------+
 
@@ -502,21 +502,21 @@ No paths to report.
 +--------+----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+-----------------------+-----------------------+--------------+------------+------------+
 ; Slack  ; From Node                                                                                                      ; To Node                                                                                                        ; Launch Clock          ; Latch Clock           ; Relationship ; Clock Skew ; Data Delay ;
 +--------+----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+-----------------------+-----------------------+--------------+------------+------------+
-; -2.383 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[15]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 3.346      ;
-; -2.348 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[14]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 3.311      ;
-; -2.313 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[13]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 3.276      ;
-; -2.278 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[12]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 3.241      ;
-; -2.243 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[11]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 3.206      ;
-; -2.208 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[10]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 3.171      ;
-; -2.173 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[9]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 3.136      ;
-; -2.138 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[8]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 3.101      ;
-; -2.044 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[7]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 3.007      ;
-; -2.009 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[6]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 2.972      ;
-; -1.974 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[5]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 2.937      ;
-; -1.939 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[4]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 2.902      ;
-; -1.904 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[3]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 2.867      ;
-; -1.869 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[2]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 2.832      ;
-; -1.729 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[1]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 2.692      ;
+; -2.386 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[15]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 3.349      ;
+; -2.351 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[14]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 3.314      ;
+; -2.316 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[13]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 3.279      ;
+; -2.281 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[12]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 3.244      ;
+; -2.246 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[11]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 3.209      ;
+; -2.211 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[10]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 3.174      ;
+; -2.176 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[9]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 3.139      ;
+; -2.141 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[8]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 3.104      ;
+; -2.047 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[7]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 3.010      ;
+; -2.012 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[6]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 2.975      ;
+; -1.977 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[5]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 2.940      ;
+; -1.942 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[4]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 2.905      ;
+; -1.907 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[3]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 2.870      ;
+; -1.872 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[2]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 2.835      ;
+; -1.732 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[1]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.069     ; 2.695      ;
 ; -1.460 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~porta_datain_reg2  ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a2~porta_memory_reg0  ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.017     ; 2.442      ;
 ; -1.460 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~porta_datain_reg4  ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a4~porta_memory_reg0  ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.017     ; 2.442      ;
 ; -1.460 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~porta_datain_reg5  ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a5~porta_memory_reg0  ; divisor:decoder|state ; divisor:decoder|state ; 1.000        ; -0.017     ; 2.442      ;
@@ -573,21 +573,21 @@ No paths to report.
 ; 2.321 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~porta_datain_reg13 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a13~porta_memory_reg0 ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.017     ; 2.442      ;
 ; 2.321 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~porta_datain_reg14 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a14~porta_memory_reg0 ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.017     ; 2.442      ;
 ; 2.321 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~porta_datain_reg15 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a15~porta_memory_reg0 ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.017     ; 2.442      ;
-; 2.374 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[15]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.457      ;
-; 2.471 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[9]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.554      ;
-; 2.471 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[11]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.554      ;
-; 2.474 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[6]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.557      ;
-; 2.474 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[14]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.557      ;
-; 2.476 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[8]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.559      ;
-; 2.479 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[10]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.562      ;
-; 2.482 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[4]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.565      ;
-; 2.485 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[7]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.568      ;
-; 2.490 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[5]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.573      ;
-; 2.493 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[12]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.576      ;
+; 2.421 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[15]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.504      ;
+; 2.470 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[10]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.553      ;
+; 2.472 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[11]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.555      ;
+; 2.475 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[12]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.558      ;
+; 2.476 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[6]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.559      ;
+; 2.478 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[14]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.561      ;
+; 2.484 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[5]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.567      ;
+; 2.485 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[4]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.568      ;
+; 2.490 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[7]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.573      ;
 ; 2.495 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[13]                                                                                    ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.578      ;
-; 2.603 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[2]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.686      ;
-; 2.609 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[1]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.692      ;
-; 2.610 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[3]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.693      ;
+; 2.514 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[8]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.597      ;
+; 2.518 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[9]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.601      ;
+; 2.607 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[2]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.690      ;
+; 2.609 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[3]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.692      ;
+; 2.612 ; RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_sng1:auto_generated|ram_block1a0~portb_address_reg0 ; Registro:regAluOut|temp[1]                                                                                     ; divisor:decoder|state ; divisor:decoder|state ; 0.000        ; -0.069     ; 2.695      ;
 +-------+----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+-----------------------+-----------------------+--------------+------------+------------+
 
 
@@ -719,27 +719,27 @@ No paths to report.
 +-----------+-----------------------+-------+-------+------------+-----------------------+
 ; Data Port ; Clock Port            ; Rise  ; Fall  ; Clock Edge ; Clock Reference       ;
 +-----------+-----------------------+-------+-------+------------+-----------------------+
-; memToReg  ; divisor:decoder|state ; 0.346 ; 0.346 ; Rise       ; divisor:decoder|state ;
-; muxA      ; divisor:decoder|state ; 0.675 ; 0.675 ; Rise       ; divisor:decoder|state ;
-; muxB[*]   ; divisor:decoder|state ; 0.956 ; 0.956 ; Rise       ; divisor:decoder|state ;
-;  muxB[0]  ; divisor:decoder|state ; 0.923 ; 0.923 ; Rise       ; divisor:decoder|state ;
-;  muxB[1]  ; divisor:decoder|state ; 0.956 ; 0.956 ; Rise       ; divisor:decoder|state ;
-; regWrite  ; divisor:decoder|state ; 0.187 ; 0.187 ; Rise       ; divisor:decoder|state ;
+; memToReg  ; divisor:decoder|state ; 0.165 ; 0.165 ; Rise       ; divisor:decoder|state ;
+; muxA      ; divisor:decoder|state ; 0.836 ; 0.836 ; Rise       ; divisor:decoder|state ;
+; muxB[*]   ; divisor:decoder|state ; 0.988 ; 0.988 ; Rise       ; divisor:decoder|state ;
+;  muxB[0]  ; divisor:decoder|state ; 0.988 ; 0.988 ; Rise       ; divisor:decoder|state ;
+;  muxB[1]  ; divisor:decoder|state ; 0.959 ; 0.959 ; Rise       ; divisor:decoder|state ;
+; regWrite  ; divisor:decoder|state ; 0.127 ; 0.127 ; Rise       ; divisor:decoder|state ;
 +-----------+-----------------------+-------+-------+------------+-----------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Hold Times                                                                               ;
-+-----------+-----------------------+--------+--------+------------+-----------------------+
-; Data Port ; Clock Port            ; Rise   ; Fall   ; Clock Edge ; Clock Reference       ;
-+-----------+-----------------------+--------+--------+------------+-----------------------+
-; memToReg  ; divisor:decoder|state ; 0.297  ; 0.297  ; Rise       ; divisor:decoder|state ;
-; muxA      ; divisor:decoder|state ; 0.153  ; 0.153  ; Rise       ; divisor:decoder|state ;
-; muxB[*]   ; divisor:decoder|state ; 0.219  ; 0.219  ; Rise       ; divisor:decoder|state ;
-;  muxB[0]  ; divisor:decoder|state ; 0.219  ; 0.219  ; Rise       ; divisor:decoder|state ;
-;  muxB[1]  ; divisor:decoder|state ; 0.184  ; 0.184  ; Rise       ; divisor:decoder|state ;
-; regWrite  ; divisor:decoder|state ; -0.048 ; -0.048 ; Rise       ; divisor:decoder|state ;
-+-----------+-----------------------+--------+--------+------------+-----------------------+
++----------------------------------------------------------------------------------------+
+; Hold Times                                                                             ;
++-----------+-----------------------+-------+-------+------------+-----------------------+
+; Data Port ; Clock Port            ; Rise  ; Fall  ; Clock Edge ; Clock Reference       ;
++-----------+-----------------------+-------+-------+------------+-----------------------+
+; memToReg  ; divisor:decoder|state ; 0.347 ; 0.347 ; Rise       ; divisor:decoder|state ;
+; muxA      ; divisor:decoder|state ; 0.017 ; 0.017 ; Rise       ; divisor:decoder|state ;
+; muxB[*]   ; divisor:decoder|state ; 0.184 ; 0.184 ; Rise       ; divisor:decoder|state ;
+;  muxB[0]  ; divisor:decoder|state ; 0.151 ; 0.151 ; Rise       ; divisor:decoder|state ;
+;  muxB[1]  ; divisor:decoder|state ; 0.184 ; 0.184 ; Rise       ; divisor:decoder|state ;
+; regWrite  ; divisor:decoder|state ; 0.012 ; 0.012 ; Rise       ; divisor:decoder|state ;
++-----------+-----------------------+-------+-------+------------+-----------------------+
 
 
 +------------------------------------------------------------------------------------------------+
@@ -747,23 +747,23 @@ No paths to report.
 +-------------------+-----------------------+-------+-------+------------+-----------------------+
 ; Data Port         ; Clock Port            ; Rise  ; Fall  ; Clock Edge ; Clock Reference       ;
 +-------------------+-----------------------+-------+-------+------------+-----------------------+
-; salidaPrueba[*]   ; divisor:decoder|state ; 3.769 ; 3.769 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[0]  ; divisor:decoder|state ; 3.641 ; 3.641 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[1]  ; divisor:decoder|state ; 3.628 ; 3.628 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[2]  ; divisor:decoder|state ; 3.643 ; 3.643 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[3]  ; divisor:decoder|state ; 3.603 ; 3.603 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[4]  ; divisor:decoder|state ; 3.632 ; 3.632 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[5]  ; divisor:decoder|state ; 3.625 ; 3.625 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[6]  ; divisor:decoder|state ; 3.649 ; 3.649 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[7]  ; divisor:decoder|state ; 3.631 ; 3.631 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[8]  ; divisor:decoder|state ; 3.769 ; 3.769 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[9]  ; divisor:decoder|state ; 3.619 ; 3.619 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[10] ; divisor:decoder|state ; 3.463 ; 3.463 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[11] ; divisor:decoder|state ; 3.604 ; 3.604 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[12] ; divisor:decoder|state ; 3.713 ; 3.713 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[13] ; divisor:decoder|state ; 3.599 ; 3.599 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[14] ; divisor:decoder|state ; 3.625 ; 3.625 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[15] ; divisor:decoder|state ; 3.696 ; 3.696 ; Rise       ; divisor:decoder|state ;
+; salidaPrueba[*]   ; divisor:decoder|state ; 3.731 ; 3.731 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[0]  ; divisor:decoder|state ; 3.611 ; 3.611 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[1]  ; divisor:decoder|state ; 3.590 ; 3.590 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[2]  ; divisor:decoder|state ; 3.586 ; 3.586 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[3]  ; divisor:decoder|state ; 3.465 ; 3.465 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[4]  ; divisor:decoder|state ; 3.597 ; 3.597 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[5]  ; divisor:decoder|state ; 3.600 ; 3.600 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[6]  ; divisor:decoder|state ; 3.485 ; 3.485 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[7]  ; divisor:decoder|state ; 3.496 ; 3.496 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[8]  ; divisor:decoder|state ; 3.600 ; 3.600 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[9]  ; divisor:decoder|state ; 3.579 ; 3.579 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[10] ; divisor:decoder|state ; 3.614 ; 3.614 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[11] ; divisor:decoder|state ; 3.610 ; 3.610 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[12] ; divisor:decoder|state ; 3.709 ; 3.709 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[13] ; divisor:decoder|state ; 3.606 ; 3.606 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[14] ; divisor:decoder|state ; 3.611 ; 3.611 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[15] ; divisor:decoder|state ; 3.731 ; 3.731 ; Rise       ; divisor:decoder|state ;
 +-------------------+-----------------------+-------+-------+------------+-----------------------+
 
 
@@ -772,23 +772,23 @@ No paths to report.
 +-------------------+-----------------------+-------+-------+------------+-----------------------+
 ; Data Port         ; Clock Port            ; Rise  ; Fall  ; Clock Edge ; Clock Reference       ;
 +-------------------+-----------------------+-------+-------+------------+-----------------------+
-; salidaPrueba[*]   ; divisor:decoder|state ; 3.463 ; 3.463 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[0]  ; divisor:decoder|state ; 3.641 ; 3.641 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[1]  ; divisor:decoder|state ; 3.628 ; 3.628 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[2]  ; divisor:decoder|state ; 3.643 ; 3.643 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[3]  ; divisor:decoder|state ; 3.603 ; 3.603 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[4]  ; divisor:decoder|state ; 3.632 ; 3.632 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[5]  ; divisor:decoder|state ; 3.625 ; 3.625 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[6]  ; divisor:decoder|state ; 3.649 ; 3.649 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[7]  ; divisor:decoder|state ; 3.631 ; 3.631 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[8]  ; divisor:decoder|state ; 3.769 ; 3.769 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[9]  ; divisor:decoder|state ; 3.619 ; 3.619 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[10] ; divisor:decoder|state ; 3.463 ; 3.463 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[11] ; divisor:decoder|state ; 3.604 ; 3.604 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[12] ; divisor:decoder|state ; 3.713 ; 3.713 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[13] ; divisor:decoder|state ; 3.599 ; 3.599 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[14] ; divisor:decoder|state ; 3.625 ; 3.625 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[15] ; divisor:decoder|state ; 3.696 ; 3.696 ; Rise       ; divisor:decoder|state ;
+; salidaPrueba[*]   ; divisor:decoder|state ; 3.465 ; 3.465 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[0]  ; divisor:decoder|state ; 3.611 ; 3.611 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[1]  ; divisor:decoder|state ; 3.590 ; 3.590 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[2]  ; divisor:decoder|state ; 3.586 ; 3.586 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[3]  ; divisor:decoder|state ; 3.465 ; 3.465 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[4]  ; divisor:decoder|state ; 3.597 ; 3.597 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[5]  ; divisor:decoder|state ; 3.600 ; 3.600 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[6]  ; divisor:decoder|state ; 3.485 ; 3.485 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[7]  ; divisor:decoder|state ; 3.496 ; 3.496 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[8]  ; divisor:decoder|state ; 3.600 ; 3.600 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[9]  ; divisor:decoder|state ; 3.579 ; 3.579 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[10] ; divisor:decoder|state ; 3.614 ; 3.614 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[11] ; divisor:decoder|state ; 3.610 ; 3.610 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[12] ; divisor:decoder|state ; 3.709 ; 3.709 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[13] ; divisor:decoder|state ; 3.606 ; 3.606 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[14] ; divisor:decoder|state ; 3.611 ; 3.611 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[15] ; divisor:decoder|state ; 3.731 ; 3.731 ; Rise       ; divisor:decoder|state ;
 +-------------------+-----------------------+-------+-------+------------+-----------------------+
 
 
@@ -797,12 +797,12 @@ No paths to report.
 +------------------------+----------+--------+----------+---------+---------------------+
 ; Clock                  ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------------+----------+--------+----------+---------+---------------------+
-; Worst-case Slack       ; -6.053   ; -1.864 ; N/A      ; N/A     ; -2.064              ;
+; Worst-case Slack       ; -6.060   ; -1.864 ; N/A      ; N/A     ; -2.064              ;
 ;  clk                   ; 1.343    ; -1.864 ; N/A      ; N/A     ; -1.631              ;
-;  divisor:decoder|state ; -6.053   ; 2.244  ; N/A      ; N/A     ; -2.064              ;
-; Design-wide TNS        ; -111.83  ; -1.864 ; 0.0      ; 0.0     ; -142.117            ;
+;  divisor:decoder|state ; -6.060   ; 2.244  ; N/A      ; N/A     ; -2.064              ;
+; Design-wide TNS        ; -111.936 ; -1.864 ; 0.0      ; 0.0     ; -142.117            ;
 ;  clk                   ; 0.000    ; -1.864 ; N/A      ; N/A     ; -2.853              ;
-;  divisor:decoder|state ; -111.830 ; 0.000  ; N/A      ; N/A     ; -139.264            ;
+;  divisor:decoder|state ; -111.936 ; 0.000  ; N/A      ; N/A     ; -139.264            ;
 +------------------------+----------+--------+----------+---------+---------------------+
 
 
@@ -811,27 +811,27 @@ No paths to report.
 +-----------+-----------------------+-------+-------+------------+-----------------------+
 ; Data Port ; Clock Port            ; Rise  ; Fall  ; Clock Edge ; Clock Reference       ;
 +-----------+-----------------------+-------+-------+------------+-----------------------+
-; memToReg  ; divisor:decoder|state ; 1.944 ; 1.944 ; Rise       ; divisor:decoder|state ;
-; muxA      ; divisor:decoder|state ; 2.784 ; 2.784 ; Rise       ; divisor:decoder|state ;
-; muxB[*]   ; divisor:decoder|state ; 3.594 ; 3.594 ; Rise       ; divisor:decoder|state ;
-;  muxB[0]  ; divisor:decoder|state ; 3.431 ; 3.431 ; Rise       ; divisor:decoder|state ;
-;  muxB[1]  ; divisor:decoder|state ; 3.594 ; 3.594 ; Rise       ; divisor:decoder|state ;
-; regWrite  ; divisor:decoder|state ; 1.440 ; 1.440 ; Rise       ; divisor:decoder|state ;
+; memToReg  ; divisor:decoder|state ; 1.568 ; 1.568 ; Rise       ; divisor:decoder|state ;
+; muxA      ; divisor:decoder|state ; 3.017 ; 3.017 ; Rise       ; divisor:decoder|state ;
+; muxB[*]   ; divisor:decoder|state ; 3.516 ; 3.516 ; Rise       ; divisor:decoder|state ;
+;  muxB[0]  ; divisor:decoder|state ; 3.516 ; 3.516 ; Rise       ; divisor:decoder|state ;
+;  muxB[1]  ; divisor:decoder|state ; 3.471 ; 3.471 ; Rise       ; divisor:decoder|state ;
+; regWrite  ; divisor:decoder|state ; 1.313 ; 1.313 ; Rise       ; divisor:decoder|state ;
 +-----------+-----------------------+-------+-------+------------+-----------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Hold Times                                                                               ;
-+-----------+-----------------------+--------+--------+------------+-----------------------+
-; Data Port ; Clock Port            ; Rise   ; Fall   ; Clock Edge ; Clock Reference       ;
-+-----------+-----------------------+--------+--------+------------+-----------------------+
-; memToReg  ; divisor:decoder|state ; 0.297  ; 0.297  ; Rise       ; divisor:decoder|state ;
-; muxA      ; divisor:decoder|state ; 0.153  ; 0.153  ; Rise       ; divisor:decoder|state ;
-; muxB[*]   ; divisor:decoder|state ; 0.219  ; 0.219  ; Rise       ; divisor:decoder|state ;
-;  muxB[0]  ; divisor:decoder|state ; 0.219  ; 0.219  ; Rise       ; divisor:decoder|state ;
-;  muxB[1]  ; divisor:decoder|state ; 0.184  ; 0.184  ; Rise       ; divisor:decoder|state ;
-; regWrite  ; divisor:decoder|state ; -0.048 ; -0.048 ; Rise       ; divisor:decoder|state ;
-+-----------+-----------------------+--------+--------+------------+-----------------------+
++----------------------------------------------------------------------------------------+
+; Hold Times                                                                             ;
++-----------+-----------------------+-------+-------+------------+-----------------------+
+; Data Port ; Clock Port            ; Rise  ; Fall  ; Clock Edge ; Clock Reference       ;
++-----------+-----------------------+-------+-------+------------+-----------------------+
+; memToReg  ; divisor:decoder|state ; 0.347 ; 0.347 ; Rise       ; divisor:decoder|state ;
+; muxA      ; divisor:decoder|state ; 0.017 ; 0.017 ; Rise       ; divisor:decoder|state ;
+; muxB[*]   ; divisor:decoder|state ; 0.184 ; 0.184 ; Rise       ; divisor:decoder|state ;
+;  muxB[0]  ; divisor:decoder|state ; 0.151 ; 0.151 ; Rise       ; divisor:decoder|state ;
+;  muxB[1]  ; divisor:decoder|state ; 0.184 ; 0.184 ; Rise       ; divisor:decoder|state ;
+; regWrite  ; divisor:decoder|state ; 0.012 ; 0.012 ; Rise       ; divisor:decoder|state ;
++-----------+-----------------------+-------+-------+------------+-----------------------+
 
 
 +------------------------------------------------------------------------------------------------+
@@ -839,23 +839,23 @@ No paths to report.
 +-------------------+-----------------------+-------+-------+------------+-----------------------+
 ; Data Port         ; Clock Port            ; Rise  ; Fall  ; Clock Edge ; Clock Reference       ;
 +-------------------+-----------------------+-------+-------+------------+-----------------------+
-; salidaPrueba[*]   ; divisor:decoder|state ; 7.228 ; 7.228 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[0]  ; divisor:decoder|state ; 6.903 ; 6.903 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[1]  ; divisor:decoder|state ; 6.875 ; 6.875 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[2]  ; divisor:decoder|state ; 6.900 ; 6.900 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[3]  ; divisor:decoder|state ; 6.841 ; 6.841 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[4]  ; divisor:decoder|state ; 6.891 ; 6.891 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[5]  ; divisor:decoder|state ; 6.711 ; 6.711 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[6]  ; divisor:decoder|state ; 6.904 ; 6.904 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[7]  ; divisor:decoder|state ; 6.874 ; 6.874 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[8]  ; divisor:decoder|state ; 7.228 ; 7.228 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[9]  ; divisor:decoder|state ; 6.871 ; 6.871 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[10] ; divisor:decoder|state ; 6.492 ; 6.492 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[11] ; divisor:decoder|state ; 6.843 ; 6.843 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[12] ; divisor:decoder|state ; 7.009 ; 7.009 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[13] ; divisor:decoder|state ; 6.836 ; 6.836 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[14] ; divisor:decoder|state ; 6.880 ; 6.880 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[15] ; divisor:decoder|state ; 6.981 ; 6.981 ; Rise       ; divisor:decoder|state ;
+; salidaPrueba[*]   ; divisor:decoder|state ; 7.031 ; 7.031 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[0]  ; divisor:decoder|state ; 6.864 ; 6.864 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[1]  ; divisor:decoder|state ; 6.830 ; 6.830 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[2]  ; divisor:decoder|state ; 6.823 ; 6.823 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[3]  ; divisor:decoder|state ; 6.495 ; 6.495 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[4]  ; divisor:decoder|state ; 6.832 ; 6.832 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[5]  ; divisor:decoder|state ; 6.832 ; 6.832 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[6]  ; divisor:decoder|state ; 6.515 ; 6.515 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[7]  ; divisor:decoder|state ; 6.534 ; 6.534 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[8]  ; divisor:decoder|state ; 6.839 ; 6.839 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[9]  ; divisor:decoder|state ; 6.815 ; 6.815 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[10] ; divisor:decoder|state ; 6.870 ; 6.870 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[11] ; divisor:decoder|state ; 6.850 ; 6.850 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[12] ; divisor:decoder|state ; 6.992 ; 6.992 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[13] ; divisor:decoder|state ; 6.849 ; 6.849 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[14] ; divisor:decoder|state ; 6.859 ; 6.859 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[15] ; divisor:decoder|state ; 7.031 ; 7.031 ; Rise       ; divisor:decoder|state ;
 +-------------------+-----------------------+-------+-------+------------+-----------------------+
 
 
@@ -864,23 +864,23 @@ No paths to report.
 +-------------------+-----------------------+-------+-------+------------+-----------------------+
 ; Data Port         ; Clock Port            ; Rise  ; Fall  ; Clock Edge ; Clock Reference       ;
 +-------------------+-----------------------+-------+-------+------------+-----------------------+
-; salidaPrueba[*]   ; divisor:decoder|state ; 3.463 ; 3.463 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[0]  ; divisor:decoder|state ; 3.641 ; 3.641 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[1]  ; divisor:decoder|state ; 3.628 ; 3.628 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[2]  ; divisor:decoder|state ; 3.643 ; 3.643 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[3]  ; divisor:decoder|state ; 3.603 ; 3.603 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[4]  ; divisor:decoder|state ; 3.632 ; 3.632 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[5]  ; divisor:decoder|state ; 3.625 ; 3.625 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[6]  ; divisor:decoder|state ; 3.649 ; 3.649 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[7]  ; divisor:decoder|state ; 3.631 ; 3.631 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[8]  ; divisor:decoder|state ; 3.769 ; 3.769 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[9]  ; divisor:decoder|state ; 3.619 ; 3.619 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[10] ; divisor:decoder|state ; 3.463 ; 3.463 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[11] ; divisor:decoder|state ; 3.604 ; 3.604 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[12] ; divisor:decoder|state ; 3.713 ; 3.713 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[13] ; divisor:decoder|state ; 3.599 ; 3.599 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[14] ; divisor:decoder|state ; 3.625 ; 3.625 ; Rise       ; divisor:decoder|state ;
-;  salidaPrueba[15] ; divisor:decoder|state ; 3.696 ; 3.696 ; Rise       ; divisor:decoder|state ;
+; salidaPrueba[*]   ; divisor:decoder|state ; 3.465 ; 3.465 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[0]  ; divisor:decoder|state ; 3.611 ; 3.611 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[1]  ; divisor:decoder|state ; 3.590 ; 3.590 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[2]  ; divisor:decoder|state ; 3.586 ; 3.586 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[3]  ; divisor:decoder|state ; 3.465 ; 3.465 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[4]  ; divisor:decoder|state ; 3.597 ; 3.597 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[5]  ; divisor:decoder|state ; 3.600 ; 3.600 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[6]  ; divisor:decoder|state ; 3.485 ; 3.485 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[7]  ; divisor:decoder|state ; 3.496 ; 3.496 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[8]  ; divisor:decoder|state ; 3.600 ; 3.600 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[9]  ; divisor:decoder|state ; 3.579 ; 3.579 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[10] ; divisor:decoder|state ; 3.614 ; 3.614 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[11] ; divisor:decoder|state ; 3.610 ; 3.610 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[12] ; divisor:decoder|state ; 3.709 ; 3.709 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[13] ; divisor:decoder|state ; 3.606 ; 3.606 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[14] ; divisor:decoder|state ; 3.611 ; 3.611 ; Rise       ; divisor:decoder|state ;
+;  salidaPrueba[15] ; divisor:decoder|state ; 3.731 ; 3.731 ; Rise       ; divisor:decoder|state ;
 +-------------------+-----------------------+-------+-------+------------+-----------------------+
 
 
@@ -938,7 +938,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue May 28 11:24:55 2019
+    Info: Processing started: Tue May 28 20:50:35 2019
 Info: Command: quartus_sta prueba2 -c prueba2
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -952,10 +952,10 @@ Info (332105): Deriving Clocks
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow Model
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -6.053
+Info (332146): Worst-case setup slack is -6.060
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -6.053      -111.830 divisor:decoder|state 
+    Info (332119):    -6.060      -111.936 divisor:decoder|state 
     Info (332119):     2.116         0.000 clk 
 Info (332146): Worst-case hold slack is -1.864
     Info (332119):     Slack End Point TNS Clock 
@@ -972,10 +972,10 @@ Info (332146): Worst-case minimum pulse width slack is -2.064
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -2.383
+Info (332146): Worst-case setup slack is -2.386
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -2.383       -51.896 divisor:decoder|state 
+    Info (332119):    -2.386       -51.941 divisor:decoder|state 
     Info (332119):     1.343         0.000 clk 
 Info (332146): Worst-case hold slack is -0.963
     Info (332119):     Slack End Point TNS Clock 
@@ -994,8 +994,8 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4556 megabytes
-    Info: Processing ended: Tue May 28 11:24:57 2019
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Tue May 28 20:50:36 2019
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
 
 

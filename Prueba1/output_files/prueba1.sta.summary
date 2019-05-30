@@ -3,51 +3,75 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'ALUOp[0]'
-Slack : -2.386
-TNS   : -18.074
+Slack : -2.484
+TNS   : -18.195
+
+Type  : Slow Model Setup 'divisor:decoder|state'
+Slack : -0.960
+TNS   : -13.935
 
 Type  : Slow Model Setup 'clk'
-Slack : -0.576
-TNS   : -6.698
-
-Type  : Slow Model Hold 'ALUOp[0]'
-Slack : -0.289
-TNS   : -1.610
+Slack : 2.116
+TNS   : 0.000
 
 Type  : Slow Model Hold 'clk'
-Slack : 0.875
+Slack : -1.864
+TNS   : -1.864
+
+Type  : Slow Model Hold 'ALUOp[0]'
+Slack : -0.146
+TNS   : -0.425
+
+Type  : Slow Model Hold 'divisor:decoder|state'
+Slack : 1.536
 TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -1.631
+TNS   : -2.853
 
 Type  : Slow Model Minimum Pulse Width 'ALUOp[0]'
 Slack : -1.631
 TNS   : -1.631
 
-Type  : Slow Model Minimum Pulse Width 'clk'
-Slack : -1.469
-TNS   : -21.021
+Type  : Slow Model Minimum Pulse Width 'divisor:decoder|state'
+Slack : -0.611
+TNS   : -19.552
 
 Type  : Fast Model Setup 'ALUOp[0]'
-Slack : -0.180
-TNS   : -0.404
+Slack : -0.196
+TNS   : -0.197
+
+Type  : Fast Model Setup 'divisor:decoder|state'
+Slack : 0.215
+TNS   : 0.000
 
 Type  : Fast Model Setup 'clk'
-Slack : 0.018
+Slack : 1.343
 TNS   : 0.000
-
-Type  : Fast Model Hold 'ALUOp[0]'
-Slack : -0.674
-TNS   : -9.028
 
 Type  : Fast Model Hold 'clk'
-Slack : 0.680
+Slack : -0.963
+TNS   : -0.963
+
+Type  : Fast Model Hold 'ALUOp[0]'
+Slack : -0.627
+TNS   : -8.755
+
+Type  : Fast Model Hold 'divisor:decoder|state'
+Slack : 0.595
 TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -2.380
 
 Type  : Fast Model Minimum Pulse Width 'ALUOp[0]'
 Slack : -1.380
 TNS   : -1.380
 
-Type  : Fast Model Minimum Pulse Width 'clk'
-Slack : -1.222
-TNS   : -17.222
+Type  : Fast Model Minimum Pulse Width 'divisor:decoder|state'
+Slack : -0.500
+TNS   : -16.000
 
 ------------------------------------------------------------

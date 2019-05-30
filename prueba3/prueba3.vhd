@@ -16,7 +16,7 @@ entity prueba3 is
 		regDst : in std_logic;
 		muxA : in std_logic;
 		muxB	: in std_logic_vector(1 downto 0);
-		eALUOp: in std_logic_vector(1 downto 0);
+		eALUOp: in std_logic_vector(2 downto 0);
 		memToReg : in std_logic;
 		irWrite : in std_logic;
 		clk : in std_logic;
@@ -275,19 +275,19 @@ begin
 			salidaMuxAluSrcB => e2Alu
 		);
 		
-	aAluControl : AluControl
-		port map
-		(
-			--funct => salidaIR(5 downto 0),
-			funct	=> "100100",
-			aluOP	=> eALUOp,
-			operation => opAluOp
-		);
+--	aAluControl : AluControl
+--		port map
+--		(
+--			--funct => salidaIR(5 downto 0),
+--			funct	=> "100100",
+--			aluOP	=> eALUOp,
+--			operation => opAluOp
+--		);
 			
 	aAlu : Alu
 		port map
 		(
-			OP => opAluOp,
+			OP => eALUOp,
 			A => e1Alu,
 			B => e2ALu,
 			res => sSalidaAlu,
