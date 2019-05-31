@@ -114,6 +114,7 @@ reset => state.OUTPUTSELECT
 reset => state.OUTPUTSELECT
 reset => state.OUTPUTSELECT
 reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
 reset => estado2[2]~reg0.ENA
 reset => estado2[1]~reg0.ENA
 reset => estado2[0]~reg0.ENA

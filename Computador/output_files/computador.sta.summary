@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'prueba3:procesador|uControl:unidadControl|aluOP[0]'
+Slack : -146.288
+TNS   : -4941.340
+
+Type  : Slow Model Setup 'prueba3:procesador|InstructionReg:IR|sal[0]'
+Slack : -139.399
+TNS   : -4422.855
+
+Type  : Slow Model Setup 'clk'
+Slack : -11.200
+TNS   : -1432.527
+
+Type  : Slow Model Hold 'clk'
+Slack : -11.007
+TNS   : -142.813
+
+Type  : Slow Model Hold 'prueba3:procesador|InstructionReg:IR|sal[0]'
+Slack : -10.604
+TNS   : -318.021
+
+Type  : Slow Model Hold 'prueba3:procesador|uControl:unidadControl|aluOP[0]'
+Slack : -3.715
+TNS   : -93.198
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -2.064
+TNS   : -636.881
+
+Type  : Slow Model Minimum Pulse Width 'prueba3:procesador|InstructionReg:IR|sal[0]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'prueba3:procesador|uControl:unidadControl|aluOP[0]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'prueba3:procesador|uControl:unidadControl|aluOP[0]'
+Slack : -56.374
+TNS   : -1844.074
+
+Type  : Fast Model Setup 'prueba3:procesador|InstructionReg:IR|sal[0]'
+Slack : -53.617
+TNS   : -1700.957
+
+Type  : Fast Model Setup 'clk'
+Slack : -4.406
+TNS   : -434.098
+
+Type  : Fast Model Hold 'prueba3:procesador|InstructionReg:IR|sal[0]'
+Slack : -4.737
+TNS   : -142.390
+
+Type  : Fast Model Hold 'clk'
+Slack : -4.601
+TNS   : -60.154
+
+Type  : Fast Model Hold 'prueba3:procesador|uControl:unidadControl|aluOP[0]'
+Slack : -1.980
+TNS   : -56.485
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.880
+TNS   : -549.462
+
+Type  : Fast Model Minimum Pulse Width 'prueba3:procesador|InstructionReg:IR|sal[0]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'prueba3:procesador|uControl:unidadControl|aluOP[0]'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

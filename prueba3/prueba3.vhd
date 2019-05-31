@@ -21,11 +21,16 @@ entity prueba3 is
 --		memToReg : in std_logic;
 --		irWrite : in std_logic;
 		clk : in std_logic;
+		salidaMem : in std_logic_vector(31 downto 0);
 --		pcSrc : in std_logic_vector(1 downto 0);
 --		IorD : in std_logic;
 		--Output
-		salidaPrueba	: out std_logic_vector(15 downto 0);
+		salidaPrueba	: out std_logic_vector(31 downto 0);
+		salidaRegB : out std_logic_vector(31 downto 0);
 		
+		salidaMemRead : out std_logic;
+		salidaMemWrite : out std_logic;
+		--salidaMemRead : out std
 		estado1 : out std_logic_vector(6 downto 0); -- primer siete seg
 		estado2 : out std_logic_vector(6 downto 0);
 		estado3 : out std_logic_vector(6 downto 0);
@@ -282,7 +287,7 @@ begin
 			entrada1 => salidaPC,
 			entrada2 => salidaRegAluOut,
 			selector => siorD,
-			salidaMuxIorD(15 downto 0) => salidaPrueba
+			salidaMuxIorD => salidaPrueba
 		);
 	
 	cPC : PC
@@ -322,7 +327,8 @@ begin
 	IR : InstructionReg
 		port map
 		(
-			ins => "00000010011101011010100000100010",
+			ins => salidaMem,
+			--ins => "00000010011101011010100000100010",
 			sal => salidaIR,
 			clk => clk,
 			irwr => sirwrite
@@ -433,5 +439,8 @@ begin
 			res => sSalidaAlu,
 			br => sBrAlu
 		);
-
+	
+	salidaRegB <= sRegB; 
+	salidaMemRead <= smemRead;
+	salidaMemWrite <= smemWrite;
 end arch_prueba;

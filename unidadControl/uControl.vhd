@@ -143,7 +143,7 @@ begin
 					estado3 <= "1000000";
 					estado4 <= "1111001"; --10
 				
-					state <= aluWriteBack;
+					state <= despuesAddi;
 				
 				when division => --div
 					estado1 <= "1111111";
@@ -396,7 +396,23 @@ begin
 					aluSrcA <= '1';
 					aluSrcB <= "10";
 					regWrite <= '0';
-					regDst <= '0';					
+					regDst <= '0';	
+	
+				when paso =>
+					pcWrite <= '0';
+					branch <= '0';
+					IorD <= '0';
+					memRead <= '0';
+					memWrite <= '0';
+					memToReg <= '0';
+					IRwrite <= '0';
+					PCsrc <= "00";
+					aluOP <= "111";
+					aluSrcA <= '1';
+					aluSrcB <= "10";
+					regWrite <= '0';
+					regDst <= '0';	
+	
 				when aluWriteBack =>
 					pcWrite <= '0';
 					branch <= '0';

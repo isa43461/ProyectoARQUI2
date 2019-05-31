@@ -1,0 +1,35 @@
+library ieee;
+
+use ieee.std_logic_arith.all;
+use ieee.std_logic_1164.all;
+
+entity computador is
+	generic
+	(
+		data : natural := 31;
+		addr : natural := 4
+	);
+	
+	port
+	(
+		--Input
+		reset : in std_logic;
+--		regWrite : in std_logic;
+--		regDst : in std_logic;
+--		muxA : in std_logic;
+--		muxB	: in std_logic_vector(1 downto 0);
+--		eALUOp: in std_logic_vector(2 downto 0);
+--		memToReg : in std_logic;
+--		irWrite : in std_logic;
+		clk : in std_logic;
+--		pcSrc : in std_logic_vector(1 downto 0);
+--		IorD : in std_logic;
+		--Output
+		salidaPrueba	: out std_logic_vector(15 downto 0);
+		
+		estado1 : out std_logic_vector(6 downto 0); -- primer siete seg
+		estado2 : out std_logic_vector(6 downto 0);
+		estado3 : out std_logic_vector(6 downto 0);
+		estado4 : out std_logic_vector(6 downto 0)
+		);
+end computador;

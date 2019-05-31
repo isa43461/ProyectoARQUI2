@@ -1,0 +1,21 @@
+|puertos
+sexo => salida1[0]~reg0.DATAIN
+sexo => salida1[3]~reg0.DATAIN
+sexo => salida1[4]~reg0.DATAIN
+sexo => salida1[5]~reg0.DATAIN
+clk => salida1[0]~reg0.CLK
+clk => salida1[1]~reg0.CLK
+clk => salida1[2]~reg0.CLK
+clk => salida1[3]~reg0.CLK
+clk => salida1[4]~reg0.CLK
+clk => salida1[5]~reg0.CLK
+clk => salida1[6]~reg0.CLK
+salida1[0] <= salida1[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+salida1[1] <= salida1[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+salida1[2] <= salida1[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+salida1[3] <= salida1[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+salida1[4] <= salida1[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+salida1[5] <= salida1[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+salida1[6] <= salida1[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

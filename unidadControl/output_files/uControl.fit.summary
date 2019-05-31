@@ -1,14 +1,14 @@
-Fitter Status : Successful - Thu May 30 06:21:07 2019
+Fitter Status : Successful - Thu May 30 20:09:34 2019
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : uControl
 Top-level Entity Name : uControl
 Family : Cyclone II
 Device : EP2C20F484C7
 Timing Models : Final
-Total logic elements : 54 / 18,752 ( < 1 % )
-    Total combinational functions : 50 / 18,752 ( < 1 % )
-    Dedicated logic registers : 46 / 18,752 ( < 1 % )
-Total registers : 46
+Total logic elements : 58 / 18,752 ( < 1 % )
+    Total combinational functions : 51 / 18,752 ( < 1 % )
+    Dedicated logic registers : 47 / 18,752 ( < 1 % )
+Total registers : 47
 Total pins : 53 / 315 ( 17 % )
 Total virtual pins : 0
 Total memory bits : 0 / 239,616 ( 0 % )
