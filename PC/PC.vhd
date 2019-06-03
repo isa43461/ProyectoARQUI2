@@ -15,7 +15,7 @@ architecture PC_arc of PC is
 begin
 	process(clk, pcOl, band)
 	begin
-		if(rising_edge(clk) and band = '1')then
+		if(falling_edge(clk) and band = '1')then
 			pcAc <= pcOl;
 		end if;
 	end process;

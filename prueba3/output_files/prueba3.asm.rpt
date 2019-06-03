@@ -1,5 +1,5 @@
 Assembler report for prueba3
-Thu May 30 20:00:04 2019
+Sat Jun 01 09:49:11 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu May 30 20:00:04 2019 ;
+; Assembler Status      ; Successful - Sat Jun 01 09:49:11 2019 ;
 ; Revision Name         ; prueba3                               ;
 ; Top-level Entity Name ; prueba3                               ;
 ; Family                ; Cyclone II                            ;
@@ -94,8 +94,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                               ;
 +----------------+-----------------------------------------------------------------------+
 ; Device         ; EP2C20F484C7                                                          ;
-; JTAG usercode  ; 0x003DDB80                                                            ;
-; Checksum       ; 0x003DDB80                                                            ;
+; JTAG usercode  ; 0x003F0F5C                                                            ;
+; Checksum       ; 0x003F0F5C                                                            ;
 +----------------+-----------------------------------------------------------------------+
 
 
@@ -106,7 +106,7 @@ applicable agreement for further details.
 +--------------------+-------------------------------------------------------------------+
 ; Device             ; EPCS16                                                            ;
 ; JTAG usercode      ; 0x00000000                                                        ;
-; Checksum           ; 0x1D9EBBB1                                                        ;
+; Checksum           ; 0x1D9F8660                                                        ;
 ; Compression Ratio  ; 2                                                                 ;
 +--------------------+-------------------------------------------------------------------+
 
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu May 30 20:00:00 2019
+    Info: Processing started: Sat Jun 01 09:49:08 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off prueba3 -c prueba3
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4576 megabytes
-    Info: Processing ended: Thu May 30 20:00:04 2019
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 4590 megabytes
+    Info: Processing ended: Sat Jun 01 09:49:11 2019
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 
 

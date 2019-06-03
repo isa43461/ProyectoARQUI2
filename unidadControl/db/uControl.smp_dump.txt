@@ -1,19 +1,20 @@
 
 State Machine - |uControl|state
-Name state.despuesAddi state.paso state.slt state.multiplicacion state.division state.addi state.jump state.branchSig state.aluWriteBack state.Execute state.memWriteSig state.memWriteBack state.memReadSig state.memAddr state.decode state.fetch 
-state.fetch 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-state.decode 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
-state.memAddr 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
-state.memReadSig 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
-state.memWriteBack 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
-state.memWriteSig 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
-state.Execute 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
-state.aluWriteBack 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
-state.branchSig 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
-state.jump 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
-state.addi 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
-state.division 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
-state.multiplicacion 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
-state.slt 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
-state.paso 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-state.despuesAddi 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+Name state.despuesAddi state.paso state.slt state.multiplicacion state.division state.addi state.jump state.branchSig state.aluWriteBack state.Execute state.memWriteSig state.memWriteBack state.memReadSig state.memAddrSW state.memAddr state.decode state.fetch 
+state.fetch 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.decode 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.memAddr 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.memAddrSW 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.memReadSig 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.memWriteBack 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.memWriteSig 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.Execute 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.aluWriteBack 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.branchSig 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.jump 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.addi 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.division 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.multiplicacion 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.slt 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.paso 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.despuesAddi 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

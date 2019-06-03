@@ -3,32 +3,32 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'prueba3:procesador|uControl:unidadControl|aluOP[0]'
-Slack : -146.288
-TNS   : -4941.340
+Slack : -145.583
+TNS   : -4991.021
 
 Type  : Slow Model Setup 'prueba3:procesador|InstructionReg:IR|sal[0]'
-Slack : -139.399
-TNS   : -4422.855
+Slack : -139.089
+TNS   : -4411.553
 
 Type  : Slow Model Setup 'clk'
-Slack : -11.200
-TNS   : -1432.527
+Slack : -11.626
+TNS   : -25343.961
 
 Type  : Slow Model Hold 'clk'
-Slack : -11.007
-TNS   : -142.813
+Slack : -9.185
+TNS   : -256.688
 
 Type  : Slow Model Hold 'prueba3:procesador|InstructionReg:IR|sal[0]'
-Slack : -10.604
-TNS   : -318.021
+Slack : -8.805
+TNS   : -264.631
 
 Type  : Slow Model Hold 'prueba3:procesador|uControl:unidadControl|aluOP[0]'
-Slack : -3.715
-TNS   : -93.198
+Slack : -2.311
+TNS   : -52.447
 
 Type  : Slow Model Minimum Pulse Width 'clk'
 Slack : -2.064
-TNS   : -636.881
+TNS   : -5486.999
 
 Type  : Slow Model Minimum Pulse Width 'prueba3:procesador|InstructionReg:IR|sal[0]'
 Slack : 0.500
@@ -39,32 +39,32 @@ Slack : 0.500
 TNS   : 0.000
 
 Type  : Fast Model Setup 'prueba3:procesador|uControl:unidadControl|aluOP[0]'
-Slack : -56.374
-TNS   : -1844.074
+Slack : -56.001
+TNS   : -1869.257
 
 Type  : Fast Model Setup 'prueba3:procesador|InstructionReg:IR|sal[0]'
-Slack : -53.617
-TNS   : -1700.957
+Slack : -53.358
+TNS   : -1690.602
 
 Type  : Fast Model Setup 'clk'
-Slack : -4.406
-TNS   : -434.098
+Slack : -4.220
+TNS   : -9137.730
 
 Type  : Fast Model Hold 'prueba3:procesador|InstructionReg:IR|sal[0]'
-Slack : -4.737
-TNS   : -142.390
+Slack : -4.037
+TNS   : -122.895
 
 Type  : Fast Model Hold 'clk'
-Slack : -4.601
-TNS   : -60.154
+Slack : -3.741
+TNS   : -78.750
 
 Type  : Fast Model Hold 'prueba3:procesador|uControl:unidadControl|aluOP[0]'
-Slack : -1.980
-TNS   : -56.485
+Slack : -1.394
+TNS   : -37.279
 
 Type  : Fast Model Minimum Pulse Width 'clk'
 Slack : -1.880
-TNS   : -549.462
+TNS   : -4518.462
 
 Type  : Fast Model Minimum Pulse Width 'prueba3:procesador|InstructionReg:IR|sal[0]'
 Slack : 0.500

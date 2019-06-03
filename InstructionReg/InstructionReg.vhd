@@ -15,7 +15,7 @@ architecture InstructionReg_arc of InstructionReg is
 begin
 process(ins, clk, irwr)
 	begin
-		if(rising_edge(clk) and irwr = '1')then
+		if(falling_edge(clk) and irwr = '1')then
 			sal <= ins;
 		end if;
 		--sal <= tmp;

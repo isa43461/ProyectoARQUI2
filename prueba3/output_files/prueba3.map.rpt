@@ -1,5 +1,5 @@
 Analysis & Synthesis report for prueba3
-Thu May 30 19:58:53 2019
+Sat Jun 01 09:48:00 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -61,15 +61,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 30 19:58:53 2019           ;
+; Analysis & Synthesis Status        ; Successful - Sat Jun 01 09:48:00 2019           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; prueba3                                         ;
 ; Top-level Entity Name              ; prueba3                                         ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 2,789                                           ;
-;     Total combinational functions  ; 2,749                                           ;
-;     Dedicated logic registers      ; 141                                             ;
-; Total registers                    ; 141                                             ;
+; Total logic elements               ; 2,799                                           ;
+;     Total combinational functions  ; 2,761                                           ;
+;     Dedicated logic registers      ; 143                                             ;
+; Total registers                    ; 143                                             ;
 ; Total pins                         ; 128                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 2,048                                           ;
@@ -228,28 +228,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 2,789 ;
+; Estimated Total logic elements              ; 2,799 ;
 ;                                             ;       ;
-; Total combinational functions               ; 2749  ;
+; Total combinational functions               ; 2761  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 1203  ;
-;     -- 3 input functions                    ; 1400  ;
-;     -- <=2 input functions                  ; 146   ;
+;     -- 4 input functions                    ; 1207  ;
+;     -- 3 input functions                    ; 1405  ;
+;     -- <=2 input functions                  ; 149   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 1579  ;
+;     -- normal mode                          ; 1591  ;
 ;     -- arithmetic mode                      ; 1170  ;
 ;                                             ;       ;
-; Total registers                             ; 141   ;
-;     -- Dedicated logic registers            ; 141   ;
+; Total registers                             ; 143   ;
+;     -- Dedicated logic registers            ; 143   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 128   ;
 ; Total memory bits                           ; 2048  ;
 ; Embedded Multiplier 9-bit elements          ; 6     ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 205   ;
-; Total fan-out                               ; 10682 ;
+; Maximum fan-out                             ; 207   ;
+; Total fan-out                               ; 10723 ;
 ; Average fan-out                             ; 3.46  ;
 +---------------------------------------------+-------+
 
@@ -259,7 +259,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                     ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |prueba3                                  ; 2749 (2)          ; 141 (0)      ; 2048        ; 6            ; 0       ; 3         ; 128  ; 0            ; |prueba3                                                                                                                                ; work         ;
+; |prueba3                                  ; 2761 (2)          ; 143 (0)      ; 2048        ; 6            ; 0       ; 3         ; 128  ; 0            ; |prueba3                                                                                                                                ; work         ;
 ;    |Alu:aAlu|                             ; 2537 (339)        ; 0 (0)        ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |prueba3|Alu:aAlu                                                                                                                       ; work         ;
 ;       |lpm_divide:Div0|                   ; 1062 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba3|Alu:aAlu|lpm_divide:Div0                                                                                                       ; work         ;
 ;          |lpm_divide_vfm:auto_generated|  ; 1062 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba3|Alu:aAlu|lpm_divide:Div0|lpm_divide_vfm:auto_generated                                                                         ; work         ;
@@ -286,7 +286,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |altsyncram_i5i1:auto_generated| ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba3|RegFile:registerFile|altsyncram:array_reg_rtl_1|altsyncram_i5i1:auto_generated                                                 ; work         ;
 ;    |Registro:regAluOut|                   ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba3|Registro:regAluOut                                                                                                             ; work         ;
 ;    |muxPCsrc:muxPC|                       ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba3|muxPCsrc:muxPC                                                                                                                 ; work         ;
-;    |uControl:unidadControl|               ; 44 (44)           ; 45 (45)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba3|uControl:unidadControl                                                                                                         ; work         ;
+;    |uControl:unidadControl|               ; 56 (56)           ; 47 (47)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |prueba3|uControl:unidadControl                                                                                                         ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -320,28 +320,29 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |prueba3|uControl:unidadControl|state                                                                                                                                                                                                                                               ;
-+----------------------+-------------------+------------+-----------+----------------------+----------------+------------+------------+-----------------+--------------------+---------------+-------------------+--------------------+------------------+---------------+--------------+-------------+
-; Name                 ; state.despuesAddi ; state.paso ; state.slt ; state.multiplicacion ; state.division ; state.addi ; state.jump ; state.branchSig ; state.aluWriteBack ; state.Execute ; state.memWriteSig ; state.memWriteBack ; state.memReadSig ; state.memAddr ; state.decode ; state.fetch ;
-+----------------------+-------------------+------------+-----------+----------------------+----------------+------------+------------+-----------------+--------------------+---------------+-------------------+--------------------+------------------+---------------+--------------+-------------+
-; state.fetch          ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0             ; 0            ; 0           ;
-; state.decode         ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0             ; 1            ; 1           ;
-; state.memAddr        ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 1             ; 0            ; 1           ;
-; state.memReadSig     ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 1                ; 0             ; 0            ; 1           ;
-; state.memWriteBack   ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 1                  ; 0                ; 0             ; 0            ; 1           ;
-; state.memWriteSig    ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 1                 ; 0                  ; 0                ; 0             ; 0            ; 1           ;
-; state.Execute        ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 1             ; 0                 ; 0                  ; 0                ; 0             ; 0            ; 1           ;
-; state.aluWriteBack   ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 1                  ; 0             ; 0                 ; 0                  ; 0                ; 0             ; 0            ; 1           ;
-; state.branchSig      ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 1               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0             ; 0            ; 1           ;
-; state.jump           ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 1          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0             ; 0            ; 1           ;
-; state.addi           ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 1          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0             ; 0            ; 1           ;
-; state.division       ; 0                 ; 0          ; 0         ; 0                    ; 1              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0             ; 0            ; 1           ;
-; state.multiplicacion ; 0                 ; 0          ; 0         ; 1                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0             ; 0            ; 1           ;
-; state.slt            ; 0                 ; 0          ; 1         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0             ; 0            ; 1           ;
-; state.paso           ; 0                 ; 1          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0             ; 0            ; 1           ;
-; state.despuesAddi    ; 1                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0             ; 0            ; 1           ;
-+----------------------+-------------------+------------+-----------+----------------------+----------------+------------+------------+-----------------+--------------------+---------------+-------------------+--------------------+------------------+---------------+--------------+-------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |prueba3|uControl:unidadControl|state                                                                                                                                                                                                                                                                 ;
++----------------------+-------------------+------------+-----------+----------------------+----------------+------------+------------+-----------------+--------------------+---------------+-------------------+--------------------+------------------+-----------------+---------------+--------------+-------------+
+; Name                 ; state.despuesAddi ; state.paso ; state.slt ; state.multiplicacion ; state.division ; state.addi ; state.jump ; state.branchSig ; state.aluWriteBack ; state.Execute ; state.memWriteSig ; state.memWriteBack ; state.memReadSig ; state.memAddrSW ; state.memAddr ; state.decode ; state.fetch ;
++----------------------+-------------------+------------+-----------+----------------------+----------------+------------+------------+-----------------+--------------------+---------------+-------------------+--------------------+------------------+-----------------+---------------+--------------+-------------+
+; state.fetch          ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0               ; 0             ; 0            ; 0           ;
+; state.decode         ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0               ; 0             ; 1            ; 1           ;
+; state.memAddr        ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0               ; 1             ; 0            ; 1           ;
+; state.memAddrSW      ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 1               ; 0             ; 0            ; 1           ;
+; state.memReadSig     ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 1                ; 0               ; 0             ; 0            ; 1           ;
+; state.memWriteBack   ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 1                  ; 0                ; 0               ; 0             ; 0            ; 1           ;
+; state.memWriteSig    ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 1                 ; 0                  ; 0                ; 0               ; 0             ; 0            ; 1           ;
+; state.Execute        ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 1             ; 0                 ; 0                  ; 0                ; 0               ; 0             ; 0            ; 1           ;
+; state.aluWriteBack   ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 1                  ; 0             ; 0                 ; 0                  ; 0                ; 0               ; 0             ; 0            ; 1           ;
+; state.branchSig      ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 1               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0               ; 0             ; 0            ; 1           ;
+; state.jump           ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 1          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0               ; 0             ; 0            ; 1           ;
+; state.addi           ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 1          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0               ; 0             ; 0            ; 1           ;
+; state.division       ; 0                 ; 0          ; 0         ; 0                    ; 1              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0               ; 0             ; 0            ; 1           ;
+; state.multiplicacion ; 0                 ; 0          ; 0         ; 1                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0               ; 0             ; 0            ; 1           ;
+; state.slt            ; 0                 ; 0          ; 1         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0               ; 0             ; 0            ; 1           ;
+; state.paso           ; 0                 ; 1          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0               ; 0             ; 0            ; 1           ;
+; state.despuesAddi    ; 1                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0               ; 0             ; 0            ; 1           ;
++----------------------+-------------------+------------+-----------+----------------------+----------------+------------+------------+-----------------+--------------------+---------------+-------------------+--------------------+------------------+-----------------+---------------+--------------+-------------+
 
 
 +----------------------------------------------------------------------------------------------------+
@@ -419,17 +420,16 @@ Encoding Type:  One-Hot
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+--------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                   ;
-+------------------------------------------+-------------------------------------------+
-; Register name                            ; Reason for Removal                        ;
-+------------------------------------------+-------------------------------------------+
-; uControl:unidadControl|estado2[0..6]     ; Stuck at VCC due to stuck port data_in    ;
-; uControl:unidadControl|estado1[0..6]     ; Stuck at VCC due to stuck port data_in    ;
-; uControl:unidadControl|PCsrc[0]          ; Merged with uControl:unidadControl|branch ;
-; uControl:unidadControl|state.despuesAddi ; Lost fanout                               ;
-; Total Number of Removed Registers = 16   ;                                           ;
-+------------------------------------------+-------------------------------------------+
++------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                 ;
++----------------------------------------+-------------------------------------------+
+; Register name                          ; Reason for Removal                        ;
++----------------------------------------+-------------------------------------------+
+; uControl:unidadControl|estado2[0..6]   ; Stuck at VCC due to stuck port data_in    ;
+; uControl:unidadControl|estado1[0..6]   ; Stuck at VCC due to stuck port data_in    ;
+; uControl:unidadControl|PCsrc[0]        ; Merged with uControl:unidadControl|branch ;
+; Total Number of Removed Registers = 15 ;                                           ;
++----------------------------------------+-------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -437,7 +437,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 141   ;
+; Total registers                              ; 143   ;
 ; Number of registers using Synchronous Clear  ; 7     ;
 ; Number of registers using Synchronous Load   ; 26    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -462,12 +462,11 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |prueba3|PC:cPC|pcAc[31]              ;
-; 4:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; Yes        ; |prueba3|PC:cPC|pcAc[25]              ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |prueba3|uControl:unidadControl|state ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |prueba3|PC:cPC|pcAc[29]              ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; Yes        ; |prueba3|PC:cPC|pcAc[13]              ;
 ; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |prueba3|MuxAluSrcB:aMuxAluSrcB|Mux16 ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |prueba3|uControl:unidadControl|state ;
-; 1:1                ; 32 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |prueba3|Alu:aAlu|Mux30               ;
+; 1:1                ; 32 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |prueba3|Alu:aAlu|Mux18               ;
 ; 7:1                ; 32 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |prueba3|Alu:aAlu|Mux60               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
 
@@ -793,7 +792,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:07     ;
 +----------------+--------------+
 
 
@@ -803,9 +802,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu May 30 19:58:41 2019
+    Info: Processing started: Sat Jun 01 09:47:46 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off prueba3 -c prueba3
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file /puj/8/arq/proyectoarqui2/memory/memory.vhd
+    Info (12022): Found design unit 1: Memory-arch_Memory
+    Info (12023): Found entity 1: Memory
 Info (12021): Found 2 design units, including 1 entities, in source file /puj/8/arq/proyectoarqui2/unidadcontrol/ucontrol.vhd
     Info (12022): Found design unit 1: uControl-rtl
     Info (12023): Found entity 1: uControl
@@ -1123,7 +1125,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "estado2[4]" is stuck at VCC
     Warning (13410): Pin "estado2[5]" is stuck at VCC
     Warning (13410): Pin "estado2[6]" is stuck at VCC
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (15400): WYSIWYG primitive "RegFile:registerFile|altsyncram:array_reg_rtl_1|altsyncram_i5i1:auto_generated|ram_block1a0" has a port clk0 that is stuck at GND
@@ -1190,16 +1191,16 @@ Warning (15400): WYSIWYG primitive "RegFile:registerFile|altsyncram:array_reg_rt
 Warning (15400): WYSIWYG primitive "RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_i5i1:auto_generated|ram_block1a3" has a port clk0 that is stuck at GND
 Warning (15400): WYSIWYG primitive "RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_i5i1:auto_generated|ram_block1a2" has a port clk0 that is stuck at GND
 Warning (15400): WYSIWYG primitive "RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_i5i1:auto_generated|ram_block1a1" has a port clk0 that is stuck at GND
-Info (21057): Implemented 3024 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3032 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 34 input pins
     Info (21059): Implemented 94 output pins
-    Info (21061): Implemented 2826 logic cells
+    Info (21061): Implemented 2834 logic cells
     Info (21064): Implemented 64 RAM segments
     Info (21062): Implemented 6 DSP elements
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 156 warnings
-    Info: Peak virtual memory: 4716 megabytes
-    Info: Processing ended: Thu May 30 19:58:53 2019
-    Info: Elapsed time: 00:00:12
+    Info: Peak virtual memory: 4715 megabytes
+    Info: Processing ended: Sat Jun 01 09:48:00 2019
+    Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:11
 
 

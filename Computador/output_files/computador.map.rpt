@@ -1,5 +1,5 @@
 Analysis & Synthesis report for computador
-Fri May 31 00:19:05 2019
+Sat Jun 01 12:23:19 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -63,15 +63,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri May 31 00:19:05 2019           ;
+; Analysis & Synthesis Status        ; Successful - Sat Jun 01 12:23:19 2019           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; computador                                      ;
 ; Top-level Entity Name              ; computador                                      ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 2,936                                           ;
-;     Total combinational functions  ; 2,837                                           ;
-;     Dedicated logic registers      ; 270                                             ;
-; Total registers                    ; 270                                             ;
+; Total logic elements               ; 9,708                                           ;
+;     Total combinational functions  ; 6,050                                           ;
+;     Dedicated logic registers      ; 4,239                                           ;
+; Total registers                    ; 4239                                            ;
 ; Total pins                         ; 30                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 2,048                                           ;
@@ -232,29 +232,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 2,936 ;
+; Estimated Total logic elements              ; 9,708 ;
 ;                                             ;       ;
-; Total combinational functions               ; 2837  ;
+; Total combinational functions               ; 6050  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 1273  ;
-;     -- 3 input functions                    ; 1373  ;
-;     -- <=2 input functions                  ; 191   ;
+;     -- 4 input functions                    ; 3992  ;
+;     -- 3 input functions                    ; 1432  ;
+;     -- <=2 input functions                  ; 626   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 1667  ;
+;     -- normal mode                          ; 4880  ;
 ;     -- arithmetic mode                      ; 1170  ;
 ;                                             ;       ;
-; Total registers                             ; 270   ;
-;     -- Dedicated logic registers            ; 270   ;
+; Total registers                             ; 4239  ;
+;     -- Dedicated logic registers            ; 4239  ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 30    ;
 ; Total memory bits                           ; 2048  ;
 ; Embedded Multiplier 9-bit elements          ; 6     ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 334   ;
-; Total fan-out                               ; 11277 ;
-; Average fan-out                             ; 3.52  ;
+; Maximum fan-out                             ; 4303  ;
+; Total fan-out                               ; 34695 ;
+; Average fan-out                             ; 3.34  ;
 +---------------------------------------------+-------+
 
 
@@ -263,24 +263,24 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                           ; Library Name ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |computador                                  ; 2837 (1)          ; 270 (0)      ; 2048        ; 6            ; 0       ; 3         ; 30   ; 0            ; |computador                                                                                                                                                   ; work         ;
-;    |Memory:memoria|                          ; 114 (114)         ; 128 (128)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computador|Memory:memoria                                                                                                                                    ; work         ;
-;    |prueba3:procesador|                      ; 2722 (1)          ; 142 (0)      ; 2048        ; 6            ; 0       ; 3         ; 0    ; 0            ; |computador|prueba3:procesador                                                                                                                                ; work         ;
-;       |Alu:aAlu|                             ; 2537 (339)        ; 0 (0)        ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |computador|prueba3:procesador|Alu:aAlu                                                                                                                       ; work         ;
+; |computador                                  ; 6050 (1)          ; 4239 (0)     ; 2048        ; 6            ; 0       ; 3         ; 30   ; 0            ; |computador                                                                                                                                                   ; work         ;
+;    |Memory:memoria|                          ; 3313 (3313)       ; 4096 (4096)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computador|Memory:memoria                                                                                                                                    ; work         ;
+;    |prueba3:procesador|                      ; 2736 (1)          ; 143 (0)      ; 2048        ; 6            ; 0       ; 3         ; 0    ; 0            ; |computador|prueba3:procesador                                                                                                                                ; work         ;
+;       |Alu:aAlu|                             ; 2538 (339)        ; 0 (0)        ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |computador|prueba3:procesador|Alu:aAlu                                                                                                                       ; work         ;
 ;          |lpm_divide:Div0|                   ; 1062 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computador|prueba3:procesador|Alu:aAlu|lpm_divide:Div0                                                                                                       ; work         ;
 ;             |lpm_divide_vfm:auto_generated|  ; 1062 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computador|prueba3:procesador|Alu:aAlu|lpm_divide:Div0|lpm_divide_vfm:auto_generated                                                                         ; work         ;
 ;                |sign_div_unsign_9nh:divider| ; 1062 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computador|prueba3:procesador|Alu:aAlu|lpm_divide:Div0|lpm_divide_vfm:auto_generated|sign_div_unsign_9nh:divider                                             ; work         ;
 ;                   |alt_u_div_k5f:divider|    ; 1062 (1062)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computador|prueba3:procesador|Alu:aAlu|lpm_divide:Div0|lpm_divide_vfm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_k5f:divider                       ; work         ;
-;          |lpm_divide:Mod0|                   ; 1108 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computador|prueba3:procesador|Alu:aAlu|lpm_divide:Mod0                                                                                                       ; work         ;
-;             |lpm_divide_28m:auto_generated|  ; 1108 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computador|prueba3:procesador|Alu:aAlu|lpm_divide:Mod0|lpm_divide_28m:auto_generated                                                                         ; work         ;
-;                |sign_div_unsign_9nh:divider| ; 1108 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computador|prueba3:procesador|Alu:aAlu|lpm_divide:Mod0|lpm_divide_28m:auto_generated|sign_div_unsign_9nh:divider                                             ; work         ;
-;                   |alt_u_div_k5f:divider|    ; 1108 (1107)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computador|prueba3:procesador|Alu:aAlu|lpm_divide:Mod0|lpm_divide_28m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_k5f:divider                       ; work         ;
+;          |lpm_divide:Mod0|                   ; 1109 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computador|prueba3:procesador|Alu:aAlu|lpm_divide:Mod0                                                                                                       ; work         ;
+;             |lpm_divide_28m:auto_generated|  ; 1109 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computador|prueba3:procesador|Alu:aAlu|lpm_divide:Mod0|lpm_divide_28m:auto_generated                                                                         ; work         ;
+;                |sign_div_unsign_9nh:divider| ; 1109 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computador|prueba3:procesador|Alu:aAlu|lpm_divide:Mod0|lpm_divide_28m:auto_generated|sign_div_unsign_9nh:divider                                             ; work         ;
+;                   |alt_u_div_k5f:divider|    ; 1109 (1108)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computador|prueba3:procesador|Alu:aAlu|lpm_divide:Mod0|lpm_divide_28m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_k5f:divider                       ; work         ;
 ;                      |add_sub_mkc:add_sub_1| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computador|prueba3:procesador|Alu:aAlu|lpm_divide:Mod0|lpm_divide_28m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_k5f:divider|add_sub_mkc:add_sub_1 ; work         ;
 ;          |lpm_mult:Mult0|                    ; 28 (0)            ; 0 (0)        ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |computador|prueba3:procesador|Alu:aAlu|lpm_mult:Mult0                                                                                                        ; work         ;
 ;             |mult_l8t:auto_generated|        ; 28 (28)           ; 0 (0)        ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |computador|prueba3:procesador|Alu:aAlu|lpm_mult:Mult0|mult_l8t:auto_generated                                                                                ; work         ;
 ;       |InstructionReg:IR|                    ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computador|prueba3:procesador|InstructionReg:IR                                                                                                              ; work         ;
 ;       |MuxAluSrcB:aMuxAluSrcB|               ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computador|prueba3:procesador|MuxAluSrcB:aMuxAluSrcB                                                                                                         ; work         ;
-;       |MuxIorD:cMuxIorD|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computador|prueba3:procesador|MuxIorD:cMuxIorD                                                                                                               ; work         ;
+;       |MuxIorD:cMuxIorD|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computador|prueba3:procesador|MuxIorD:cMuxIorD                                                                                                               ; work         ;
 ;       |MuxMemToReg:muxMemReg|                ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computador|prueba3:procesador|MuxMemToReg:muxMemReg                                                                                                          ; work         ;
 ;       |MuxRegDst:muxDST|                     ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computador|prueba3:procesador|MuxRegDst:muxDST                                                                                                               ; work         ;
 ;       |MuxSrcA:MuxAluSrcA|                   ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computador|prueba3:procesador|MuxSrcA:MuxAluSrcA                                                                                                             ; work         ;
@@ -292,7 +292,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |altsyncram_uhi1:auto_generated| ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |computador|prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_1|altsyncram_uhi1:auto_generated                                                 ; work         ;
 ;       |Registro:regAluOut|                   ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computador|prueba3:procesador|Registro:regAluOut                                                                                                             ; work         ;
 ;       |muxPCsrc:muxPC|                       ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computador|prueba3:procesador|muxPCsrc:muxPC                                                                                                                 ; work         ;
-;       |uControl:unidadControl|               ; 48 (48)           ; 46 (46)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computador|prueba3:procesador|uControl:unidadControl                                                                                                         ; work         ;
+;       |uControl:unidadControl|               ; 56 (56)           ; 47 (47)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computador|prueba3:procesador|uControl:unidadControl                                                                                                         ; work         ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -326,28 +326,29 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |computador|prueba3:procesador|uControl:unidadControl|state                                                                                                                                                                                                                         ;
-+----------------------+-------------------+------------+-----------+----------------------+----------------+------------+------------+-----------------+--------------------+---------------+-------------------+--------------------+------------------+---------------+--------------+-------------+
-; Name                 ; state.despuesAddi ; state.paso ; state.slt ; state.multiplicacion ; state.division ; state.addi ; state.jump ; state.branchSig ; state.aluWriteBack ; state.Execute ; state.memWriteSig ; state.memWriteBack ; state.memReadSig ; state.memAddr ; state.decode ; state.fetch ;
-+----------------------+-------------------+------------+-----------+----------------------+----------------+------------+------------+-----------------+--------------------+---------------+-------------------+--------------------+------------------+---------------+--------------+-------------+
-; state.fetch          ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0             ; 0            ; 0           ;
-; state.decode         ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0             ; 1            ; 1           ;
-; state.memAddr        ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 1             ; 0            ; 1           ;
-; state.memReadSig     ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 1                ; 0             ; 0            ; 1           ;
-; state.memWriteBack   ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 1                  ; 0                ; 0             ; 0            ; 1           ;
-; state.memWriteSig    ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 1                 ; 0                  ; 0                ; 0             ; 0            ; 1           ;
-; state.Execute        ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 1             ; 0                 ; 0                  ; 0                ; 0             ; 0            ; 1           ;
-; state.aluWriteBack   ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 1                  ; 0             ; 0                 ; 0                  ; 0                ; 0             ; 0            ; 1           ;
-; state.branchSig      ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 1               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0             ; 0            ; 1           ;
-; state.jump           ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 1          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0             ; 0            ; 1           ;
-; state.addi           ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 1          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0             ; 0            ; 1           ;
-; state.division       ; 0                 ; 0          ; 0         ; 0                    ; 1              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0             ; 0            ; 1           ;
-; state.multiplicacion ; 0                 ; 0          ; 0         ; 1                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0             ; 0            ; 1           ;
-; state.slt            ; 0                 ; 0          ; 1         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0             ; 0            ; 1           ;
-; state.paso           ; 0                 ; 1          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0             ; 0            ; 1           ;
-; state.despuesAddi    ; 1                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0             ; 0            ; 1           ;
-+----------------------+-------------------+------------+-----------+----------------------+----------------+------------+------------+-----------------+--------------------+---------------+-------------------+--------------------+------------------+---------------+--------------+-------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |computador|prueba3:procesador|uControl:unidadControl|state                                                                                                                                                                                                                                           ;
++----------------------+-------------------+------------+-----------+----------------------+----------------+------------+------------+-----------------+--------------------+---------------+-------------------+--------------------+------------------+-----------------+---------------+--------------+-------------+
+; Name                 ; state.despuesAddi ; state.paso ; state.slt ; state.multiplicacion ; state.division ; state.addi ; state.jump ; state.branchSig ; state.aluWriteBack ; state.Execute ; state.memWriteSig ; state.memWriteBack ; state.memReadSig ; state.memAddrSW ; state.memAddr ; state.decode ; state.fetch ;
++----------------------+-------------------+------------+-----------+----------------------+----------------+------------+------------+-----------------+--------------------+---------------+-------------------+--------------------+------------------+-----------------+---------------+--------------+-------------+
+; state.fetch          ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0               ; 0             ; 0            ; 0           ;
+; state.decode         ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0               ; 0             ; 1            ; 1           ;
+; state.memAddr        ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0               ; 1             ; 0            ; 1           ;
+; state.memAddrSW      ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 1               ; 0             ; 0            ; 1           ;
+; state.memReadSig     ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 1                ; 0               ; 0             ; 0            ; 1           ;
+; state.memWriteBack   ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 1                  ; 0                ; 0               ; 0             ; 0            ; 1           ;
+; state.memWriteSig    ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 1                 ; 0                  ; 0                ; 0               ; 0             ; 0            ; 1           ;
+; state.Execute        ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 1             ; 0                 ; 0                  ; 0                ; 0               ; 0             ; 0            ; 1           ;
+; state.aluWriteBack   ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 1                  ; 0             ; 0                 ; 0                  ; 0                ; 0               ; 0             ; 0            ; 1           ;
+; state.branchSig      ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 1               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0               ; 0             ; 0            ; 1           ;
+; state.jump           ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 1          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0               ; 0             ; 0            ; 1           ;
+; state.addi           ; 0                 ; 0          ; 0         ; 0                    ; 0              ; 1          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0               ; 0             ; 0            ; 1           ;
+; state.division       ; 0                 ; 0          ; 0         ; 0                    ; 1              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0               ; 0             ; 0            ; 1           ;
+; state.multiplicacion ; 0                 ; 0          ; 0         ; 1                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0               ; 0             ; 0            ; 1           ;
+; state.slt            ; 0                 ; 0          ; 1         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0               ; 0             ; 0            ; 1           ;
+; state.paso           ; 0                 ; 1          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0               ; 0             ; 0            ; 1           ;
+; state.despuesAddi    ; 1                 ; 0          ; 0         ; 0                    ; 0              ; 0          ; 0          ; 0               ; 0                  ; 0             ; 0                 ; 0                  ; 0                ; 0               ; 0             ; 0            ; 1           ;
++----------------------+-------------------+------------+-----------+----------------------+----------------+------------+------------+-----------------+--------------------+---------------+-------------------+--------------------+------------------+-----------------+---------------+--------------+-------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -355,11 +356,21 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------+-----------------------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal               ; Free of Timing Hazards ;
 +-----------------------------------------------------+-----------------------------------+------------------------+
-; prueba3:procesador|Alu:aAlu|res[1]                  ; prueba3:procesador|Alu:aAlu|Mux65 ; yes                    ;
+; prueba3:procesador|Alu:aAlu|res[4]                  ; prueba3:procesador|Alu:aAlu|Mux65 ; yes                    ;
 ; prueba3:procesador|Alu:aAlu|br                      ; prueba3:procesador|Alu:aAlu|Mux67 ; yes                    ;
+; prueba3:procesador|Alu:aAlu|res[5]                  ; prueba3:procesador|Alu:aAlu|Mux65 ; yes                    ;
+; prueba3:procesador|Alu:aAlu|res[2]                  ; prueba3:procesador|Alu:aAlu|Mux65 ; yes                    ;
+; prueba3:procesador|Alu:aAlu|res[3]                  ; prueba3:procesador|Alu:aAlu|Mux65 ; yes                    ;
+; prueba3:procesador|Alu:aAlu|res[1]                  ; prueba3:procesador|Alu:aAlu|Mux65 ; yes                    ;
 ; prueba3:procesador|Alu:aAlu|res[0]                  ; prueba3:procesador|Alu:aAlu|Mux65 ; yes                    ;
+; prueba3:procesador|Alu:aAlu|res[6]                  ; prueba3:procesador|Alu:aAlu|Mux65 ; yes                    ;
+; prueba3:procesador|Alu:aAlu|tmp[4]                  ; prueba3:procesador|Alu:aAlu|Mux2  ; yes                    ;
+; prueba3:procesador|Alu:aAlu|tmp[5]                  ; prueba3:procesador|Alu:aAlu|Mux2  ; yes                    ;
+; prueba3:procesador|Alu:aAlu|tmp[2]                  ; prueba3:procesador|Alu:aAlu|Mux2  ; yes                    ;
+; prueba3:procesador|Alu:aAlu|tmp[3]                  ; prueba3:procesador|Alu:aAlu|Mux2  ; yes                    ;
 ; prueba3:procesador|Alu:aAlu|tmp[1]                  ; prueba3:procesador|Alu:aAlu|Mux2  ; yes                    ;
 ; prueba3:procesador|Alu:aAlu|tmp[0]                  ; prueba3:procesador|Alu:aAlu|Mux2  ; yes                    ;
+; prueba3:procesador|Alu:aAlu|tmp[6]                  ; prueba3:procesador|Alu:aAlu|Mux2  ; yes                    ;
 ; prueba3:procesador|Alu:aAlu|res[29]                 ; prueba3:procesador|Alu:aAlu|Mux65 ; yes                    ;
 ; prueba3:procesador|Alu:aAlu|res[31]                 ; prueba3:procesador|Alu:aAlu|Mux65 ; yes                    ;
 ; prueba3:procesador|Alu:aAlu|res[30]                 ; prueba3:procesador|Alu:aAlu|Mux65 ; yes                    ;
@@ -385,11 +396,6 @@ Encoding Type:  One-Hot
 ; prueba3:procesador|Alu:aAlu|res[9]                  ; prueba3:procesador|Alu:aAlu|Mux65 ; yes                    ;
 ; prueba3:procesador|Alu:aAlu|res[8]                  ; prueba3:procesador|Alu:aAlu|Mux65 ; yes                    ;
 ; prueba3:procesador|Alu:aAlu|res[7]                  ; prueba3:procesador|Alu:aAlu|Mux65 ; yes                    ;
-; prueba3:procesador|Alu:aAlu|res[6]                  ; prueba3:procesador|Alu:aAlu|Mux65 ; yes                    ;
-; prueba3:procesador|Alu:aAlu|res[5]                  ; prueba3:procesador|Alu:aAlu|Mux65 ; yes                    ;
-; prueba3:procesador|Alu:aAlu|res[4]                  ; prueba3:procesador|Alu:aAlu|Mux65 ; yes                    ;
-; prueba3:procesador|Alu:aAlu|res[3]                  ; prueba3:procesador|Alu:aAlu|Mux65 ; yes                    ;
-; prueba3:procesador|Alu:aAlu|res[2]                  ; prueba3:procesador|Alu:aAlu|Mux65 ; yes                    ;
 ; prueba3:procesador|Alu:aAlu|tmp[29]                 ; prueba3:procesador|Alu:aAlu|Mux2  ; yes                    ;
 ; prueba3:procesador|Alu:aAlu|tmp[31]                 ; prueba3:procesador|Alu:aAlu|Mux2  ; yes                    ;
 ; prueba3:procesador|Alu:aAlu|tmp[30]                 ; prueba3:procesador|Alu:aAlu|Mux2  ; yes                    ;
@@ -415,11 +421,6 @@ Encoding Type:  One-Hot
 ; prueba3:procesador|Alu:aAlu|tmp[9]                  ; prueba3:procesador|Alu:aAlu|Mux2  ; yes                    ;
 ; prueba3:procesador|Alu:aAlu|tmp[8]                  ; prueba3:procesador|Alu:aAlu|Mux2  ; yes                    ;
 ; prueba3:procesador|Alu:aAlu|tmp[7]                  ; prueba3:procesador|Alu:aAlu|Mux2  ; yes                    ;
-; prueba3:procesador|Alu:aAlu|tmp[6]                  ; prueba3:procesador|Alu:aAlu|Mux2  ; yes                    ;
-; prueba3:procesador|Alu:aAlu|tmp[5]                  ; prueba3:procesador|Alu:aAlu|Mux2  ; yes                    ;
-; prueba3:procesador|Alu:aAlu|tmp[4]                  ; prueba3:procesador|Alu:aAlu|Mux2  ; yes                    ;
-; prueba3:procesador|Alu:aAlu|tmp[3]                  ; prueba3:procesador|Alu:aAlu|Mux2  ; yes                    ;
-; prueba3:procesador|Alu:aAlu|tmp[2]                  ; prueba3:procesador|Alu:aAlu|Mux2  ; yes                    ;
 ; Number of user-specified and inferred latches = 65  ;                                   ;                        ;
 +-----------------------------------------------------+-----------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -442,12 +443,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 270   ;
-; Number of registers using Synchronous Clear  ; 29    ;
+; Total registers                              ; 4239  ;
+; Number of registers using Synchronous Clear  ; 26    ;
 ; Number of registers using Synchronous Load   ; 26    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 206   ;
+; Number of registers using Clock Enable       ; 4174  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -467,13 +468,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |computador|prueba3:procesador|PC:cPC|pcAc[29]              ;
-; 4:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; Yes        ; |computador|prueba3:procesador|PC:cPC|pcAc[21]              ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |computador|prueba3:procesador|uControl:unidadControl|state ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |computador|prueba3:procesador|PC:cPC|pcAc[31]              ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; Yes        ; |computador|prueba3:procesador|PC:cPC|pcAc[24]              ;
 ; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |computador|prueba3:procesador|MuxAluSrcB:aMuxAluSrcB|Mux16 ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |computador|prueba3:procesador|uControl:unidadControl|state ;
-; 1:1                ; 32 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |computador|prueba3:procesador|Alu:aAlu|Mux17               ;
-; 7:1                ; 32 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |computador|prueba3:procesador|Alu:aAlu|Mux38               ;
+; 1:1                ; 32 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |computador|prueba3:procesador|Alu:aAlu|Mux32               ;
+; 7:1                ; 32 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |computador|prueba3:procesador|Alu:aAlu|Mux63               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 
 
@@ -820,7 +820,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:07     ;
+; Top            ; 00:00:12     ;
 +----------------+--------------+
 
 
@@ -830,9 +830,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri May 31 00:18:54 2019
+    Info: Processing started: Sat Jun 01 12:23:01 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off computador -c computador
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file /puj/8/arq/proyectoarqui2/entradasalida/puertos.vhd
+    Info (12022): Found design unit 1: puertos-arch_puertos
+    Info (12023): Found entity 1: puertos
 Info (12021): Found 2 design units, including 1 entities, in source file /puj/8/arq/proyectoarqui2/unidadcontrol/ucontrol.vhd
     Info (12022): Found design unit 1: uControl-rtl
     Info (12023): Found entity 1: uControl
@@ -885,7 +888,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file /puj/8/
     Info (12022): Found design unit 1: prueba3-arch_prueba
     Info (12023): Found entity 1: prueba3
 Info (12021): Found 2 design units, including 1 entities, in source file /puj/8/arq/proyectoarqui2/memory/memory.vhd
-    Info (12022): Found design unit 1: Memory-behavioral
+    Info (12022): Found design unit 1: Memory-arch_Memory
     Info (12023): Found entity 1: Memory
 Info (12021): Found 2 design units, including 1 entities, in source file /puj/8/arq/proyectoarqui2/prueba3/computador.vhd
     Info (12022): Found design unit 1: computador-arch_computador
@@ -979,7 +982,7 @@ Info (12128): Elaborating entity "Memory" for hierarchy "Memory:memoria"
 Warning (276027): Inferred dual-clock RAM node "prueba3:procesador|RegFile:registerFile|array_reg_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Warning (276027): Inferred dual-clock RAM node "prueba3:procesador|RegFile:registerFile|array_reg_rtl_1" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276004): RAM logic "Memory:memoria|mem" is uninferred due to inappropriate RAM size
+    Info (276007): RAM logic "Memory:memoria|mem" is uninferred due to asynchronous read logic
 Info (19000): Inferred 2 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "prueba3:procesador|RegFile:registerFile|array_reg_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -1079,11 +1082,21 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "prueba3:procesador|Alu:aAlu|lpm_mult:Mult0|mult_l8t:auto_generated|mac_out8"
 Info (13014): Ignored 84 buffer(s)
     Info (13019): Ignored 84 SOFT buffer(s)
-Warning (13012): Latch prueba3:procesador|Alu:aAlu|res[1] has unsafe behavior
+Warning (13012): Latch prueba3:procesador|Alu:aAlu|res[4] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal prueba3:procesador|uControl:unidadControl|aluOP[0]
 Warning (13012): Latch prueba3:procesador|Alu:aAlu|br has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal prueba3:procesador|uControl:unidadControl|aluOP[2]
+Warning (13012): Latch prueba3:procesador|Alu:aAlu|res[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal prueba3:procesador|uControl:unidadControl|aluOP[0]
+Warning (13012): Latch prueba3:procesador|Alu:aAlu|res[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal prueba3:procesador|uControl:unidadControl|aluOP[0]
+Warning (13012): Latch prueba3:procesador|Alu:aAlu|res[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal prueba3:procesador|uControl:unidadControl|aluOP[0]
+Warning (13012): Latch prueba3:procesador|Alu:aAlu|res[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal prueba3:procesador|uControl:unidadControl|aluOP[0]
 Warning (13012): Latch prueba3:procesador|Alu:aAlu|res[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal prueba3:procesador|uControl:unidadControl|aluOP[0]
+Warning (13012): Latch prueba3:procesador|Alu:aAlu|res[6] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal prueba3:procesador|uControl:unidadControl|aluOP[0]
 Warning (13012): Latch prueba3:procesador|Alu:aAlu|res[29] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal prueba3:procesador|uControl:unidadControl|aluOP[0]
@@ -1135,16 +1148,6 @@ Warning (13012): Latch prueba3:procesador|Alu:aAlu|res[8] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal prueba3:procesador|uControl:unidadControl|aluOP[0]
 Warning (13012): Latch prueba3:procesador|Alu:aAlu|res[7] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal prueba3:procesador|uControl:unidadControl|aluOP[0]
-Warning (13012): Latch prueba3:procesador|Alu:aAlu|res[6] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal prueba3:procesador|uControl:unidadControl|aluOP[0]
-Warning (13012): Latch prueba3:procesador|Alu:aAlu|res[5] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal prueba3:procesador|uControl:unidadControl|aluOP[0]
-Warning (13012): Latch prueba3:procesador|Alu:aAlu|res[4] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal prueba3:procesador|uControl:unidadControl|aluOP[0]
-Warning (13012): Latch prueba3:procesador|Alu:aAlu|res[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal prueba3:procesador|uControl:unidadControl|aluOP[0]
-Warning (13012): Latch prueba3:procesador|Alu:aAlu|res[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal prueba3:procesador|uControl:unidadControl|aluOP[0]
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "estado1[0]" is stuck at VCC
     Warning (13410): Pin "estado1[1]" is stuck at VCC
@@ -1162,16 +1165,14 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "estado2[6]" is stuck at VCC
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_1|altsyncram_uhi1:auto_generated|ram_block1a26" has a port clk0 that is stuck at GND
 Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_1|altsyncram_uhi1:auto_generated|ram_block1a29" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_1|altsyncram_uhi1:auto_generated|ram_block1a30" has a port clk0 that is stuck at GND
 Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_1|altsyncram_uhi1:auto_generated|ram_block1a31" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_1|altsyncram_uhi1:auto_generated|ram_block1a28" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_1|altsyncram_uhi1:auto_generated|ram_block1a26" has a port clk0 that is stuck at GND
 Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_1|altsyncram_uhi1:auto_generated|ram_block1a27" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_uhi1:auto_generated|ram_block1a0" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_1|altsyncram_uhi1:auto_generated|ram_block1a30" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_1|altsyncram_uhi1:auto_generated|ram_block1a28" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_uhi1:auto_generated|ram_block1a4" has a port clk0 that is stuck at GND
 Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_1|altsyncram_uhi1:auto_generated|ram_block1a0" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_uhi1:auto_generated|ram_block1a31" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_1|altsyncram_uhi1:auto_generated|ram_block1a2" has a port clk0 that is stuck at GND
 Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_1|altsyncram_uhi1:auto_generated|ram_block1a12" has a port clk0 that is stuck at GND
 Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_1|altsyncram_uhi1:auto_generated|ram_block1a13" has a port clk0 that is stuck at GND
 Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_1|altsyncram_uhi1:auto_generated|ram_block1a14" has a port clk0 that is stuck at GND
@@ -1192,10 +1193,12 @@ Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|alts
 Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_1|altsyncram_uhi1:auto_generated|ram_block1a8" has a port clk0 that is stuck at GND
 Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_1|altsyncram_uhi1:auto_generated|ram_block1a6" has a port clk0 that is stuck at GND
 Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_1|altsyncram_uhi1:auto_generated|ram_block1a7" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_1|altsyncram_uhi1:auto_generated|ram_block1a3" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_1|altsyncram_uhi1:auto_generated|ram_block1a1" has a port clk0 that is stuck at GND
 Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_1|altsyncram_uhi1:auto_generated|ram_block1a4" has a port clk0 that is stuck at GND
 Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_1|altsyncram_uhi1:auto_generated|ram_block1a5" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_1|altsyncram_uhi1:auto_generated|ram_block1a3" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_uhi1:auto_generated|ram_block1a31" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_1|altsyncram_uhi1:auto_generated|ram_block1a1" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_1|altsyncram_uhi1:auto_generated|ram_block1a2" has a port clk0 that is stuck at GND
 Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_uhi1:auto_generated|ram_block1a30" has a port clk0 that is stuck at GND
 Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_uhi1:auto_generated|ram_block1a29" has a port clk0 that is stuck at GND
 Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_uhi1:auto_generated|ram_block1a28" has a port clk0 that is stuck at GND
@@ -1222,20 +1225,20 @@ Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|alts
 Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_uhi1:auto_generated|ram_block1a7" has a port clk0 that is stuck at GND
 Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_uhi1:auto_generated|ram_block1a6" has a port clk0 that is stuck at GND
 Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_uhi1:auto_generated|ram_block1a5" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_uhi1:auto_generated|ram_block1a4" has a port clk0 that is stuck at GND
 Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_uhi1:auto_generated|ram_block1a3" has a port clk0 that is stuck at GND
 Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_uhi1:auto_generated|ram_block1a2" has a port clk0 that is stuck at GND
 Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_uhi1:auto_generated|ram_block1a1" has a port clk0 that is stuck at GND
-Info (21057): Implemented 3084 device resources after synthesis - the final resource count might be different
+Warning (15400): WYSIWYG primitive "prueba3:procesador|RegFile:registerFile|altsyncram:array_reg_rtl_0|altsyncram_uhi1:auto_generated|ram_block1a0" has a port clk0 that is stuck at GND
+Info (21057): Implemented 9853 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 28 output pins
-    Info (21061): Implemented 2984 logic cells
+    Info (21061): Implemented 9753 logic cells
     Info (21064): Implemented 64 RAM segments
     Info (21062): Implemented 6 DSP elements
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 156 warnings
-    Info: Peak virtual memory: 4723 megabytes
-    Info: Processing ended: Fri May 31 00:19:05 2019
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Peak virtual memory: 4735 megabytes
+    Info: Processing ended: Sat Jun 01 12:23:19 2019
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:18
 
 

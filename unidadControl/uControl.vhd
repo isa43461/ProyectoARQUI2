@@ -40,7 +40,7 @@ end entity;
 architecture rtl of uControl is
 
 	-- Build an enumerated type for the state machine
-	type state_type is (fetch, decode,memAddr,memReadSig,memWriteBack,memWriteSig,Execute,aluWriteBack,branchSig,jump,addi,division,multiplicacion,slt,paso,despuesAddi);
+	type state_type is (fetch, decode,memAddr,memAddrSW,memReadSig,memWriteBack,memWriteSig,Execute,aluWriteBack,branchSig,jump,addi,division,multiplicacion,slt,paso,despuesAddi);
 
 	-- Register to hold the current state
 	signal state : state_type := fetch;
@@ -73,10 +73,10 @@ begin
 					if opcode = "100011" then --lw
 						state <= memAddr;
 					elsif opcode = "101011" then --sw
-						state <= memAddr;
+						state <= memAddrSW;
 					elsif opcode = "000100" then --beq
 						state <= branchSig;
-					elsif opcode = "000000" then --add
+					elsif opcode = "100000" then --add
 						state <= execute;
 					elsif opcode = "000110" then --division
 						state <= division;
@@ -97,12 +97,23 @@ begin
 					estado2 <= "1111111";
 					estado3 <= "1111111";
 					estado4 <= "0110000"; --3
-					if opcode = "100011" then --lw
+--					if opcode = "100011" then --lw
 						state <= memReadSig;
-					else-- opcode = "101011" then --sw
+--					else-- opcode = "101011" then --sw
+--						state <= memWriteSig;
+--					end if;
+
+				when memAddrSW =>
+					estado1 <= "1111111";
+					estado2 <= "1111111";
+					estado3 <= "1111000";
+					estado4 <= "1111001"; --17
+--					if opcode = "100011" then --lw
+--						state <= memReadSig;
+--					else-- opcode = "101011" then --sw
 						state <= memWriteSig;
-					end if;
-				
+--					end if;	
+--	
 				when memReadSig =>
 					estado1 <= "1111111";
 					estado2 <= "1111111";
@@ -137,7 +148,7 @@ begin
 					state <= aluWriteBack;
 
 					
-				when addi => --add
+				when addi => --addi
 					estado1 <= "1111111";
 					estado2 <= "1111111";
 					estado3 <= "1000000";
@@ -183,7 +194,16 @@ begin
 					estado3 <= "0010010";
 					estado4 <= "1111001"; --15	
 
-					state <= fetch;					
+					state <= fetch;		
+					
+--				when guardarInput =>
+--					estado1 <= "1111111";
+--					estado2 <= "1111111";
+--					estado3 <= "0000010";
+--					estado4 <= "1111001"; --15		
+--					
+--					state <= fetch;
+					
 				when aluWriteBack=>
 					estado1 <= "1111111";
 					estado2 <= "1111111";
@@ -251,6 +271,22 @@ begin
 					aluSrcB <= "11";
 					regWrite <= '0';
 					regDst <= '0';
+					
+				when memAddrSW =>
+					pcWrite <= '0';
+					branch <= '0';
+					IorD <= '0';
+					memRead <= '0';
+					memWrite <= '0';
+					memToReg <= '0';
+					IRwrite <= '0';
+					PCsrc <= "00";
+					aluOP <= "000";
+					aluSrcA <= '1';
+					aluSrcB <= "10";
+					regWrite <= '0';
+					regDst <= '0';
+					
 				when memAddr =>
 					pcWrite <= '0';
 					branch <= '0';
@@ -323,6 +359,21 @@ begin
 					regWrite <= '0';
 					regDst <= '0';
 
+--				when guardarInput =>
+--					pcWrite <= '0';
+--					branch <= '0';
+--					IorD <= '1';
+--					memRead <= '0';
+--					memWrite <= '1';
+--					memToReg <= '0';
+--					IRwrite <= '0';
+--					PCsrc <= "00";
+--					aluOP <= "000";
+--					aluSrcA <= '0';
+--					aluSrcB <= "00";
+--					regWrite <= '0';
+--					regDst <= '0';
+--					
 				when division =>
 					pcWrite <= '0';
 					branch <= '0';

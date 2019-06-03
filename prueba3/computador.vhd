@@ -27,6 +27,8 @@ entity computador is
 		--Output
 		--salidaPrueba	: out std_logic_vector(15 downto 0);
 		
+		--entrada : in std_logic_vector(6 downto 0);
+		
 		estado1 : out std_logic_vector(6 downto 0); -- primer siete seg
 		estado2 : out std_logic_vector(6 downto 0);
 		estado3 : out std_logic_vector(6 downto 0);
@@ -35,6 +37,19 @@ entity computador is
 end computador;
 
 architecture arch_computador of computador is
+
+component puertos is
+	port
+	(
+		-- Input ports
+		entrada : in std_logic_vector(6 downto 0);
+		clk : in std_logic;
+		
+		-- Output ports
+		salida	: out std_logic_vector(6 downto 0)
+		
+	);
+end component;
 
 component prueba3 is
 	port
@@ -54,6 +69,9 @@ component prueba3 is
 --		IorD : in std_logic;
 		salidaMemRead : out std_logic;
 		salidaMemWrite : out std_logic;
+		
+		
+--		entradas : in std_logic_vector(31 downto 0);
 		--Output
 		salidaPrueba	: out std_logic_vector(31 downto 0);
 		salidaRegB : out std_logic_vector(31 downto 0);
@@ -65,8 +83,10 @@ component prueba3 is
 end component;
 
 component Memory is
-generic(dataSize : natural := 32; instructionSize: natural := 32);
-
+generic(
+	dataSize : natural := 32; 
+	instructionSize: natural := 32
+);
 port(
 	--inputs
 	addressIn: in std_logic_vector(instructionSize-1 downto 0);
@@ -90,6 +110,17 @@ signal sMemRead : std_logic;
 signal sMemWrite : std_logic;
 
 begin
+	
+--	entrada : puertos
+--		port map
+--		(
+--			entrada => entrada,
+--			clk => clk,
+--
+--
+--			--salida
+--		);
+
 	 procesador : prueba3
 		port map
 		(
@@ -114,6 +145,22 @@ begin
 			memRead => sMemRead,
 			memWrite => sMemWrite,
 			clk => clk,
+			--inputs
+			
+			--outputs
 			memOut => salidaMemoria
 		);
+	
+--
+--		port map
+--		(
+--			address => salidaProcesador,
+--			writeData => sSalidaRegB,
+--			signalMemRead => sMemRead,
+--			signalMemWrite => sMemWrite,
+--			clk => clk,
+--			memData => salidaMemoria
+--		);
+--		
+
 end arch_computador;

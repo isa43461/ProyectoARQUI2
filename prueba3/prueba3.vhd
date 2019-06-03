@@ -443,4 +443,6 @@ begin
 	salidaRegB <= sRegB; 
 	salidaMemRead <= smemRead;
 	salidaMemWrite <= smemWrite;
+--	salida1 <= 
+--	salida2 <=
 end arch_prueba;

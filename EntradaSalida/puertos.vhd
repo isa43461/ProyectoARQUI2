@@ -13,9 +13,7 @@ library ieee;
 
 	-- SIGNED and UNSIGNED types, and relevant functions
 	use ieee.numeric_std.all;
-
-	-- Basic sequential functions and concurrent procedures
-	use ieee.VITAL_Primitives.all;
+	use ieee.std_logic_unsigned.all;
 
 entity puertos is
 
@@ -23,49 +21,24 @@ entity puertos is
 	(
 		-- Input ports
 		entrada : in std_logic_vector(6 downto 0);
---		sexo	: in  std_logic;
---		peso : in std_logic_vector(6 downto 0);
---		tipo : in std_logic_vector(5 downto 0);
---		cantidad : in std_logic_vector(4 downto 0);
 		clk : in std_logic;
-
+		
 		-- Output ports
-		salida1	: out std_logic_vector(6 downto 0);
-		salida2 : out std_logic_vector(6 downto 0)
-
+		salida	: out std_logic_vector(6 downto 0)
+		
 	);
 end puertos;
 
--- Library Clause(s) (optional)
--- Use Clause(s) (optional)
-
 architecture arch_puertos of puertos is
 
-signal sexo, peso, tipo,cantidad : std_logic_vector(6 downto 0);
-	-- Declarations (optional)
---type state_type is (sexo,peso,tipo,cantidad);
---signal state : state_type := sexo;
-begin
+	signal data : std_logic_vector(6 downto 0);
 
-	process(clk)
-	
 	begin
-	if (rising_edge(clk)) then
-	
---		case state is
---			when sexo =>
---				if entrada = "0000001" then
---					salida1 <= "1111001";
---				else
---					salida1 <= "1000000";
---				end if;
---			
---			when peso =>
---				if entrada = 
---		end case;
-	end if;
-end process;
-
-
-
+	process(clk)
+	begin
+		if (rising_edge(clk)) then
+			data <= entrada;
+		end if;
+	end process;
+salida <= data;
 end arch_puertos;

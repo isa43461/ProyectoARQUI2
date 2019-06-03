@@ -52,25 +52,6 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VHDL_FILE ../unidadControl/uControl.vhd
-set_global_assignment -name VHDL_FILE ../SignExtend26/SignExtend26.vhd
-set_global_assignment -name VHDL_FILE ../SignExtend/SignExtend.vhd
-set_global_assignment -name VHDL_FILE ../ShiftLeft/ShiftLeft.vhd
-set_global_assignment -name VHDL_FILE ../Registros/Registro.vhd
-set_global_assignment -name VHDL_FILE ../RegFile/RegFile.vhd
-set_global_assignment -name VHDL_FILE ../PC/PC.vhd
-set_global_assignment -name VHDL_FILE ../MuxRegDst/MuxRegDst.vhd
-set_global_assignment -name VHDL_FILE ../MuxPcSrc/muxPCsrc.vhd
-set_global_assignment -name VHDL_FILE ../MuxMemToReg/MuxMemToReg.vhd
-set_global_assignment -name VHDL_FILE ../MuxIorD/MuxIorD.vhd
-set_global_assignment -name VHDL_FILE ../MuxAluSrcA/MuxSrcA.vhd
-set_global_assignment -name VHDL_FILE ../InstructionReg/InstructionReg.vhd
-set_global_assignment -name VHDL_FILE ../Divisor/Divisor.vhd
-set_global_assignment -name VHDL_FILE ../AluSrcB/MuxAluSrcB.vhd
-set_global_assignment -name VHDL_FILE ../Alu/Alu.vhd
-set_global_assignment -name VHDL_FILE ../prueba3/prueba3.vhd
-set_global_assignment -name VHDL_FILE ../Memory/Memory.vhd
-set_global_assignment -name VHDL_FILE ../prueba3/computador.vhd
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
 set_location_assignment PIN_L2 -to reset
 set_location_assignment PIN_R22 -to clk
@@ -102,4 +83,24 @@ set_location_assignment PIN_J4 -to estado4[3]
 set_location_assignment PIN_D6 -to estado4[2]
 set_location_assignment PIN_D5 -to estado4[1]
 set_location_assignment PIN_F4 -to estado4[0]
+set_global_assignment -name VHDL_FILE ../EntradaSalida/puertos.vhd
+set_global_assignment -name VHDL_FILE ../unidadControl/uControl.vhd
+set_global_assignment -name VHDL_FILE ../SignExtend26/SignExtend26.vhd
+set_global_assignment -name VHDL_FILE ../SignExtend/SignExtend.vhd
+set_global_assignment -name VHDL_FILE ../ShiftLeft/ShiftLeft.vhd
+set_global_assignment -name VHDL_FILE ../Registros/Registro.vhd
+set_global_assignment -name VHDL_FILE ../RegFile/RegFile.vhd
+set_global_assignment -name VHDL_FILE ../PC/PC.vhd
+set_global_assignment -name VHDL_FILE ../MuxRegDst/MuxRegDst.vhd
+set_global_assignment -name VHDL_FILE ../MuxPcSrc/muxPCsrc.vhd
+set_global_assignment -name VHDL_FILE ../MuxMemToReg/MuxMemToReg.vhd
+set_global_assignment -name VHDL_FILE ../MuxIorD/MuxIorD.vhd
+set_global_assignment -name VHDL_FILE ../MuxAluSrcA/MuxSrcA.vhd
+set_global_assignment -name VHDL_FILE ../InstructionReg/InstructionReg.vhd
+set_global_assignment -name VHDL_FILE ../Divisor/Divisor.vhd
+set_global_assignment -name VHDL_FILE ../AluSrcB/MuxAluSrcB.vhd
+set_global_assignment -name VHDL_FILE ../Alu/Alu.vhd
+set_global_assignment -name VHDL_FILE ../prueba3/prueba3.vhd
+set_global_assignment -name VHDL_FILE ../Memory/Memory.vhd
+set_global_assignment -name VHDL_FILE ../prueba3/computador.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

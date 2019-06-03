@@ -3,32 +3,32 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'uControl:unidadControl|aluOP[0]'
-Slack : -143.673
-TNS   : -4918.687
+Slack : -144.154
+TNS   : -4955.520
 
 Type  : Slow Model Setup 'InstructionReg:IR|sal[0]'
-Slack : -138.074
-TNS   : -4407.331
+Slack : -137.617
+TNS   : -4378.696
 
 Type  : Slow Model Setup 'clk'
-Slack : -8.425
-TNS   : -728.882
+Slack : -9.988
+TNS   : -817.977
 
 Type  : Slow Model Hold 'clk'
-Slack : -9.830
-TNS   : -142.188
+Slack : -11.190
+TNS   : -161.059
 
 Type  : Slow Model Hold 'InstructionReg:IR|sal[0]'
-Slack : -8.167
-TNS   : -241.284
+Slack : -9.431
+TNS   : -282.314
 
 Type  : Slow Model Hold 'uControl:unidadControl|aluOP[0]'
-Slack : -2.568
-TNS   : -58.050
+Slack : -2.894
+TNS   : -68.814
 
 Type  : Slow Model Minimum Pulse Width 'clk'
 Slack : -2.064
-TNS   : -479.243
+TNS   : -481.687
 
 Type  : Slow Model Minimum Pulse Width 'InstructionReg:IR|sal[0]'
 Slack : 0.500
@@ -39,32 +39,32 @@ Slack : 0.500
 TNS   : 0.000
 
 Type  : Fast Model Setup 'uControl:unidadControl|aluOP[0]'
-Slack : -55.274
-TNS   : -1834.680
+Slack : -55.875
+TNS   : -1861.097
 
 Type  : Fast Model Setup 'InstructionReg:IR|sal[0]'
-Slack : -52.971
-TNS   : -1690.354
+Slack : -53.153
+TNS   : -1690.526
 
 Type  : Fast Model Setup 'clk'
-Slack : -3.305
-TNS   : -246.173
+Slack : -3.819
+TNS   : -279.685
 
 Type  : Fast Model Hold 'InstructionReg:IR|sal[0]'
-Slack : -3.848
-TNS   : -115.279
+Slack : -4.326
+TNS   : -130.372
 
 Type  : Fast Model Hold 'clk'
-Slack : -3.736
-TNS   : -54.017
+Slack : -4.303
+TNS   : -61.861
 
 Type  : Fast Model Hold 'uControl:unidadControl|aluOP[0]'
-Slack : -1.545
-TNS   : -51.578
+Slack : -1.604
+TNS   : -41.383
 
 Type  : Fast Model Minimum Pulse Width 'clk'
 Slack : -1.880
-TNS   : -420.462
+TNS   : -422.462
 
 Type  : Fast Model Minimum Pulse Width 'InstructionReg:IR|sal[0]'
 Slack : 0.500
